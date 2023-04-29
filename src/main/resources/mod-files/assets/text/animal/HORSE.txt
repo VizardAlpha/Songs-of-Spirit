@@ -1,0 +1,5 @@
+INFO: {
+	NAME: "Horse",
+	NAMES: "Horses",
+	DESC: "A fast, four-legged herbivore. If domesticated, horses are difficult to breed, but they make up for their usefullness as both strong pack animals and fast war mounts.",
+},

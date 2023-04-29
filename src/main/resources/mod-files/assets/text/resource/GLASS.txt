@@ -1,0 +1,3 @@
+NAME: "Glass",
+NAMES: "Glass",
+DESC: "Allows to decorate your homes, the glass is created at the glass producer.",

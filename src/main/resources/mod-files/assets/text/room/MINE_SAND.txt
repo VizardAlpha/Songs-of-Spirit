@@ -1,0 +1,46 @@
+INFO: {
+	NAME: "Sandpit",
+	NAMES: "Sandpits",
+	DESC: "Sandpits extract sand from sand deposits.",
+},
+
+WORK: {
+	TITLE: "Sand Digger",
+	VERB: "Extracting Sand",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "Maximum amount of workers.",	
+	},
+	{
+		NAME: "Deposits",
+		DESC: "The average fidelity of the deposits. Higher increases production.",	
+	},
+	{
+		NAME: "",
+		DESC: "",	
+	},
+	{
+		NAME: "",
+		DESC: "",	
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "Necessary for all mines. Bigger increases internal storage capacity.",	
+	},
+	{
+		NAME: "Auxiliaries",
+		DESC: "Improves the performance of the mine.",	
+	},
+],
+
+
+BONUS: {
+	NAME: "Sand extraction",
+	DESC: "Increases the output of your Sandpits.",
+},

@@ -1,0 +1,3 @@
+NAME: "Rope",
+NAMES: "Ropes",
+DESC: "Rope are used to make material.",

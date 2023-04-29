@@ -1,0 +1,30 @@
+TECHS: [
+	
+	{
+		NAME: "Kitchen",
+		CATEGORY:"Civic",
+
+		DESC: "Unlock the kitchen so that your subjects can prepare a good meal!",
+	},
+
+	{
+		NAME: "Kitchen Bonus",
+		CATEGORY:"Civic",
+
+		DESC: "Better knife sharpening, more speed and agility for your chefs! ",
+	},
+
+	{
+		NAME: "Filleted fish",
+		CATEGORY:"Civic",
+
+		DESC: "Allows to prepare the fish and to recover its flesh",
+	},
+
+		{
+		NAME: "Sushi",
+		CATEGORY:"Civic",
+
+		DESC: "Who doesn't like sushi should not unlock this technique!",
+	},
+],
