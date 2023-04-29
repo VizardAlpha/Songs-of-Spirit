@@ -1,0 +1,44 @@
+INFO: {
+	NAME: "Carpenter",
+	NAMES: "Carpenters",
+	DESC: "Workshop that carves furniture out of wood",
+},
+
+BONUS: {
+	NAME: "Wood Carving",
+	DESC: "Increases effectiveness of Carpenters",
+},
+
+WORK: {
+	TITLE: "Carpenter",
+	VERB: "Crafting furniture",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production",
+	},
+	{
+		
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "The internal storage for produce.",
+	},
+	{
+		NAME: "Work Bench",
+		DESC: "Where subjects work",
+	},
+	{
+		NAME: "Auxiliary Station",
+		DESC: "Adds Efficiency to the room",
+	},
+],
