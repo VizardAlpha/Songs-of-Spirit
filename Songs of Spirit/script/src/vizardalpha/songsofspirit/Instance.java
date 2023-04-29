@@ -74,7 +74,6 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 				storedValue++;
 				MessageVersion();
 				hasRun = true;
-				System.out.println(storedValue +" est la nouvelle valeur");
 				}
 	}
 	public void UpdateFar() {
@@ -83,12 +82,6 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			MessageVersion();
 			storedValue++;
 			hasRun = false;
-			System.out.println("La version est égale ou inférieur a celle enregistrer. " + UpdateNew + " / " + storedValue);
-
-				} else {
-					System.out.println("Ne fait rien " + UpdateNew + " / " + storedValue);
-				}
-
 	}
 	
 	@Override
