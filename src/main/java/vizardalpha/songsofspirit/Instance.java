@@ -11,16 +11,29 @@ import snake2d.util.file.Json;
 import snake2d.util.misc.ACTION;
 import view.interrupter.IDebugPanel;
 import view.main.MessageText;
+import view.main.VIEW;
+import vizardalpha.songsofspirit.log.Logger;
+import vizardalpha.songsofspirit.log.Loggers;
 
 
 public class Instance implements SCRIPT.SCRIPT_INSTANCE {
+
+	private final static Logger log = Loggers.getLogger(Instance.class);
+
+	private boolean init = false;
+
+	private boolean initGamePresent = false;
 
 	public boolean states = false;
 	public boolean hasRun = false;
 	public int UpdateNew = 1;
 	public int storedValue;
 
-	public Instance() {
+	private final SongsofSpirit script;
+
+	public Instance(SongsofSpirit script) {
+		this.script = script;
+
 		IDebugPanel.add("Update Songs of Spirit", new ACTION() {
 
 			@Override
@@ -82,10 +95,22 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			MessageVersion();
 			storedValue++;
 			hasRun = false;
+		}
 	}
 	
 	@Override
 	public void update(double ds) {
+		if (!init) {
+			log.debug("initGameRunning");
+			script.initGameRunning();
+			init = true;
+		}
+
+		if (!initGamePresent && !VIEW.inters().load.isActivated()) {
+			log.debug("initGameLoaded");
+			script.initGamePresent();
+			initGamePresent = true;
+		}
 		//NewGame();
 		//NewUpdate(UpdateNew, storedValue);
 		
