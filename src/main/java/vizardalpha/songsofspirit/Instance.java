@@ -49,6 +49,11 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	}
 
 	@Override
+	public void update(double ds) {
+
+	}
+
+	@Override
 	public void save(FilePutter file) {
 		file.bool(states);
 		file.bool(hasRun);
@@ -78,23 +83,10 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	}
 	public void UpdateFar() {
 		if (hasRun && UpdateNew > storedValue) {
-
 			MessageVersion();
 			storedValue++;
 			hasRun = false;
-	}
-	
-	@Override
-	public void update(double ds) {
-		//NewGame();
-		//NewUpdate(UpdateNew, storedValue);
-		
+		}
 	}
 
-	
-	
-	@Override
-	public boolean handleBrokenSavedState() {
-		return false;
-	}
 }
