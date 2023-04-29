@@ -1,3 +1,0 @@
-NAME: "Crossbow",
-NAMES: "Crossbow",
-DESC: "More powerful than a bow and has a better range. Reloads a little longer.",

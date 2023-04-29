@@ -1,3 +1,0 @@
-NAME: "Salmon flesh",
-NAMES: "Salmons flesh",
-DESC: "Salmon flesh is a food source but honestly with rice. MIAMmm.",

@@ -1,8 +1,0 @@
-VNews: {
-	TITLE: "Minor 0.2.3!",
-	PARAGRAPHS: [
-"
-%r%%r%
-",
-],
-},

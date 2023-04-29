@@ -1,3 +1,0 @@
-NAME: "Gold Ore",
-NAMES: "Gold Ores",
-DESC: "Gold Ores are used to make material.",

@@ -1,3 +1,0 @@
-NAME: "HORSE",
-NAMES: "HORSES",
-DESC: "Domesticated horses. Useful for civilians as pack animals within logistics and in armies as mounts for powerful cavalry units.",
