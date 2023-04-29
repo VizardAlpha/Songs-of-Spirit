@@ -22,9 +22,9 @@
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
         <game.version.major>63</game.version.major>
         <game.version.minor>46</game.version.minor>
-        <game.version>${game.version.major}.${game.version.minor}</game.version>
 
         <!-- Build settings -->
+        <game.version>${game.version.major}.${game.version.minor}</game.version>
         <game.version.directory>V${game.version.major}</game.version.directory>
         <game.jar.name>SongsOfSyx.jar</game.jar.name>
         <game.jar.source.name>SongsOfSyx-sources.jar</game.jar.source.name>
