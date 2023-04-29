@@ -1,0 +1,45 @@
+INFO: {
+	NAME: "GlassMaker",
+	NAMES: "GlassMaker",
+	DESC: "Refiner that turns sand and coal into Glass.",
+},
+
+BONUS: {
+	NAME: "Smelting",
+	DESC: "Increases effectiveness of smelting",
+},
+
+WORK: {
+	TITLE: "Smelter",
+	VERB: "Smelting",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production",
+	},
+	{
+		
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Furnace",
+		DESC: "Where subjects work",
+	},
+	{
+		NAME: "Storage",
+		DESC: "Storage for the output.",
+	},
+	{
+		NAME: "Auxiliary Furnace",
+		DESC: "Adds Efficiency to the room",
+	},
+],
+

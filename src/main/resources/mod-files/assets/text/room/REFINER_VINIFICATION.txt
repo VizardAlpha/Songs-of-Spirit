@@ -1,0 +1,44 @@
+INFO: {
+	NAME: "Vinifiation",
+	NAMES: "Vinifiations",
+	DESC: "Refiner that turns pottery and GRAPE into Drink.",
+},
+
+BONUS: {
+	NAME: "Vinifiation",
+	DESC: "Increases effectiveness of Grain Breweries",
+},
+
+WORK: {
+	TITLE: "WineMaker",
+	VERB: "Brewing drink",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production",
+	},
+	{
+		
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Kettle",
+		DESC: "Where subjects work",
+	},
+	{
+		NAME: "Storage",
+		DESC: "Storage for the output.",
+	},
+	{
+		NAME: "Auxiliary Kettle",
+		DESC: "Adds Efficiency to the room",
+	},
+],
