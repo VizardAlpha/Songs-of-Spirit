@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="SongsOfSyx">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SongsOfSyx.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/SongsOfSyx.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/SongsOfSyx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/info/SongsOfSyx-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
