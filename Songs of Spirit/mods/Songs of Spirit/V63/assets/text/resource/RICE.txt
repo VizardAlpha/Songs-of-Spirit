@@ -1,3 +1,0 @@
-NAME: "Rice",
-NAMES: "Rices",
-DESC: "Rice is a source of food from a distant land. Who doesn't like rice...",

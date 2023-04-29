@@ -1,4 +1,0 @@
-SONGS_OF_SPIRIT_INFO: {
-	NAME: "Songs of Spirit [Script]",
-	DESC: "Script required for Songs of Spirit.",
-},

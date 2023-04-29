@@ -1,3 +1,0 @@
-NAME: "Sand",
-NAMES: "Sands",
-DESC: "Sand are used to make glass and as construction material.",

@@ -1,3 +1,0 @@
-NAME: "Gold Ingot",
-NAMES: "Gold Ingots",
-DESC: "Gold Ingot are used to make material.",

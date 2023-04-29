@@ -1,3 +1,0 @@
-NAME: "Sushi",
-NAMES: "Sushis",
-DESC: "Sushi is a source of food, I would say even more than a source.",
