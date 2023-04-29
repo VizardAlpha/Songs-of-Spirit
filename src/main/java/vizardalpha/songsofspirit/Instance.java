@@ -83,7 +83,7 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			MessageVersion();
 			storedValue++;
 			hasRun = false;
-			System.out.println("La version est égale ou inférieur a celle enregistrer. " + UpdateNew + " / " + storedValue);
+			System.out.println(" La version est ï¿½gale ou infï¿½rieur a celle enregistrer. " + UpdateNew + " / " + storedValue);
 
 				} else {
 					System.out.println("Ne fait rien " + UpdateNew + " / " + storedValue);
