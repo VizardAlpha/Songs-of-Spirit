@@ -91,13 +91,12 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	}
 	public void UpdateFar() {
 		if (hasRun && UpdateNew > storedValue) {
-
 			MessageVersion();
 			storedValue++;
 			hasRun = false;
 		}
 	}
-	
+
 	@Override
 	public void update(double ds) {
 		if (!init) {
@@ -114,12 +113,7 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 		//NewGame();
 		//NewUpdate(UpdateNew, storedValue);
 		
+		}
 	}
 
-	
-	
-	@Override
-	public boolean handleBrokenSavedState() {
-		return false;
-	}
 }
