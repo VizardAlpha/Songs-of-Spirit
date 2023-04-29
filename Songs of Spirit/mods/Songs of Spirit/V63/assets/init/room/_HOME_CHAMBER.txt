@@ -1,0 +1,116 @@
+TYPE: CHAMBER,
+RESOURCES: [STONE_CUT,FURNITURE,FABRIC,GOLD_INGOT,],
+AREA_COSTS: [0,0,0,0,],
+FLOOR: STONE_MEDIUM_FINE,
+MINI_COLOR: [70,0,255,],
+MONUMENT: MONUMENT_STATUE,
+
+ITEMS: [
+	{
+		COSTS: [40,60,50,20,],
+		STATS: [1,2,],
+	},
+],
+
+
+WORK: {
+	SHIFT_OFFSET: 0.1,
+	SOUND: FABRIC,
+	USES_TOOL: false,
+	FULFILLMENT: 0.2,
+	EDUCATION_FACTOR: 0,
+},
+
+SERVICE: {
+	DEFAULT_ACCESS: 0,
+	STANDING: {
+		CITIZEN: 0,
+		SLAVE: 0,
+		NOBLE: 4,
+	},
+	SOUND: SLEEP,
+},
+
+
+SPRITES: {
+	CARPET_COMBO: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 0,
+			FRAMES: [
+				COMBO_CARPETS: 4,
+			],
+		},
+	],
+	MISC_1X1: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 4,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 3,
+				STORAGE: 4,
+			],
+		},
+	],
+	BENCH_END_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 3,
+			],
+		},
+	],
+	BENCH_CENTRE_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 4,
+			],
+		},
+	],
+	MANTEL_A_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 5,
+			],
+		},
+	],
+	MANTEL_B_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 6,
+			],
+		},
+	],
+	BEDPOST_A_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 7,
+			],
+		},
+	],
+	BEDPOST_B_1X1: [
+		{	
+			TINT: false,
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				SPECIAL: 8,
+			],
+		},
+	],
+},

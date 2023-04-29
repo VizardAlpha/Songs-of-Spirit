@@ -1,0 +1,248 @@
+TYPE: REFINER,
+RESOURCES: [STONE,WOOD,FURNITURE,MACHINERY,],
+AREA_COSTS: [0.2,0,0,0,],
+FLOOR: [DIRT,WOOD_SQUARE,WOOD,],
+MINI_COLOR: [226,195,38,],
+
+ITEMS: [
+	{
+		COSTS: [2,6,3,4,],
+		STATS: [1.2,0,1,],
+	},
+	{
+		COSTS: [1,1,2,3,],
+		STATS: [0,0,0,],
+	},
+	{
+		COSTS: [0.5,1,2,3,],
+		STATS: [0,0.5,0,],
+	},
+],
+
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,1,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [2,2,1,0,],
+		BOOST: 0.25,
+	},
+	{
+		RESOURCE_MASK: [3,3,3,1,],
+		BOOST: 0.5,
+	},
+],
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: MACHINE,
+	FULFILLMENT: 0.2,
+	EDUCATION_FACTOR: 0.15,
+    ACCIDENTS_PER_YEAR: 0.005,	
+},
+
+INDUSTRIES: [
+	{
+		INDUSTRY: {
+			IN: {
+				COTTON: 6.0,
+			},
+			OUT: {
+				FABRIC: 3.0,
+			},
+		},
+	},
+	{
+		INDUSTRY: {
+			IN: {
+				COTTON: 6.0,
+			},
+			OUT: {
+				ROPE: 3.0,
+			},
+		},
+	},
+],
+
+ENVIRONMENT_EMIT: {
+	_NOISE: {
+		VALUE: 1,
+		RADIUS: 1,
+	},
+},
+
+SPRITES: {
+	MAIN_MACHINE_COMBO: [
+		{
+			SHADOW_LENGTH: 12,
+			FRAMES: [
+				REFINER: 4,
+			],
+		},
+	],
+	MAIN_MACHINE_COMBO_TOP: [
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			FRAMES: [
+				REFINER: 7,
+			],
+		},
+	],
+	MAIN_MACHINE_COMBO_TOP_MACHINE: [
+		{
+			FRAMES: [],
+		},
+		{
+			FRAMES: [],
+		},
+		{
+			SHADOW_LENGTH: 1,
+			FPS: 10,
+			FRAMES: [
+				MECH2: 0,
+				MECH2: 1,
+				MECH2: 2,
+				MECH2: 3,
+				MECH2: 4,
+				MECH2: 5,
+			],
+		},
+	],
+	STORAGE_IN_1X1: [
+		{
+			SHADOW_LENGTH: 3,
+			ROTATES: true,
+			FRAMES: [
+				STORAGE: 5,
+			],
+		},
+		{
+			SHADOW_LENGTH: 3,
+			ROTATES: true,
+			FRAMES: [
+				STORAGE: 11,
+			],
+		},
+	],
+	WORK_1X1: [
+		{
+			SHADOW_HEIGHT: 5,
+			ROTATES: true,
+			FPS: 8,
+			CIRCULAR: true,
+			FRAMES:[
+				MECH_WORK: 8,
+				MECH_WORK: 9,
+			],
+		},
+	],
+	CONVEYOR_1X1: [
+		{
+			SHADOW_LENGTH: 5,
+			ROTATES: true,
+			FPS: 12,
+			FRAMES:[
+				MECH_CONVEYOR: 5,
+			],
+		},
+	],
+	STORAGE_1X1: [
+		{
+			SHADOW_LENGTH: 1,
+			ROTATES: true,
+			FRAMES:[
+				STORAGEx3: 1,
+			],
+		},
+		{
+			SHADOW_LENGTH: 1,
+			ROTATES: true,
+			FRAMES:[
+				STORAGEx3: 4,
+			],
+		},
+		{
+			SHADOW_LENGTH: 1,
+			ROTATES: true,
+			FRAMES:[
+				STORAGEx3: 7,
+			],
+		},
+	],
+	NICKNACK_BOTTOM_1X1: [
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES:[
+				STORAGE: 0,
+				STORAGE: 5,
+				STORAGE: 10,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES:[
+				PIPE: 2,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES:[
+				PIPE: 2,
+			],
+		},
+	],
+	NICKNACK_TOP_1X1: [
+		{
+			FRAMES:[
+				
+			],
+		},
+		{
+			FRAMES:[
+				
+			],
+		},
+		{
+			FRAMES:[
+				
+			],
+		},
+	],
+	MACHINE_1X1: [
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				STORAGE: 1,
+				STORAGE: 5,
+				STORAGE: 10,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FRAMES: [
+				STORAGE: 1,
+				STORAGE: 5,
+				STORAGE: 10,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: true,
+			FPS: 12,
+			FRAMES: [
+				MECH_WORK: 8,
+				MECH_WORK: 9,
+			],
+		},
+	],
+},

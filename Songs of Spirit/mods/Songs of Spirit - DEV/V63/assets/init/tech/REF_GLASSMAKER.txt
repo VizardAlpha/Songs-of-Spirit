@@ -1,0 +1,30 @@
+TECHS: [
+
+	{
+		LEVEL_COST: 250,
+
+		TREE_ORDER: 5496,				
+
+		ROOMS: [
+			REFINER_GLASSMAKER,
+		],		
+	},
+
+	{
+		LEVEL_MAX: 25,
+		LEVEL_COST: 350,
+		LEVEL_COST_INC_MUL: 1.4,
+
+		TREE_ORDER: 5496,				
+
+		REQUIRES_TECH_LEVEL: {
+			REF_GLASSMAKER0: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				REFINER_GLASSMAKER: 0.1,
+			},
+		},
+	},
+],

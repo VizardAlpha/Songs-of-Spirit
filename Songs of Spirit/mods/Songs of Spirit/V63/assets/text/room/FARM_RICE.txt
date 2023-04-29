@@ -1,0 +1,30 @@
+INFO: {
+	NAME: "Rice Farm",
+	NAMES: "Rice Farms",
+	DESC: "Grows Rice.",
+},
+
+BONUS: {
+	NAME: "Rice Farming",
+	DESC: "Increases production of rice farming.",
+},
+
+WORK: {
+	TITLE: "Rice Farmer",
+	VERB: "Farming",
+},
+
+STATS: [
+	{
+		NAME: "Fertility",
+		DESC: "The fertility of the farmland",
+	},
+	{
+		NAME: "Farmers",
+		DESC: "The amount of Farmers needed",
+	},
+	{
+		NAME: "Yearly Output",
+		DESC: "An estimate of how much this farm will output if well worked during a year. Not including bonuses, or irrigation",
+	},
+],

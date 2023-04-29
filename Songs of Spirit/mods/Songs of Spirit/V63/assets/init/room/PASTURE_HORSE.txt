@@ -1,0 +1,75 @@
+TYPE: PASTURE,
+RESOURCES: [WOOD,],
+AREA_COSTS: [0.10,],
+MINI_COLOR: [101,124,14,],
+ANIMAL: HORSE,
+FENCE: WOOD,
+FLOOR: DIRT,
+
+ITEMS: [
+	{
+		COSTS: [20,],
+		STATS: [0,0,],
+	},
+],
+
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: _DIG,
+	USES_TOOL: true,
+	FULFILLMENT: 0.2,
+	EDUCATION_FACTOR: 0.1,
+	ACCIDENTS_PER_YEAR: 0.002,
+},
+
+SPRITES: {
+
+	GATE_TOP_3X3: {
+		ROTATES: true,
+		SHADOW_HEIGHT: 8,
+		SHADOW_LENGTH: 0,
+		COLOR: {R: 255, G: 255, B: 255,},
+		FRAMES: [
+			PASTURE_GATE: 0,
+		],
+		
+	},
+	
+	STORAGE_1X1: {
+		ROTATES: false,
+		SHADOW_HEIGHT: 0,
+		SHADOW_LENGTH: 4,
+		COLOR: {R: 255, G: 255, B: 255,},
+		FRAMES: [
+			STORAGE: 6,
+		],
+	},
+	
+	FENCE_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 3,
+		],
+	},
+},
+
+INDUSTRY: {
+	OUT: {
+		MEAT: 0.75,
+		LEATHER: 0.75,
+		HORSES: 0.082,
+	},
+},
+
+BONUS: {
+	CLIMATE: {
+		TEMPERATE: 1.0,
+		COLD: 0.1,
+		HOT: 0.6,
+	},
+},
+
+
+

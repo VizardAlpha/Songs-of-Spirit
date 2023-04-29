@@ -1,0 +1,29 @@
+TECHS: [
+
+	{
+		NAME: "Vinification",
+		CATEGORY:"Refining",
+
+		DESC: "From grapes to quality wine!
+
+		%r%%r%
+
+		(Drink rations can be set in the species -> access tab.  Very high rations of Vin can have negative health and work impacts on your people.)
+		",
+	},
+
+	{
+		NAME: "Vinification Bonus",
+		CATEGORY:"Refining",
+
+		DESC: "With a better foot, hmm machine I mean, your subjects will increase wine production instantly!",
+	},
+
+	{
+		NAME: "Coal Vinification",
+		CATEGORY:"Refining",
+
+		DESC: "Adding coal ? But nah, it's a process that allows to increase the wine production with Co2, what ? Nothing nothing...",
+	},
+
+],

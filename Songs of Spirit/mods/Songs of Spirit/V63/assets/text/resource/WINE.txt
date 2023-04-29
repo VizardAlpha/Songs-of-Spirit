@@ -1,0 +1,3 @@
+NAME: "Wine",
+NAMES: "Wines",
+DESC: "Wine of the stronger kind. Can be consumed by your subjects and is an essence of most life.",

@@ -1,0 +1,17 @@
+TECHS: [
+
+	{
+		NAME: "Smelter",
+		CATEGORY:"Refining",
+
+		DESC: "The creation of glass requires the hand of an expert.",
+	},
+
+	{
+		NAME: "Smelter Bonus",
+		CATEGORY:"Refining",
+
+		DESC: "Precisely controlled temperatures and better processing of ores can improve output of the Smelteries.",
+	},
+
+],

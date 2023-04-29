@@ -1,0 +1,18 @@
+TECHS: [
+
+	{
+		LEVEL_COST: 750,
+
+		TREE_ORDER: 5968,		
+
+		REQUIRES_TECH_LEVEL: {
+				MISC_LOGISTICS0: 1,
+		},
+
+		FLOORS: [
+			STONE_UPGRADE_0,
+			STONE_UPGRADE_1,
+		],
+	},
+
+],

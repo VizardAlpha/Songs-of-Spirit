@@ -1,0 +1,413 @@
+PLAYABLE: false,
+
+PROPERTIES: {
+	HEIGHT: 12,
+	WIDTH: 13,
+	ADULT_AT_DAY: 0,
+	CORPSE_DECAY: true,
+	SLEEPS: true,
+},
+
+BEHAVIOUR: {
+	SKINNY_DIPS: 0,
+	USES_BENCH: 0,
+},
+
+BIO_FILE: Dry,
+OPINION_FILE_SCARED: Dry,
+OPINION_FILE_NORMAL: Dry,
+OPINION_FILE_CONFIDENT: Dry,
+
+HOME: ARGONOSH,
+
+PREFERRED: {
+	FOOD: [
+		MEAT,
+		FISH,
+		EGG,
+		SALMON_FLESH,
+	],
+	STRUCTURE: {
+		MOUNTAIN: 1.0,
+		GLASS: 0.6,
+		STONE: 0.6,
+		GRAND: 0.3,
+		WOOD: 0,
+	},
+	WORK: {
+		*: 0.3,
+		MINE_CLAY: 0.1,
+		MINE_COAL: 0.0,
+		MINE_GEM: 0.1,
+		MINE_ORE: 0.0,
+		MINE_GOLD: 0.1,
+		MINE_SITHILON: 0.1,
+		MINE_STONE: 0.1,
+		MINE_SAND: 0.1,
+		TEMPLE_AMINION: 0.8,
+		TEMPLE_ATHURI: 0.0,
+		TEMPLE_CRATOR: 0.0,
+		TEMPLE_SHMALOR: 1.0,
+		_BARRACKS: 1.0,
+		_GUARD: 1.0,
+		_SLAVER: 1,
+		_EXECUTION: 1,
+	},
+	OTHER_RACES: {
+		TILAPI: -1,
+		DONDORIAN: -1,		
+	},
+},
+
+BONUS_ADD: {
+	
+	BATTLE: {
+		ARMOUR: 2,
+		PIERCE_DAMAGE: 1,
+	},
+},
+
+BONUS_MUL: {
+	PHYSICS: {
+		HEALTH: 3,
+		DEATH_AGE: 5,
+		MASS: 3,
+		SPEED: 2,
+		ACCELERATION: 0.75,
+		RESISTANCE_COLD: 1,
+		RESISTANCE_HOT: 2,
+		
+	},
+	
+	BATTLE: {
+		RANGED_SKILL: 0,
+		MORALE: 3,
+		BLUNT_DAMAGE: 20,
+	},
+
+	ROOM: {
+		*: 0.1,
+	},
+	
+	BEHAVIOUR: {
+		LAWFULNESS: 5.0,
+		SUBMISSION: 0.3,
+		SANITY: 1000,
+	},
+	
+	RATES: {
+		
+		LEARNING: 0,
+		HUNGER: 2,
+		PIETY: 4,			
+	},	
+},
+
+TRAITS: {
+	*: 0,
+},
+
+RESOURCE: {
+	MEAT: 100,
+	LEATHER: 20,
+},
+
+RELIGION_INCLINATION: {
+	TEMPLE_CRATOR: 0,
+	TEMPLE_AMINION: 0,
+	TEMPLE_ATHURI: 0,
+	TEMPLE_SHMALOR: 1,
+},
+
+STATS: {
+	SERVICE: {
+		
+		*: {
+		
+		},
+	
+		EATERY_NORMAL: {
+			CITIZEN: 1.0,
+		},
+
+		CANTEEN_NORMAL: {
+			CITIZEN: 2.5,
+		},
+
+		TAVERN_NORMAL: {
+			CITIZEN: 1.5,
+		},
+
+		ARENA_NORMAL: {
+			CITIZEN: 2,
+		},
+	},
+	
+	EQUIP: {
+		*: {
+		
+		},
+
+	},
+	
+	BURIAL: {
+		*: {
+	
+		},
+
+		TOMB_NORMAL: {
+			CITIZEN: 1.0,
+		},
+	},
+	
+	ACCESS: {
+		*: {
+		
+		},
+
+		DREAD: {
+			CITIZEN: 1.5,
+		},
+
+		HARMONY: {
+			CITIZEN: 0.5,
+			INVERTED: true,
+		},
+	},
+	
+	FOOD: {
+		STARVATION: {
+			CITIZEN: 3,
+			INVERTED: true,
+			MULTIPLIER: 5,
+		},
+		FOOD_PREFFERENCE: {
+			CITIZEN: 2.5,
+		},
+		FOOD_DAYS: {
+			CITIZEN: 2,
+			MULTIPLIER: 0.8,
+		},
+		FOOD_RATIONS: {
+			CITIZEN: 8,
+		},
+		DRINK_RATIONS: {
+			CITIZEN: 3.5,
+		},
+	},
+	
+	HOME: {
+		HOUSED: {
+			CITIZEN: 2,	
+		},
+		FURNITURE: {
+			CITIZEN: 2,
+		},
+		SPACE: {
+			CITIZEN: 1,
+			INVERTED: true,
+		},
+	},
+
+	BATTLE: {
+		*: {
+		
+		},
+
+		COMBAT_TRAINING: {
+			CITIZEN: 1.5,
+		},
+	},
+	
+	WORK: {
+		*: {
+		
+		},
+	},
+	
+	POPULATION: {
+		*: {
+		
+		},
+
+		WRONGFUL_DEATHS: {
+			CITIZEN: 2,
+			INVERTED: true,
+		},
+		SLAVES_SELF: {
+			INVERTED: true,
+			CITIZEN: 6,
+			NOBLE: 6,
+		},
+		SLAVES_OTHER: {
+			CITIZEN: 1.5,
+		},
+	},
+	
+	ENVIRONMENT: {
+		*: {
+
+		},
+
+		BUILDING_PREF: {
+			CITIZEN: 0.5,
+			SLAVE: 0.5,			
+		},
+	},
+	
+	STORED: {
+		*: {
+		
+		},
+	},
+	
+	EDUCATION: {
+		*: {
+		
+		},
+	},
+	
+	RELIGION: {
+		FAITH: {
+			CITIZEN: 6,
+		},
+		RELIGION_OPPOSITION: {
+			INVERTED: true,
+			CITIZEN: 2,
+			NOBLE: 0,
+			SLAVE: 0,
+		},
+	},
+	
+	MONUMENTS: {
+		MONUMENT_BLOB: {
+			CITIZEN: 1,
+			SLAVE: 0.5,
+			PRIO: 50,
+		},
+	},
+},
+
+APPEARANCE: {
+
+	SPRITE_FILE: Argonosh,
+	SPRITE_EXTRA_FILE: Normal,
+	SPRITE_CHILD_FILE: Humanoid,
+	SPRITE_CHILD_SKELLETON_FILE: Argonosh,
+	SPRITE_SKELLETON_FILE: Argonosh,
+
+	COLOR_CLOTHES: [
+		{R: 114, G: 101, B: 35,},
+		{R: 142, G: 126, B: 44,},
+		{R: 83, G: 181, B: 94,},
+		{R: 62, G: 135, B: 70,},
+		{R: 105, G: 125, B: 239,},
+		{R: 79, G: 94, B: 181,},
+		{R: 53, G: 64, B: 122,},
+		{R: 193, G: 77, B: 0,},
+	],
+	COLOR_ARMOUR_LEVELS: [
+		{R: 107, G: 79, B: 65,},
+		{R: 99, G: 99, B: 99,},
+		{R: 168, G: 168, B: 180,},
+		{R: 209, G: 159, B: 54,},
+	],
+
+	COLOR_BLOOD: {R: 70, G: 40, B: 40,},
+
+	COLORS: {
+		SKIN: {
+			TURNS_WHITE_WHEN_DEAD: false,
+			VALUES:[
+				{R: 100, G: 60, B: 20,},
+				{R: 105, G: 60, B: 20,},
+				{R: 110, G: 60, B: 20,},
+				{R: 115, G: 60, B: 20,},
+				{R: 100, G: 65, B: 20,},
+				{R: 105, G: 70, B: 20,},
+				{R: 110, G: 75, B: 20,},
+				{R: 115, G: 80, B: 20,},
+				{R: 100, G: 65, B: 25,},
+				{R: 105, G: 70, B: 30,},
+				{R: 110, G: 75, B: 35,},
+				{R: 115, G: 80, B: 40,},
+			],
+			
+		},
+		LEG: {
+			VALUES: [
+				{R: 29, G: 12, B: 4,},
+				{R: 119, G: 48, B: 16,},
+				{R: 96, G: 39, B: 13,},
+				{R: 74, G: 26, B: 10,},
+				{R: 52, G: 18, B: 7,},
+				{R: 21, G: 9, B: 3,},
+				{R: 54, G: 28, B: 7,},
+				{R: 77, G: 34, B: 10,},
+			],
+		},
+	},
+
+	CHILD: {
+		OCCURRENCE_EXTRA1: 0,
+		OCCURRENCE_EXTRA2: 0,
+		COLOR_SKIN: SKIN,
+		COLOR_LEG: LEG,
+		COLOR_EXTRA1: SKIN,
+		COLOR_EXTRA2: SKIN,
+	},
+	
+	
+	TYPES: [
+		{
+			OCCURRENCE: 1,
+			OCCURRENCE_EXTRA1: 0,
+			OCCURRENCE_EXTRA2: 0,
+			COLOR_SKIN: SKIN,
+			COLOR_LEG: LEG,
+			COLOR_EXTRA1: SKIN,
+			COLOR_EXTRA2: SKIN,
+			
+			NAMESET_FILE_FIRST: StdFirst,
+			NAMESET_FILE_SURNAME: StdLast,
+			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
+			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			
+			PORTRAIT: [
+				**head
+				{
+					FRAME_START: 0,
+					FRAME_VARIATIONS: 4, 
+					COLOR: SKIN,
+				},
+				**Top
+				{
+					FRAME_START: 4,
+					FRAME_VARIATIONS: 8,
+					SPLITS: 3,
+					SPLIT: 0,
+					STAINS: true,
+					COLOR: SKIN,
+				},
+				**Eyes
+				{
+					FRAME_START: 4,
+					FRAME_VARIATIONS: 8,
+					SPLITS: 3,
+					SPLIT: 1,
+					STAINS: false,
+				},
+				**jaw
+				{
+					FRAME_START: 4,
+					FRAME_VARIATIONS: 8,
+					SPLITS: 3,
+					SPLIT: 2,
+					STAINS: true,
+					COLOR: SKIN,
+				},
+			],
+		},
+	],
+},
+

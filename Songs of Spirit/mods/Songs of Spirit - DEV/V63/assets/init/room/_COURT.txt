@@ -1,0 +1,138 @@
+RESOURCES: [WOOD,FURNITURE,GEM,GOLD_INGOT,],
+AREA_COSTS: [0.2,0,0,0,],
+FLOOR: STONE_CHECK,
+MINI_COLOR: [70,70,70,],
+ITEMS: [
+	{
+		COSTS: [0,10,20,10,],
+		STATS: [1,1,0.0,],
+	},
+	{
+		COSTS: [1,1,0,0,],
+		STATS: [0,0,0.05,],
+	},
+],
+
+WORK: {
+	SHIFT_OFFSET: 0.1,
+	SOUND: FABRIC,
+	USES_TOOL: false,
+	FULLFILLMENT: 1.0,
+	EDUCATION_FACTOR: 0,
+},
+
+SPRITES: {
+	
+	BENCH_A_1X1: [
+		{	
+			ROTATES: true,
+			TINT: true,
+			SHADOW_HEIGHT: 4,
+			FRAMES: [
+				STORAGEx3: 9,	
+			],
+		},
+	],
+	BENCH_B_1X1: [
+		{	
+			ROTATES: true,
+			TINT: true,
+			SHADOW_HEIGHT: 4,
+			FRAMES: [
+				STORAGEx3: 10,	
+			],
+		},
+	],
+	BENCH_C_1X1: [
+		{	
+			ROTATES: true,
+			TINT: true,
+			SHADOW_HEIGHT: 4,
+			FRAMES: [
+				STORAGEx3: 11,	
+			],
+		},
+	],
+	
+	CHAIR_1X1: [
+		{	
+			ROTATES: true,
+			TINT: true,
+			SHADOW_LENGTH: 8,
+			FRAMES: [
+				CHAIRS: 4,
+				CHAIRS: 5,
+			],
+		},
+	],
+	
+	DECOR_A_1X1: [
+		{	
+			ROTATES: true,
+			TINT: false,
+			SHADOW_LENGTH: 6,
+			FRAMES: [
+				SPECIAL: 1,
+			],
+		},
+	],
+
+	DECOR_B_1X1: [
+		{	
+			ROTATES: true,
+			TINT: false,
+			SHADOW_LENGTH: 6,
+			FRAMES: [
+				SPECIAL: 2,
+			],
+		},
+	],
+
+	TORCH_1X1: [
+		{	
+			ROTATES: false,
+			TINT: true,
+			SHADOW_LENGTH: 4,
+			FRAMES: [
+				TORCH: 2,
+				TORCH: 3,	
+			],
+		},
+	],
+	TABLE_COMBO: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 6,
+			FRAMES: [
+				COMBO_TABLES: 2,
+			],
+		},
+	],
+	CARPET_COMBO: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 0,
+			FRAMES: [
+				COMBO_CARPETS: 4,
+			],
+		},
+	],
+	STAND_COMBO: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 0,
+			FRAMES: [
+				COMBO_PODEUM: 0,
+			],
+		},
+	],
+	GEM_1X1: [
+		{	
+			TINT: true,
+			SHADOW_LENGTH: 1,
+			FRAMES: [
+				TOP: 24,
+			],
+		},
+	],
+},

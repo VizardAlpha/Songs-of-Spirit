@@ -1,0 +1,376 @@
+PLAYABLE: false,
+
+PROPERTIES: {
+	HEIGHT: 12,
+	WIDTH: 13,
+	ADULT_AT_DAY: 0,
+	CORPSE_DECAY: true,
+	SLEEPS: false,
+},
+
+BEHAVIOUR: {
+	SKINNY_DIPS: 0,
+},
+
+BIO_FILE: Dry,
+OPINION_FILE_SCARED: Dry,
+OPINION_FILE_NORMAL: Dry,
+OPINION_FILE_CONFIDENT: Dry,
+
+HOME: CANTOR,
+
+PREFERRED: {
+	FOOD: [
+		EGG,
+		MEAT,
+		FISH,
+		SALMON_FLESH,
+	],
+	STRUCTURE: {
+		MOUNTAIN: 0.2,
+		GLASS: 0.5,
+		STONE: 0.5,
+		GRAND: 1.0,
+	},
+	EMPLOYED: {
+		
+	},
+	WORK: {
+		*: 0.3,
+		MINE_CLAY: 0.1,
+		MINE_COAL: 0.0,
+		MINE_GEM: 0.1,
+		MINE_ORE: 0.0,
+		MINE_GOLD: 0.1,
+		MINE_SITHILON: 0.1,
+		MINE_STONE: 0.1,
+		MINE_SAND: 0.2,
+		SPEAKER_NORMAL: 1.0,
+		STAGE_NORMAL: 1.0,
+		TEMPLE_AMINION: 0.0,
+		TEMPLE_ATHURI: 1.0,
+		TEMPLE_CRATOR: 0.0,
+		TEMPLE_SHMALOR: 0.0,
+		_BARRACKS: 1.0,
+		_COURT: 1.0,
+		_GUARD: 1.0,
+		WORKSHOP_SMITHY: 1.0,
+	},
+	OTHER_RACES: {
+		DONDORIAN: 1.0,
+		GARTHIMI: -1.0,
+		HUMAN: -1,
+	},
+},
+
+BONUS_MUL: {
+	
+	PHYSICS: {
+		RESISTANCE_COLD: 2,
+		RESISTANCE_HOT: 0.75,
+		DEATH_AGE: 10,
+		MASS: 5,
+		SPEED: 0.75,
+		ACCELERATION: 0.75,
+		STAMINA: 2,
+		HEALTH: 10,
+	},
+	
+	BATTLE: {
+		ARMOUR: 3,
+		RANGED_SKILL: 0,
+		MORALE: 3,
+		BLUNT_DAMAGE: 25,
+	},
+
+	ROOM: {
+		*: 2.0,
+	},
+	
+	BEHAVIOUR: {
+		LAWFULNESS: 10,
+		SUBMISSION: 0.2,
+		SANITY: 10000,
+	},
+	
+	RATES: {
+		
+		DEFECATE: 0.0,
+		SOIL: 0.1,
+		HUNGER: 0.1,
+		THIRST: 0,
+		PIETY: 4,
+		LEARNING: 0,	
+	},	
+},
+
+BONUS_ADD: {
+	BATTLE: {
+		ARMOUR: 3,
+	},
+},
+
+TRAITS: {
+	*: 0,
+	FIGHTER: 0.1,
+},
+
+RESOURCE: {
+	MEAT: 100,
+	LEATHER: 20,
+},
+
+RELIGION_INCLINATION: {
+	TEMPLE_CRATOR: 0,
+	TEMPLE_AMINION: 0,
+	TEMPLE_ATHURI: 1,
+	TEMPLE_SHMALOR: 0,	
+},
+
+STATS: {
+	SERVICE: {
+		*: {
+		
+		},
+		
+		WELL_NORMAL: {
+			CITIZEN: 1,
+			NOBLE: 1,
+		},
+		
+		BATH_NORMAL: {
+			CITIZEN: 2,
+		},
+		
+	},
+	
+	HOME: {
+		SPACE: {
+			CITIZEN: 5,
+		},
+	},
+	
+	EQUIP: {
+
+	},
+	
+	BURIAL: {
+		*: {
+		
+		},
+		TOMB_NORMAL: {
+			CITIZEN: 4,
+			NOBLE: 4,
+		},
+	},
+	
+	ACCESS: {
+		AWE: {
+			CITIZEN: 3,
+			SLAVE: 3,
+			NOBLE: 3,
+		},
+	},
+	
+	FOOD: {
+		*: {
+
+		},
+	},
+	
+	BATTLE: {
+		SOLDIERS: {
+			SLAVE: 2,
+			CITIZEN: 2,
+			NOBLE: 2,
+		},
+	},
+	
+	WORK: {
+		RETIREMENT_AGE: {
+		
+		},
+		EMPLOYED: {
+			
+		},
+	},
+	
+	POPULATION: {
+		*: {
+		
+		},
+		SLAVES_SELF: {
+			INVERTED: true,
+			CITIZEN: 6,
+			NOBLE: 6,
+		},
+		WRONGFUL_DEATHS: {
+			INVERTED: true,
+			CITIZEN: 4,
+			NOBLE: 4,
+		},
+	},
+	
+	ENVIRONMENT: {
+		*: {
+
+		},
+		UNBURRIED: {
+			CITIZEN: 3,
+			INVERTED: true,
+		},
+	},
+	
+	STORED: {
+		
+	},
+	
+	EDUCATION: {
+		INDOCTRINATION: {
+			INVERTED: true,
+			CITIZEN: 3,
+			NOBLE: 3,
+		},
+	},
+	
+	RELIGION: {
+		FAITH: {
+			CITIZEN: 5,
+		},
+	},
+},
+
+APPEARANCE: {
+	SPRITE_FILE: Cantor,
+	SPRITE_EXTRA_FILE: Normal,
+	SPRITE_CHILD_FILE: Humanoid,
+	SPRITE_CHILD_SKELLETON_FILE: Cantor,
+	SPRITE_SKELLETON_FILE: Cantor,
+	
+	COLOR_CLOTHES: [
+		{R: 114, G: 101, B: 35,},
+		{R: 142, G: 126, B: 44,},
+		{R: 83, G: 181, B: 94,},
+		{R: 62, G: 135, B: 70,},
+		{R: 105, G: 125, B: 239,},
+		{R: 79, G: 94, B: 181,},
+		{R: 53, G: 64, B: 122,},
+		{R: 193, G: 77, B: 0,},
+	],
+	COLOR_ARMOUR_LEVELS: [
+		{R: 107, G: 79, B: 65,},
+		{R: 99, G: 99, B: 99,},
+		{R: 168, G: 168, B: 180,},
+		{R: 209, G: 159, B: 54,},
+	],
+	
+	COLOR_BLOOD: {R: 80, G: 150, B: 150,},
+	
+	COLORS: {
+		SKIN: {
+			TURNS_WHITE_WHEN_DEAD: true,
+			VALUES:[
+				{R: 164, G: 172, B: 216,},
+				{R: 129, G: 139, B: 199,},
+				{R: 117, G: 127, B: 181,},
+			],
+			
+		},
+		EYE: {
+			VALUES: [
+				{R: 128, G: 173, B: 206,},
+				{R: 104, G: 141, B: 168,},
+				{R: 142, G: 193, B: 229,},
+				{R: 32, G: 74, B: 104,},
+				{R: 9, G: 110, B: 183,},
+				{R: 75, G: 196, B: 23,},
+				{R: 142, G: 196, B: 222,},
+				{R: 29, G: 114, B: 119,},
+				{R: 162, G: 151, B: 131,},
+				{R: 87, G: 95, B: 132,},
+				{R: 19, G: 80, B: 36,},
+			],
+		},
+		LEG: {
+			VALUES: [
+				{R: 80, G: 40, B: 20,},
+			],
+		},
+	},
+	
+	CHILD: {
+		OCCURRENCE_EXTRA1: 0,
+		OCCURRENCE_EXTRA2: 0,
+		COLOR_SKIN: SKIN,
+		COLOR_LEG: LEG,
+		COLOR_EXTRA1: SKIN,
+		COLOR_EXTRA2: SKIN,
+	},
+	
+	TYPES: [
+		{
+			OCCURRENCE: 1,
+			OCCURRENCE_EXTRA1: 0,
+			OCCURRENCE_EXTRA2: 0,
+			COLOR_SKIN: SKIN,
+			COLOR_LEG: LEG,
+			COLOR_EXTRA1: SKIN,
+			COLOR_EXTRA2: SKIN,
+			
+			NAMESET_FILE_FIRST: StdFirst,
+			NAMESET_FILE_SURNAME: StdLast,
+			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
+			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			
+			PORTRAIT: [
+				**Chest
+				{
+					FRAME_START: 28,
+					SPLITS: 1,
+					SPLIT: 0,
+					FRAME_VARIATIONS: 2, 
+					COLOR: SKIN,
+					OFF_Y: 6,
+				},
+				{
+					FRAME_START: 0, 
+					FRAME_VARIATIONS: 3,
+					COLOR: SKIN,
+				},
+		
+				**Eyes
+				{
+					FRAME_START: 12,
+					FRAME_VARIATIONS: 1,
+					SPLITS: 3,
+					SPLIT: 0,
+					STAINS: false,
+					OFF_Y: 12,
+				},
+		
+				**iris
+				{
+					FRAME_START: 23,
+					FRAME_VARIATIONS: 1,
+					SPLITS: 3,
+					SPLIT: 0,
+					COLOR: EYE,
+					STAINS: false,
+					OFF_Y: 12,
+					ONLY_IF_DEAD_NOT: true,
+				},
+				**crest
+				{
+					FRAME_START: 4,
+					FRAME_VARIATIONS: 24,
+					SPLITS: 3,
+					SPLIT: 2,
+					COLOR: SKIN,
+					OFF_Y: -29,
+				},
+			],
+		},
+	],
+},	
+
+

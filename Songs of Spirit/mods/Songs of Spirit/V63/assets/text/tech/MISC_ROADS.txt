@@ -1,0 +1,14 @@
+TECHS: [
+
+	{
+		NAME: "Paved road variant",
+		CATEGORY:"Miscellaneous",
+
+		DESC: "Artfully cut stone lines the streets and plazas of your city.  The breathtaking expense is a sign of the city's power.
+
+		%r%%r%
+
+		(A paved road will improve but the rain will run off more easily. Who doesn't like jumping from cobblestone to cobblestone, just ask the kids. More durable and faster than classic paved roads.)",
+	},
+
+],

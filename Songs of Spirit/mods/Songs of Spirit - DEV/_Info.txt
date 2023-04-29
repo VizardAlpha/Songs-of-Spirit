@@ -1,0 +1,7 @@
+VERSION: "0.2.3",
+GAME_VERSION_MAJOR: 63,
+GAME_VERSION_MINOR: 46,
+NAME: "Songs of Spirit - Dev",
+DESC: "Songs of Spirit is a mod adding new content and working on basic game settings.",
+AUTHOR: "VizardAlpha#3714",
+INFO: "Game V63.46 | Mod Version 0.2.3",
