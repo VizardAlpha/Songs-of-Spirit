@@ -1,0 +1,20 @@
+Songs of Syx source license
+
+This license allows users to use the game sources for the purpose of creating game mods. The game sources may not be used for any other purpose.
+
+By using the game sources, you agree to the following terms:
+
+1. You may only use the game sources to create game mods.
+2. You may not distribute, publish or include the game sources, or any derivative works based on the game sources, as part of the mod. The game sources are to be used exclusively as an API for creating game mods.
+3. You may accept donations for game mods that you create using the game sources, but you may not charge a fee for the game mod or use the game sources for any other commercial purposes.
+4. You must include the following notice in any game mod that you create using the game sources: "This game mod includes game sources licensed by [developer name] under the Game Modding License."
+5. The game developer retains all rights to the game sources and any derivative works created from the game sources.
+6. The game developer may, at its discretion, integrate any mods created with the game sources into the base game.
+7. Any mods that are integrated into the base game will be subject to the terms of this Game Modding License.
+8. The game developer may make any modifications to the mod as deemed necessary for integration into the base game.
+9. By creating a mod using the game sources, you grant the game developer the right to integrate it into the base game.
+10. This license is non-transferable and is only granted to you.
+11. This license may be terminated by the game developer at any time for any reason.
+12. This license does not grant you any rights to use any of the game developer's trademarks, logos, or other intellectual property.
+13. This license does not grant you any rights to use any third-party trademarks, logos, or other intellectual property that may be included in the game sources.
+14. This license does not create any partnership, joint venture, or other relationship between you and the game developer.
