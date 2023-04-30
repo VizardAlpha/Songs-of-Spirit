@@ -3,7 +3,6 @@ package vizardalpha.songsofspirit.ui.info;
 import game.VERSION;
 import init.C;
 import init.paths.ModInfo;
-import init.paths.PATHS;
 import init.sprite.UI.UI;
 import snake2d.MButt;
 import snake2d.Renderer;
@@ -18,9 +17,8 @@ import util.gui.misc.GText;
 import util.gui.panel.GPanelL;
 import view.interrupter.Interrupter;
 import view.main.VIEW;
-import vizardalpha.songsofspirit.SongsofSpirit;
-import vizardalpha.songsofspirit.ui.info.model.ChangelogsStore;
-import vizardalpha.songsofspirit.ui.info.model.CreditsStore;
+import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
+import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -33,10 +31,13 @@ public class InfoModal extends Interrupter {
 
     private final Map<String, GuiSection> panels = new LinkedHashMap<>();
 
+    private final ModInfo modInfo;
+
     public final static int WIDTH = 800;
     public final static int HEIGHT = 600;
 
-    public InfoModal(ChangelogsStore changelogsStore, CreditsStore creditsStore) {
+    public InfoModal(ChangelogsStore changelogsStore, CreditsStore creditsStore, ModInfo modInfo) {
+        this.modInfo = modInfo;
         GPanelL pan = new GPanelL();
         pan.body.setDim(WIDTH, HEIGHT);
 //        D.t(this);
@@ -137,10 +138,8 @@ public class InfoModal extends Interrupter {
         gameVersion.color(color);
 
         String modVersionString = "0.0.0";
-        for (ModInfo currentMod : PATHS.currentMods()) {
-            if (SongsofSpirit.MOD_INFO.name.equals(currentMod.name)) {
-                modVersionString = currentMod.version;
-            }
+        if (modInfo != null) {
+            modVersionString = modInfo.version;
         }
 
         GText modVersion = new GText(UI.FONT().S, "Mod Version: " + modVersionString);

@@ -1,7 +1,7 @@
 package vizardalpha.songsofspirit.ui.info;
 
 import snake2d.util.gui.GuiSection;
-import vizardalpha.songsofspirit.ui.info.model.CreditsStore;
+import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 import vizardalpha.songsofspirit.ui.richtext.RichText;
 
 import java.util.List;
