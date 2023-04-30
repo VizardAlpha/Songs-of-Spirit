@@ -58,8 +58,6 @@ public final class SongsofSpirit implements SCRIPT<Void> {
     
     @Override
 	public SCRIPT_INSTANCE initAfterGameCreated() {
-
-
         Loggers.setLevels(Level.FINEST);
         return new Instance(this);
 	}
@@ -71,10 +69,8 @@ public final class SongsofSpirit implements SCRIPT<Void> {
 
     @Override
     public void initGamePresent() {
-
         ChangelogsStore changelogsStore = ChangelogsStore.load()
             .orElse(ChangelogsStore.builder().line("No changelogs :(").build());
-
         CreditsStore creditsStore = CreditsStore.load()
             .orElse(CreditsStore.builder().line("No credits :(").build());
 

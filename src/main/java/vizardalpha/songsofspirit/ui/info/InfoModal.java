@@ -52,16 +52,16 @@ public class InfoModal extends Interrupter {
         Credits credits = new Credits(creditsStore, WIDTH, HEIGHT - 50);
         Changelogs changelogs = new Changelogs(changelogsStore, WIDTH, HEIGHT - 50);
 
-        panels.put("Changelog", changelogs);
+        panels.put("Changelogs", changelogs);
         panels.put("Credits", credits);
 
-        GuiSection picker = picker();
-        picker.body().moveY1(pan.getInnerArea().y1());
-        picker.body().centerX(pan);
-        section.add(picker);
+        GuiSection header = header();
+        header.body().moveY1(pan.getInnerArea().y1());
+        header.body().centerX(pan);
+        section.add(header);
 
-        changelogs.body().moveY1(picker.body().y2() + 16);
-        changelogs.body().centerX(picker);
+        changelogs.body().moveY1(header.body().y2() + 16);
+        changelogs.body().centerX(header);
 
         switcher = new CLICKABLE.Switcher(changelogs);
         section.add(switcher);
@@ -106,7 +106,7 @@ public class InfoModal extends Interrupter {
         show(VIEW.inters().manager);
     }
 
-    private GuiSection picker() {
+    private GuiSection header() {
         GuiSection section = new GuiSection();
 
         panels.forEach((title, panel) -> {
@@ -120,7 +120,7 @@ public class InfoModal extends Interrupter {
                 protected void renAction() {
                     selectedSet(switcher.get() == panel);
                 }
-            }.setDim(130, 32));
+            }.setDim(136, 32));
         });
 
         GuiSection versions = versions();
