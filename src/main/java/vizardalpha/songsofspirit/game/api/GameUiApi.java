@@ -12,6 +12,8 @@ import view.main.VIEW;
 import view.sett.SettView;
 import view.sett.ui.bottom.UIBuildPanel;
 import view.tool.ToolManager;
+import view.world.WorldView;
+import view.world.generator.WorldViewGenerator;
 import vizardalpha.songsofspirit.game.GameUiNotAvailableException;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
@@ -45,6 +47,8 @@ public class GameUiApi {
         return interrupters;
     }
 
+
+
     /**
      * Contains the settlements ui elements
      *
@@ -58,6 +62,26 @@ public class GameUiApi {
         }
 
         return settView;
+    }
+
+    public WorldView world() {
+        WorldView worldView = VIEW.world();
+
+        if (worldView == null) {
+            throw new GameUiNotAvailableException("Games world ui isn't initialized yet.");
+        }
+
+        return worldView;
+    }
+
+    public WorldViewGenerator worldGenerator() {
+        WorldViewGenerator worldViewGenerator = VIEW.world().viewGenerator;
+
+        if (worldViewGenerator == null) {
+            throw new GameUiNotAvailableException("Games world generator ui isn't initialized yet.");
+        }
+
+        return worldViewGenerator;
     }
 
     /**
@@ -120,6 +144,13 @@ public class GameUiApi {
             return optionalUiElement;
         }
 
+        // search in VIEW.world() uiManager
+        optionalUiElement = findUIElementInWorldView(clazz);
+
+        if (optionalUiElement.isPresent()) {
+            return optionalUiElement;
+        }
+
         // search in VIEW.s() uiManager
         return findUIElementInSettlementView(clazz);
     }
@@ -138,6 +169,22 @@ public class GameUiApi {
     public <T> Optional<T> findUIElementInSettlementView(Class<T> clazz) {
         return ReflectionUtil.getDeclaredField("inters", settlement().uiManager)
                 .flatMap(inters -> extractFromIterable((Iterable<?>) inters, clazz));
+    }
+
+    /**
+     * Tries to find an ui element by class in {@link VIEW#world()} ui manager.
+     */
+    public <T> Optional<T> findUIElementInWorldView(Class<T> clazz) {
+        return ReflectionUtil.getDeclaredField("inters", world().uiManager)
+            .flatMap(inters -> extractFromIterable((Iterable<?>) inters, clazz));
+    }
+
+    /**
+     * Tries to find an ui element by class in {@link VIEW#world()} ui manager.
+     */
+    public <T> Optional<T> findUIElementInWorldGeneratorView(Class<T> clazz) {
+        return ReflectionUtil.getDeclaredField("inters", world().viewGenerator.uiManager)
+            .flatMap(inters -> extractFromIterable((Iterable<?>) inters, clazz));
     }
 
     /**
