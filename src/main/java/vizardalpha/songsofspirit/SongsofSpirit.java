@@ -14,6 +14,7 @@ import vizardalpha.songsofspirit.room.wine.ROOM_WINE;
 import vizardalpha.songsofspirit.ui.UIGameConfig;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.model.ChangelogsStore;
+import vizardalpha.songsofspirit.ui.info.model.CreditsStore;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -82,7 +83,7 @@ public final class SongsofSpirit implements SCRIPT<Void> {
             .line("This is a description of the update. It is very good. So much fun. You won't believe it. China has it too.")
             .line("* added some stuff")
             .line("* added some other stuff")
-            .line("")
+            .line("---")
             .line("###2023-07-12 0.1.0 Release bla")
             .line("* added some v" +
                 "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" +
@@ -99,9 +100,31 @@ public final class SongsofSpirit implements SCRIPT<Void> {
 
             .build();
 
+        CreditsStore creditsStore = CreditsStore.builder()
+            .line("#Creators")
+            .line("VizardAlpha")
+            .line("4rg0n")
+            .line("")
+            .line("---")
+            .line("")
+            .line("##Bug Reporters")
+            .line("IFindBugs9000")
+            .line("Darklord69")
+            .line("")
+            .line("---")
+            .line("")
+            .line("##Translators")
+            .line("###Chinese")
+            .line("ITranslateChineseStuff9000")
+            .line("Lightlord42CH")
+            .line("###French")
+            .line("ITranslateFrenchStuff9000")
+            .line("Lightlord42FR")
+            .build();
+
         this.uiGameConfig = new UIGameConfig(
             GameUiApi.getInstance(),
-            new InfoModal(changelogsStore)
+            new InfoModal(changelogsStore, creditsStore)
         );
         uiGameConfig.init();
     }

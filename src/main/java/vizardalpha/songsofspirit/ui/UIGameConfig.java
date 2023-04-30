@@ -4,6 +4,7 @@ import init.sprite.SPRITES;
 import lombok.RequiredArgsConstructor;
 import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.clickable.CLICKABLE;
+import snake2d.util.sprite.SPRITE;
 import util.gui.misc.GButt;
 import view.ui.UIPanelTop;
 import view.world.WorldIIMinimap;
@@ -27,7 +28,14 @@ public class UIGameConfig {
     public void init() {
         log.debug("Initializing UI");
 
-        CLICKABLE button = new GButt.ButtPanel(SPRITES.icons().m.heart) {
+        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().m.heart, 32, UIPanelTop.HEIGHT) {
+            @Override
+            protected void clickA() {
+                infoModal.activate();
+            }
+        }.hoverInfoSet(MOD_INFO.name);
+
+        CLICKABLE worldButton = new SpiritInfoButton(SPRITES.icons().m.heart) {
             @Override
             protected void clickA() {
                 infoModal.activate();
@@ -36,7 +44,7 @@ public class UIGameConfig {
 
         gameUiApi.findUIElementInSettlementView(UIPanelTop.class).ifPresent(uiPanelTop -> {
                 log.debug("Injecting into UIPanelTop in settlement view");
-                uiPanelTop.addRight(new GuiSection().add(button));
+                uiPanelTop.addRight(new GuiSection().add(settlementButton));
             });
 
         gameUiApi.findUIElementInWorldGeneratorView(WorldIIMinimap.class)
@@ -45,7 +53,20 @@ public class UIGameConfig {
                 GuiSection buttons = (GuiSection) o;
                 log.debug("Injecting into WorldIIMinimap#buttons");
 
-                buttons.addDown(1, button);
+                buttons.addDown(1, worldButton);
              });
+    }
+
+    private static class SpiritInfoButton extends GButt.ButtPanel{
+
+        public SpiritInfoButton(SPRITE label, int width, int height) {
+            super(label);
+            body.setHeight(height);
+            body.setWidth(width);
+        }
+
+        public SpiritInfoButton(SPRITE label) {
+            super(label);
+        }
     }
 }
