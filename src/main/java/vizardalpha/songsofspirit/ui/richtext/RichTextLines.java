@@ -19,10 +19,6 @@ public class RichTextLines extends RENDEROBJ.RenderImp {
 
     private final boolean alignCenter;
 
-    public RichTextLines(List<String> lines, int width, int height) {
-        this(lines, width, height, 2, false);
-    }
-
     public RichTextLines(List<String> lines, int width, int height, int lineSpace, boolean alignCenter) {
         this.lines = lines;
         this.lineSpace = lineSpace;

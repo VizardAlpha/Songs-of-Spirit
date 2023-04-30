@@ -31,7 +31,7 @@ public class FileUtil {
         try (Stream<String> stream = Files.lines(path)) {
             return Optional.of(stream.collect(Collectors.toList()));
         } catch (IOException e) {
-            log.debug("Could not load file %s", path);
+            log.debug("Could not load file %s: %s", path, e.getMessage());
             return Optional.empty();
         }
     }

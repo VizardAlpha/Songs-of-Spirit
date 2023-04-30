@@ -7,7 +7,7 @@ public interface SCRIPT<T> extends script.SCRIPT {
     void initGameRunning();
 
     /**
-     * Executed right after "CLICK TO CONTINUE"
+     * Executed right after the game UI is present
      */
     void initGamePresent();
 
