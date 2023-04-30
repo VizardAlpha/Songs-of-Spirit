@@ -8,7 +8,6 @@ import settlement.stats.STATS;
 import snake2d.util.file.FileGetter;
 import snake2d.util.file.FilePutter;
 import snake2d.util.file.Json;
-import snake2d.util.misc.ACTION;
 import view.interrupter.IDebugPanel;
 import view.main.MessageText;
 import view.main.VIEW;
@@ -31,13 +30,7 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	public Instance(SongsofSpirit script) {
 		this.script = script;
 		
-		IDebugPanel.add("Welcome Message Songs of Spirit", new ACTION() {
-
-			@Override
-			public void exe() {
-				Message();
-			}
-		});
+		IDebugPanel.add("Songs of Spirit: Welcome Message", this::Message);
 	}
 
 	public void Message(){
