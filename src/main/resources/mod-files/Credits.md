@@ -3,17 +3,12 @@ VizardAlpha
 4rg0n
 
 ---
-
 ## Bug Reporters
-IFindBugs9000
-Darklord69
+Shado, Rebel of Exclusivity
 
 ---
 
 ## Translators
 ### Chinese
-ITranslateChineseStuff9000
-Lightlord42CH
-### French
-ITranslateFrenchStuff9000
-Lightlord42FR
+Prototype-alpha
+sizhentao03
