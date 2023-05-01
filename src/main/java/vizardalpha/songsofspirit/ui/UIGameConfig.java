@@ -14,6 +14,10 @@ import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.util.ReflectionUtil;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import static vizardalpha.songsofspirit.SongsofSpirit.MOD_INFO;
 
@@ -29,7 +33,7 @@ public class UIGameConfig {
     public void init() {
         log.debug("Initializing UI");
 
-        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().m.menu2, 32, UIPanelTop.HEIGHT) {
+        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
             @Override
             protected void clickA() {
                 infoModal.activate();
@@ -43,12 +47,39 @@ public class UIGameConfig {
             }
         }.hoverInfoSet(MOD_INFO.name);
 
+        CLICKABLE Dis = new SpiritInfoButton(SPRITES.icons().m.plus, 32, UIPanelTop.HEIGHT) {
+            @Override
+            protected void clickA() {
+                Desktop desktop = java.awt.Desktop.getDesktop();
+                URI url;
+                try {
+                    url = new URI("https://discord.gg/KCarMbDtJz");
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    desktop.browse(url);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }.hoverInfoSet("Discord Songs of Spirit");
+
+
         gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
             .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
             .ifPresent(o -> {
                 log.debug("Injecting into UIPanelTop#right in settlement view");
                 GuiSection right = (GuiSection) o;
-                right.addRelBody(0, DIR.W, settlementButton);
+                right.addRelBody(8, DIR.W, settlementButton);
+            });
+
+        gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
+            .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
+            .ifPresent(o -> {
+                 log.debug("Injecting into UIPanelTop#right in settlement view");
+                 GuiSection right = (GuiSection) o;
+                 right.addRelBody(0, DIR.W, Dis);
             });
 
         gameUiApi.findUIElementInWorldGeneratorView(WorldIIMinimap.class)
