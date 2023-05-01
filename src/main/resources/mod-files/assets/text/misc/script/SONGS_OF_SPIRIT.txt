@@ -1,4 +1,4 @@
 SONGS_OF_SPIRIT_INFO: {
-	NAME: "Songs of Spirit [Script]",
+	NAME: "Songs of Spirit",
 	DESC: "Script required for Songs of Spirit.",
 },
