@@ -47,15 +47,13 @@ class RiceConstructor extends Furnisher{
 		
 		//rooms use different kind of sprites. The easiest one is just simply a 1x1 tile. We'll use that.
 		RoomSpriteNew Primary = new RoomSprite1xN(sjson, "PRIMARY_1X1", false);
-		
-		RoomSpriteNew TempleEmblem = new RoomSpriteXxX(sjson, "EMBLEM_2X2", 2);
+
 		/**
 		 * TILES
 		 * Now we'll create a tile with the sprite and give it some properties
 		 */
 		
 		final FurnisherItemTile tt = new FurnisherItemTile(this, Primary, AVAILABILITY.SOLID, false);
-		final FurnisherItemTile dd = new FurnisherItemTile(this, TempleEmblem, AVAILABILITY.ROOM, false);
 		
 		/**
 		 * ITEM from tiles
@@ -63,13 +61,6 @@ class RiceConstructor extends Furnisher{
 		new FurnisherItem(new FurnisherItemTile[][] {
 			{tt},
 		}, 4, 2);
-		
-		flush(3);
-		
-		new FurnisherItem(new FurnisherItemTile[][] {
-			{dd,dd},
-			{dd,dd},
-		}, 1);
 		
 		flush(3);
 	}
@@ -82,11 +73,6 @@ class RiceConstructor extends Furnisher{
 	@Override
 	public Room create(TmpArea area, RoomInit init) {
 		return new RiceInstance(blue, area, init);
-	}
-	
-	@Override
-	public boolean mustBeIndoors() {
-		return true;
 	}
 
 	@Override
