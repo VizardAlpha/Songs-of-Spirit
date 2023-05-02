@@ -1,0 +1,3 @@
+NAME: "Plank",
+NAMES: "Planks",
+DESC: "The planks are mainly used to make furniture for your citizens!",

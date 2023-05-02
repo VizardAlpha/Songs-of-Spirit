@@ -49,7 +49,7 @@ TECHS: [
 		},
 	},
 
-	**Makeshift Weapons
+	**Plank Specialization
 	{
 		LEVEL_COST: 100,
 
@@ -64,20 +64,33 @@ TECHS: [
 		},
 	},
 
+	**Makeshift Weapons
+    {
+    	LEVEL_COST: 120,
+
+    	TREE_ORDER: 5526,
+
+    	REQUIRES_TECH_LEVEL: {
+    		CRA_CARPENTER0: 1,
+    	},
+
+    	INDUSTRIES: {
+    		WORKSHOP_CARPENTER: 2,
+    	},
+    },
+
 	**Makeshift Shield
-	{
-		LEVEL_COST: 150,
+    {
+    	LEVEL_COST: 150,
 
-		TREE_ORDER: 5527,
+    	TREE_ORDER: 5527,
 
-		REQUIRES_TECH_LEVEL: {
-			CRA_CARPENTER0: 1,
-		},		
+    	REQUIRES_TECH_LEVEL: {
+    		CRA_CARPENTER0: 1,
+    	},
 
-		INDUSTRIES: {
-			WORKSHOP_CARPENTER: 2,
-		},
-	},
-
+    	INDUSTRIES: {
+    		WORKSHOP_CARPENTER: 3,
+    	},
+    },
 ],
-

@@ -35,10 +35,21 @@ INDUSTRIES: [
 				WOOD: 3.0,
 			},
 			OUT: {
-				FURNITURE: 0.75,
+				PLANK: 1.75,
 			},
 		},
 	},
+
+	{
+    		INDUSTRY: {
+    			IN: {
+    				PLANK: 3.0,
+    			},
+    			OUT: {
+    				FURNITURE: 0.75,
+    			},
+    		},
+    	},
 
 	{
 		INDUSTRY: {
