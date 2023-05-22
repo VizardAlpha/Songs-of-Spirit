@@ -17,6 +17,10 @@ import vizardalpha.songsofspirit.ui.UIGameConfig;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
 import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
+import vizardalpha.songsofspirit.ui.quest.QuestInfo;
+import vizardalpha.songsofspirit.ui.quest.QuestInteractions;
+import vizardalpha.songsofspirit.ui.quest.QuestSelection;
+import vizardalpha.songsofspirit.ui.quest.UIQuestLog;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -79,8 +83,10 @@ public final class SongsofSpirit implements SCRIPT<Void> {
 
         this.uiGameConfig = new UIGameConfig(
             GameUiApi.getInstance(),
-            new InfoModal(changelogsStore, creditsStore, modInfo)
+            new InfoModal(changelogsStore, creditsStore, modInfo),
+            new UIQuestLog(new QuestInteractions(), new QuestSelection(), new QuestInfo())
         );
+
         uiGameConfig.init();
     }
 

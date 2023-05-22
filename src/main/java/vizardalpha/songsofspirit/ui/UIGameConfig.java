@@ -13,6 +13,7 @@ import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
+import vizardalpha.songsofspirit.ui.quest.UIQuestLog;
 import vizardalpha.songsofspirit.util.ReflectionUtil;
 import java.awt.Desktop;
 import java.io.IOException;
@@ -30,27 +31,37 @@ public class UIGameConfig {
 
     private final InfoModal infoModal;
 
+    private final UIQuestLog questLog;
+
     public void init() {
         log.debug("Initializing UI");
 
-        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
-            @Override
-            protected void clickA() {
-                infoModal.activate();
-            }
-        }.hoverInfoSet(MOD_INFO.name);
+        initInfoButton();
+        initQuestButton();
+        initDiscordButton();
+    }
 
-        CLICKABLE worldButton = new SpiritInfoButton(SPRITES.icons().s.menu) {
+    private void initQuestButton() {
+        CLICKABLE questButton = new SpiritButton(SPRITES.icons().s.star, 32, UIPanelTop.HEIGHT) {
             @Override
             protected void clickA() {
-                infoModal.activate();
+                gameUiApi.showPanel(questLog, true);
             }
-        }.hoverInfoSet(MOD_INFO.name);
+        }.hoverInfoSet("Quests");
+        gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
+            .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
+            .ifPresent(o -> {
+                log.debug("Injecting Quest button into UIPanelTop#right in settlement view");
+                GuiSection right = (GuiSection) o;
+                right.addRelBody(0, DIR.W, questButton);
+            });
+    }
 
-        CLICKABLE Dis = new SpiritInfoButton(SPRITES.icons().m.plus, 32, UIPanelTop.HEIGHT) {
+    private void initDiscordButton() {
+        CLICKABLE Dis = new SpiritButton(SPRITES.icons().m.plus, 32, UIPanelTop.HEIGHT) {
             @Override
             protected void clickA() {
-                Desktop desktop = java.awt.Desktop.getDesktop();
+                Desktop desktop = Desktop.getDesktop();
                 URI url;
                 try {
                     url = new URI("https://discord.gg/KCarMbDtJz");
@@ -64,8 +75,22 @@ public class UIGameConfig {
                 }
             }
         }.hoverInfoSet("Discord Songs of Spirit");
+        gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
+            .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
+            .ifPresent(o -> {
+                 log.debug("Injecting Discord button into UIPanelTop#right in settlement view");
+                 GuiSection right = (GuiSection) o;
+                 right.addRelBody(0, DIR.W, Dis);
+            });
+    }
 
-
+    private void initInfoButton() {
+        CLICKABLE settlementButton = new SpiritButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
+            @Override
+            protected void clickA() {
+                infoModal.activate();
+            }
+        }.hoverInfoSet(MOD_INFO.name);
         gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
             .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
             .ifPresent(o -> {
@@ -74,33 +99,31 @@ public class UIGameConfig {
                 right.addRelBody(8, DIR.W, settlementButton);
             });
 
-        gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
-            .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
-            .ifPresent(o -> {
-                 log.debug("Injecting into UIPanelTop#right in settlement view");
-                 GuiSection right = (GuiSection) o;
-                 right.addRelBody(0, DIR.W, Dis);
-            });
-
+        CLICKABLE worldButton = new SpiritButton(SPRITES.icons().s.menu) {
+            @Override
+            protected void clickA() {
+                infoModal.activate();
+            }
+        }.hoverInfoSet(MOD_INFO.name);
         gameUiApi.findUIElementInWorldGeneratorView(WorldIIMinimap.class)
             .flatMap(worldIIMinimap -> ReflectionUtil.getDeclaredField("buttons", worldIIMinimap))
             .ifPresent(o -> {
                 GuiSection buttons = (GuiSection) o;
-                log.debug("Injecting into WorldIIMinimap#buttons in world generator view");
+                log.debug("Injecting Info button into WorldIIMinimap#buttons in world generator view");
 
                 buttons.add(worldButton, buttons.body().x1() + 130, buttons.body().y1() + 4);
-             });
+            });
     }
 
-    private static class SpiritInfoButton extends GButt.ButtPanel{
+    private static class SpiritButton extends GButt.ButtPanel{
 
-        public SpiritInfoButton(SPRITE label, int width, int height) {
+        public SpiritButton(SPRITE label, int width, int height) {
             super(label);
             body.setHeight(height);
             body.setWidth(width);
         }
 
-        public SpiritInfoButton(SPRITE label) {
+        public SpiritButton(SPRITE label) {
             super(label);
         }
     }
