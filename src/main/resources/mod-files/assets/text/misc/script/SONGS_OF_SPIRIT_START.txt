@@ -8,7 +8,7 @@ You can find the Songs of Spirit team on this Discord!
 %r%%r%
 https://discord.gg/KCarMbDtJz
 %r%%r%
-Mod version: 0.3.0%r%%r%
-Game version: 0.64.00%r%%r%",
+Mod version: ${mod.version}%r%%r%,
+Game version: 0.64.47%r%%r%",
 ],
 },
