@@ -24,7 +24,7 @@
 
 ## 18-01-2023 0.2.0 Major
 - New content added: CrossBow, Gold Mine as well as drifters, Rope, roads.
-- Some buildings need gold to be built.****
+- Some buildings need gold to be built.
 - New textures for some resources.
 - Adjustment of stats and technology.
 
