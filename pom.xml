@@ -14,14 +14,14 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- These settings will go into the mods _info.txt file -->
+        <!-- These settings will go into the mods _Info.txt file -->
         <mod.version>${project.version}</mod.version>
         <mod.name>Songs of Spirit</mod.name>
         <mod.description>Songs of Spirit is a mod adding new content and working on basic game settings.</mod.description>
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
         <game.version.major>64</game.version.major>
-        <game.version.minor>13</game.version.minor>
+        <game.version.minor>14</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>
@@ -322,7 +322,7 @@
                         </configuration>
                     </execution>
 
-                    <!-- Copy mod _info.txt file and replace tokens -->
+                    <!-- Copy mod _Info.txt file and replace tokens -->
                     <execution>
                         <id>copy-mod-info</id>
                         <phase>package</phase>
@@ -336,7 +336,7 @@
                                 <resource>
                                     <directory>${mod.files.directory}</directory>
                                     <includes>
-                                        <include>_info.txt</include>
+                                        <include>_Info.txt</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>

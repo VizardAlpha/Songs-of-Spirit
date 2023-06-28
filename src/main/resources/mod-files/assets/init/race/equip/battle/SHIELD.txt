@@ -15,6 +15,6 @@ BONUS_ADD: {
 },
 BONUS_MUL: {
 	BATTLE: {
-		RANGED_SKILL: -0.2,
+		RANGED_SKILL: -0.3,
 	},
 },

@@ -4,8 +4,9 @@ HEIGHT: 8,
 DANGER: 0,
 SOUND: SHEEP,
 
+ICON: : 32->animal->Horse->0,
 SPRITE: Horse,
-COLOR: [255,255,255,],
+COLOR: 255_255_255,
 LIVES_IN_CAVES: 0,
 CARAVAN: true,
 
