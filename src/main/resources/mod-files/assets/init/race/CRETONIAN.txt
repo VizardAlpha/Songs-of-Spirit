@@ -57,10 +57,9 @@ PREFERRED: {
 },
 
 POPULATION: {
-	MAX_REGION: 1,
-	MAX_CITY: 1,
-	REPRODUCTION_REGION_PER_DAY: 0.05,
-	IMMIGRANTS_PER_DAY: 2,
+	MAX: 0.8,
+	GROWTH: 0.05,
+	IMMIGRATION_RATE: 2,
 	CLIMATE: {
 		COLD: 0.2,
 		TEMPERATE: 1,
@@ -100,7 +99,7 @@ BONUS_MUL: {
 		PASTURE_ONX: 1.2,						
 		PASTURE_BALTI: 0.1,
 		PASTURE_HORSE: 1.2,
-		FISHERY: 1.4,
+		FISHERY: 1.2,
 		WORKSHOP: 0.5,
 		WORKSHOP_RATION: 1.2,
 		WORKSHOP_KITCHEN: 1.2,
@@ -144,15 +143,6 @@ STATS: {
 	
 	EQUIP: {
 
-	},
-	
-	HOME: {
-		SPACE: {
-			CITIZEN: 1,
-			SLAVE: 1,
-			NOBLE: 0,
-			INVERTED: true,
-		},
 	},
 	
 	FOOD: {
@@ -278,11 +268,19 @@ STATS: {
 },
 
 APPEARANCE: {
-	SPRITE_FILE: Cretonian,
+
+	ICON_SMALL: 24->race->Cretonian->0,
+	ICON_BIG: 32->race->Cretonian->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Humanoid_small,
-	SPRITE_SKELLETON_FILE: Humanoid,
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
+	CROWN: {
+		FILE: Cretonian,
+		OFFX: 0,
+		OFFY: 0,
+	},
 
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
@@ -295,15 +293,8 @@ APPEARANCE: {
 		{R: 193, G: 77, B: 0,},
 	],
 
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
 	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-	
+
 	COLORS: {
 		SKIN: {
 			TURNS_WHITE_WHEN_DEAD: true,
@@ -313,17 +304,17 @@ APPEARANCE: {
 				{R: 226, G: 128, B: 109,},
 				{R: 220, G: 128, B: 109,},
 				{R: 215, G: 128, B: 109,},
-				
+
 				{R: 224, G: 120, B: 109,},
 				{R: 224, G: 134, B: 109,},
 				{R: 224, G: 138, B: 109,},
 				{R: 224, G: 110, B: 109,},
-				
+
 				{R: 224, G: 128, B: 100,},
 				{R: 224, G: 128, B: 95,},
 				{R: 224, G: 128, B: 112,},
 				{R: 224, G: 128, B: 115,},
-				
+
 				{R: 222, G: 122, B: 101,},
 				{R: 224, G: 128, B: 102,},
 				{R: 228, G: 127, B: 103,},
@@ -380,7 +371,7 @@ APPEARANCE: {
 				{R: 10, G: 10, B: 100,},
 				{R: 100, G: 10, B: 100,},
 				{R: 10, G: 100, B: 100,},
-				{R: 100, G: 50, B: 200,},	
+				{R: 100, G: 50, B: 200,},
 			],
 		},
 		LIPS: {
@@ -393,48 +384,98 @@ APPEARANCE: {
 				{R: 80, G: 40, B: 20,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
-	
+
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 1.0,
+
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: HAIR,
-		COLOR_EXTRA2: HAIR,
+
+		SPRITE_FILE: ChildHumanoid,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: StdFirst,
+		NAMESET_FILE_SURNAME: StdLast,
+
+		ADDONS: [
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: HairCretonian,
+				COLOR: HAIR,
+			},
+		],
 	},
 
 	TYPES: [
 		{
 			OCCURRENCE: 0.5,
-			OCCURRENCE_EXTRA1: 0,
-			OCCURRENCE_EXTRA2: 0.8,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-			
+
+			PORTRAIT_FILE: Cretonian,
+			SPRITE_FILE: Cretonian,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
 
 
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairCretonian,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.25,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourCretonian,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
-			
+
 				**Ears
 				{
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 12,
 				},
 				**head
 				{
-					FRAME_START: 4, 
+					FRAME_START: 4,
 					FRAME_VARIATIONS: 6,
 					COLOR: SKIN,
 				},
@@ -443,31 +484,38 @@ APPEARANCE: {
 					FRAME_START: 12,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 11,
 				},
 				**Earring
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 4,
-					OCCURENCE: 0.7,
 					SPLITS: 3,
 					SPLIT: 1,
 					OFF_Y: -4,
 					COLOR: JEWELLERY,
-					COLOR_RANDOM: 0,
 				},
 				**Olden lines
 				{
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 					FRAME_START: 12,
 					FRAME_VARIATIONS: 8,
 					SPLITS: 3,
 					SPLIT: 2,
 					OFF_Y: -16,
-					ONLY_IF_OLD: true, 
 				},
-		
+
 				**Eyes
 				{
 					FRAME_START: 12,
@@ -477,9 +525,14 @@ APPEARANCE: {
 					STAINS: false,
 					OFF_Y: -1,
 				},
-		
+
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 19,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -487,7 +540,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: -2,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**mouth
 				{
@@ -510,13 +562,17 @@ APPEARANCE: {
 				},
 				**lower jewellery
 				{
+					CONDITIONS: {
+						EQUAL: {
+							RANDOM_3_F: 0.5,
+						},
+					},
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
 					SPLIT: 2,
 					STAINS: false,
 					OFF_Y: -11,
-					OCCURENCE: 0.7,
 					COLOR: JEWELLERY,
 				},
 				**nose
@@ -530,45 +586,78 @@ APPEARANCE: {
 				},
 				**hair
 				{
-					ONLY_IF_EXTRA2: true,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.25,
+						},
+					},
 					FRAME_START: 24,
 					FRAME_VARIATIONS: 8,
 					SPLITS: 3,
 					SPLIT: 0,
 					COLOR: HAIR,
-					ONLY_IF_HAIR: true,
 					OFF_Y: -3,
 				},
 			],
 		},
 		{
 			OCCURRENCE: 0.5,
-			OCCURRENCE_EXTRA1: 0.7,
-			OCCURRENCE_EXTRA2: 1.0,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-			
+
+			PORTRAIT_FILE: Cretonian,
+			SPRITE_FILE: Cretonian,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFemaleFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairCretonian,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.1,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourCretonian,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
-			
+
 				**Ears
 				{
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 12,
 				},
 				**head
 				{
-					FRAME_START: 6, 
+					FRAME_START: 6,
 					FRAME_VARIATIONS: 6,
 					COLOR: SKIN,
 				},
@@ -577,33 +666,34 @@ APPEARANCE: {
 					FRAME_START: 12,
 					SPLITS: 3,
 					SPLIT: 2,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: PAINT,
 					OFF_Y: -22,
-					OCCURRENCE: 0.5,
 					OPACITY: 120,
 				},
 				**Earring
 				{
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 4,
-					OCCURENCE: 0.7,
 					SPLITS: 3,
 					SPLIT: 1,
 					OFF_Y: -4,
 					COLOR: JEWELLERY,
-					COLOR_RANDOM: 0,
 				},
 				**Olden lines
 				{
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 					FRAME_START: 12,
 					FRAME_VARIATIONS: 8,
 					SPLITS: 3,
 					SPLIT: 2,
 					OFF_Y: -16,
-					ONLY_IF_OLD: true, 
 				},
-		
+
 				**Eyes
 				{
 					FRAME_START: 16,
@@ -613,9 +703,14 @@ APPEARANCE: {
 					STAINS: false,
 					OFF_Y: -1,
 				},
-		
+
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 19,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -623,7 +718,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: -2,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**mouth
 				{
@@ -655,17 +749,19 @@ APPEARANCE: {
 				},
 				**hair
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.1,
+						},
+					},
 					FRAME_START: 24,
 					FRAME_VARIATIONS: 8,
 					SPLITS: 3,
 					SPLIT: 0,
 					COLOR: HAIR,
-					ONLY_IF_HAIR: true,
 					OFF_Y: -3,
 				},
 			],
 		},
 	],	
 },
-
-

@@ -77,14 +77,19 @@ BONUS_MUL: {
 	},
 	
 	BATTLE: {
-		ARMOUR: 3,
 		RANGED_SKILL: 0,
 		MORALE: 3,
 		BLUNT_DAMAGE: 25,
 	},
 
 	ROOM: {
-		*: 2.0,
+		MINE: 2,
+		REFINER: 2,
+		WORKSHOP: 2,
+		FARM: 0.6,
+		PASTURE: 0.8,
+		_WOODCUTTER: 2,
+		FISHERY: 0.8,
 	},
 	
 	BEHAVIOUR: {
@@ -144,26 +149,20 @@ STATS: {
 		
 	},
 	
-	HOME: {
-		SPACE: {
-			CITIZEN: 5,
-		},
-	},
-	
 	EQUIP: {
 
 	},
-	
+
 	BURIAL: {
 		*: {
-		
+
 		},
 		TOMB_NORMAL: {
 			CITIZEN: 4,
 			NOBLE: 4,
 		},
 	},
-	
+
 	ACCESS: {
 		AWE: {
 			CITIZEN: 3,
@@ -171,13 +170,13 @@ STATS: {
 			NOBLE: 3,
 		},
 	},
-	
+
 	FOOD: {
 		*: {
 
 		},
 	},
-	
+
 	BATTLE: {
 		SOLDIERS: {
 			SLAVE: 2,
@@ -185,19 +184,19 @@ STATS: {
 			NOBLE: 2,
 		},
 	},
-	
+
 	WORK: {
 		RETIREMENT_AGE: {
-		
+
 		},
 		EMPLOYED: {
-			
+
 		},
 	},
-	
+
 	POPULATION: {
 		*: {
-		
+
 		},
 		SLAVES_SELF: {
 			INVERTED: true,
@@ -210,7 +209,7 @@ STATS: {
 			NOBLE: 4,
 		},
 	},
-	
+
 	ENVIRONMENT: {
 		*: {
 
@@ -220,11 +219,11 @@ STATS: {
 			INVERTED: true,
 		},
 	},
-	
+
 	STORED: {
-		
+
 	},
-	
+
 	EDUCATION: {
 		INDOCTRINATION: {
 			INVERTED: true,
@@ -232,7 +231,7 @@ STATS: {
 			NOBLE: 3,
 		},
 	},
-	
+
 	RELIGION: {
 		FAITH: {
 			CITIZEN: 5,
@@ -241,12 +240,14 @@ STATS: {
 },
 
 APPEARANCE: {
-	SPRITE_FILE: Cantor,
+
+	ICON_SMALL: 24->race->Cantor->0,
+	ICON_BIG: 32->race->Cantor->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Cantor,
-	SPRITE_SKELLETON_FILE: Cantor,
-	
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
 		{R: 142, G: 126, B: 44,},
@@ -257,15 +258,9 @@ APPEARANCE: {
 		{R: 53, G: 64, B: 122,},
 		{R: 193, G: 77, B: 0,},
 	],
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
+
 	COLOR_BLOOD: {R: 80, G: 150, B: 150,},
-	
+
 	COLORS: {
 		SKIN: {
 			TURNS_WHITE_WHEN_DEAD: true,
@@ -274,7 +269,7 @@ APPEARANCE: {
 				{R: 129, G: 139, B: 199,},
 				{R: 117, G: 127, B: 181,},
 			],
-			
+
 		},
 		EYE: {
 			VALUES: [
@@ -296,48 +291,80 @@ APPEARANCE: {
 				{R: 80, G: 40, B: 20,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
-	
+
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 0,
+
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: SKIN,
-		COLOR_EXTRA2: SKIN,
+
+		SPRITE_FILE: Cantor,
+		SPRITE_SKELLETON_FILE: Cantor,
+		NAMESET_FILE_FIRST: StdFirstNoble,
+		NAMESET_FILE_SURNAME: StdLastNoble,
 	},
-	
+
 	TYPES: [
 		{
 			OCCURRENCE: 1,
-			OCCURRENCE_EXTRA1: 0,
-			OCCURRENCE_EXTRA2: 0,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: SKIN,
-			COLOR_EXTRA2: SKIN,
-			
-			NAMESET_FILE_FIRST: StdFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
-			
+
+			PORTRAIT_FILE: Cantor,
+			SPRITE_FILE: Cantor,
+			SPRITE_SKELLETON_FILE: Cantor,
+			NAMESET_FILE_FIRST: StdFirstNoble,
+			NAMESET_FILE_SURNAME: StdLastNoble,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourCantor,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
+
 			PORTRAIT: [
 				**Chest
 				{
 					FRAME_START: 28,
 					SPLITS: 1,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 2, 
+					FRAME_VARIATIONS: 2,
 					COLOR: SKIN,
 					OFF_Y: 6,
 				},
 				{
-					FRAME_START: 0, 
+					FRAME_START: 0,
 					FRAME_VARIATIONS: 3,
 					COLOR: SKIN,
 				},
-		
+
 				**Eyes
 				{
 					FRAME_START: 12,
@@ -347,9 +374,14 @@ APPEARANCE: {
 					STAINS: false,
 					OFF_Y: 12,
 				},
-		
+
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 23,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -357,7 +389,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: 12,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**crest
 				{
@@ -371,6 +402,4 @@ APPEARANCE: {
 			],
 		},
 	],
-},	
-
-
+},

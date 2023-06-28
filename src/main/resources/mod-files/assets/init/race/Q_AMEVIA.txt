@@ -1,13 +1,23 @@
 PLAYABLE: true,
 
-PHYSICS: {
-    MASS: 90,
-    ACCELERATION: 2,
-    TOP_SPEED: 3,
-    HEIGHT: 8,
-    WIDTH: 9,
-    ADULT_AT_DAY: 64,
+PROPERTIES: {
+	HEIGHT: 6,
+	WIDTH: 9,
+	ADULT_AT_DAY: 32,
+	CORPSE_DECAY: true,
+	SLEEPS: true,
 },
+
+BEHAVIOUR: {
+	SKINNY_DIPS: 1.0,
+},
+
+BIO_FILE: Normal,
+OPINION_FILE_SCARED: Normal,
+OPINION_FILE_NORMAL: Normal,
+OPINION_FILE_CONFIDENT: Normal,
+
+HOME: AMEVIA,
 
 TECH: [
     *,
@@ -15,140 +25,105 @@ TECH: [
 
 PREFERRED: {
     FOOD: [
-        MEAT,EGG,FISH,SALMON_FLESH,
+        FISH,
+        FRUIT,
+        EGG,
+        SALMON_FLESH,
     ],
     STRUCTURE: {
         MOUNTAIN: 0,
-				GLASS: 0.9,
-        STONE: 0.9,
+		GLASS: 0.9,
+        STONE: 1.0,
         GRAND: 1.0,
-        WOOD: 0.9,
+        WOOD: 0,
     },
     EMPLOYED: {
         
     },
     WORK: {
-
+    	FISHERY: 1.0,
     },
+
     OTHER_RACES: {
-        CANTOR: -1.0,
-        DONDORIAN: -1.0,
-        GATHIMI: -0.5,
-        HUMAN: -1,
+
     },
 },
 
 POPULATION: {
-    MAX_REGION: 1,
-    MAX_CITY: 1,
-    REPRODUCTION_REGION_PER_DAY: 0.05,
-    IMMIGRANTS_PER_DAY: 1,
-    CLIMATE: {
-        COLD: 0,
-        TEMPERATE: 0.1,
-        HOT: 1.0,
-    },
-
-    TERRAIN: {
-        MOUNTAIN: 0.5,
-        FOREST: 0.5,
-        NONE: 0.5,
-    },
+	MAX: 0.65,
+	GROWTH: 0.05,
+	IMMIGRATION_RATE: 1,
+	CLIMATE: {
+	    COLD: 0,
+	    TEMPERATE: 0.5,
+	    HOT: 1.0,
+	},
+	TERRAIN: {
+	    WET: 1.5,
+	    OCEAN: 1.5,
+	},
 },
 
-BONUS: {
-    MISC: {
+BONUS_MUL: {
+	PHYSICS: {
+		RESISTANCE_COLD: 0.75,
+		RESISTANCE_HOT: 0.75,
+		DEATH_AGE: 1.5,
+		MASS: 1.25,
+	},
+	BATTLE: {
+		BLUNT_DAMAGE: 1.4,
+	},
 
-        WORKSHOP: 0.1,
-    },
     ROOM: {
-        _BARRACKS: 1.5,
-        LIBRARY_NORMAL: -0.2, 
+    	FARM: 0.5,
+    	PASTURE: 0.5,
+        FISHERY: 1.4,
     },
+	BEHAVIOUR: {
+		LAWFULNESS: 0.8,
+		SANITY: 5.0,
+		SUBMISSION: 0.5,
+	},
+	RATES: {
+		HUNGER: 0.75,
+	},
+},
+
+BONUS_ADD: {
+	BATTLE: {
+		PIERCE_DAMAGE: 0.25,
+	},
 },
 
 TRAITS: {
-    FIGHTER: 0.1,
-    GLUTTON: 0.2,
-    SLEEPER: 0.2,
+    GLUTTON: 0.0,
     SPRINTER: 0,
 },
 
-
-
-PROPERTIES: {
-    RESISTANCE_HOT: 1.0,
-    RESISTANCE_COLD: 0.0,
-    ARMOUR: 0.2,
-    STAMINA: 1.0,
-    STRENGTH: 0.2,
-    HUNGER_RATE: 0.8,
-    HEAL_RATE: 0.3,
-    HEAL_NATURALLY_ABOVE: 0.1,
-    SLEEP_RATE: 1,
-    IMMUNE_DEFENCE: 1.0,
-    SKINNYDIPS: 1.5,
-    CANNIBALIZE_TENDENCY: 1.0,
-    MOURNING_RATE: 1,
-    DEATH_AGE: 120,
-    OLD_AT: 0.70,
-    INTELLIGENCE: 1,
-    CRIMINALITY: 1.5,
-    SUBMISSION: 0.0,
-},
 
 RESOURCE: {
 	MEAT: 30,
 	LEATHER: 10,
 },
 
+RESOURCE_GROOMING: {
+	LEATHER: 1,
+},
+
 STATS: {
-	SERVICE: {
-		
-	},
-	
-	EQUIPABLE: {
-		
-	},
-	
-	DEATH: {
-	
-	},
-	
-	EDUCATION: {
-	
-	},
-	
-	FOOD: {
-	
-	},
-	
-	BATTLE: {
-	
-	},
-	
-	NEEDS: {
-	
-	},
-	
-	WORK: {
-	
-	},
-	
-	POPULATION: {
-	
-	},
-	
-	ENVIRONMENT: {
-		
-	},
-	
+
 	ACCESS: {
-	
+
+		_WATER_SWEET: {
+			CITIZEN: 2,
+			SLAVE: 1,
+		},
+
 	},
-	
+
 	STORED: {
-		GEM: {
+		FISH: {
 			CITIZEN: 2.5,
 			SLAVE: 0,
 			NOBLE: 3,
@@ -159,15 +134,25 @@ STATS: {
 
 RELIGION_INCLINATION: {
 	TEMPLE_CRATOR: 1,
-	TEMPLE_AMINION: 0,
-	TEMPLE_ATHURI: 0.1,
+	TEMPLE_AMINION: 0.5,
+	TEMPLE_ATHURI: 0.5,
 },
 
 APPEARANCE: {
-    SPRITE_FILE: Amevia,
-    SPRITE_EXTRA_FILE: Normal,
-    SPRITE_CHILD_FILE: Lizard,
-	
+
+	ICON_SMALL: 24->race->Amevia->0,
+	ICON_BIG: 32->race->Amevia->0,
+
+	SLEEP_FILE: Blanket,
+	SPRITE_EXTRA_FILE: Normal,
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
+	CROWN: {
+		FILE: Amevia,
+		OFFX: 0,
+		OFFY: 0,
+	},
+
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
 		{R: 142, G: 126, B: 44,},
@@ -179,42 +164,31 @@ APPEARANCE: {
 		{R: 193, G: 77, B: 0,},
 	],
 
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-    
+	COLOR_BLOOD: {R: 30, G: 30, B: 255,},
+
     COLORS: {
         SKIN: {
             TURNS_WHITE_WHEN_DEAD: true,
-            VALUES:[
-				{R: 120, G: 127, B: 110,},
-				{R: 98, G: 105, B: 88,},
-				{R: 117, G: 128, B: 103,},
-				{R: 137, G: 148, B: 121,},
-				
-				{R: 137, G: 156, B: 110,},
-				{R: 110, G: 130, B: 156,},
-				{R: 87, G: 117, B: 143,},
-				{R: 123, G: 149, B: 184,},
-				
-				{R: 99, G: 89, B: 62,},
-				{R: 128, G: 116, B: 83,},
-				{R: 158, G: 143, B: 103,},
-				{R: 115, G: 105, B: 78,},
-				
-				{R: 189, G: 182, B: 125,},
-				{R: 171, G: 166, B: 120,},
-				{R: 176, G: 171, B: 130,},
-            ],
-            
+            VALUES:{
+				GENERATE: 16,
+				FROM: 255_230_180,
+				TO: 200_180_160,
+            },
+        },
+        SKIN2: {
+            TURNS_WHITE_WHEN_DEAD: true,
+            VALUES:{
+				GENERATE: 16,
+				FROM: 180_230_255,
+				TO: 160_180_200,
+            },
         },
         HAIR: {
-            VALUES:[
-                {R: 139, G: 69, B: 19,},
-            ],
+            VALUES:{
+				GENERATE: 16,
+				FROM: 140_70_20,
+				TO: 160_90_40,
+            },
         },
         EYE: {
             VALUES:[
@@ -246,137 +220,209 @@ APPEARANCE: {
 				{R: 255, G: 255, B: 255,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
     },
 
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 1.0,
+
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: HAIR,
-		COLOR_EXTRA2: HAIR,
+
+		SPRITE_FILE: ChildLizard,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: LzmFirst,
+		NAMESET_FILE_SURNAME: LzmLast,
+
 	},
 
     TYPES: [
         {
-            OCCURRENCE: 1,
-            OCCURRENCE_EXTRA1: 0.5,
-            OCCURRENCE_EXTRA2: 0.5,
-            COLOR_SKIN: SKIN,
-            COLOR_LEG: LEG,
-            COLOR_EXTRA1: SKIN,
-            COLOR_EXTRA2: SKIN,
-            
+           	OCCURRENCE: 0.5,
+			COLOR_SKIN: SKIN,
+			COLOR_LEG: LEG,
+
+			SPRITE_FILE: Amevia,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: LzmFirst,
 			NAMESET_FILE_SURNAME: LzmLast,
-			NAMESET_FILE_FIRST_NOBLE: LzmFirst,
-			NAMESET_FILE_SURNAME_NOBLE: LzmLastNoble,
-            
+			PORTRAIT_FILE: Amevia,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourAmevia,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
+
             PORTRAIT: [
                 **head
                 {
                     FRAME_START: 4,
-                    FRAME_VARIATIONS: 4, 
-                    COLOR: SKIN,
-					STAINS: false,
-                },
-				**jaws
-                {
-                    FRAME_START: 12, 
                     FRAME_VARIATIONS: 4,
                     COLOR: SKIN,
-					STAINS: false,
+					STAINS: true,
                 },
-        
+                **top
+                {
+                    FRAME_START: 12,
+                    FRAME_VARIATIONS: 4,
+                    COLOR: SKIN,
+					STAINS: true,
+					OFF_Y: 4,
+					SPLITS: 3,
+					SPLIT: 0,
+                },
+				**warpaint
+				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.5,
+						},
+					},
+					FRAME_START: 0,
+					FRAME_VARIATIONS: 4,
+					SPLITS: 3,
+					SPLIT: 0,
+					STAINS: true,
+					COLOR: PAINT1,
+					OFF_Y: 12,
+				},
+				**jaws
+                {
+                    FRAME_START: 12,
+                    FRAME_VARIATIONS: 4,
+                    SPLITS: 2,
+                    SPLIT: 1,
+                    COLOR: SKIN,
+					STAINS: true,
+                },
+
                 **Eyes
                 {
                     FRAME_START: 0,
                     FRAME_VARIATIONS: 4,
                     STAINS: false,
+                    SPLITS: 3,
+                    SPLIT: 1,
                 },
 
-				**warpaint large
-				{
-					ONLY_IF_EXTRA1: true,
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 2,
-					SPLIT: 0,
-					OFF_Y: 8,
-					STAINS: true,
-				},
-				**warpaint small
-				{
-					ONLY_IF_EXTRA2: true,
-					FRAME_START: 28,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -9,
-					STAINS: true,
-					COLOR: PAINT2,
-				},
             ],
         },
 		{
-            OCCURRENCE: 1,
-            OCCURRENCE_EXTRA1: 0.5,
-            OCCURRENCE_EXTRA2: 0.5,
-            COLOR_SKIN: SKIN,
-            COLOR_LEG: LEG,
-            COLOR_EXTRA1: SKIN,
-            COLOR_EXTRA2: PAINT2,
-            
-			NAMESET_FILE_FIRST: LzmFemaleFirst,
+            OCCURRENCE: 0.5,
+			COLOR_SKIN: SKIN2,
+			COLOR_LEG: LEG,
+
+			SPRITE_FILE: Amevia,
+			SPRITE_SKELLETON_FILE: Humanoid,
+			NAMESET_FILE_FIRST: LzmFirst,
 			NAMESET_FILE_SURNAME: LzmLast,
-			NAMESET_FILE_FIRST_NOBLE: LzmFemaleFirst,
-			NAMESET_FILE_SURNAME_NOBLE: LzmLastNoble,
-            
+			PORTRAIT_FILE: Amevia,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourAmevia,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairCretonian,
+					COLOR: HAIR,
+				},
+			],
+
             PORTRAIT: [
                 **head
                 {
                     FRAME_START: 8,
-                    FRAME_VARIATIONS: 4, 
-                    COLOR: SKIN,
-					STAINS: false,
+                    FRAME_VARIATIONS: 4,
+                    COLOR: SKIN2,
+					STAINS: true,
                 },
+                **top
+                {
+                    FRAME_START: 16,
+                    FRAME_VARIATIONS: 4,
+                    COLOR: HAIR,
+					STAINS: true,
+					OFF_Y: 4,
+					SPLITS: 3,
+					SPLIT: 0,
+                },
+               	**warpaint
+				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.5,
+						},
+					},
+					FRAME_START: 0,
+					FRAME_VARIATIONS: 4,
+					SPLITS: 3,
+					SPLIT: 2,
+					STAINS: true,
+					COLOR: PAINT1,
+					OFF_Y: -12,
+				},
 				**jaws
                 {
-                    FRAME_START: 16, 
+                    FRAME_START: 16,
                     FRAME_VARIATIONS: 4,
-                    COLOR: SKIN,
-					STAINS: false,
+                    COLOR: SKIN2,
+					STAINS: true,
+					SPLITS: 2,
+                    SPLIT: 1,
                 },
-        
+
                 **Eyes
                 {
                     FRAME_START: 0,
                     FRAME_VARIATIONS: 4,
                     STAINS: false,
+					SPLITS: 3,
+					SPLIT: 1,
                 },
 
-				**warpaint large
-				{
-					ONLY_IF_EXTRA1: true,
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 2,
-					SPLIT: 0,
-					OFF_Y: 8,
-					STAINS: true,
-					COLOR: PAINT1,
-				},
-				**warpaint small
-				{
-					ONLY_IF_EXTRA2: true,
-					FRAME_START: 28,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -9,
-					STAINS: false,
-					COLOR: PAINT2,
-				},
             ],
         },
     ],
