@@ -1,3 +1,6 @@
+## xx-xx-2023 0.3.0 Major
+
+---
 ## 26-06-2023 0.2.4 Minor
 - The changelog has been added! Thanks to Argon for his work!
 - Button Community Discord ! Check the top right corner of your city view.

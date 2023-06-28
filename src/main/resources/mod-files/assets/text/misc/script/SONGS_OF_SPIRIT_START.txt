@@ -6,9 +6,6 @@ SONGS_OF_SPIRIT_NEW_GAME: {
 I recommend you to take a quick look at the new resources in the tab on the right! 
 You can find the Songs of Spirit team on this Discord!
 %r%%r%
-https://discord.gg/KCarMbDtJz
-%r%%r%
-Mod version: ${mod.version}%r%%r%,
-Game version: 0.64.47%r%%r%",
+https://discord.gg/KCarMbDtJz,
 ],
 },

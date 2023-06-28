@@ -37,7 +37,7 @@ TECHS: [
 		DESC: "Your weavers learn more efficient ways to make use of their workshop.",
 	},
 	
-	**Bonus Specialization
+	**Rope Specialization
 	{
 		NAME: "Rope Specialization",
 		CATEGORY:"Refining",
