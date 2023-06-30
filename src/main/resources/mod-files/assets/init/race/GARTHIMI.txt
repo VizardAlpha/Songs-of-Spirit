@@ -154,56 +154,50 @@ RELIGION_INCLINATION: {
 STATS: {
 	
 	HOME: {
-		SPACE: {
-			CITIZEN: 1.5,
-			SLAVE: 1,
-			NOBLE: 0,
-			INVERTED: true,
-		},
 		FURNITURE: {
 			CITIZEN: 3.5,
 			SLAVE: 1,
 			NOBLE: 2,
-			PRIO: 100000,	
-		},		
+			PRIO: 100000,
+		},
 	},
-	
+
 	SERVICE: {
-		
+
 	},
-	
+
 	EQUIP: {
-		
+
 	},
-	
+
 	EDUCATION: {
-	
+
 	},
-	
+
 	FOOD: {
-	
+
 	},
-	
+
 	BATTLE: {
-	
+
 		COMBAT_TRAINING: {
 			CITIZEN: 1.0,
 		},
 
 	},
-	
+
 	WORK: {
-	
+
 	},
-	
+
 	POPULATION: {
-	
+
 	},
-	
+
 	ENVIRONMENT: {
 
 	},
-	
+
 	ACCESS: {
 		*: {
 
@@ -211,11 +205,6 @@ STATS: {
 
 		LIGHT: {
 			CITIZEN: 0.5,
-			INVERTED: true,
-		},
-
-		NOISE: {
-			CITIZEN: 1.0,
 		},
 
 		DREAD: {
@@ -223,7 +212,7 @@ STATS: {
 		},
 
 	},
-	
+
 	MONUMENTS: {
 		MONUMENT_BLOB: {
 			CITIZEN: 1,
@@ -231,7 +220,7 @@ STATS: {
 			PRIO: 50,
 		},
 	},
-	
+
 	STORED: {
 		MEAT: {
 			CITIZEN: 2.0,
@@ -244,12 +233,21 @@ STATS: {
 
 APPEARANCE: {
 
-	SPRITE_FILE: Garthimi,
+
+	ICON_SMALL: 24->race->Garthimi->0,
+	ICON_BIG: 32->race->Garthimi->0,
+
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Humanoid_small,
-	SPRITE_SKELLETON_FILE: Humanoid,
-	
+	NAMESET_FILE_NOBLE: LzmLastNoble,
+
+	CROWN: {
+		FILE: Amevia,
+		OFFX: 0,
+		OFFY: 0,
+	},
+
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
 		{R: 142, G: 126, B: 44,},
@@ -260,15 +258,9 @@ APPEARANCE: {
 		{R: 53, G: 64, B: 122,},
 		{R: 193, G: 77, B: 0,},
 	],
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
+
 	COLOR_BLOOD: {R: 80, G: 40, B: 100,},
-	
+
 	COLORS: {
 		SKIN: {
 			TURNS_WHITE_WHEN_DEAD: true,
@@ -278,17 +270,17 @@ APPEARANCE: {
 				{R: 98, G: 105, B: 88,},
 				{R: 117, G: 128, B: 103,},
 				{R: 137, G: 148, B: 121,},
-				
+
 				{R: 137, G: 156, B: 110,},
 				{R: 110, G: 130, B: 156,},
 				{R: 87, G: 117, B: 143,},
 				{R: 123, G: 149, B: 184,},
-				
+
 				{R: 99, G: 89, B: 62,},
 				{R: 128, G: 116, B: 83,},
 				{R: 158, G: 143, B: 103,},
 				{R: 115, G: 105, B: 78,},
-				
+
 				{R: 189, G: 182, B: 125,},
 				{R: 171, G: 166, B: 120,},
 				{R: 176, G: 171, B: 130,},
@@ -324,31 +316,113 @@ APPEARANCE: {
 				{R: 255, G: 255, B: 255,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
 
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 0,
+
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: PAINT1,
-		COLOR_EXTRA2: PAINT2,
+
+		SPRITE_FILE: ChildHumanoid,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: StdFirst,
+		NAMESET_FILE_SURNAME: StdLast,
+
+		ADDONS: [
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: PaintGarthimi1,
+				CONDITIONS: {
+					GREATER: {
+						RANDOM_1_F: 0.5,
+					},
+				},
+				COLOR: PAINT1,
+			},
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: PaintGarthimi1,
+				CONDITIONS: {
+					GREATER: {
+						RANDOM_2_F: 0.5,
+					},
+				},
+				COLOR: PAINT2,
+			},
+		],
 	},
-	
+
 	TYPES: [
 		{
 			OCCURRENCE: 1.0,
-			OCCURRENCE_EXTRA1: 0.5,
-			OCCURRENCE_EXTRA2: 0.5,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: PAINT1,
-			COLOR_EXTRA2: PAINT2,
-			
+
+			SPRITE_FILE: Garthimi,
+			SPRITE_SKELLETON_FILE: Humanoid_small,
 			NAMESET_FILE_FIRST: StdFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			PORTRAIT_FILE: Garthimi,
+
+			SET_APPEARANCE_STATS: {
+				EXTRA1: 0.5,
+				EXTRA2: 0.5,
+				EXTRA3: 0.3,
+				EXTRA4: 0.5,
+			},
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: PaintGarthimi1,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.5,
+						},
+					},
+					COLOR: PAINT1,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: PaintGarthimi1,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
+					COLOR: PAINT2,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourGarthimi,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
 				**Ears
@@ -356,7 +430,7 @@ APPEARANCE: {
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 18,
 				},
@@ -369,7 +443,11 @@ APPEARANCE: {
 				},
 				**warpaint large
 				{
-					ONLY_IF_EXTRA1: true,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.5,
+						},
+					},
 					FRAME_START: 24,
 					FRAME_VARIATIONS: 8,
 					SPLITS: 2,
@@ -380,7 +458,11 @@ APPEARANCE: {
 				},
 				**warpaint small
 				{
-					ONLY_IF_EXTRA2: true,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
 					FRAME_START: 24,
 					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
@@ -397,21 +479,29 @@ APPEARANCE: {
 					SPLIT: 1,
 					STAINS: false,
 					OFF_Y: -5,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**Eye Injury
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_3_F: 0.25,
+						},
+					},
 					FRAME_START: 1,
 					FRAME_VARIATIONS: 2,
 					SPLITS: 3,
 					SPLIT: 2,
 					STAINS: false,
 					OFF_Y: -20,
-					FRAME_OCCURRENCE: 0.3,
 
 				},
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 3,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -448,7 +538,11 @@ APPEARANCE: {
 					COLOR: SKIN,
 					SPLIT: 1,
 					OFF_Y: 15,
-					FRAME_OCCURRENCE: 0.75,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_4_F: 0.5,
+						},
+					},
 				},
 				**Brow Chitin
 				{
@@ -474,4 +568,3 @@ APPEARANCE: {
 		},
 	],
 },
-

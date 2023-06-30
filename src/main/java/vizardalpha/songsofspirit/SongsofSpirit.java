@@ -2,17 +2,12 @@ package vizardalpha.songsofspirit;
 
 import init.paths.ModInfo;
 import init.paths.PATHS;
-import settlement.room.main.RoomBlueprint;
-import settlement.room.main.RoomCreator;
-import settlement.room.main.util.RoomInitData;
 import snake2d.util.file.Json;
 import util.info.INFO;
 import vizardalpha.songsofspirit.game.SCRIPT;
 import vizardalpha.songsofspirit.game.api.GameModApi;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Loggers;
-import vizardalpha.songsofspirit.room.rice.ROOM_RICE;
-import vizardalpha.songsofspirit.room.wine.ROOM_WINE;
 import vizardalpha.songsofspirit.ui.UIGameConfig;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
@@ -42,18 +37,7 @@ public final class SongsofSpirit implements SCRIPT<Void> {
 
     @Override
     public void initBeforeGameCreated() {
-       new RoomCreator() {
-            @Override
-            public RoomBlueprint createBlueprint(RoomInitData init) throws IOException {
-                return new ROOM_WINE(init, null);
-            }
-        };
-        new RoomCreator() {
-            @Override
-            public RoomBlueprint createBlueprint(RoomInitData init) throws IOException {
-                return new ROOM_RICE(init, null);
-            }
-        };
+
     }
     
     @Override

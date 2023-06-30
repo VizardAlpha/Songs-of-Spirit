@@ -1,0 +1,22 @@
+**EQUAL, GREATERE, GREATER, LESS, NEQUAL,
+
+REQ_PLAYER: {
+	GREATERE: {
+		FREED_SLAVES_GAME: 2000,
+	},
+
+	GREATER: {
+    	AMOUNT: 10, **the target amount
+        IS_MAX: 15.0,
+    	SPAN: 1.0,
+    },
+},
+
+BONUS_ADD: {
+	ROOM: {
+        FARM_GRAPE: 0.3,
+	},
+	BEHAVIOUR: {
+		HAPPINESS: 0.05,
+	},
+},
