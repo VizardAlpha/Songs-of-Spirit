@@ -8,13 +8,14 @@ import snake2d.util.gui.clickable.CLICKABLE;
 import snake2d.util.sprite.SPRITE;
 import util.gui.misc.GButt;
 import view.ui.UIPanelTop;
-import view.world.WorldIIMinimap;
+import view.world.WorldMinimap;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.util.ReflectionUtil;
-import java.awt.Desktop;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -82,7 +83,7 @@ public class UIGameConfig {
                  right.addRelBody(0, DIR.W, Dis);
             });
 
-        gameUiApi.findUIElementInWorldGeneratorView(WorldIIMinimap.class)
+        gameUiApi.findUIElementInWorldGeneratorView(WorldMinimap.class)
             .flatMap(worldIIMinimap -> ReflectionUtil.getDeclaredField("buttons", worldIIMinimap))
             .ifPresent(o -> {
                 GuiSection buttons = (GuiSection) o;

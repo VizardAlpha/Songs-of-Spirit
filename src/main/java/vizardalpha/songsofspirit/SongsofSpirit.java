@@ -13,7 +13,6 @@ import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
 import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 
-import java.io.IOException;
 import java.util.logging.Level;
 
 public final class SongsofSpirit implements SCRIPT<Void> {
@@ -39,12 +38,12 @@ public final class SongsofSpirit implements SCRIPT<Void> {
     public void initBeforeGameCreated() {
 
     }
-    
+
     @Override
-	public SCRIPT_INSTANCE initAfterGameCreated() {
+    public SCRIPT_INSTANCE createInstance() {
         Loggers.setLevels(Level.FINEST);
         return new Instance(this);
-	}
+    }
 
     @Override
     public void initGameRunning() {
