@@ -4,11 +4,12 @@ VizardAlpha
 
 ---
 ## Bug Reporters
-Shado, Rebel of Exclusivity
+Shado,
+Rebel of Exclusivity,
 
 ---
 
 ## Translators
 ### Chinese
-Prototype-alpha
-sizhentao03
+Prototype-alpha,
+sizhentao03,

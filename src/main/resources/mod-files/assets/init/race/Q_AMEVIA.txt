@@ -33,19 +33,24 @@ PREFERRED: {
     STRUCTURE: {
         MOUNTAIN: 0,
 		GLASS: 0.9,
-        STONE: 1.0,
+        STONE: 0.7,
         GRAND: 1.0,
-        WOOD: 0,
+        WOOD: 0.2,
+        OUTDOORS: 0.3,
     },
     EMPLOYED: {
         
     },
     WORK: {
     	FISHERY: 1.0,
+    	NURSERY_AMEVIA: 1.0,
+        PASTURE_GLOBDIEN: 0.8,
     },
 
     OTHER_RACES: {
-
+		DONDORIAN: -1.3,
+		CRETONIAN: -1,
+		HUMAN: -1.3,
     },
 },
 
@@ -76,13 +81,18 @@ BONUS_MUL: {
 	},
 
     ROOM: {
-    	FARM: 0.5,
-    	PASTURE: 0.5,
+    	FARM: 0.7,
+    	ORCHARD: 0.7,
+		PASTURE_AUR: 0.7,
+		PASTURE_ENT: 0.7,
+		PASTURE_ONX: 0.7,
+		PASTURE_GLOBDIEN: 1.3,
+		PASTURE_BALTI: 0.1,
         FISHERY: 1.4,
     },
 	BEHAVIOUR: {
 		LAWFULNESS: 0.8,
-		SANITY: 5.0,
+		SANITY: 1.5,
 		SUBMISSION: 0.5,
 	},
 	RATES: {
@@ -116,21 +126,40 @@ STATS: {
 	ACCESS: {
 
 		_WATER_SWEET: {
-			CITIZEN: 2,
-			SLAVE: 1,
+			CITIZEN: 3,
+			SLAVE: 2,
+			EXPONENT: 0.6,
 		},
 
 	},
-
+	ENVIRONMENT: {
+		OTHERS: {
+			CITIZEN: 1.0,
+			EXPONENT: 0.5,
+		},
+	},
 	STORED: {
 		FISH: {
-			CITIZEN: 2.5,
+			CITIZEN: 2,
 			SLAVE: 0,
 			NOBLE: 3,
 			MULTIPLIER: 0.5,
 		},
 	},
+
+	LAW: {
+		EQUALITY: {
+			CITIZEN: 1.5,
+			SLAVE: 0,
+			NOBLE: 1.5,
+			INVERTED: true,
+		},
+
+	},
+
 },
+
+
 
 RELIGION_INCLINATION: {
 	TEMPLE_CRATOR: 1,

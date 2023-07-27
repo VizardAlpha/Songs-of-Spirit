@@ -30,7 +30,9 @@ PREFERRED: {
 		MOUNTAIN: 0.2,
 		GLASS: 0.5,
 		STONE: 0.5,
+		WOOD: 0.3,
 		GRAND: 1.0,
+		OUTDOORS: 0.3,
 	},
 	EMPLOYED: {
 		
@@ -87,6 +89,7 @@ BONUS_MUL: {
 		REFINER: 2,
 		WORKSHOP: 2,
 		FARM: 0.6,
+		ORCHARD: 0.6,
 		PASTURE: 0.8,
 		_WOODCUTTER: 2,
 		FISHERY: 0.8,

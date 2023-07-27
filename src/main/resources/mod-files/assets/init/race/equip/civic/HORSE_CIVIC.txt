@@ -10,3 +10,9 @@ BONUS_ADD: {
 		ACCELERATION: 2,
 	},
 },
+STANDING: {
+	CITIZEN: 1,
+	SLAVE: 0,
+	NOBLE: 3,
+	PRIO: 10,
+},
