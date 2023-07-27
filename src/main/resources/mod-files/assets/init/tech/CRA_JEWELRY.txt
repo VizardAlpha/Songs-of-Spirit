@@ -23,7 +23,7 @@ TECHS: [
 
 		BONUS_ADD: {
 			ROOM: {
-				WORKSHOP_JEWELRY: 0.1,
+				WORKSHOP_JEWELRY: 0.05,
 			},
 		},
 	},

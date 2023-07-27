@@ -35,9 +35,9 @@ TECHS: [
 
 	**Bonus Specialization
 	{
-		LEVEL_MAX: 25,
-		LEVEL_COST: 350,
-		LEVEL_COST_INC_MUL: 1.4,
+		LEVEL_MAX: 23,
+		LEVEL_COST: 500,
+		LEVEL_COST_INC_MUL: 1.15,
 
 		TREE_ORDER: 5495,				
 
@@ -47,7 +47,7 @@ TECHS: [
 
 		BONUS_ADD: {
 			ROOM: {
-				REFINER_SMELTER: 0.1,
+				REFINER_SMELTER: 0.05,
 			},
 		},
 	},
@@ -67,8 +67,8 @@ TECHS: [
 
 		BONUS_ADD: {
 			ROOM: {
-				REFINER_SMELTER: 0.2,
-				REFINER_COALER: 0.2,
+				REFINER_SMELTER: 0.1,
+				REFINER_COALER: 0.1,
 			},
 		},
 	},

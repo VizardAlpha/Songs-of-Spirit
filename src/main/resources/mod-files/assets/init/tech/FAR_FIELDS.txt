@@ -13,6 +13,7 @@ TECHS: [
 				FARM_FRUIT: 0.1,
 				FARM_GRAIN: 0.1,
 				FARM_MUSHROOM: 0.1,
+				ORCHARD_FRUIT: 0.1,
 				FARM_RICE: 0.1,
 				FARM_GRAPE: 0.1,
 			},
