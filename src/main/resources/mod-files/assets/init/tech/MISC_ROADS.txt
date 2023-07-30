@@ -1,7 +1,7 @@
 TECHS: [
 
 	{
-		LEVEL_COST: 750,
+		LEVEL_COST: 320,
 
 		TREE_ORDER: 5968,		
 
@@ -12,6 +12,7 @@ TECHS: [
 		FLOORS: [
 			STONE_UPGRADE_0,
 			STONE_UPGRADE_1,
+			STONE_UPGRADE_2,
 		],
 	},
 
