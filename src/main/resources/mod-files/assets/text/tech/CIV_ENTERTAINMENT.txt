@@ -1,0 +1,32 @@
+TECHS: [
+
+	{
+		NAME: "Stage",
+		CATEGORY:"First Ere",
+
+		DESC: "Actors enact elaborate plays and musical performances.  Whether they are applauded or pelted with rotten fruit, there's fun to be had by all.  %r%%r%(Larger, more expensive stages provide more fulfillment.)",
+	},
+
+	{
+		NAME: "Bathhouse",
+		CATEGORY:"First Ere",
+
+		DESC: "Rising steam and contended sighs fill this refuge of glistening marble.  A marvel of both art and engineering, the Bathhouse brings cleanliness to species with a need for elegance. 
+
+		%r%%r%
+
+		(Bathhouses need a constant supply of coal to operate)",
+	},
+
+	{
+		NAME: "Arena",
+		CATEGORY:"First Ere",
+
+		DESC: "Doomed prisoners step upon the sands, ready to risk it all for glory and redemption.  Why waste a perfectly good source of entertainment to the gallows?
+
+		%r%%r%
+
+		(Larger, more expensive arenas provide more fulfillment.)",
+	},
+
+],

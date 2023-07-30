@@ -1,0 +1,59 @@
+TECHS: [
+
+	**Tier 2
+	{
+		LEVEL_COST: 750,
+		TREE_ORDER: 5350,
+		UPGRADES: [
+			REFINER_BAKERY,
+		],	
+	},
+
+	**Tier 3
+	{
+		LEVEL_COST: 1500,
+		TREE_ORDER: 5350,
+		REQUIRES_TECH_LEVEL: {
+			REF_BAKERY0: 1,
+		},	
+		UPGRADES: [
+			REFINER_BAKERY,
+		],	
+	},
+
+	**Coal Recipe
+	{
+		LEVEL_COST: 600,
+
+		TREE_ORDER: 5350,
+
+
+		REQUIRES_TECH_LEVEL: {
+			REF_BAKERY0: 1,
+		},
+
+		INDUSTRIES: {
+			REFINER_BAKERY: 1,
+		},
+	},
+
+	**Bonus Specialization
+	{
+		LEVEL_MAX: 23,
+		LEVEL_COST: 400,
+		LEVEL_COST_INC_MUL: 1.15,
+
+		REQUIRES_TECH_LEVEL: {
+			REF_BAKERY1: 1,
+		},	
+		TREE_ORDER: 5350,
+
+		BONUS_ADD: {
+			ROOM: {
+				REFINER_BAKERY: 0.05,
+			},
+		},
+	},
+
+],
+

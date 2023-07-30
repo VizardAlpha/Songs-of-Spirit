@@ -1,0 +1,47 @@
+TECHS: [
+
+	{
+		NAME: "Maintenance",
+		CATEGORY:"First Ere",
+
+		DESC: "Your builders learn the secrets of making constructions survive the test of time.
+
+		%r%%r%
+
+		(Your city takes up valuable time and resources to make repairs)",
+	},
+
+	{
+		NAME: "Spoilage",
+		CATEGORY:"First Ere",
+
+		DESC: "So much is wasted every year on rot and rust.  Your people learn how to properly store goods and preserve foods for longer periods of time.
+
+		%r%%r%
+
+		(Spoilage rates can be found hovering over goods in the inventory tracker on the right.)",
+	},
+
+	{
+		NAME: "Improved Trade Routes",
+		CATEGORY:"First Ere",
+
+		DESC: "Caravans and Ships travel far and wide to feed your growing city.  Improve their equipment and planning to capitalize on distant offers.
+
+		%r%%r%
+
+		(The further from your empire you trade, the higher transport costs become.  Use this technology to mitigate it.)",
+	},
+	
+	{
+		NAME: "Administration",
+		CATEGORY:"First Ere",
+
+		DESC: "Tax ledgers, provincial law, public development programs, detailed intelligence on rebels... The scribblings of your administrators have far flung effects.  Tighten your grip over your provinces.
+
+		%r%%r%
+
+		(Administration offices are unlocked by your throne level, this bonus is useless without it.  Build infrastructure and set taxes in the world map over territories you control.  It is your goal to keep loyalty high so you will need to counter balance your taxes with public programs.  Garrisons are an excellent way to keep loyalty in check without affecting productivity.)",
+	},
+
+],

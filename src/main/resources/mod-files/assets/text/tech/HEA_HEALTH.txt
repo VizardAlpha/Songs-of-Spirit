@@ -1,0 +1,47 @@
+TECHS: [
+
+	{
+		NAME: "Asylum",
+		CATEGORY:"First Ere",
+
+		DESC: "Feverish scratching at the walls and ominous muttering fill the cells.  The Asylum is a rehabilitation place for your population touched by the gods.
+
+		%r%%r%
+
+		(Insane citizens are a constant drain on the economy while providing no benefit.  Cure them at this building.  They must be fed with rations.)",
+	},
+
+	{
+		NAME: "Physician",
+		CATEGORY:"First Ere",
+
+		DESC: "These doctors do regular health checkups of your people, helping their chances against disease and injury.  It also provides some peace of mind.
+
+		%r%%r%
+
+		(While not directly combating plague when it happens, physicians will still greatly improve your chances.)",
+	},
+
+	{
+		NAME: "Hospital",
+		CATEGORY:"First Ere",
+
+		DESC: "Bodies line the streets during a serious plague.  Get the ill quarantined from society and give them higher quality treatment in the hospital.
+
+		%r%%r%
+
+		(Disease comes in a variety of severities.  Be ready for a big plague or your city will suffer.  Doctors improve the chances of survival with the use of opiates.)",
+	},
+
+	{
+		NAME: "Workplace Safety",
+		CATEGORY:"First Ere",
+
+		DESC: "There's a Tilapi scewered by an Aurochs and three Garthimi under a heap of rubble in the mining pits.  It's time to improve work conditions.
+		
+		%r%%r%
+
+		(Some industries are more dangerous for its workers.  This can result in potentially fatal accidents.)",
+	},
+
+],

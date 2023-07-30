@@ -1,0 +1,25 @@
+TECHS: [
+
+	{
+		NAME: "Schooling",
+		CATEGORY:"First Ere",
+
+		DESC: "Fill impressionable young minds with skills for high education work, or indoctrinate them to be loyal through tough times.  
+
+		%r%%r%
+
+		(Children learn at a much greater rate than adults to a maximum of 60%.  Set Educate/Indoctrinate in the Species -> Occupation panel.  Requires paper to function.)",
+	},
+
+	{
+		NAME: "University",
+		CATEGORY:"First Ere",
+
+		DESC: "Educate adults to perform well in very high intellect work, or indoctrinate them to be more loyal through the harshest of times.  
+
+		%r%%r%
+
+		(Universities are much slower than schools but go to 100% maximum bonus.  Education level matters massively for some industries so be sure to check their tooltip.  This includes laboratories.  Instruction type and maximum can be set in the Species -> Occupation panel.)",
+	},
+
+],

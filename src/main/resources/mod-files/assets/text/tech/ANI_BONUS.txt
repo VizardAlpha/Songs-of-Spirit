@@ -1,0 +1,52 @@
+TECHS: [
+
+	{
+		NAME: "Fishery Methods",
+		CATEGORY:"First Ere",
+
+		DESC: "Your fishers learn not only better methods of the catch, but also sustainability by letting the younger fish go.
+
+		%r%%r%
+
+		(Proteins are harder to produce than most farmed goods, but can help satisfy more advanced food variety desires of certain species.  Hint: You can get more usable fishing area by filling in strips of land in the deeper water.)
+		",
+	},
+
+	{
+		NAME: "Husbandry Methods",
+		CATEGORY:"First Ere",
+
+		DESC: "Animal tenders learn to keep their herd healthy, balance nutrition, and butcher efficiently.
+
+		%r%%r%
+
+		(Proteins are harder to produce than most farmed goods, but can help satisfy more advanced food variety desires of certain species.)
+		",
+	},
+	
+	{
+		NAME: "Exotic Husbandry Methods",
+		CATEGORY:"First Ere",
+
+		DESC: "These creatures are almost like raising aliens compared to typical husbandry.
+
+		%r%%r%
+
+		(Proteins are harder to produce than most farmed goods, but can help satisfy more advanced food variety desires of certain species.  Be aware that Balticrawlers are only effectively handled by Garthimi)
+		",
+	},
+
+	{
+		NAME: "Hunter Training",
+		CATEGORY:"First Ere",
+
+		DESC: "Tracking prey, taking them down quickly, and butchering methods are just a few ways your hunters can improve upon their craft.
+
+		%r%%r%
+
+		(Wild animals are an enormous boost to your early game.  Just a few hunters can keep your city fed for several years if your land is rich in wildlife.  This is a temporary resource as they do not replenish naturally.  Be sure to be ready to export byproducts you don't need for easy trading.)
+		",
+	},
+
+
+],

@@ -1,0 +1,78 @@
+TECHS: [
+
+	**Initial Unlock
+	{
+		LEVEL_COST: 750,
+
+		TREE_ORDER: 5350,
+
+		ROOMS: [
+			REFINER_BREWERY,
+		],		
+	},
+	
+	**Tier 2
+	{
+		LEVEL_COST: 750,
+		TREE_ORDER: 5350,
+		REQUIRES_TECH_LEVEL: {
+			REF_BREWERY0: 1,
+		},		
+		UPGRADES: [
+			REFINER_BREWERY,
+		],
+	},
+
+	**Tier 3
+	{
+		LEVEL_COST: 1500,
+		TREE_ORDER: 5350,
+		REQUIRES_TECH_LEVEL: {
+			REF_BREWERY1: 1,
+		},	
+		UPGRADES: [
+			REFINER_BREWERY,
+		],	
+	},
+
+	**Bonus Specialization
+	{
+		LEVEL_MAX: 23,
+		LEVEL_COST: 400,
+		LEVEL_COST_INC_MUL: 1.15,
+
+		TREE_ORDER: 5350,
+		
+		REQUIRES_TECH_LEVEL: {
+			REF_BREWERY2: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				REFINER_BREWERY: 0.05,
+			},
+		},
+	},
+
+	**Food Science
+	{
+		LEVEL_MAX: 1,
+		LEVEL_COST: 1000,
+		LEVEL_COST_INC_MUL: 1,
+
+		TREE_ORDER: 5350,
+		
+		REQUIRES_TECH_LEVEL: {
+			REF_BREWERY1: 1,
+			REF_BAKERY1: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				REFINER_BREWERY: 0.1,
+				REFINER_BAKERY: 0.1,
+			},
+		},
+	},	
+
+],

@@ -1,0 +1,22 @@
+TECHS: [
+
+	{
+		NAME: "Sithilon Mine",
+		CATEGORY:"First Ere",
+
+		DESC: "Your lead prospector comes to you with hands shaking uncontrollably.  They have found a vein of Sithilon.  Your city has a source of great wealth... and envy.
+
+		%r%%r%
+
+		(Sithilon is important to some religious rites and is a powerful trade good.  Some species have an obsession to build up a hoard of it.)
+		",
+	},
+
+	{
+		NAME: "Sithilon Mine Bonus",
+		CATEGORY:"First Ere",
+
+		DESC: "Every ounce of this wondrous material is more precious than a dozen lives.",
+	},
+
+],

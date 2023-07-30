@@ -1,0 +1,45 @@
+TECHS: [
+
+	{
+		LEVEL_COST: 200,
+
+		TREE_ORDER: 5350,
+
+		ROOMS: [
+			GRAVEYARD_NORMAL,
+		],
+	},
+
+	{
+		LEVEL_COST: 1800,
+
+		TREE_ORDER: 5350,
+
+		REQUIRES_TECH_LEVEL: {
+			CIV_RELIGION0: 1,
+		},
+
+		ROOMS: [
+			TOMB_NORMAL,
+		],		
+	},
+
+	{
+		LEVEL_COST: 1200,
+
+		TREE_ORDER: 5350,
+
+		REQUIRES_TECH_LEVEL: {
+			CIV_RELIGION0: 1,
+		},
+
+		ROOMS: [
+			TEMPLE_AMINION,
+			TEMPLE_ATHURI,
+			TEMPLE_CRATOR,
+			TEMPLE_SHMALOR,
+		],		
+	},
+
+],
+

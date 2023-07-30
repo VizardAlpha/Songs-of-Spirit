@@ -1,0 +1,33 @@
+TECHS: [
+
+	{
+		LEVEL_COST: 900,
+
+		TREE_ORDER: 5350,
+
+
+		ROOMS: [
+			WORKSHOP_PAPER,
+		],		
+	},
+
+	{
+		LEVEL_MAX: 25,
+		LEVEL_COST: 400,
+		LEVEL_COST_INC_MUL: 1.15,
+
+		TREE_ORDER: 5350,
+
+
+		REQUIRES_TECH_LEVEL: {
+			KNO_PAPERMAKING0: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				WORKSHOP_PAPER: 0.05,
+			},
+		},
+	},
+
+],

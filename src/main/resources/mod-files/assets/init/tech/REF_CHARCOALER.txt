@@ -1,0 +1,55 @@
+TECHS: [
+
+	**Initial Unlock
+	{
+		LEVEL_COST: 250,
+		TREE_ORDER: 5350,
+		ROOMS: [
+			REFINER_COALER,
+		],
+	},
+
+	**Tier 2	
+	{
+		LEVEL_COST: 750,
+		TREE_ORDER: 5350,
+		REQUIRES_TECH_LEVEL: {
+			REF_CHARCOALER0: 1,
+		},	
+		UPGRADES: [
+			REFINER_COALER,
+		],	
+	},
+
+	**Tier 3	
+	{
+		LEVEL_COST: 1500,
+		TREE_ORDER: 5350,
+		REQUIRES_TECH_LEVEL: {
+			REF_CHARCOALER1: 1,
+		},	
+		UPGRADES: [
+			REFINER_COALER,
+		],	
+	},
+
+	**Bonus Specialization
+	{
+		LEVEL_MAX: 23,
+		LEVEL_COST: 400,
+		LEVEL_COST_INC_MUL: 1.15,
+
+		TREE_ORDER: 5350,
+
+		REQUIRES_TECH_LEVEL: {
+			REF_CHARCOALER2: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				REFINER_COALER: 0.05,
+			},
+		},
+	},
+
+],

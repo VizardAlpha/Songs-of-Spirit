@@ -2,58 +2,28 @@ TECHS: [
 
 	**Root Node
 	{
-		LEVEL_MAX: 3,
+		LEVEL_MAX: 2,
 		LEVEL_COST: 100,
-		LEVEL_COST_INC_MUL: 2,
+		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5525,	
+		TREE_ORDER: 200,
+
+		REQUIRES_TECH_LEVEL: {
+            1_THE_DARK_AGE0: 1,
+        },
 
 		BONUS_ADD: {
 			ROOM: {
-				WORKSHOP_CARPENTER: 0.05,
-			},
-		},
-	},
-
-	**Carpenter (Refined)
-	{
-		LEVEL_COST: 750,
-
-		TREE_ORDER: 5525,
-
-		REQUIRES_TECH_LEVEL: {
-			CRA_CARPENTER0: 1,
-		},		
-
-		UPGRADES: [
-			WORKSHOP_CARPENTER,
-		],		
-	},
-
-	**Carpenter Specialization
-	{
-		LEVEL_MAX: 22,
-		LEVEL_COST: 400,
-		LEVEL_COST_INC_MUL: 1.15,
-
-		TREE_ORDER: 5525,
-
-		REQUIRES_TECH_LEVEL: {
-			CRA_CARPENTER1: 1,
-		},		
-
-		BONUS_ADD: {
-			ROOM: {
-				WORKSHOP_CARPENTER: 0.05,
+				WORKSHOP_CARPENTER: 0.1,
 			},
 		},
 	},
 
 	**Plank Specialization
 	{
-		LEVEL_COST: 100,
+		LEVEL_COST: 201,
 
-		TREE_ORDER: 5526,
+		TREE_ORDER: 5350,
 
 		REQUIRES_TECH_LEVEL: {
 			CRA_CARPENTER0: 1,
@@ -63,34 +33,4 @@ TECHS: [
 			WORKSHOP_CARPENTER: 1,
 		},
 	},
-
-	**Makeshift Weapons
-    {
-    	LEVEL_COST: 100,
-
-    	TREE_ORDER: 5526,
-
-    	REQUIRES_TECH_LEVEL: {
-    		CRA_CARPENTER0: 1,
-    	},
-
-    	INDUSTRIES: {
-    		WORKSHOP_CARPENTER: 2,
-    	},
-    },
-
-	**Makeshift Shield
-    {
-    	LEVEL_COST: 150,
-
-    	TREE_ORDER: 5527,
-
-    	REQUIRES_TECH_LEVEL: {
-    		CRA_CARPENTER0: 1,
-    	},
-
-    	INDUSTRIES: {
-    		WORKSHOP_CARPENTER: 3,
-    	},
-    },
 ],

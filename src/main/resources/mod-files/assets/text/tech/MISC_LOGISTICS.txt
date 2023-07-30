@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Paved Roads",
-		CATEGORY:"Miscellaneous",
+		CATEGORY:"First Ere",
 
 		DESC: "Your people tire of the muddy, divoted dirt roads lining the city.  Invest in stone paved streets for the future.
 
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Logistics",
-		CATEGORY:"Miscellaneous",
+		CATEGORY:"First Ere",
 
 		DESC: "A solid logistics network is the pumping heart of a city.  Improve the ability of your haulers to move goods quickly, freeing up workers for other tasks.
 
@@ -22,7 +22,7 @@ TECHS: [
 
 	{
 		NAME: "Transports",
-		CATEGORY:"Miscellaneous",
+		CATEGORY:"First Ere",
 
 		DESC: "Heavy wagons rumble down the street to the groan of beasts of burden.
 
@@ -33,7 +33,7 @@ TECHS: [
 
 	{
 		NAME: "Fancy Roads",
-		CATEGORY:"Miscellaneous",
+		CATEGORY:"First Ere",
 		
 		DESC: "Artfully cut stone lines the streets of your city.  The breathtaking expense is a sign of the city's power.
 
@@ -44,7 +44,7 @@ TECHS: [
 	
 	{
 		NAME: "Decorative Plazas",
-		CATEGORY:"Miscellaneous",
+		CATEGORY:"First Ere",
 		
 		DESC: "An explosion of bright colors sets the stage for your festivals, markets, and town squares.
 

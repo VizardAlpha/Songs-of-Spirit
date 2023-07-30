@@ -1,0 +1,15 @@
+TECHS: [
+
+	{
+		LEVEL_COST: 1200,
+		TREE_ORDER: 300,
+
+		REQUIRES_TECH_LEVEL: {
+            1_THE_DARK_AGE0: 1,
+        },
+
+		UPGRADES: [
+			LABORATORY_NORMAL,
+		],
+	},
+],

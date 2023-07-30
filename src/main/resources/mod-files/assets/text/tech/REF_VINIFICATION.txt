@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Vinification",
-		CATEGORY:"Refining",
+		CATEGORY:"First Ere",
 
 		DESC: "From grapes to quality wine!
 
@@ -14,14 +14,14 @@ TECHS: [
 
 	{
 		NAME: "Vinification Bonus",
-		CATEGORY:"Refining",
+		CATEGORY:"First Ere",
 
 		DESC: "With a better foot, hmm machine I mean, your subjects will increase wine production instantly!",
 	},
 
 	{
 		NAME: "Coal Vinification",
-		CATEGORY:"Refining",
+		CATEGORY:"First Ere",
 
 		DESC: "Adding coal ? But nah, it's a process that allows to increase the wine production with Co2, what ? Nothing nothing...",
 	},

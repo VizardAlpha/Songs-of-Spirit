@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Clay Mine Bonus",
-		CATEGORY:"Mining",
+		CATEGORY:"First Ere",
 
 		DESC: "Clay mining is grueling work, but at least they get to see the sun unlike most mining professions and there isn't much health impact.
 		",
@@ -10,7 +10,7 @@ TECHS: [
 
 	{
 		NAME: "Stone Mine Bonus",
-		CATEGORY:"Mining",
+		CATEGORY:"First Ere",
 
 		DESC: "Cutting down stone to usable sizes and transporting them safely take constant improvement.  Stone mining is relatively tough but doesn't have a big impact to health.
 		",
@@ -18,7 +18,7 @@ TECHS: [
 
 	{
 		NAME: "Coal Mine Bonus",
-		CATEGORY:"Mining",
+		CATEGORY:"First Ere",
 
 		DESC: "Coal mining is one of the filthiest jobs.  No one really wants to do it and those that do suffer severe health consequences.  Still, you can do what you can to improve their conditions and methods.
 		",
@@ -26,7 +26,7 @@ TECHS: [
 
 	{
 		NAME: "Ore Mine Bonus",
-		CATEGORY:"Mining",
+		CATEGORY:"First Ere",
 
 		DESC: "Better identification and tracing of ore veins can improve your output.  Ore mining is a necessity but can have health impacts.
 		",
@@ -34,7 +34,7 @@ TECHS: [
 
 	{
 		NAME: "Sand Mine Bonus",
-		CATEGORY:"Mining",
+		CATEGORY:"First Ere",
 
 		DESC: "Better identification and tracing of sand can improve your output.  Sand mining is a necessity but can have health impacts.
 		",

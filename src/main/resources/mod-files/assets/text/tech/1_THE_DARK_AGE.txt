@@ -1,0 +1,9 @@
+TECHS: [
+
+	{
+		NAME: "Starting Age",
+		CATEGORY:"The Dark Age",
+
+		DESC: "",
+	},
+],

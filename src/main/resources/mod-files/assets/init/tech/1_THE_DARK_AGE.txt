@@ -1,0 +1,17 @@
+TECHS: [
+
+	{
+		** 0: The Dark Age
+		LEVEL_MAX: 1,
+		LEVEL_COST: 100,
+
+		TREE_ORDER: 1000,
+
+        BONUS_ADD: {
+        	START: {
+            	LANDING: 0.0,
+            },
+
+        },
+	},
+],

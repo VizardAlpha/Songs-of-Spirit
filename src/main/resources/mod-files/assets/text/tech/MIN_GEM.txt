@@ -1,0 +1,17 @@
+TECHS: [
+
+	{
+		NAME: "Gem Mine",
+		CATEGORY:"First Ere",
+
+		DESC: "The gems found in this deposit are a true boon to your city state.  Glittering courthouses, places of worship, jewelry, and massive trade wealth lie in your future.",
+	},
+
+	{
+		NAME: "Gem Mine Bonus",
+		CATEGORY:"First Ere",
+
+		DESC: "Better prospecting skills and particularly search methods of workers can kick up your gem mine production.",
+	},
+
+],

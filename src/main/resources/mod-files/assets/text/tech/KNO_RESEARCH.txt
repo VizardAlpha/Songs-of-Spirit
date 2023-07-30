@@ -1,0 +1,13 @@
+TECHS: [
+
+	{
+		NAME: "Improved Laboratory",
+		CATEGORY:"The Dark Age",
+
+		DESC: "Chaotic tinkering has given way to more measured experimentation. FSupply your scientists with a cleaner work environment to continue their progress.  
+
+		%r%%r%
+
+		(After unlocking this tech, you will need to select a laboratory and press upgrade.",
+	},
+],

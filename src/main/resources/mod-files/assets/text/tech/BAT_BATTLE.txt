@@ -1,0 +1,21 @@
+TECHS: [
+
+	{
+		NAME: "Artillery",
+		CATEGORY:"First Ere",
+
+		DESC: "
+		Invaders will think twice before attacking your mighty walls studded with artillery batteries.
+		",
+	},
+
+	{
+		NAME: "Soldiering",
+		CATEGORY:"First Ere",
+
+		DESC: "
+		Elevate your drill sergeants' abilities to turn out good troops in short order.
+		",
+	},
+
+],

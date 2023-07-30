@@ -42,10 +42,10 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 3.0,
+				WOOD: 3.2,
 			},
 			OUT: {
-				PLANK: 1.75,
+				PLANK: 2.5,
 			},
 		},
 	},
@@ -64,7 +64,7 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 6.0,
+				PLANK: 6.0,
 				STONE: 4.0,
 			},
 			OUT: {
@@ -76,7 +76,7 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 5.0,
+				PLANK: 5.0,
 			},
 			OUT: {
 				SHIELD: 1.0,

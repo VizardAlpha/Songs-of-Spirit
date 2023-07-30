@@ -1,0 +1,46 @@
+TECHS: [
+
+	{
+		NAME: "Lighting",
+		CATEGORY:"First Ere",
+
+		DESC: "Metal braziers flood the streets and tunnels with light, providing safety.
+
+		%r%%r%
+		
+		(Torches radiate Light, which is preferred by some species.)
+		",
+	},
+
+	{
+		NAME: "Monuments",
+		CATEGORY:"First Ere",
+
+		DESC: "Sculpted statues and towering pillars project the might of your city state.  
+
+		%r%%r%
+
+		(Monuments radiate Awe, which is preferred by some species)",
+	},
+
+	{
+		NAME: "Basements",
+		CATEGORY:"First Ere",
+
+		DESC: "Your people require denser housing to get to work and services quickly.  Dig out basements to increase housing capacity.
+
+		%r%%r%
+
+		Select a home and then click House Upgrader at the top of the menu.  Upgrading homes is an expensive endeavor.
+		",
+	},
+
+	{
+		NAME: "Second Floors",
+		CATEGORY:"First Ere",
+
+		DESC: "Second floors for your housing will make the most out of your dense neighborhoods but will require much sturdier construction.",
+	},
+
+
+],

@@ -1,0 +1,22 @@
+TECHS: [
+
+	{
+		NAME: "Pottery",
+		CATEGORY:"First Ere",
+
+		DESC: "Carefully selected clay is shaped and baked into reusable containers.
+
+		%r%%r%
+
+		(Pottery is very useful for rationmaking, drink production, and providing housing with furnishing.)
+		",
+	},
+
+	{
+		NAME: "Pottery Bonus",
+		CATEGORY:"First Ere",
+
+		DESC: "Spinning wheels, shaping tools, string cutters, and precision kilns are just some of the ways your potters are discovering to improve their craft.",
+	},
+
+],
