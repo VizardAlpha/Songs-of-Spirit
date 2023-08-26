@@ -1,7 +1,7 @@
 TECHS: [
 
 	{
-		NAME: "Starting Age",
+		NAME: "Age de départ",
 		CATEGORY:"The Dark Age",
 
 		DESC: "",

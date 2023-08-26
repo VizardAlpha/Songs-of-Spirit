@@ -1,0 +1,10 @@
+POPULATION: 150,
+NOBLES: 1,
+BONUS_ADD: {
+	BEHAVIOUR: {
+		HAPPINESS: 0.03,
+	},
+},
+ROOMS: [
+
+],

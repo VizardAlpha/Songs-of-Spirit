@@ -1,10 +1,14 @@
 TECHS: [
 	{
-		** 0: The Dark Age
+		** 0: The Renaissance
 		LEVEL_MAX: 1,
-		LEVEL_COST: 0,
+		LEVEL_COST: 350,
 
-		TREE_ORDER: 1000,
+		TREE_ORDER: 2000,
+
+		REQUIRES_TECH_LEVEL: {
+
+        },
 
         BONUS_ADD: {
         	START: {
