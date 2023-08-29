@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Advanced Forestry",
-		CATEGORY:"The Dark Age",
+		CATEGORY:"Farming",
 
 		DESC: "Teach your foresters to more efficiently select saplings, stave off disease, and process wood.",
 		

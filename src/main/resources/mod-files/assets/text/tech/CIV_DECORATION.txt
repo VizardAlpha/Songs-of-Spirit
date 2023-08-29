@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Lighting",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Metal braziers flood the streets and tunnels with light, providing safety.
 
@@ -14,7 +14,7 @@ TECHS: [
 
 	{
 		NAME: "Monuments",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Sculpted statues and towering pillars project the might of your city state.  
 
@@ -25,7 +25,7 @@ TECHS: [
 
 	{
 		NAME: "Basements",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Your people require denser housing to get to work and services quickly.  Dig out basements to increase housing capacity.
 
@@ -37,7 +37,7 @@ TECHS: [
 
 	{
 		NAME: "Second Floors",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Second floors for your housing will make the most out of your dense neighborhoods but will require much sturdier construction.",
 	},

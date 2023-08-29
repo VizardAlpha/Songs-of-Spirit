@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Masonry",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		DESC: "Raw stone doesn't have the strength or beauty necessary for more advanced buildings.  Masons know attention to detail makes the difference between a towering monument lasting generations and a heap of rubble. 
 
 		%r%%r%
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Masonry Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Teach your masons more advanced techniques to improve not only their production speed but also efficiency with goods",
 	},

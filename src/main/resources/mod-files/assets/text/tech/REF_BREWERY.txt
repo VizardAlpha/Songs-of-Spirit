@@ -3,7 +3,7 @@ TECHS: [
 	**Initial Unlock
 	{
 		NAME: "Brewery (Crude)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Bubbling wort and distilling vats unlock a blessing and a curse all bottled into one.
 
@@ -16,7 +16,7 @@ TECHS: [
 	**Tier 2
 	{
 		NAME: "Brewery (Refined)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Contamination is the number one source of waste.  Upgrade your breweries with better flooring and containers to improve output.
 
@@ -28,7 +28,7 @@ TECHS: [
 	**Tier 3
 	{
 		NAME: "Brewery (Advanced)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Metal stills and piping allows for precise control over brewing conditions.",
 	},
@@ -36,7 +36,7 @@ TECHS: [
 	**Bonus Specialization
 	{
 		NAME: "Brewery Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "With more study into the fermentation process and advancing their recipes, your brewers can greatly increase productivity.",
 	},
@@ -44,7 +44,7 @@ TECHS: [
 	**Food Science
 	{
 		NAME: "Food Science",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Your breweries and bakeries have a lot to learn from each other's methods.",
 	},

@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Jewelry",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Brilliant colors sparkle from the myriad of cut facets in the gems.  Jewelry may have no functional purpose, but it makes people feel like they are important and beautiful.
 		
@@ -13,14 +13,14 @@ TECHS: [
 
 	{
 		NAME: "Jewelry Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Improved magnifying devices, weights, faceting tools, and quality assessments can all boost the performance of your jewelers.",
 	},
 	
 	{
 		NAME: "Jewelry Craft",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Improved magnifying devices, weights, faceting tools, and quality assessments can all boost the performance of your jewelers.",
 	},

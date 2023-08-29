@@ -2,14 +2,14 @@ TECHS: [
 
 	{
 		NAME: "Sand Mine",
-		CATEGORY:"First Ere",
+		CATEGORY:"Mining",
 
 		DESC: "Who doesn't like playing in the sand? Your subjects will be able to collect sand to make something extraordinary!",
 	},
 
 	{
 		NAME: "Sand Mine Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Mining",
 
 		DESC: "Better prospecting skills and particularly search methods of workers can kick up your sand mine production.",
 	},

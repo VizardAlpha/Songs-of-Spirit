@@ -3,7 +3,7 @@ TECHS: [
 	**Initial Unlock
 	{
 		NAME: "Metal Smelter (Crude)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "A rivulet of liquid metal is poured into an ingot cast from the crucible.  Your dependency on other nations for metal is finally at an end.  This marks a new age of progress and power for your city state.
 
@@ -16,7 +16,7 @@ TECHS: [
 	**Tier 2
 	{
 		NAME: "Smelter (Refined)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Crude clay bloomeries get the job done for basic smelting, but higher quality construction will improve yield.
 
@@ -29,7 +29,7 @@ TECHS: [
 	**Tier 3
 	{
 		NAME: "Smelter (Advanced)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Bellows and advanced machinery pulley systems make your smeltery a marvel of iron production.",
 	},
@@ -37,7 +37,7 @@ TECHS: [
 	**Bonus Specialization
 	{
 		NAME: "Smelter Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Precisely controlled temperatures and better pre-processing of ores can improve output of the Smelteries.",
 	},
@@ -45,7 +45,7 @@ TECHS: [
 	**Charcoaler Synergy
 	{
 		NAME: "Secrets of the Flame",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Flame consumes everything if you let it, but the true secrets lie in precise control and focusing of that power.",
 	},
@@ -53,7 +53,7 @@ TECHS: [
 	**Gold secret
 	{
 		NAME: "Secrets of the Gold",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Bellows and advanced machinery pulley systems make your smeltery a marvel of gold production.",
 	},

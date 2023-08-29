@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Maintenance",
-		CATEGORY:"First Ere",
+		CATEGORY:"Miscellaneous",
 
 		DESC: "Your builders learn the secrets of making constructions survive the test of time.
 
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Spoilage",
-		CATEGORY:"First Ere",
+		CATEGORY:"Miscellaneous",
 
 		DESC: "So much is wasted every year on rot and rust.  Your people learn how to properly store goods and preserve foods for longer periods of time.
 
@@ -24,7 +24,7 @@ TECHS: [
 
 	{
 		NAME: "Improved Trade Routes",
-		CATEGORY:"First Ere",
+		CATEGORY:"Miscellaneous",
 
 		DESC: "Caravans and Ships travel far and wide to feed your growing city.  Improve their equipment and planning to capitalize on distant offers.
 
@@ -35,7 +35,7 @@ TECHS: [
 	
 	{
 		NAME: "Administration",
-		CATEGORY:"First Ere",
+		CATEGORY:"Miscellaneous",
 
 		DESC: "Tax ledgers, provincial law, public development programs, detailed intelligence on rebels... The scribblings of your administrators have far flung effects.  Tighten your grip over your provinces.
 

@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Rations",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "As winter deepens, your people can't help but glance nervously at the dwindling stockpiles.  Rations may be bland, but knowing they are there can set minds at ease.
 
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Prepared Meals",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Sizzling dishes carefully prepared fill the air with mouth watering scents.  Your people can subsist cooking at home, but a canteen makes eating a pleasure instead of a chore.
 
@@ -24,7 +24,7 @@ TECHS: [
 
 	{
 		NAME: "Tavern",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Bawdy songs and the sound of crashing furniture spill out into the streets.  The patrons might regret their decisions in the morning, but it won't stop them from being right back here again tomorrow night.
 
@@ -35,14 +35,14 @@ TECHS: [
 
 	{
 		NAME: "Rationmaker Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 		
 		DESC: "Improved salting, tighter wrapping, and better preparation of ingredients makes for less waste at the Rationmaker.  It might even taste a bit better, too.",
 	},
 
 	{
 		NAME: "Tourism",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 		
 		DESC: "Draw in guests to study your mighty industries.  This can provide a nice boost to your treasury.
 

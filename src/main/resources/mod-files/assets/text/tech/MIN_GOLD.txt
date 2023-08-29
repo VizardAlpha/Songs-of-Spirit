@@ -2,14 +2,14 @@ TECHS: [
 
 	{
 		NAME: "Gold Mine",
-		CATEGORY:"First Ere",
+		CATEGORY:"Mining",
 
 		DESC: "Your subjects will be able to collect Gold Ore to make something extraordinary!",
 	},
 
 	{
 		NAME: "Gold Mine Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Mining",
 
 		DESC: "Better prospecting skills and particularly search methods of workers can kick up your gold mine production.",
 	},

@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Asylum",
-		CATEGORY:"First Ere",
+		CATEGORY:"Health",
 
 		DESC: "Feverish scratching at the walls and ominous muttering fill the cells.  The Asylum is a rehabilitation place for your population touched by the gods.
 
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Physician",
-		CATEGORY:"First Ere",
+		CATEGORY:"Health",
 
 		DESC: "These doctors do regular health checkups of your people, helping their chances against disease and injury.  It also provides some peace of mind.
 
@@ -24,7 +24,7 @@ TECHS: [
 
 	{
 		NAME: "Hospital",
-		CATEGORY:"First Ere",
+		CATEGORY:"Health",
 
 		DESC: "Bodies line the streets during a serious plague.  Get the ill quarantined from society and give them higher quality treatment in the hospital.
 
@@ -35,7 +35,7 @@ TECHS: [
 
 	{
 		NAME: "Workplace Safety",
-		CATEGORY:"First Ere",
+		CATEGORY:"Health",
 
 		DESC: "There's a Tilapi scewered by an Aurochs and three Garthimi under a heap of rubble in the mining pits.  It's time to improve work conditions.
 		

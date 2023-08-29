@@ -2,12 +2,38 @@ TECHS: [
 
 	{
 		NAME: "Improved Laboratory",
-		CATEGORY:"The Dark Age",
+		CATEGORY:"Knowledge",
 
-		DESC: "Chaotic tinkering has given way to more measured experimentation. FSupply your scientists with a cleaner work environment to continue their progress.  
+		DESC: "Chaotic tinkering has given way to more measured experimentation.  Supply your scientists with a cleaner work environment to continue their progress.  
 
 		%r%%r%
 
 		(After unlocking this tech, you will need to select a laboratory and press upgrade.",
 	},
+
+	{
+		NAME: "Advanced Laboratory",
+		CATEGORY:"Knowledge",
+
+		DESC: "Experimentation has led toward formal methods and advanced theory.  Your laboratories now need more precise instruments to break into new discoveries.",
+	},
+
+	{
+		NAME: "Library",
+		CATEGORY:"Knowledge",
+
+		DESC: "A lifetime of study cannot encompass all the discoveries of your people.  Librarians toil to assist your Laboratories by preserving existing knowledge.  Their work is impossible without a consistent supply of precious paper.  
+
+		%r%%r%
+
+		(This building will not serve you well if you don't already have a lot of running laboratories.)",
+	},
+
+	{
+		NAME: "Advanced Library",
+		CATEGORY:"Knowledge",
+
+		DESC: "Rows of neatly organized texts indexed for easy reference have made libraries a powerful tool of specialization for your scientists.",
+	},
+
 ],

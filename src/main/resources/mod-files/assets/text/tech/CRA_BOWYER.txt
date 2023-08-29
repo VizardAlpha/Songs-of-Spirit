@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Bowyer",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		DESC: "Elegant curved wood forms the bow, with carefully fletched arrows designed for maximum accuracy and distance.  Noone wants to fight on the front line, but a bow lets them dish out damage from afar.
 
 		%r%%r%
@@ -13,14 +13,14 @@ TECHS: [
 
 	{
 		NAME: "Bowyer Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Finer material selection with wood and feathers make a better product.  Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
 	},
 
 	{
 		NAME: "Crossbow",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "The crossbow is made of an elegant bentwood and carefully crafted arrows for maximum accuracy and distance.  No one wants to fight on the front line, but a crossbow allows them to do more damage at range than a bow!
 
@@ -31,7 +31,7 @@ TECHS: [
 
 	{
 		NAME: "Crossbow Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Finer material selection with wood and feathers make a better product.  Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
 	},

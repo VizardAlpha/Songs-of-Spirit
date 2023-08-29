@@ -7,8 +7,7 @@ TECHS: [
 		TREE_ORDER: 1500,
 
 		REQUIRES_TECH_LEVEL: {
-            KNO_RESEARCH1: 1,
-            1_CIV0: 1,
+
         },
 
         BONUS_ADD: {

@@ -2,14 +2,14 @@ TECHS: [
 
 {
 		NAME: "Tailoring Basics",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Some extra clothing would go a long way for saving your people from extreme weather.",
 	},
 
 	{
 		NAME: "Tailor (Refined)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Patchwork clothing leave your people to suffer in the face of nature's wrath... and even worse they have absolutely no sense of fashion!  Upgrade your workshops with proper tools for the job.
 		
@@ -20,7 +20,7 @@ TECHS: [
 
 	{
 		NAME: "Tailor Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "More precise designs save precious cloth.  Teach your tailors more advanced techniques to improve not only their production speed but also efficiency with goods
 		",
@@ -28,7 +28,7 @@ TECHS: [
 
 	{
 		NAME: "Fine Clothing",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Crude leather survival clothing is inefficient and ugly.  Your tailors learn how to work with fine bolts of cloth.
 		
@@ -39,7 +39,7 @@ TECHS: [
 
 	{
 		NAME: "Makeshift Armor",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Leather doesn't offer the greatest protection, but it is certainly better than nothing and doesn't require advanced industry to produce.
 		

@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Graveyard Burial",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Headstones commemorating the dead look out upon trees and flowers decorating the hillside.  Families were understandably upset at their loved ones being dumped into mass graves. 
 
@@ -13,7 +13,7 @@ TECHS: [
 	
 	{
 		NAME: "Tombs",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Carved statues look solemnly down on tombs of heavy stone.  Every step echoes down these hallowed halls.  This is a place of respect for the honored dead. 
 
@@ -24,7 +24,7 @@ TECHS: [
 
 	{
 		NAME: "Temples",
-		CATEGORY:"First Ere",
+		CATEGORY:"Civic",
 
 		DESC: "Whispered prayers float up to the pedestal as priests offer up precious sacrifices to distant yet powerful gods.  This path leads to alliances with powerful Cantor and Argonosh havens.
 		

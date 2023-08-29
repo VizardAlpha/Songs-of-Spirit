@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Paved road variant",
-		CATEGORY:"First Ere",
+		CATEGORY:"Miscellaneous",
 
 		DESC: "Artfully cut stone lines the streets and plazas of your city.  The breathtaking expense is a sign of the city's power.
 

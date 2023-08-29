@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Papermaking",
-		CATEGORY:"First Ere",
+		CATEGORY:"Knowledge",
 		
 		DESC: "Oral histories and stone slates can only carry a small amount of knowledge to new generations.  Paper is the gateway to deeper knowledge but takes a lot of effort to create.
 		
@@ -14,7 +14,7 @@ TECHS: [
 
 	{
 		NAME: "Papermaking Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Knowledge",
 
 		DESC: "Your papermakers learn better methods of pulping wood, treating, screening, pressing, and drying it into final paper.",
 	},

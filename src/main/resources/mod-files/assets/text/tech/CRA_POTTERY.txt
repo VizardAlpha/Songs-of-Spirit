@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Pottery",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Carefully selected clay is shaped and baked into reusable containers.
 
@@ -14,7 +14,7 @@ TECHS: [
 
 	{
 		NAME: "Pottery Bonus",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 
 		DESC: "Spinning wheels, shaping tools, string cutters, and precision kilns are just some of the ways your potters are discovering to improve their craft.",
 	},

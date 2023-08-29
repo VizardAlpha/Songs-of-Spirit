@@ -2,14 +2,52 @@ TECHS: [
 
 	{
 		LEVEL_COST: 1200,
-		TREE_ORDER: 300,
-
-		REQUIRES_TECH_LEVEL: {
-            1_THE_DARK_AGE0: 1,
-        },
+		TREE_ORDER: 5174,		
 
 		UPGRADES: [
 			LABORATORY_NORMAL,
 		],
 	},
+
+	{
+		LEVEL_COST: 5000,
+		TREE_ORDER: 5174,		
+
+		REQUIRES_TECH_LEVEL: {
+			KNO_RESEARCH0: 1,
+		},
+		
+		UPGRADES: [
+			LABORATORY_NORMAL,
+		],
+	},
+
+	{
+		LEVEL_COST: 8000,
+		TREE_ORDER: 5174,		
+
+		REQUIRES_TECH_LEVEL: {
+			KNO_RESEARCH0: 1,
+		},
+
+		ROOMS: [
+			LIBRARY_NORMAL,
+		],
+	},
+
+	{
+		LEVEL_COST: 12000,
+		TREE_ORDER: 5174,		
+
+		REQUIRES_TECH_LEVEL: {
+			KNO_RESEARCH2: 1,
+		},
+		
+		UPGRADES: [
+			LIBRARY_NORMAL,
+		],
+	},
+
 ],
+
+

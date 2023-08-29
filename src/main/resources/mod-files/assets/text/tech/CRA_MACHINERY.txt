@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Machinery",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		DESC: "The industrial might of your smithies combined with intricacy rivaling even the jewelcrafters.  This fine machinery can bring your city state to new heights in production.
 
 		%r%%r%
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Machinist Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "To your uneducated citizens, machinery is nearly indistinguishable from magic.  Further train your machinists in groundbreaking methods.",
 	},

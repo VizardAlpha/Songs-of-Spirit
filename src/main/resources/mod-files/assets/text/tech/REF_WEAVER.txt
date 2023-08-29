@@ -3,7 +3,7 @@ TECHS: [
 	**Initial Unlock
 	{
 		NAME: "Weaver (Crude)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Simple cotton or animal fiber is turned into soft and strong bolts of vibrant cloth.  This can revolutionize your Clothiers' work or prove a valuable export.
 		",
@@ -12,7 +12,7 @@ TECHS: [
 	**Tier 2
 	{
 		NAME: "Weaver (Refined)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Metal needles and scissors ease the work of your weavers.
 
@@ -24,7 +24,7 @@ TECHS: [
 	**Tier 3
 	{
 		NAME: "Weaver (Advanced)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Mechanical looms are like magic in motion, making complex patterns and fast production a reality.",
 	},
@@ -32,15 +32,15 @@ TECHS: [
 	**Bonus Specialization
 	{
 		NAME: "Weaver Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Your weavers learn more efficient ways to make use of their workshop.",
 	},
 	
-	**Rope Specialization
+	**Bonus Specialization
 	{
 		NAME: "Rope Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Your weavers learn more efficient ways to make use of their workshop.",
 	},

@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Schooling",
-		CATEGORY:"First Ere",
+		CATEGORY:"Knowledge",
 
 		DESC: "Fill impressionable young minds with skills for high education work, or indoctrinate them to be loyal through tough times.  
 
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "University",
-		CATEGORY:"First Ere",
+		CATEGORY:"Knowledge",
 
 		DESC: "Educate adults to perform well in very high intellect work, or indoctrinate them to be more loyal through the harshest of times.  
 

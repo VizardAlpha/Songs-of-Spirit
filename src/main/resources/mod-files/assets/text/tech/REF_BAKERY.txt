@@ -5,7 +5,7 @@ TECHS: [
 	**Tier 2
 	{
 		NAME: "Bakery (Refined)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Give your bakers a much needed upgrade to their workshops, giving a clean environment to work in with proofing racks to smoothe production timing.
 
@@ -17,7 +17,7 @@ TECHS: [
 	**Tier 3
 	{
 		NAME: "Bakery (Advanced)",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Advanced ovens with steam injection make your bakeries turn out the finest quality bread.
 		",
@@ -26,7 +26,7 @@ TECHS: [
 	**Coal Recipe
 	{
 		NAME: "Coal Fired Ovens",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Coal fired ovens operate with less fuel and more intense heat.  While not more efficient in its use of grain, it produces batches faster.",
 	},
@@ -34,7 +34,7 @@ TECHS: [
 	**Bonus Specialization
 	{
 		NAME: "Bakery Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Refining",
 
 		DESC: "Wheat, water, and yeast sounds like a simple process, but your bakers have many ways to further refine their craft.",
 	},	

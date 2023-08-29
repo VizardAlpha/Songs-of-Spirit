@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Artillery",
-		CATEGORY:"First Ere",
+		CATEGORY:"Battle",
 
 		DESC: "
 		Invaders will think twice before attacking your mighty walls studded with artillery batteries.
@@ -11,7 +11,7 @@ TECHS: [
 
 	{
 		NAME: "Soldiering",
-		CATEGORY:"First Ere",
+		CATEGORY:"Battle",
 
 		DESC: "
 		Elevate your drill sergeants' abilities to turn out good troops in short order.

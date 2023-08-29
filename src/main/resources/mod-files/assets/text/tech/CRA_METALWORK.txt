@@ -2,7 +2,7 @@ TECHS: [
 
 	{
 		NAME: "Smithy",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Smiths toil near the intense heat of furnaces as they shape metal into powerful tools of industry.  This marks a whole new level of productivity for nearly every trade.
 		
@@ -13,7 +13,7 @@ TECHS: [
 
 	{
 		NAME: "Armorsmithing",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Your soldiers are being cut down in swathes on the battlefield.  Smithies can fashion protective chain and plate to make your divisions have real staying power on the battlefield.
 		
@@ -24,7 +24,7 @@ TECHS: [
 
 	{
 		NAME: "Weaponsmithing",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Wooden clubs and rakes aren't the most intimidating sight to your adversaries.  Fine metal weapons can be forged to make your divisons a real threat in melee combat.
 		
@@ -35,7 +35,7 @@ TECHS: [
 
 	{
 		NAME: "Smith Specialization",
-		CATEGORY:"First Ere",
+		CATEGORY:"Crafting",
 		
 		DESC: "Smithing is equally science, art, and pure physical prowess.  Teach your smiths more advanced techniques to improve not only their production speed but also efficiency with goods.",
 	},
