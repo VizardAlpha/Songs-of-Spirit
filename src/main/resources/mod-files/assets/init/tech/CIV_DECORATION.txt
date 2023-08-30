@@ -4,7 +4,7 @@ TECHS: [
 	{
 		LEVEL_COST: 300,
 
-		TREE_ORDER: 5150,
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
 			
@@ -19,10 +19,10 @@ TECHS: [
 	{
 		LEVEL_COST: 900,
 
-		TREE_ORDER: 5160,
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			CIV_DECORATION0: 1,
+
 		},		
 
 		ROOMS: [
@@ -34,9 +34,9 @@ TECHS: [
 	**Home Basement
 	{
 		LEVEL_COST: 500,
-		TREE_ORDER: 5150,
+		TREE_ORDER: 1000,
 		REQUIRES_TECH_LEVEL: {
-			CIV_DECORATION0: 1,
+
 		},					
 		UPGRADES: [
 			_HOME,
@@ -46,9 +46,9 @@ TECHS: [
 	**Home Second Floor
 	{
 		LEVEL_COST: 800,
-		TREE_ORDER: 5150,
+		TREE_ORDER: 1000,
 		REQUIRES_TECH_LEVEL: {
-			CIV_DECORATION2: 1,
+
 		},				
 		UPGRADES: [
 			_HOME,

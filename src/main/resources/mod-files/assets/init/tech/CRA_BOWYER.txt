@@ -3,10 +3,10 @@ TECHS: [
 	{
 		LEVEL_COST: 200,
 
-		TREE_ORDER: 5515,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			CRA_CARPENTER0: 1,
+
 		},	
 
 		ROOMS: [
@@ -19,10 +19,10 @@ TECHS: [
 		LEVEL_COST: 250,
 		LEVEL_COST_INC_MUL: 1.3,
 
-		TREE_ORDER: 5515,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			CRA_BOWYER0: 1,
+
 		},
 
 		BONUS_ADD: {
@@ -36,14 +36,14 @@ TECHS: [
 	{
 		LEVEL_COST: 350,
 
-		TREE_ORDER: 5516,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			CRA_BOWYER0: 1,
+
 		},
 
 		INDUSTRIES: {
 				WORKSHOP_BOWYER: 1,
-			},
+		},
 	},
 ],

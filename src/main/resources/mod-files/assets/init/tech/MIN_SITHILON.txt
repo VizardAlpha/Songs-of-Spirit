@@ -18,7 +18,7 @@ TECHS: [
 		TREE_ORDER: 5865,
 
 		REQUIRES_TECH_LEVEL: {
-			MIN_SITHILON0: 1,
+
 		},
 
 		BONUS_ADD: {

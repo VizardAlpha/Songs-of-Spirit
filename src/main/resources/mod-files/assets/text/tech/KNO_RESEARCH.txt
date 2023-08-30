@@ -1,5 +1,16 @@
 TECHS: [
+	{   ** 1: Premier laboratoire
+		NAME: "Premier laboratoire",
+		CATEGORY:"The Dark Age",
 
+		DESC: "",
+	},
+	{   ** 1: Laboratoire améliorer
+		NAME: "Laboratoire améliorer",
+		CATEGORY:"The Dark Age",
+
+		DESC: "",
+	},
 	{
 		NAME: "Improved Laboratory",
 		CATEGORY:"Knowledge",

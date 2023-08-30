@@ -1,5 +1,32 @@
 TECHS: [
+	{ ** 1: Premiere ferme
+		NAME: "Premiere ferme",
+		CATEGORY:"The Dark Age",
 
+		DESC: "Learn to renew the soil's nutrients to give your edible crops a significant boost without risking illness from your methods.
+		",
+	},
+	{ ** 1: Végé
+		NAME: "Optimisation végétale",
+		CATEGORY:"The Dark Age",
+
+		DESC: "Learn to renew the soil's nutrients to give your edible crops a significant boost without risking illness from your methods.
+		",
+	},
+	{ ** 1: Riz
+		NAME: "Optimisation ricière",
+		CATEGORY:"The Dark Age",
+
+		DESC: "Learn to renew the soil's nutrients to give your edible crops a significant boost without risking illness from your methods.
+		",
+	},
+	{ ** 1: Coton
+		NAME: "Optimisation coton",
+		CATEGORY:"The Dark Age",
+
+		DESC: "Learn to renew the soil's nutrients to give your edible crops a significant boost without risking illness from your methods.
+		",
+	},
 	{
 		NAME: "Edible Crop Optimization",
 		CATEGORY:"Farming",

@@ -1,8 +1,37 @@
 TECHS: [
+	{
+	    ** 1: Premier laboratoire
+		LEVEL_COST: 0,
+        TREE_ORDER: 1003,
 
+		REQUIRES_TECH_LEVEL: {
+			1_THE_DARK_AGE0: 1,
+		},
+
+		ROOMS: [
+			LABORATORY_NORMAL,
+		],
+	},
+    {
+        ** 1: Amélioration
+		LEVEL_MAX: 2,
+        LEVEL_COST: 100,
+        LEVEL_COST_INC_MUL: 1.5,
+        TREE_ORDER: 1000,
+
+		REQUIRES_TECH_LEVEL: {
+			KNO_RESEARCH0: 1,
+		},
+
+		BONUS_ADD: {
+        	ROOM: {
+        	    LABORATORY_NORMAL: 0.1,
+        	},
+        },
+	},
 	{
 		LEVEL_COST: 1200,
-		TREE_ORDER: 5174,		
+		TREE_ORDER: 1000,
 
 		UPGRADES: [
 			LABORATORY_NORMAL,
@@ -11,10 +40,10 @@ TECHS: [
 
 	{
 		LEVEL_COST: 5000,
-		TREE_ORDER: 5174,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			KNO_RESEARCH0: 1,
+	
 		},
 		
 		UPGRADES: [
@@ -24,10 +53,10 @@ TECHS: [
 
 	{
 		LEVEL_COST: 8000,
-		TREE_ORDER: 5174,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			KNO_RESEARCH0: 1,
+
 		},
 
 		ROOMS: [
@@ -37,10 +66,10 @@ TECHS: [
 
 	{
 		LEVEL_COST: 12000,
-		TREE_ORDER: 5174,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			KNO_RESEARCH2: 1,
+
 		},
 		
 		UPGRADES: [

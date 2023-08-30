@@ -1,11 +1,74 @@
 TECHS: [
 	{
+		** 0: Premiere ferme
+		LEVEL_COST: 0,
+		TREE_ORDER: 998,
+
+		REQUIRES_TECH_LEVEL: {
+			1_THE_DARK_AGE0: 1,
+		},
+
+		ROOMS: [
+			FARM_VEG,
+			FARM_RICE,
+			FARM_COTTON,
+	    ],
+	},
+	{
+		** 1: Veg Spécialisation
+		LEVEL_MAX: 2,
+		LEVEL_COST: 500,
+		LEVEL_COST_INC_MUL: 1.5,
+
+		REQUIRES_TECH_LEVEL: {
+            FAR_FIELDS0: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				FARM_VEG: 0.1,
+			},
+		},
+	},
+	{
+		** 1: Riz Spécialisation
+		LEVEL_MAX: 2,
+		LEVEL_COST: 500,
+		LEVEL_COST_INC_MUL: 1.5,
+
+		REQUIRES_TECH_LEVEL: {
+            FAR_FIELDS0: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				FARM_RICE: 0.1,
+			},
+		},
+	},
+	{
+		** 1: Coton Spécialisation
+		LEVEL_MAX: 2,
+		LEVEL_COST: 500,
+		LEVEL_COST_INC_MUL: 1.5,
+
+		REQUIRES_TECH_LEVEL: {
+            FAR_FIELDS0: 1,
+		},
+
+		BONUS_ADD: {
+			ROOM: {
+				FARM_COTTON: 0.1,
+			},
+		},
+	},
+	{
 		** 0: Edible Optimization
 		LEVEL_MAX: 10,
 		LEVEL_COST: 500,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5250,		
+		TREE_ORDER: 1000,
 
 		BONUS_ADD: {
 			ROOM: {
@@ -24,10 +87,10 @@ TECHS: [
 		LEVEL_COST: 500,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5251,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -42,10 +105,10 @@ TECHS: [
 		LEVEL_COST: 500,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5252,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -60,10 +123,10 @@ TECHS: [
 		LEVEL_COST: 500,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5253,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -78,10 +141,10 @@ TECHS: [
 		LEVEL_COST: 700,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5254,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -96,7 +159,7 @@ TECHS: [
 		LEVEL_COST: 700,
 		LEVEL_COST_INC_MUL: 1.5,
 
-		TREE_ORDER: 5255,		
+		TREE_ORDER: 1000,
 
 
 		BONUS_ADD: {
@@ -112,11 +175,10 @@ TECHS: [
 		LEVEL_COST: 750,
 		LEVEL_COST_INC_MUL: 2,
 
-		TREE_ORDER: 5256,		
+		TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
-			FAR_FIELDS5: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -141,7 +203,7 @@ TECHS: [
 		TREE_ORDER: 5257,		
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS5: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -158,8 +220,7 @@ TECHS: [
 
 		TREE_ORDER: 5258,		
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS9: 1,
-			FAR_FIELDS5: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -186,7 +247,7 @@ TECHS: [
 		TREE_ORDER: 5259,		
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {
@@ -204,7 +265,7 @@ TECHS: [
 		TREE_ORDER: 5260,		
 
 		REQUIRES_TECH_LEVEL: {
-			FAR_FIELDS0: 2,
+
 		},
 
 		BONUS_ADD: {

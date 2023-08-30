@@ -3,7 +3,8 @@ TECHS: [
 	**Tier 2
 	{
 		LEVEL_COST: 750,
-		TREE_ORDER: 5455,	
+		TREE_ORDER: 1000,
+
 		UPGRADES: [
 			REFINER_BAKERY,
 		],	
@@ -12,10 +13,12 @@ TECHS: [
 	**Tier 3
 	{
 		LEVEL_COST: 1500,
-		TREE_ORDER: 5455,
+		TREE_ORDER: 1000,
+
 		REQUIRES_TECH_LEVEL: {
-			REF_BAKERY0: 1,
-		},	
+
+		},
+
 		UPGRADES: [
 			REFINER_BAKERY,
 		],	
@@ -25,11 +28,11 @@ TECHS: [
 	{
 		LEVEL_COST: 600,
 
-		TREE_ORDER: 5465,
+		TREE_ORDER: 1000,
 
 
 		REQUIRES_TECH_LEVEL: {
-			REF_BAKERY0: 1,
+
 		},
 
 		INDUSTRIES: {
@@ -44,9 +47,10 @@ TECHS: [
 		LEVEL_COST_INC_MUL: 1.15,
 
 		REQUIRES_TECH_LEVEL: {
-			REF_BAKERY1: 1,
-		},	
-		TREE_ORDER: 5455,
+
+		},
+
+		TREE_ORDER: 1000,
 
 		BONUS_ADD: {
 			ROOM: {
