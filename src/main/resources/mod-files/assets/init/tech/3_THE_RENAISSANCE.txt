@@ -1,6 +1,6 @@
 TECHS: [
 	{
-		** 0: The Renaissance
+		** 3: The Renaissance
 		LEVEL_MAX: 1,
 		LEVEL_COST: 350,
 

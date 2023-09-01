@@ -3,25 +3,25 @@ TECHS: [
 		NAME: "Puits",
 		CATEGORY:"The Dark Age",
 
-		DESC: "Actors enact elaborate plays and musical performances.  Whether they are applauded or pelted with rotten fruit, there's fun to be had by all.  %r%%r%(Larger, more expensive stages provide more fulfillment.)",
+		DESC: "",
 	},
 	{   ** 1: Maison
 		NAME: "Maison",
 		CATEGORY:"The Dark Age",
 
-		DESC: "Actors enact elaborate plays and musical performances.  Whether they are applauded or pelted with rotten fruit, there's fun to be had by all.  %r%%r%(Larger, more expensive stages provide more fulfillment.)",
+		DESC: "",
 	},
 	{   ** 1: Réserve
 		NAME: "Réserve",
 		CATEGORY:"The Dark Age",
 
-		DESC: "Actors enact elaborate plays and musical performances.  Whether they are applauded or pelted with rotten fruit, there's fun to be had by all.  %r%%r%(Larger, more expensive stages provide more fulfillment.)",
+		DESC: "",
 	},
 	{
 		NAME: "Stage",
 		CATEGORY:"Civic",
 
-		DESC: "Actors enact elaborate plays and musical performances.  Whether they are applauded or pelted with rotten fruit, there's fun to be had by all.  %r%%r%(Larger, more expensive stages provide more fulfillment.)",
+		DESC: "",
 	},
 	{
 		NAME: "Bathhouse",

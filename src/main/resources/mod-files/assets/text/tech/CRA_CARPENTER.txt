@@ -3,23 +3,19 @@ TECHS: [
 		NAME: "Charpentier",
 		CATEGORY:"The Dark Age",
 
-		DESC: "Your people are demanding furniture for nearly every project you conceive of.
-		",
+		DESC: "",
 	},
     {   ** 1: Amélioration
 		NAME: "Rendements améliorer",
 		CATEGORY:"The Dark Age",
 
-		DESC: "Your people are demanding furniture for nearly every project you conceive of.
-		",
+		DESC: "",
 	},
-
 	{
 		NAME: "Carpentry Basics",
 		CATEGORY:"Crafting",
 
-		DESC: "Your people are demanding furniture for nearly every project you conceive of.
-		",
+		DESC: "Your people are demanding furniture for nearly every project you conceive of.",
 	},
 
 	{

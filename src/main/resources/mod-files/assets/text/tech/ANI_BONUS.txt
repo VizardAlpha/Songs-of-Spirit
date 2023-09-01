@@ -1,5 +1,28 @@
 TECHS: [
+	{
+		NAME: "Premier Animaux",
+		CATEGORY:"The Castel Age",
 
+		DESC: "",
+	},
+	{
+		NAME: "Amélioration [Aur]",
+		CATEGORY:"The Castel Age",
+
+		DESC: "",
+	},
+	{
+		NAME: "Amélioration [Onx]",
+		CATEGORY:"The Castel Age",
+
+		DESC: "",
+	},
+	{
+		NAME: "Amélioration [Ent]",
+		CATEGORY:"The Castel Age",
+
+		DESC: "",
+	},
 	{
 		NAME: "Fishery Methods",
 		CATEGORY:"Animal Science",

@@ -1,6 +1,6 @@
 TECHS: [
 	{
-		** 0: The Dark Age
+		** 1: The Dark Age
 		LEVEL_MAX: 1,
 		LEVEL_COST: 0,
 

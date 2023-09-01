@@ -1,8 +1,6 @@
 TECHS: [
-	{ ** 0: Puits
+	{ ** 1: Puits
 		LEVEL_COST: 100,
-
-		**TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
 			1_THE_DARK_AGE0: 1,
@@ -16,8 +14,6 @@ TECHS: [
 	{ ** 1: Maison
 		LEVEL_COST: 100,
 
-		**TREE_ORDER: 1000,
-
 		REQUIRES_TECH_LEVEL: {
 			1_THE_DARK_AGE0: 1,
 		},
@@ -27,10 +23,8 @@ TECHS: [
 		],
 	},
 
-	{ ** 2: Réserve
+	{ ** 1: Réserve
 		LEVEL_COST: 100,
-
-		**TREE_ORDER: 1000,
 
 		REQUIRES_TECH_LEVEL: {
 			1_THE_DARK_AGE0: 1,
@@ -82,6 +76,4 @@ TECHS: [
 			ARENA_NORMAL,
 		],		
 	},
-
 ],
-
