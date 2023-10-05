@@ -1,9 +1,0 @@
-TECHS: [
-
-	{
-		NAME: "Age de départ",
-		CATEGORY:"The Dark Age",
-
-		DESC: "",
-	},
-],

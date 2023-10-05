@@ -1,8 +1,0 @@
-TECHS: [
-	{
-		NAME: "Deuxieme Ére",
-		CATEGORY:"The Castel Age",
-
-		DESC: "",
-	},
-],
