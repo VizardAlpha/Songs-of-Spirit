@@ -8,13 +8,13 @@ import snake2d.util.gui.clickable.CLICKABLE;
 import snake2d.util.sprite.SPRITE;
 import util.gui.misc.GButt;
 import view.ui.UIPanelTop;
-import view.world.WorldIIMinimap;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.util.ReflectionUtil;
-import java.awt.Desktop;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -34,13 +34,6 @@ public class UIGameConfig {
         log.debug("Initializing UI");
 
         CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
-            @Override
-            protected void clickA() {
-                infoModal.activate();
-            }
-        }.hoverInfoSet(MOD_INFO.name);
-
-        CLICKABLE worldButton = new SpiritInfoButton(SPRITES.icons().s.menu) {
             @Override
             protected void clickA() {
                 infoModal.activate();
@@ -81,15 +74,6 @@ public class UIGameConfig {
                  GuiSection right = (GuiSection) o;
                  right.addRelBody(0, DIR.W, Dis);
             });
-
-        gameUiApi.findUIElementInWorldGeneratorView(WorldIIMinimap.class)
-            .flatMap(worldIIMinimap -> ReflectionUtil.getDeclaredField("buttons", worldIIMinimap))
-            .ifPresent(o -> {
-                GuiSection buttons = (GuiSection) o;
-                log.debug("Injecting into WorldIIMinimap#buttons in world generator view");
-
-                buttons.add(worldButton, buttons.body().x1() + 130, buttons.body().y1() + 4);
-             });
     }
 
     private static class SpiritInfoButton extends GButt.ButtPanel{

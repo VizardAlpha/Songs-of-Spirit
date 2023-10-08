@@ -12,6 +12,7 @@ TECHS: [
 		FLOORS: [
 			STONE_UPGRADE_0,
 			STONE_UPGRADE_1,
+			SANDSTONE,
 		],
 	},
 

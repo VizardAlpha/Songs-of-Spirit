@@ -1,0 +1,217 @@
+TYPE:LIBRARY,
+RESOURCES: [FURNITURE,FABRIC,STONE_CUT,GEM,],
+AREA_COSTS: [0.25,0,0,0,],
+FLOOR:  [
+	WOOD,
+	STONE_LARGE_FINE,
+],
+MINI_COLOR: 134_184_184,
+KNOWLEDGE_DEGRADE: 0.025,
+BOOST_PER_WORKER: 0.005,
+KNOWLEDGE_GAIN_SPEED: 25,
+
+WORK: {
+	SHIFT_OFFSET: 0.375,
+	SOUND: LIBRARY,
+	FULFILLMENT: 1.0,
+	EDUCATION_FACTOR: 1.5,
+	INDOCTRINATION_FACTOR: 0.5,
+},
+
+ITEMS: [
+	{
+		COSTS: [3,1,0,1,],
+		STATS: [1,1,0,],
+	},
+	{
+		COSTS: [0,2,1,0,],
+		STATS: [0,0,0.3,],
+	},
+],
+
+INDUSTRY: {
+	IN: {
+		PAPER: 1.0,
+	},
+},
+
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,1,1,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,2,1,],
+		BOOST: 0.5,
+	},
+],
+
+SPRITES: {
+	TABLE_COMBO: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 0,
+			SHADOW_HEIGHT: 3,
+			FRAMES: [
+				COMBO_TABLES: 4,
+			],
+		},
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 0,
+			SHADOW_HEIGHT: 3,
+			FRAMES: [
+				COMBO_TABLES: 2,
+			],
+		},
+	],
+	
+	CARPET_COMBO: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 0,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				COMBO_CARPETS: 0,
+				COMBO_CARPETS: 1,
+				COMBO_CARPETS: 2,
+				COMBO_CARPETS: 3,
+			],
+		},
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 0,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				COMBO_CARPETS: 4,
+			],
+		},
+	],
+	
+	SHELF_1X1: [
+		{
+			ROTATES: true,
+			FPS: 0,
+			SHADOW_LENGTH: 3,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				SHELVES: 0,
+			],
+		},
+		{
+			ROTATES: true,
+			FPS: 0,
+			SHADOW_LENGTH: 3,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				SHELVES: 1,
+			],
+		},
+	],
+
+	CHAIR_1X1: [
+		{
+			FPS: 0,
+			ROTATES: true,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				CHAIRS: 6,
+				CHAIRS: 7,
+			],
+		},
+		{
+			ROTATES: true,
+			FPS: 0,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				CHAIRS: 8,
+				CHAIRS: 9,
+			],
+		},
+	],
+	
+
+	
+	WORK_UNUSED_1x1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 1,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				TOP: 11,
+				TOP: 12,
+			],
+		},
+	],
+	
+	WORK_USED_1x1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 1,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				TOP: 13,
+				TOP: 14,
+			],
+		},
+	],
+
+	SHELF_DECOR_1x1: [
+		{
+			FPS: 0,
+			ROTATES: true,
+			SHADOW_LENGTH: 1,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				TOP: 19,
+				TOP: 20,
+				TOP: 21,
+				TOP: 22,
+			],
+		},
+	],
+	
+	DECOR_1x1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 3,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				MECH2: 12,
+				MECH2: 13,
+			],
+		},
+	],
+	
+	TORCH_1x1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 3,
+			SHADOW_HEIGHT: 0,
+			FRAMES: [
+				TABLES: 3,
+			],
+		},
+	],
+	
+	TABLE_DECOR_1x1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 1,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				TOP: 5,
+				TOP: 6,
+				TOP: 7,
+				TOP: 8,
+			],
+		},
+	],
+	
+	
+},

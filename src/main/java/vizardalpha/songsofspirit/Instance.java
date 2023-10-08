@@ -9,7 +9,7 @@ import snake2d.util.file.FileGetter;
 import snake2d.util.file.FilePutter;
 import snake2d.util.file.Json;
 import view.interrupter.IDebugPanel;
-import view.main.MessageText;
+import view.ui.message.MessageText;
 import view.main.VIEW;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;

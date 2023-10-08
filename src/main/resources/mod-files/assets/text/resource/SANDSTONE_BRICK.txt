@@ -1,0 +1,3 @@
+NAME: "Sandstone brick",
+NAMES: "Sandstone brick",
+DESC: "Sandstone brick found naturally or can be created by your citizens.",

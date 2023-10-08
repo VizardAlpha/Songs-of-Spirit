@@ -27,35 +27,30 @@ TECHS: [
 		DESC: "Measure twice cut once.  Your carpenters learn how to improve their precision, joinery, and preparation of raw wood before processing.
 		",
 	},
-	
+
 	{
-		NAME: "Plank Specialization",
+		NAME: "Makeshift Weapons",
 		CATEGORY:"Crafting",
 		
-		DESC: "Chop and slice your logs to make a beautiful plank of wood!",
+		DESC: "Cudgels, wooden spears, and stone hammers aren't very terrifying... but they're better than nothing.
+
+		%r%%r%
+
+		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
+		",
 	},
 
 	{
-    	NAME: "Makeshift Weapons",
-    	CATEGORY:"Crafting",
+		NAME: "Makeshift Shield",
+		CATEGORY:"Crafting",
+		
+		DESC: "Having a wooden shield is not very terrifying... but it's better than nothing.
 
-    	DESC: "Cudgels, wooden spears, and stone hammers aren't very terrifying... but they're better than nothing.
+		%r%%r%
 
-    	%r%%r%
+		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
+		",
+	},
 
-    	(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
-    	",
-    },
 
-	{
-    	NAME: "Makeshift Shield",
-    	CATEGORY:"Crafting",
-
-    	DESC: "Having a wooden shield is not very terrifying... but it's better than nothing.
-
-    	%r%%r%
-
-    	(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
-    	",
-    },
 ],

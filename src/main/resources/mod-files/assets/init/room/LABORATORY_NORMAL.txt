@@ -1,0 +1,177 @@
+TYPE: LABORATORY,
+RESOURCES: [WOOD,FURNITURE,METAL,MACHINERY,],
+AREA_COSTS: [0.25,0,0,0,],
+FLOOR: [
+	DIRT,
+	WOOD,
+	STONE_MEDIUM_FINE,
+],
+MINI_COLOR: 134_184_184,
+KNOWLEDGE_DEGRADE: 0.025,
+KNOWLEDGE_PER_WORKER: 70,
+KNOWLEDGE_GAIN_SPEED: 4,
+
+WORK: {
+	SHIFT_OFFSET: 0.375,
+	SOUND: LIBRARY,
+	USES_TOOL: true,
+	FULFILLMENT: 1.0,
+	EDUCATION_FACTOR: 1.0,
+},
+
+ITEMS: [
+	{
+		COSTS: [4,3,2,1,],
+		STATS: [1,1,],
+	},
+],
+
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,1,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,2,0,],
+		BOOST: 0.5,
+	},
+	{
+		RESOURCE_MASK: [1,1,5,2,],
+		BOOST: 1.0,
+	},
+],
+
+SPRITES: {
+	TABLE_COMBO: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 6,
+			SHADOW_HEIGHT: 3,
+			FRAMES: [
+				COMBO_TABLES: 0,
+				COMBO_TABLES: 1,
+			],
+		},
+		{
+			COLOR: {R: 216, G: 192, B: 158,},
+			FPS: 0,
+			SHADOW_LENGTH: 6,
+			SHADOW_HEIGHT: 3,
+			FRAMES: [
+				COMBO_TABLES: 4,
+			],
+		},
+		{
+			COLOR: {R: 216, G: 192, B: 158,},
+			FPS: 0,
+			SHADOW_LENGTH: 6,
+			SHADOW_HEIGHT: 3,
+			FRAMES: [
+				COMBO_TABLES: 3,
+			],
+		},
+	],
+	
+	TABLE_KNOWLEDGE_ONTOP_1X1: {
+		FPS: 0,
+		SHADOW_LENGTH: 2,
+		SHADOW_HEIGHT: 0,
+		ROTATES: false,
+		FRAMES: [
+			WORK: 25,
+		],
+	},
+	
+	CHAIR_1X1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				CHAIRS: 0,
+				CHAIRS: 1,
+			],
+		},
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				CHAIRS: 6,
+				CHAIRS: 7,
+			],
+		},
+	],
+	
+	WORK_TABLE_1X1: [
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				WORK: 35,
+				WORK: 36,
+				WORK: 35,
+				WORK: 36,
+				ANIMAL: 2,
+				ANIMAL: 3,
+			],
+		},
+		{
+			FPS: 0,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 0,
+			ROTATES: true,
+			FRAMES: [
+				WORK: 37,
+				WORK: 38,
+				WORK: 37,
+				WORK: 38,
+				ANIMAL: 2,
+				ANIMAL: 3,	
+			],
+		},
+	],
+	WORK_STANDALONE_1X1: [
+		{
+			FPS: 5,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 5,
+			ROTATES: false,
+			FRAMES: [
+				MECH2: 6,
+				MECH2: 7,
+				MECH2: 8,
+				MECH2: 9,
+			],
+		},
+		{
+			FPS: 5,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 5,
+			ROTATES: false,
+			FRAMES: [
+				MECH2: 6,
+				MECH2: 7,
+				MECH2: 8,
+				MECH2: 9,
+			],
+		},
+		{
+			FPS: 5,
+			SHADOW_LENGTH: 2,
+			SHADOW_HEIGHT: 5,
+			ROTATES: false,
+			FRAMES: [
+				MECH2: 10,
+				MECH2: 11,
+				MECH2: 12,
+				MECH2: 13,
+			],
+		},
+	],
+
+},

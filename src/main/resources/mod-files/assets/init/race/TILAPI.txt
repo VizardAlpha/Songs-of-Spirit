@@ -35,18 +35,20 @@ PREFERRED: {
 	STRUCTURE: {
 		MOUNTAIN: 0,
 		STONE: 0.2,
-		GLASS: 0.5,
+		GLASS: 0.4,
 		GRAND: 0.3,
 		WOOD: 1.0,
+		OUTDOORS: 1.0,
 	},
 	WORK: {
 		_HUNTER: 1.0,
 		PASTURE_AUR: 1.0,
 		PASTURE_ENT: 1.0,
+		PASTURE_GLOBDIEN: 0.8,
 		PASTURE_ONX: 1.0,
-		PASTURE_GLOBDIEN: 1.0,
+		PASTURE_BALTI: 0.1,
+		ORCHARD: 1.0,
 		PASTURE_HORSE: 1.0,
-		_WOODCUTTER: 1.0,
 		MINE_SAND: 0.0,		
 	},
 	OTHER_RACES: {
@@ -57,10 +59,9 @@ PREFERRED: {
 
 
 POPULATION: {
-	MAX_REGION: 0.7,
-	MAX_CITY: 1.0,
-	REPRODUCTION_REGION_PER_DAY: 0.03,
-	IMMIGRANTS_PER_DAY: 2,
+	MAX: 0.55,
+	GROWTH: 0.025,
+	IMMIGRATION_RATE: 2,
 	CLIMATE: {
 		COLD: 0.8,
 		TEMPERATE: 1.0,
@@ -96,11 +97,12 @@ BONUS_MUL: {
 	ROOM: {
 		PASTURE_AUR: 1.4,
 		PASTURE_ENT: 1.4,
-		PASTURE_GLOBDIEN: 1.4,
+		PASTURE_GLOBDIEN: 1.0,
 		PASTURE_ONX: 1.4,						
 		PASTURE_BALTI: 0.1,
 		PASTURE_HORSE: 1.2,
-		_WOODCUTTER: 1.2,
+		ORCHARD: 1.2,
+		_WOODCUTTER: 1.3,
 		WORKSHOP_BOWYER: 1.4,			
 	},
 },
@@ -201,11 +203,18 @@ STATS: {
 
 APPEARANCE: {
 
-	SPRITE_FILE: Tilapi,
+	ICON_SMALL: 24->race->Tilapi->0,
+	ICON_BIG: 32->race->Tilapi->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Humanoid_small,
-	SPRITE_SKELLETON_FILE: Humanoid,
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
+	CROWN: {
+		FILE: Human,
+		OFFX: 0,
+		OFFY: -2,
+	},
 
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
@@ -218,15 +227,8 @@ APPEARANCE: {
 		{R: 193, G: 77, B: 0,},
 	],
 
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
 	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-	
+
 	COLORS: {
 		SKIN: {
 			GENERATE_RANDOMIZE: 0.2,
@@ -246,10 +248,10 @@ APPEARANCE: {
 			TURNS_GRAY_WHEN_OLD: true,
 			VALUES: [
 				{R: 220, G: 80, B: 40,},
-				
+
 			],
 		},
-		
+
 		EYE: {
 			GENERATE_RANDOMIZE: 0.2,
 			VALUES: [
@@ -267,39 +269,89 @@ APPEARANCE: {
 				{R: 255, G: 150, B: 150,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
 
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 1.0,
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: HAIR,
-		COLOR_EXTRA2: HAIR,
+
+		SPRITE_FILE: ChildHumanoid,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: StdFemaleFirst,
+		NAMESET_FILE_SURNAME: StdLast,
+
+		ADDONS: [
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: HairTilapi,
+				COLOR: HAIR,
+			},
+		],
 	},
 
 	TYPES: [
 		{
 			OCCURRENCE: 1.0,
-			OCCURRENCE_EXTRA1: 0,
-			OCCURRENCE_EXTRA2: 1.0,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-			
+
+			SPRITE_FILE: Tilapi,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFemaleFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			PORTRAIT_FILE: Tilapi,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairTilapi,
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourTilapi,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
+
+
 
 			PORTRAIT: [
 				**hair extension
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_3_F: 0.25,
+						},
+					},
 					FRAME_START: 28,
 					FRAME_VARIATIONS: 1,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA2: true,
 					STAINS: false,
 				},
 				**Ears
@@ -307,7 +359,7 @@ APPEARANCE: {
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 2,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: -18,
 				},
@@ -326,7 +378,11 @@ APPEARANCE: {
 					OFF_Y: -20,
 					OPACITY: 127,
 					COLOR: SKIN,
-					ONLY_IF_OLD: true,
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 				},
 				**Eyes
 				{
@@ -339,6 +395,11 @@ APPEARANCE: {
 				},
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 3,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -346,7 +407,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: -7,
-					ONLY_WHEN_DEAD_NOT: true,
 				},
 				**eyebrows
 				{
@@ -389,4 +449,3 @@ APPEARANCE: {
 		},
 	],	
 },
-

@@ -1,0 +1,8 @@
+ICON: 24->resource->Sandstone_brick->0,
+DEGRADE_RATE: 0.001,
+COLOR: 255_255_255,
+MINIMAP_COLOR: 10_10_10,
+EDIBLE: false,
+SPRITE: Sandstone_brick,
+SPRITE_DEBRIS: Stone,
+CATEGORY_DEFAULT: 2,

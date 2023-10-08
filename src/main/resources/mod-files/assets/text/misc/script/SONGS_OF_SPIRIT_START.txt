@@ -1,14 +1,6 @@
 SONGS_OF_SPIRIT_NEW_GAME: {
 	TITLE: "Welcome!",
 	PARAGRAPHS: [
-"Thank you for downloading Songs of Spirit! May you be blessed during this game!
-%r%%r%
-I recommend you to take a quick look at the new resources in the tab on the right! 
-You can find the Songs of Spirit team on this Discord!
-%r%%r%
-https://discord.gg/KCarMbDtJz
-%r%%r%
-Mod version: ${mod.version}%r%%r%,
-Game version: 0.64.47%r%%r%",
-],
+        "Thank you for downloading Songs of Spirit! May you be blessed during this game!%r%%r% I recommend you to take a quick look at the new resources in the tab on the right and check the patch note if the mod version has changed. You can find the Songs of Spirit team on this Discord!%r%%r% https://discord.gg/KCarMbDtJz",
+    ],
 },
