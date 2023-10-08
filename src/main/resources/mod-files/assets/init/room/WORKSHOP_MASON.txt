@@ -1,0 +1,166 @@
+TYPE: WORKSHOP,
+RESOURCES: [STONE,FURNITURE,METAL,],
+AREA_COSTS: [0.2,0,0,],
+FLOOR: STONE_MEDIUM_DARK,
+MINI_COLOR: 226_195_38,
+
+ITEMS: [
+	{
+		COSTS: [1,1,1,],
+		STATS: [0,0,0,],
+	},
+	{
+		COSTS: [2,4,2,],
+		STATS: [1.2,0,1,],
+	},
+	{
+		COSTS: [1,2,3,],
+		STATS: [0,3,0,],
+	},
+],
+
+
+WORK: {
+	SHIFT_OFFSET: 0.325,
+	SOUND: STONE,
+	ACCIDENTS_PER_YEAR: 0.0025,	
+	FULFILLMENT: 1.0,
+	EDUCATION_FACTOR: 0.4,
+},
+
+INDUSTRIES: [
+	{
+		INDUSTRY: {
+			IN: {
+				STONE: 4,
+			},
+			OUT: {
+				STONE_CUT: 1.0,
+			},
+		},
+	},
+
+	{
+		INDUSTRY: {
+			IN: {
+				SAND: 4,
+			},
+			OUT: {
+				SANDSTONE_BRICK: 1.0,
+			},
+		},
+	},
+],
+
+ENVIRONMENT_EMIT: {
+	_NOISE: {
+		VALUE: 1,
+		RADIUS: 1,
+	},
+},
+
+SPRITES: {
+	CHAIR_1X1: [
+		{
+			SHADOW_HEIGHT: 4,
+			FRAMES: [
+				CHAIRS: 10,
+				CHAIRS: 11,
+			],
+		},
+	], 
+	TABLE_COMBO: [
+		{
+			SHADOW_HEIGHT: 4,
+			COLOR: {R:200,G:160,B:160,},
+			FRAMES: [
+				COMBO_TABLES: 4,
+			],
+		},
+	],
+	TABLE_TOP_COMBO: [
+		{
+			TINT: true,
+			FRAMES: [
+				ONTOP: 0,
+			],
+		},
+	],
+	WORK_BELOW_1X1: [
+		{
+			FRAMES: [ 
+				
+			],
+		},
+	],
+	WORK_ABOVE_1X1: [
+		{
+			SHADOW_LENGTH: 3,
+			TINT: true,
+			FPS: 5,
+			FRAMES: [
+				WORK: 2,
+				WORK: 3,
+				WORK: 4,
+				WORK: 5,
+				WORK: 6,
+				WORK: 7,
+				WORK: 8,
+				WORK: 9,
+				WORK: 10,
+			],
+		},
+	],
+	TOOL_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			TINT: true,
+			ROTATES: false,
+			FRAMES: [
+				WORK: 11,
+				WORK: 12,
+				WORK: 13,
+				WORK: 14,
+				WORK: 15,
+			],
+		},
+	],
+	MISC_BELOW_1X1: [
+		{
+			SHADOW_LENGTH: 1,
+			TINT: true,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 5,
+				STORAGE: 6,
+				STORAGE: 8,
+			],
+		},
+	],
+	MISC_ABOVE_1X1: [
+		{
+			SHADOW_LENGTH: 5,
+			TINT: true,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 0,
+				STORAGE: 1,
+				STORAGE: 2,
+				STORAGE: 10,
+				WORK: 2,
+				WORK: 3,
+				WORK: 4,
+				WORK: 5,
+				WORK: 6,
+				WORK: 7,
+				WORK: 8,
+				WORK: 9,
+				WORK: 10,
+				RESOURCE: 2,
+				RESOURCE: 2,
+				RESOURCE: 2,
+				RESOURCE: 2,
+			],
+		},
+	],
+},

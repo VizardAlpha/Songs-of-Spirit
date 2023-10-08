@@ -1,0 +1,44 @@
+INFO: {
+	NAME: "Masonry",
+	NAMES: "Masonries",
+	DESC: "Workshop that turns stone into cut stone",
+},
+
+BONUS: {
+	NAME: "Stone Carving",
+	DESC: "Increases effectiveness of Masons",
+},
+
+WORK: {
+	TITLE: "Mason",
+	VERB: "Cutting stone",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production",
+	},
+	{
+		
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "The internal storage for produce.",
+	},
+	{
+		NAME: "Work Bench",
+		DESC: "Where subjects work",
+	},
+	{
+		NAME: "Auxiliary Station",
+		DESC: "Adds Efficiency to the room",
+	},
+],

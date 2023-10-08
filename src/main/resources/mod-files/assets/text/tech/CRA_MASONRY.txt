@@ -1,0 +1,28 @@
+TECHS: [
+
+	{
+		NAME: "Masonry",
+		CATEGORY:"Crafting",
+		DESC: "Raw stone doesn't have the strength or beauty necessary for more advanced buildings.  Masons know attention to detail makes the difference between a towering monument lasting generations and a heap of rubble. 
+
+		%r%%r%
+
+		(Cut stone is incredibly useful.  It gives you access to Grand buildings which fully fulfill some species in the Building category.  It can be used in advanced decoration, roads, and military walls.)
+		",
+	},
+
+	{
+		NAME: "Sandstone Brick",
+		CATEGORY:"Crafting",
+
+		DESC: "Teach your masons techniques for producing Sandstone Brick from sand.",
+	},
+
+	{
+		NAME: "Masonry Bonus",
+		CATEGORY:"Crafting",
+		
+		DESC: "Teach your masons more advanced techniques to improve not only their production speed but also efficiency with goods",
+	},
+
+],
