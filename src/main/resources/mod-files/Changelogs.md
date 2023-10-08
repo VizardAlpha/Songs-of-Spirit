@@ -1,4 +1,25 @@
-## xx-xx-2023 0.3.0 Major
+## 09-10-2023 0.3.0 Major
+- The horses now have 3 different sounds. If the sound is too quiet, send a feedback to Discord.
+- Crowdin's translations have been removed, find them on Github now!
+- Race stats updated to match changes made in vanilla.
+- Road speeds in general have been reduced.
+- The sandstone road no longer costs sand, but sandstone brick.
+- Masons can make sandstone brick.
+- From now on, the kitchen will have accidents like any other building [Forgotten].
+- Some technologies have modified bonuses and malus, as well as cost.
+- Some files were no longer in use, and have been deleted.
+- Small change to the message for a new game.
+- New stone road.
+- In the army management section, bows and crossbows give a bonus to archery stats.
+- Wooden sword added. [They'll be much more useful in V65].
+- You'll start a new game with slightly more resources than vanilla. [This will be useful for the version that will change the way technologies are unlocked].
+- Shield production now costs metal.
+- Ration maker modified to match vanilla stats.
+- New metal structure. [This is a test, it may be removed later, give me feedback on the structure on Discord]
+
+
+- ###### This version was supposed to have a new way of unlocking technologies. Due to major changes in the next game update, I thought I'd wait and see if it would be easier and more modular.
+- ###### Thank you for your feedback on Steam and Discord.
 
 ---
 ## 26-06-2023 0.2.4 Minor

@@ -1,15 +1,15 @@
 # Creators
-VizardAlpha
-4rg0n
+- VizardAlpha [Assets]
+- 4rg0n [Script]
 
 ---
 ## Bug Reporters
-Shado,
-Rebel of Exclusivity,
+- Shado,
+- Rebel of Exclusivity,
 
 ---
 
 ## Translators
 ### Chinese
-Prototype-alpha,
-sizhentao03,
+- Prototype-alpha [Crowdin],
+- sizhentao03 [Crowdin],

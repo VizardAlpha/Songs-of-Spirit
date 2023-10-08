@@ -88,6 +88,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				PLANK: 5.0,
+				METAL: 1.0,
 			},
 			OUT: {
 				SHIELD: 1.0,
