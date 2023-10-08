@@ -1,9 +1,0 @@
-POPULATION: 1000,
-NOBLES: 5,
-BONUS_ADD: {
-	BEHAVIOUR: {
-	},
-},
-ROOMS: [
-
-],

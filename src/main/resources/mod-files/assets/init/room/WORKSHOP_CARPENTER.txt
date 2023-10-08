@@ -50,16 +50,27 @@ INDUSTRIES: [
 		},
 	},
 
+    {
+		INDUSTRY: {
+			IN: {
+				WOOD: 5.5,
+			},
+			OUT: {
+				WOODEN_WEAPON: 0.20,
+			},
+		},
+	},
+
 	{
-    		INDUSTRY: {
-    			IN: {
-    				PLANK: 3.0,
-    			},
-    			OUT: {
-    				FURNITURE: 0.75,
-    			},
+    	INDUSTRY: {
+    		IN: {
+    			PLANK: 3.0,
+    		},
+    		OUT: {
+    			FURNITURE: 0.75,
     		},
     	},
+    },
 
 	{
 		INDUSTRY: {
@@ -84,10 +95,7 @@ INDUSTRIES: [
 		},
 	},
 
-
 ],
-
-
 
 ENVIRONMENT_EMIT: {
 	_NOISE: {

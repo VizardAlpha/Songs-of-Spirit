@@ -1,9 +1,0 @@
-POPULATION: 30,
-BONUS_ADD: {
-	BEHAVIOUR: {
-		HAPPINESS: 0.05,
-	},
-},
-ROOMS: [
-
-],
