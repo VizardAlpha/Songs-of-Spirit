@@ -16,7 +16,8 @@
 - Shield production now costs metal.
 - Ration maker modified to match vanilla stats.
 - New metal structure. [This is a test, it may be removed later, give me feedback on the structure on Discord]
-
+- Plank item added.
+- Carpenter will now have to go through Wood then plank for some craft.
 
 - ###### This version was supposed to have a new way of unlocking technologies. Due to major changes in the next game update, I thought I'd wait and see if it would be easier and more modular.
 - ###### Thank you for your feedback on Steam and Discord.
