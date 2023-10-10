@@ -2,7 +2,7 @@ TYPE: WORKSHOP,
 RESOURCES: [WOOD,POTTERY,METAL,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
-MINI_COLOR: [226,195,38,],
+MINI_COLOR: 226_195_38,
 
 ITEMS: [
 	{
@@ -33,7 +33,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				MEAT: 4,
-				HERB: 0.5,
+				HERB: 2,
 			},
 			OUT: {
 				RATION: 3.0,
@@ -54,7 +54,7 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				EGG: 5,
+				FISH: 4,
 				HERB: 2,
 			},
 			OUT: {
@@ -66,7 +66,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				FRUIT: 6,
-				HERB: 1,
+				HERB: 2,
 			},
 			OUT: {
 				RATION: 2.0,
@@ -77,7 +77,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				VEGETABLE: 6,
-				HERB: 1,
+				HERB: 2,
 			},
 			OUT: {
 				RATION: 2.0,

@@ -2,7 +2,7 @@ TYPE: REFINER,
 RESOURCES: [WOOD,STONE,POTTERY,METAL,],
 AREA_COSTS: [0,0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
-MINI_COLOR: [226,195,38,],
+MINI_COLOR: 226_195_38,
 
 ITEMS: [
 	{
@@ -33,7 +33,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				GRAPE: 5.0,
-				GLASS: 1.8,
+				GLASS: 2.0,
 			},
 			OUT: {
 				WINE: 6.0,
@@ -45,7 +45,7 @@ INDUSTRIES: [
 			IN: {
 				GRAPE: 9.0,
 				COAL: 3.5,
-				GLASS: 2.2,
+				GLASS: 5.5,
 			},
 			OUT: {
 				WINE: 12.0,

@@ -203,31 +203,27 @@ STATS: {
 		FURNITURE: {
 			CITIZEN: 2,
 		},
-		SPACE: {
-			CITIZEN: 1,
-			INVERTED: true,
-		},
 	},
 
 	BATTLE: {
 		*: {
-		
+
 		},
 
 		COMBAT_TRAINING: {
 			CITIZEN: 1.5,
 		},
 	},
-	
+
 	WORK: {
 		*: {
-		
+
 		},
 	},
-	
+
 	POPULATION: {
 		*: {
-		
+
 		},
 
 		WRONGFUL_DEATHS: {
@@ -243,7 +239,7 @@ STATS: {
 			CITIZEN: 1.5,
 		},
 	},
-	
+
 	ENVIRONMENT: {
 		*: {
 
@@ -251,22 +247,22 @@ STATS: {
 
 		BUILDING_PREF: {
 			CITIZEN: 0.5,
-			SLAVE: 0.5,			
+			SLAVE: 0.5,
 		},
 	},
-	
+
 	STORED: {
 		*: {
-		
+
 		},
 	},
-	
+
 	EDUCATION: {
 		*: {
-		
+
 		},
 	},
-	
+
 	RELIGION: {
 		FAITH: {
 			CITIZEN: 6,
@@ -278,7 +274,7 @@ STATS: {
 			SLAVE: 0,
 		},
 	},
-	
+
 	MONUMENTS: {
 		MONUMENT_BLOB: {
 			CITIZEN: 1,
@@ -290,11 +286,19 @@ STATS: {
 
 APPEARANCE: {
 
-	SPRITE_FILE: Argonosh,
+
+
+	ICON_SMALL: 24->race->Argonosh->0,
+	ICON_BIG: 32->race->Argonosh->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Argonosh,
-	SPRITE_SKELLETON_FILE: Argonosh,
+	NAMESET_FILE_NOBLE: LzmLastNoble,
+	CROWN: {
+		FILE: Amevia,
+		OFFX: 0,
+		OFFY: 0,
+	},
 
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
@@ -305,12 +309,6 @@ APPEARANCE: {
 		{R: 79, G: 94, B: 181,},
 		{R: 53, G: 64, B: 122,},
 		{R: 193, G: 77, B: 0,},
-	],
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
 	],
 
 	COLOR_BLOOD: {R: 70, G: 40, B: 40,},
@@ -332,7 +330,7 @@ APPEARANCE: {
 				{R: 110, G: 75, B: 35,},
 				{R: 115, G: 80, B: 40,},
 			],
-			
+
 		},
 		LEG: {
 			VALUES: [
@@ -346,32 +344,55 @@ APPEARANCE: {
 				{R: 77, G: 34, B: 10,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
 
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 0,
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: SKIN,
-		COLOR_EXTRA2: SKIN,
+
+		SPRITE_FILE: Argonosh,
+		SPRITE_SKELLETON_FILE: Argonosh,
+		NAMESET_FILE_FIRST: LzmFirst,
+		NAMESET_FILE_SURNAME: LzmLast,
 	},
-	
-	
+
+
+
 	TYPES: [
 		{
 			OCCURRENCE: 1,
-			OCCURRENCE_EXTRA1: 0,
-			OCCURRENCE_EXTRA2: 0,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: SKIN,
-			COLOR_EXTRA2: SKIN,
-			
-			NAMESET_FILE_FIRST: StdFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+
+			SPRITE_FILE: Argonosh,
+			SPRITE_SKELLETON_FILE: Argonosh,
+			PORTRAIT_FILE: Argonosh,
+			NAMESET_FILE_FIRST: LzmFirst,
+			NAMESET_FILE_SURNAME: LzmLast,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourArgonosh,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 			
 			PORTRAIT: [
 				**head
@@ -410,4 +431,3 @@ APPEARANCE: {
 		},
 	],
 },
-

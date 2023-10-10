@@ -38,11 +38,12 @@ PREFERRED: {
 		SUSHI,
 	],
 	STRUCTURE: {
-		MOUNTAIN: 0.3,
+		MOUNTAIN: 0.2,
 		STONE: 0.7,
 		GLASS: 0.9,
-		GRAND: 0.9,
+		GRAND: 1,
 		WOOD: 0.5,
+		OUTDOORS: 0.3,
 	},
 	WORK: {
 		LIBRARY_NORMAL: 1.0,
@@ -57,10 +58,9 @@ PREFERRED: {
 },
 
 POPULATION: {
-	MAX_REGION: 1,
-	MAX_CITY: 1,
-	REPRODUCTION_REGION_PER_DAY: 0.06,
-	IMMIGRANTS_PER_DAY: 1,
+	MAX: 0.9,
+	GROWTH: 0.05,
+	IMMIGRATION_RATE: 1,
 	CLIMATE: {
 		COLD: 0.8,
 		TEMPERATE: 1.0,
@@ -69,7 +69,7 @@ POPULATION: {
 	TERRAIN: {
 		MOUNTAIN: 0.2,
 		FOREST: 0.2,
-		NONE: 1.0,
+		NONE: 1.2,
 	},
 },
 
@@ -85,6 +85,7 @@ BONUS_MUL: {
 	},
 	ROOM: {
 		FARM: 1.2,
+		ORCHARD: 1.2,
 		LIBRARY_NORMAL: 1.25,
 		ADMIN_NORMAL: 1.25,
 		LABORATORY_NORMAL: 1.25,
@@ -188,12 +189,20 @@ STATS: {
 
 APPEARANCE: {
 
-	SPRITE_FILE: Human,
+
+	ICON_SMALL: 24->race->Human->0,
+	ICON_BIG: 32->race->Human->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Humanoid_small,
-	SPRITE_SKELLETON_FILE: Humanoid,
-	
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
+	CROWN: {
+		FILE: Human,
+		OFFX: 0,
+		OFFY: -2,
+	},
+
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
 		{R: 142, G: 126, B: 44,},
@@ -205,19 +214,11 @@ APPEARANCE: {
 		{R: 193, G: 77, B: 0,},
 	],
 
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
 	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-	
+
 	COLORS: {
 		SKIN: {
 			TURNS_WHITE_WHEN_DEAD: true,
-			RANDOM_SEED: 1,
 			VALUES: [
 				{R: 183, G: 139, B: 119,},
 				{R: 198, G: 150, B: 131,},
@@ -256,7 +257,7 @@ APPEARANCE: {
 				{R: 116, G: 92, B: 66,},
 			],
 		},
-		
+
 		EYE: {
 			VALUES: [
 			{R: 128, G: 173, B: 206,},
@@ -296,31 +297,91 @@ APPEARANCE: {
 				{R: 255, G: 150, B: 150,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
 
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 1.0,
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: HAIR,
-		COLOR_EXTRA2: HAIR,
+
+		SPRITE_FILE: ChildHumanoid,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: StdFirst,
+		NAMESET_FILE_SURNAME: StdLast,
+
+		ADDONS: [
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: HairHuman,
+				COLOR: HAIR,
+			},
+		],
 	},
-	
+
 	TYPES: [
 		{
 			OCCURRENCE: 0.5,
-			OCCURRENCE_EXTRA1: 0.5,
-			OCCURRENCE_EXTRA2: 0.7,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-			
+
+			SPRITE_FILE: Human,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			PORTRAIT_FILE: Human,
+
+			ADDONS: [
+
+				{
+					BELOW_HEAD: true,
+					SPRITE_FILE: BeardHuman,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.25,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairHuman,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourHuman,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
 				**Ears
@@ -328,7 +389,7 @@ APPEARANCE: {
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 18,
 				},
@@ -340,6 +401,11 @@ APPEARANCE: {
 				},
 				**Olden lines
 				{
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 3,
 					SPLITS: 3,
@@ -347,7 +413,6 @@ APPEARANCE: {
 					OFF_Y: -20,
 					OPACITY: 127,
 					COLOR: SKIN,
-					ONLY_IF_OLD: true,
 				},
 				**Eyes Male
 				{
@@ -360,6 +425,11 @@ APPEARANCE: {
 				},
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 3,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -367,7 +437,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: -23,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**eyebrows
 				{
@@ -376,7 +445,6 @@ APPEARANCE: {
 					SPLITS: 3,
 					SPLIT: 0,
 					COLOR: HAIR,
-					FRAME_OCCURRENCE: 0.95,
 					OFF_Y: 8,
 				},
 				**mouth
@@ -392,7 +460,11 @@ APPEARANCE: {
 				},
 				**mustage
 				{
-					FRAME_OCCURRENCE: 1.0,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_3_F: 0.5,
+						},
+					},
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
@@ -401,7 +473,7 @@ APPEARANCE: {
 					OFF_Y: 10,
 					COLOR: HAIR,
 				},
-				
+
 				**nose male
 				{
 					FRAME_START: 16,
@@ -411,11 +483,14 @@ APPEARANCE: {
 					SPLIT: 2,
 					OFF_Y: -12,
 					**OPACITY: 0,
-					MALE_ONLY: true,
 				},
 				**freckles
 				{
-					FRAME_OCCURRENCE: 0.2,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.25,
+						},
+					},
 					FRAME_START: 21,
 					FRAME_VARIATIONS: 3,
 					OFF_Y: -15,
@@ -423,36 +498,33 @@ APPEARANCE: {
 					SPLIT: 2,
 					COLOR: SKIN,
 				},
-				
+
 				**hair male
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
 					FRAME_START: 26,
 					FRAME_VARIATIONS: 6,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA2: true,
 					OFF_Y: -10,
 					STAINS: false,
 				},
 				**beard1
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.25,
+						},
+					},
 					FRAME_START: 20,
 					FRAME_VARIATIONS: 4,
 					FRAME_RANDOM: 5,
-					SPLITS: 3,
+					SPLITS: 2,
 					SPLIT: 0,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA1: true,
-					OFF_Y: 24,
-				},
-				**beard2
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					FRAME_RANDOM: 5,
-					SPLITS: 3,
-					SPLIT: 1,
-					COLOR: HAIR,
-					ONLY_IF_EXTRA1: true,
 					OFF_Y: 24,
 				},
 			],
@@ -465,19 +537,64 @@ APPEARANCE: {
 			COLOR_LEG: LEG,
 			COLOR_EXTRA1: HAIR,
 			COLOR_EXTRA2: HAIR,
-			
+
+			SPRITE_FILE: Human,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFemaleFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			PORTRAIT_FILE: Human,
+
+			SET_APPEARANCE_STATS: {
+				**hair
+				EXTRA1: 0.95,
+				EXTRA2: 0.5,
+				EXTRA4: 0.5,
+			},
+
+			ADDONS: [
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairHuman,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.95,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourHuman,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
 				**hair extension
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
 					FRAME_START: 24,
 					FRAME_VARIATIONS: 1,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA2: true,
 					STAINS: false,
 				},
 				**Ears
@@ -485,7 +602,7 @@ APPEARANCE: {
 					FRAME_START: 0,
 					SPLITS: 3,
 					SPLIT: 0,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					COLOR: SKIN,
 					OFF_Y: 18,
 				},
@@ -503,9 +620,14 @@ APPEARANCE: {
 					SPLITS: 3,
 					SPLIT: 2,
 				},
-				
+
 				**Olden lines
 				{
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 					FRAME_START: 0,
 					FRAME_VARIATIONS: 3,
 					SPLITS: 3,
@@ -513,7 +635,6 @@ APPEARANCE: {
 					OFF_Y: -20,
 					OPACITY: 127,
 					COLOR: SKIN,
-					ONLY_IF_OLD: true,
 				},
 				**Eyes
 				{
@@ -523,10 +644,15 @@ APPEARANCE: {
 					SPLIT: 2,
 					STAINS: false,
 					OFF_Y: -21,
-					
+
 				},
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 3,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -534,7 +660,6 @@ APPEARANCE: {
 					COLOR: EYE,
 					STAINS: false,
 					OFF_Y: -23,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**eyebrows
 				{
@@ -543,7 +668,6 @@ APPEARANCE: {
 					SPLITS: 3,
 					SPLIT: 0,
 					COLOR: HAIR,
-					FRAME_OCCURRENCE: 0.95, 
 					OFF_Y: 8,
 				},
 				**mouth
@@ -566,7 +690,11 @@ APPEARANCE: {
 				},
 				**freckles
 				{
-					FRAME_OCCURRENCE: 0.2,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_3_F: 0.25,
+						},
+					},
 					FRAME_START: 21,
 					FRAME_VARIATIONS: 3,
 					COLOR: SKIN,
@@ -574,13 +702,17 @@ APPEARANCE: {
 					SPLITS: 3,
 					SPLIT: 2,
 				},
-				
+
 				**hair
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.95,
+						},
+					},
 					FRAME_START: 25,
 					FRAME_VARIATIONS: 5,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA2: true,
 					OFF_Y: -9,
 					STAINS: false,
 				},
@@ -588,4 +720,3 @@ APPEARANCE: {
 		},
 	],	
 },
-
