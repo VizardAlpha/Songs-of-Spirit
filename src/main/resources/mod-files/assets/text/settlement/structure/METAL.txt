@@ -1,0 +1,13 @@
+INFO: {
+	NAME: "Metal Building",
+	NAMES: "Metal Buildings",
+	DESC: "Very good durability but its beauty leaves something to be desired",
+},
+
+BONUS: {
+	NAME: "Metal Structure Construction",
+	DESC: "Decreases construction time of Metal Structures",
+},
+
+NAME_WALL: "Metal Wall",
+NAME_CEILING: "Metal Ceiling",

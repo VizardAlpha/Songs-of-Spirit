@@ -60,7 +60,7 @@ TECHS: [
 		},		
 
 		INDUSTRIES: {
-			WORKSHOP_CARPENTER: 1,
+			WORKSHOP_CARPENTER: 3,
 		},
 	},
 
@@ -75,7 +75,7 @@ TECHS: [
 		},		
 
 		INDUSTRIES: {
-			WORKSHOP_CARPENTER: 2,
+			WORKSHOP_CARPENTER: 4,
 		},
 	},
 

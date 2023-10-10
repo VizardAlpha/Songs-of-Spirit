@@ -37,6 +37,8 @@ PREFERRED: {
 		GLASS: 0.5,
 		STONE: 0.5,
 		GRAND: 0.7,
+		OUTDOORS: 0.2,
+        WOOD: 0.2,
 	},
 	WORK: {
 		WORKSHOP_MASON: 1.0,
@@ -56,16 +58,15 @@ PREFERRED: {
 		MINE_SAND: 0.5,
 	},
 	OTHER_RACES: {
-		GARTHIMI: -0.5,
+		GARTHIMI: -2.0,
 		TILAPI: -0.25,
 	},
 },
 
 POPULATION: {
-	MAX_REGION: 0.75,
-	MAX_CITY: 0.75,
-	REPRODUCTION_REGION_PER_DAY: 0.03,
-	IMMIGRANTS_PER_DAY: 25,
+	MAX: 0.6,
+	GROWTH: 0.025,
+	IMMIGRATION_RATE: 25,
 	CLIMATE: {
 		COLD: 1,
 		TEMPERATE: 0.8,
@@ -73,8 +74,8 @@ POPULATION: {
 	},
 	TERRAIN: {
 		MOUNTAIN: 5.5,
-		FOREST: 0.2,
-		NONE: 0.2,
+		FOREST: 0.1,
+		NONE: 0.1,
 	},
 },
 
@@ -89,6 +90,7 @@ BONUS_MUL: {
 		REFINER: 1.2,
 		WORKSHOP: 1.4,
 		FARM: 0.65,
+		ORCHARD: 0.65,
 		PASTURE: 0.8,
 		WORKSHOP_SMITHY: 1.4,
 		WORKSHOP_JEWELRY: 1.4,
@@ -120,6 +122,10 @@ RESOURCE: {
 	MEAT: 25,
 	LEATHER: 5,
 	COTTON: 10,
+},
+
+RESOURCE_GROOMING: {
+	COTTON: 1,
 },
 
 RELIGION_INCLINATION: {
@@ -217,12 +223,20 @@ STATS_ON_SPAWN: {
 },
 
 APPEARANCE: {
-	SPRITE_FILE: Dondorian,
+
+	ICON_SMALL: 24->race->Dondorian->0,
+	ICON_BIG: 32->race->Dondorian->0,
+
+	SLEEP_FILE: Blanket,
 	SPRITE_EXTRA_FILE: Normal,
-	SPRITE_CHILD_FILE: Humanoid,
-	SPRITE_CHILD_SKELLETON_FILE: Humanoid_small,
-	SPRITE_SKELLETON_FILE: Humanoid,
-	
+	NAMESET_FILE_NOBLE: StdLastNoble,
+
+	CROWN: {
+		FILE: Amevia,
+		OFFX: 0,
+		OFFY: 0,
+	},
+
 	COLOR_CLOTHES: [
 		{R: 114, G: 101, B: 35,},
 		{R: 142, G: 126, B: 44,},
@@ -234,21 +248,13 @@ APPEARANCE: {
 		{R: 193, G: 77, B: 0,},
 	],
 
-	COLOR_ARMOUR_LEVELS: [
-		{R: 107, G: 79, B: 65,},
-		{R: 99, G: 99, B: 99,},
-		{R: 168, G: 168, B: 180,},
-		{R: 209, G: 159, B: 54,},
-	],
-	
 	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-	
+
 	COLORS: {
 		SKIN: {
 			TURNS_GRAY_WHEN_OLD: false,
 			TURNS_WHITE_WHEN_DEAD: true,
 			TURNS_SICKLY: true,
-			RANDOM_SEED: 1,
 			VALUES: [
 				{R: 183, G: 139, B: 119,},
 				{R: 198, G: 150, B: 131,},
@@ -287,7 +293,7 @@ APPEARANCE: {
 				{R: 116, G: 92, B: 66,},
 			],
 		},
-		
+
 		EYE: {
 			VALUES: [
 				{R: 128, G: 173, B: 206,},
@@ -308,46 +314,109 @@ APPEARANCE: {
 				{R: 80, G: 40, B: 20,},
 			],
 		},
+		ARMOUR: {
+			PICK_BY_STAT: {
+				EQUIP: ARMOUR,
+			},
+			VALUES: [
+				107_079_065,
+				099_099_099,
+				168_168_180,
+				209_159_054,
+			],
+		},
 	},
-	
+
 	CHILD: {
-		OCCURRENCE_EXTRA1: 0,
-		OCCURRENCE_EXTRA2: 1.0,
+
 		COLOR_SKIN: SKIN,
 		COLOR_LEG: LEG,
-		COLOR_EXTRA1: HAIR,
-		COLOR_EXTRA2: HAIR,
+		SPRITE_FILE: Dondorian,
+		SPRITE_SKELLETON_FILE: Humanoid_small,
+		NAMESET_FILE_FIRST: StdFirst,
+		NAMESET_FILE_SURNAME: StdLast,
+
+		ADDONS: [
+			{
+				BELOW_HEAD: false,
+				SPRITE_FILE: HairDondorian,
+				COLOR: HAIR,
+			},
+		],
 	},
-	
+
 	TYPES: [
 		{
 			OCCURRENCE: 1.0,
-			OCCURRENCE_EXTRA1: 0.8,
-			OCCURRENCE_EXTRA2: 0.5,
 			COLOR_SKIN: SKIN,
 			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-			
+
+			SPRITE_FILE: Dondorian,
+			SPRITE_SKELLETON_FILE: Humanoid,
 			NAMESET_FILE_FIRST: StdFirst,
 			NAMESET_FILE_SURNAME: StdLast,
-			NAMESET_FILE_FIRST_NOBLE: StdFirstNoble,
-			NAMESET_FILE_SURNAME_NOBLE: StdLastNoble,
+			PORTRAIT_FILE: Dondorian,
+
+			ADDONS: [
+				{
+					BELOW_HEAD: true,
+					SPRITE_FILE: BeardDondorian,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.1,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: NobilityCloakMedium,
+					CONDITIONS: {
+						EQUAL: {
+							POPULATION_NOBLES_I: 1,
+						},
+					},
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: HairDondorian,
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
+					COLOR: HAIR,
+				},
+				{
+					BELOW_HEAD: false,
+					SPRITE_FILE: ArmourDondorian,
+					CONDITIONS: {
+						GREATER: {
+							EQUIP_ARMOUR_I: 0,
+						},
+					},
+					COLOR: ARMOUR,
+				},
+			],
 
 			PORTRAIT: [
 				**head
 				{
 					FRAME_START: 0,
-					FRAME_VARIATIONS: 8, 
+					FRAME_VARIATIONS: 8,
 					COLOR: SKIN,
 				},
 				**wrinkles
 				{
+					CONDITIONS: {
+						GREATER: {
+							POPULATION_AGE_F: 0.75,
+						},
+					},
 					FRAME_START: 12,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
 					SPLIT: 2,
-					ONLY_IF_OLD: true,
 				},
 				**eye
 				{
@@ -360,6 +429,11 @@ APPEARANCE: {
 				},
 				**iris
 				{
+					CONDITIONS: {
+						EQUAL: {
+							APPEARANCE_DEAD_I: 0,
+						},
+					},
 					FRAME_START: 15,
 					FRAME_VARIATIONS: 1,
 					SPLITS: 3,
@@ -367,54 +441,57 @@ APPEARANCE: {
 					OFF_Y: -1,
 					COLOR: EYE,
 					STAINS: false,
-					ONLY_IF_DEAD_NOT: true,
 				},
 				**mouth
 				{
 					FRAME_START: 12,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
 					SPLIT: 2,
 					OFF_Y: -2,
 					STAINS: false,
 					COLOR: SKIN,
-					COLOR_RANDOM: 0,
 				},
 				**mustage
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_3_F: 0.25,
+						},
+					},
 					FRAME_START: 8,
-					FRAME_VARIATIONS: 4, 
+					FRAME_VARIATIONS: 4,
 					SPLITS: 3,
 					SPLIT: 2,
 					COLOR: HAIR,
-					FRAME_OCCURRENCE: 0.5,
-					COLOR_RANDOM: 1,
 				},
 				**beard
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_1_F: 0.1,
+						},
+					},
 					FRAME_START: 24,
-					FRAME_VARIATIONS: 8, 
+					FRAME_VARIATIONS: 8,
 					SPLITS: 2,
 					SPLIT: 1,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA1: true,
-					COLOR_RANDOM: 1,
 					OFF_Y: 2,
 				},
 				**nose
 				{
 					FRAME_START: 24,
-					FRAME_VARIATIONS: 8, 
+					FRAME_VARIATIONS: 8,
 					COLOR: SKIN,
 					SPLITS: 2,
 					SPLIT: 0,
 					OFF_Y: 16,
-					COLOR_RANDOM: 0,
 				},
 				**eyebrows
 				{
 					FRAME_START: 8,
-					FRAME_VARIATIONS: 8, 
+					FRAME_VARIATIONS: 8,
 					SPLITS: 3,
 					SPLIT: 0,
 					COLOR: HAIR,
@@ -422,12 +499,14 @@ APPEARANCE: {
 				},
 				**hair
 				{
+					CONDITIONS: {
+						GREATER: {
+							RANDOM_2_F: 0.5,
+						},
+					},
 					FRAME_START: 16,
 					FRAME_VARIATIONS: 8,
 					COLOR: HAIR,
-					ONLY_IF_EXTRA2: true,
-					COLOR_TURNS_GRAY: true,
-					COLOR_RANDOM: 1,
 				},
 			],
 		},

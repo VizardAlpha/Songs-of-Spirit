@@ -2,7 +2,7 @@ TYPE: WORKSHOP,
 RESOURCES: [STONE,WOOD,METAL,],
 AREA_COSTS: [0.2,0.2,0,],
 FLOOR: [DIRT,WOOD_SQUARE,],
-MINI_COLOR: [226,195,38,],
+MINI_COLOR: 226_195_38,
 
 ITEMS: [
 	{
@@ -19,6 +19,16 @@ ITEMS: [
 	},
 ],
 
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,1,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,1,0,],
+		BOOST: 0.5,
+	},
+],
 
 WORK: {
 	SHIFT_OFFSET: 0.325,
@@ -32,18 +42,40 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 3.0,
+				WOOD: 3.2,
 			},
 			OUT: {
-				FURNITURE: 0.75,
+				PLANK: 2.5,
+			},
+		},
+	},
+
+    {
+		INDUSTRY: {
+			IN: {
+				WOOD: 5.5,
+			},
+			OUT: {
+				WOODEN_WEAPON: 0.20,
 			},
 		},
 	},
 
 	{
+    	INDUSTRY: {
+    		IN: {
+    			PLANK: 3.0,
+    		},
+    		OUT: {
+    			FURNITURE: 0.75,
+    		},
+    	},
+    },
+
+	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 6.0,
+				PLANK: 6.0,
 				STONE: 4.0,
 			},
 			OUT: {
@@ -55,7 +87,8 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 5.0,
+				PLANK: 5.0,
+				METAL: 1.0,
 			},
 			OUT: {
 				SHIELD: 1.0,
@@ -63,10 +96,7 @@ INDUSTRIES: [
 		},
 	},
 
-
 ],
-
-
 
 ENVIRONMENT_EMIT: {
 	_NOISE: {
@@ -74,17 +104,6 @@ ENVIRONMENT_EMIT: {
 		RADIUS: 1,
 	},
 },
-
-UPGRADES: [
-	{
-		RESOURCE_MASK: [1,1,0,0,],
-		BOOST: 0,
-	},
-	{
-		RESOURCE_MASK: [2,2,1,0,],
-		BOOST: 0.5,
-	},
-],
 
 SPRITES: {
 	CHAIR_1X1: [

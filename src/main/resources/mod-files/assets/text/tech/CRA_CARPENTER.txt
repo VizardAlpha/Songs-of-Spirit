@@ -27,7 +27,7 @@ TECHS: [
 		DESC: "Measure twice cut once.  Your carpenters learn how to improve their precision, joinery, and preparation of raw wood before processing.
 		",
 	},
-	
+
 	{
 		NAME: "Makeshift Weapons",
 		CATEGORY:"Crafting",

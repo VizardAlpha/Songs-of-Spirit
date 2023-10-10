@@ -1,0 +1,3 @@
+NAME: "Wooden Weapon",
+NAMES: "Wooden Weapons",
+DESC: "",

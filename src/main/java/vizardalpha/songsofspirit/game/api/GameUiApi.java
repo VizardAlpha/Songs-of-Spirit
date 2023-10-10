@@ -75,20 +75,21 @@ public class GameUiApi {
     }
 
     public WorldViewGenerator worldGenerator() {
-        WorldViewGenerator worldViewGenerator = VIEW.world().viewGenerator;
 
-        if (worldViewGenerator == null) {
-            throw new GameUiNotAvailableException("Games world generator ui isn't initialized yet.");
+        VIEW.ViewSubSimple current = VIEW.current();
+
+        if (current instanceof WorldViewGenerator) {
+            return (WorldViewGenerator) current;
         }
 
-        return worldViewGenerator;
+        throw new GameUiNotAvailableException("Games world generator ui isn't initialized yet.");
     }
 
     /**
      * @throws GameUiNotAvailableException when ui isn't initialized yet
      */
-    public VIEW.ViewSub currentView() {
-        VIEW.ViewSub currentView = VIEW.current();
+    public VIEW.ViewSubSimple currentView() {
+        VIEW.ViewSubSimple currentView = VIEW.current();
 
         if (currentView == null) {
             throw new GameUiNotAvailableException("Games current view isn't initialized yet.");
@@ -183,7 +184,7 @@ public class GameUiApi {
      * Tries to find an ui element by class in {@link VIEW#world()} ui manager.
      */
     public <T> Optional<T> findUIElementInWorldGeneratorView(Class<T> clazz) {
-        return ReflectionUtil.getDeclaredField("inters", world().viewGenerator.uiManager)
+        return ReflectionUtil.getDeclaredField("inters", worldGenerator().uiManager)
             .flatMap(inters -> extractFromIterable((Iterable<?>) inters, clazz));
     }
 
