@@ -20,11 +20,11 @@ STATS: [
 	},
 	{
 		NAME: "",
-		DESC: "",	
+		DESC: "",
 	},
 	{
 		NAME: "",
-		DESC: "",	
+		DESC: "",
 	},
 ],
 

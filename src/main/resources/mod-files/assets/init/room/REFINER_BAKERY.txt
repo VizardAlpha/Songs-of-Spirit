@@ -1,46 +1,76 @@
 TYPE: REFINER,
-RESOURCES: [STONE,WOOD,METAL,],
-AREA_COSTS: [0.2,0,0.1,],
-FLOOR: STONE_MEDIUM_DARK,
+RESOURCES: [STONE,WOOD,METAL,MACHINERY,],
+AREA_COSTS: [0.2,0,0,0,],
+FLOOR: [DIRT,STONE_SMALL_BRICK,STONE_MEDIUM_DARK,],
 MINI_COLOR: 226_195_38,
 
 ITEMS: [
 	{
-		COSTS: [2,6,0.1,],
+		COSTS: [1,2,1,1,],
 		STATS: [1.2,0,1,],
 	},
 	{
-		COSTS: [1,1,0,],
+		COSTS: [1,1,0,0,],
 		STATS: [0,0,0,],
 	},
 	{
-		COSTS: [0.5,1,0,],
+		COSTS: [1,3,1,1,],
 		STATS: [0,0.5,0,],
 	},
 ],
 
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,1,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,2,0,],
+		BOOST: 0.5,
+	},
+	{
+		RESOURCE_MASK: [1,1,5,1,],
+		BOOST: 1.0,
+	},
+],
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: MACHINE,
-	USES_TOOL: true,
 	FULFILLMENT: 0.2,
 	EDUCATION_FACTOR: 0.15,
-	ACCIDENTS_PER_YEAR: 0.3,
+    ACCIDENTS_PER_YEAR: 0.005,	
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				COAL: 3,
-				SAND: 3,
+			    WATER: 2.5,
+			    SALT: 0.5,
+				GRAIN: 8.0,
+				WOOD: 1.0,
 			},
 			OUT: {
-				GLASS: 3,
+				BREAD: 6,
 			},
 		},
 	},
+
+	{
+		INDUSTRY: {
+			IN: {
+			    WATER: 4,
+			    SALT: 1,
+				GRAIN: 10.0,
+				COAL: 0.5,
+			},
+			OUT: {
+				BREAD: 11,
+			},
+		},
+	},
+
 ],
 
 ENVIRONMENT_EMIT: {
@@ -54,10 +84,10 @@ SPRITES: {
 	MAIN_MACHINE_COMBO: [
 		{
 			COLOR: [
-				{R:168,G:117,B:84,},
-				{R:162,G:117,B:84,},
-				{R:168,G:112,B:84,},
-				{R:168,G:117,B:80,},
+				168_117_84,
+				162_117_84,
+				168_112_84,
+				168_117_80,
 			],
 			SHADOW_LENGTH: 12,
 			FRAMES: [
@@ -66,10 +96,10 @@ SPRITES: {
 		},
 		{
 			COLOR: [
-				{R:188,G:158,B:137,},
-				{R:195,G:158,B:137,},
-				{R:188,G:150,B:137,},
-				{R:188,G:158,B:130,},
+				188_158_137,
+				195_158_137,
+				188_150_137,
+				188_158_130,
 			],
 			SHADOW_LENGTH: 12,
 			FRAMES: [
@@ -238,18 +268,3 @@ SPRITES: {
 		},
 	],
 },
-
-UPGRADES: [
-	{
-		RESOURCE_MASK: [1,1,0,0,],
-		BOOST: 0,
-	},
-	{
-		RESOURCE_MASK: [1,1,2,0,],
-		BOOST: 0.25,
-	},
-	{
-		RESOURCE_MASK: [1,1,3,4,],
-		BOOST: 0.5,
-	},
-],

@@ -73,5 +73,4 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 		return true;
 	}
 
-
 }

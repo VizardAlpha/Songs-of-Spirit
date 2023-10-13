@@ -1,10 +1,11 @@
 TYPE: PASTURE,
-RESOURCES: [WOOD,],
-AREA_COSTS: [0.10,],
+RESOURCES: [WOOD,PLANK,],
+AREA_COSTS: [0.10,0.5,],
 MINI_COLOR: 101_124_14,
 ANIMAL: HORSE,
 FENCE: WOOD,
 FLOOR: DIRT,
+
 ICON: {
 	BG: 32->Backgrounds->0,
 	FG: 32->animal->Horse->0,
@@ -13,9 +14,10 @@ ICON: {
 	OFFY: 0,
 	SHADOW: 3,
 },
+
 ITEMS: [
 	{
-		COSTS: [20,],
+		COSTS: [20,10,],
 		STATS: [0,0,],
 	},
 ],
