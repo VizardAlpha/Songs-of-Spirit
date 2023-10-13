@@ -51,6 +51,4 @@ TECHS: [
 		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
 		",
 	},
-
-
 ],

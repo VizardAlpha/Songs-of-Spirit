@@ -1,17 +1,17 @@
 INFO: {
 	NAME: "Masonry",
 	NAMES: "Masonries",
-	DESC: "Workshop that turns stone into cut stone",
+	DESC: "Workshop for processing different types of primary materials such as stone...",
 },
 
 BONUS: {
-	NAME: "Stone Carving",
+	NAME: "Carver",
 	DESC: "Increases effectiveness of Masons",
 },
 
 WORK: {
 	TITLE: "Mason",
-	VERB: "Cutting stone",
+	VERB: "Cutting",
 },
 
 STATS: [

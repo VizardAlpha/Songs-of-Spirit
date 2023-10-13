@@ -1,3 +1,8 @@
+## 14-10-2023 0.3.1 Minor
+- Reduce the size of all sprites. [1.41Mo -> 1.40Mo]
+- General text rewriting. [If something seems fishy or doesn't fit, please feel free to post a feedback on the Discord.]
+- The translation on GitHub is not yet available, I'm thinking about the procedure to put in place for a better readability for translators.
+
 ## 09-10-2023 0.3.0 Major
 - The horses now have 3 different sounds. If the sound is too quiet, send a feedback to Discord.
 - Crowdin's translations have been removed, find them on Github now!

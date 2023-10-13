@@ -7,7 +7,7 @@ TECHS: [
 
 		%r%%r%
 
-		(Each species has a different skill in ranged combat.  Be sure to train your divisions accordingly.)
+		(Each species has a different skill in ranged combat. Be sure to train your divisions accordingly.)
 		",
 	},
 
@@ -15,7 +15,7 @@ TECHS: [
 		NAME: "Bowyer Bonus",
 		CATEGORY:"Crafting",
 		
-		DESC: "Finer material selection with wood and feathers make a better product.  Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
+		DESC: "Finer material selection with wood and feathers make a better product. Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
 	},
 
 	{
@@ -26,14 +26,14 @@ TECHS: [
 
 		%r%%r%
 
-		(Each species has a different skill in ranged combat.  Be sure to train your divisions accordingly).",
+		(Each species has a different skill in ranged combat. Be sure to train your divisions accordingly).",
 	},
 
 	{
 		NAME: "Crossbow Bonus",
 		CATEGORY:"Crafting",
 		
-		DESC: "Finer material selection with wood and feathers make a better product.  Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
+		DESC: "Finer material selection with wood and feathers make a better product. Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
 	},
 
 ],

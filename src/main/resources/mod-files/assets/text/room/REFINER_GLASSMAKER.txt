@@ -42,4 +42,3 @@ ITEMS: [
 		DESC: "Adds Efficiency to the room",
 	},
 ],
-

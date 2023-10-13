@@ -1,2 +1,2 @@
 NAME: "Sandstone Road",
-DESC: "The road of choice for your subjects. Durable, but requires stone to construct",
+DESC: "A sandstone road, so your citizens don't burn their feet on sand.",

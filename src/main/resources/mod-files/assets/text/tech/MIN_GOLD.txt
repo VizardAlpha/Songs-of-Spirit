@@ -4,7 +4,7 @@ TECHS: [
 		NAME: "Gold Mine",
 		CATEGORY:"Mining",
 
-		DESC: "Your subjects will be able to collect Gold Ore to make something extraordinary!",
+		DESC: "Your subjects will be able to collect gold ore to make something extraordinary!",
 	},
 
 	{

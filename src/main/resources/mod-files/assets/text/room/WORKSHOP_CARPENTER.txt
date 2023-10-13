@@ -1,7 +1,7 @@
 INFO: {
 	NAME: "Carpenter",
 	NAMES: "Carpenters",
-	DESC: "Workshop that carves furniture out of wood",
+	DESC: "Wood-carving workshop",
 },
 
 BONUS: {

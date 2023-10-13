@@ -31,13 +31,4 @@ TECHS: [
 		DESC: "Better identification and tracing of ore veins can improve your output.  Ore mining is a necessity but can have health impacts.
 		",
 	},
-
-	{
-		NAME: "Sand Mine Bonus",
-		CATEGORY:"Mining",
-
-		DESC: "Better identification and tracing of sand can improve your output.  Sand mining is a necessity but can have health impacts.
-		",
-	},
-
 ],
