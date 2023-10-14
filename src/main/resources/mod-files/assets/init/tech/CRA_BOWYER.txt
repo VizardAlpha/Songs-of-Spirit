@@ -44,6 +44,6 @@ TECHS: [
 
 		INDUSTRIES: {
 				WORKSHOP_BOWYER: 1,
-			},
+		},
 	},
 ],
