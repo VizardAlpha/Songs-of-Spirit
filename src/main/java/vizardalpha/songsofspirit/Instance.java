@@ -1,7 +1,5 @@
 package vizardalpha.songsofspirit;
 
-import java.io.IOException;
-
 import init.paths.PATHS;
 import script.SCRIPT;
 import settlement.stats.STATS;
@@ -9,10 +7,12 @@ import snake2d.util.file.FileGetter;
 import snake2d.util.file.FilePutter;
 import snake2d.util.file.Json;
 import view.interrupter.IDebugPanel;
-import view.ui.message.MessageText;
 import view.main.VIEW;
+import view.ui.message.MessageText;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
+
+import java.io.IOException;
 
 
 public class Instance implements SCRIPT.SCRIPT_INSTANCE {
@@ -22,8 +22,6 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	private boolean init = false;
 
 	private boolean initGamePresent = false;
-
-	public boolean newgame = false;
 
 	private final SongsofSpirit script;
 
@@ -40,12 +38,26 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 
 	@Override
 	public void save(FilePutter file) {
-		file.bool(newgame);
+		file.bool(script.getState().isNewGame());
+		file.chars(script.getState().getModVersion());
 	}
 
 	@Override
 	public void load(FileGetter file) throws IOException {
-		newgame = file.bool();
+
+		try {
+			boolean newGame = file.bool();
+			script.getState().setNewGame(newGame);
+		} catch (Exception e) {
+			log.debug("Could not load newGame from save", e);
+		}
+
+		try {
+			String modVersion = file.chars();
+			script.getState().setSavedModVersion(modVersion);
+		} catch (Exception e) {
+			log.debug("Could not load modVersion from save", e);
+		}
 	}
 
 	@Override
@@ -62,9 +74,9 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			initGamePresent = true;
 		}
 
-		if (STATS.POP().POP.data().get(null) > 0 && (!newgame)) {
+		if (STATS.POP().POP.data().get(null) > 0 && (!script.getState().isNewGame())) {
 			Message();
-			newgame = true;
+			script.getState().setNewGame(true);
 			log.debug("New game");
 		}
 	}

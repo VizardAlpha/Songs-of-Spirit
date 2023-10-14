@@ -40,25 +40,6 @@ public class UIGameConfig {
             }
         }.hoverInfoSet(MOD_INFO.name);
 
-        CLICKABLE Dis = new SpiritInfoButton(SPRITES.icons().m.plus, 32, UIPanelTop.HEIGHT) {
-            @Override
-            protected void clickA() {
-                Desktop desktop = java.awt.Desktop.getDesktop();
-                URI url;
-                try {
-                    url = new URI("https://discord.gg/KCarMbDtJz");
-                } catch (URISyntaxException e) {
-                    throw new RuntimeException(e);
-                }
-                try {
-                    desktop.browse(url);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }.hoverInfoSet("Discord Songs of Spirit");
-
-
         gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
             .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
             .ifPresent(o -> {
@@ -67,13 +48,20 @@ public class UIGameConfig {
                 right.addRelBody(8, DIR.W, settlementButton);
             });
 
-        gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
-            .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))
-            .ifPresent(o -> {
-                 log.debug("Injecting into UIPanelTop#right in settlement view");
-                 GuiSection right = (GuiSection) o;
-                 right.addRelBody(0, DIR.W, Dis);
-            });
+        infoModal.getDiscordButton().clickActionSet(() -> {
+            Desktop desktop = java.awt.Desktop.getDesktop();
+            URI url;
+            try {
+                url = new URI("https://discord.gg/KCarMbDtJz");
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                desktop.browse(url);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     private static class SpiritInfoButton extends GButt.ButtPanel{

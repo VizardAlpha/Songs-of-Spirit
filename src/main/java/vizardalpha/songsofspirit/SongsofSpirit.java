@@ -2,6 +2,9 @@ package vizardalpha.songsofspirit;
 
 import init.paths.ModInfo;
 import init.paths.PATHS;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import snake2d.util.file.Json;
 import util.info.INFO;
 import vizardalpha.songsofspirit.game.SCRIPT;
@@ -20,8 +23,11 @@ public final class SongsofSpirit implements SCRIPT<Void> {
 
     public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
 
-    public SongsofSpirit() {
+    @Getter
+    private State state;
 
+    public SongsofSpirit() {
+        state = State.builder().build();
     }
 
     @Override
@@ -60,6 +66,10 @@ public final class SongsofSpirit implements SCRIPT<Void> {
         GameModApi gameModApi = GameModApi.getInstance();
         ModInfo modInfo = gameModApi.getCurrentMod().orElse(null);
 
+        if (modInfo != null) {
+            getState().setModVersion(modInfo.version);
+        }
+
         this.uiGameConfig = new UIGameConfig(
             GameUiApi.getInstance(),
             new InfoModal(changelogsStore, creditsStore, modInfo)
@@ -70,5 +80,18 @@ public final class SongsofSpirit implements SCRIPT<Void> {
     @Override
     public void initGameSaveLoaded(Void config) {
 
+    }
+
+    @Setter
+    @Getter
+    @Builder
+    public static class State {
+        @Builder.Default
+        private boolean newGame = true;
+
+        @Builder.Default
+        private String savedModVersion = "0.0.0";
+        @Builder.Default
+        private String modVersion = "0.0.0";
     }
 }
