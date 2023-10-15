@@ -1,3 +1,3 @@
 NAME: "Wooden Weapon",
 NAMES: "Wooden Weapons",
-DESC: "",
+DESC: "Extremely basic weapon, won't do any damage against iron armor!",

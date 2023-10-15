@@ -1,5 +1,4 @@
 TECHS: [
-
 	{
 		NAME: "Smelter",
 		CATEGORY:"Refining",
@@ -13,5 +12,4 @@ TECHS: [
 
 		DESC: "Precisely controlled temperatures and better processing of ores can improve output of the Smelteries.",
 	},
-
 ],

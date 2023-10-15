@@ -1,12 +1,12 @@
 INFO: {
-	NAME: "Kitchen ",
-	NAMES: "Kitchen ",
+	NAME: "Kitchen",
+	NAMES: "Kitchen",
 	DESC: "Kitchen that makes Foods from a variety of different raw foods for long-term storage. Your citizens can eat food raw, and might even prefer it, but one bad harvest or one plague could begin a mass famine.",
 },
 
 BONUS: {
 	NAME: "Kitchen Food ",
-	DESC: "Increases effectiveness of Kitchen Food ",
+	DESC: "Increases effectiveness of Kitchen Food.",
 },
 
 WORK: {
@@ -17,14 +17,15 @@ WORK: {
 STATS: [
 	{
 		NAME: "Workers",
-		DESC: "The amount of workers",
+		DESC: "The amount of workers.",
 	},
 	{
 		NAME: "Efficiency",
-		DESC: "Efficiency increases production",
+		DESC: "Efficiency increases production.",
 	},
 	{
-		
+		NAME: "Empty",
+		DESC: "Empty.",
 	},
 ],
 
@@ -35,10 +36,10 @@ ITEMS: [
 	},
 	{
 		NAME: "Work Bench",
-		DESC: "Where subjects work",
+		DESC: "Where subjects work.",
 	},
 	{
 		NAME: "Auxiliary Station",
-		DESC: "Adds Efficiency to the room",
+		DESC: "Adds Efficiency to the room.",
 	},
 ],

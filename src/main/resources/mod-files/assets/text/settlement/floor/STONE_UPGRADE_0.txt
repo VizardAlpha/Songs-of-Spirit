@@ -1,2 +1,2 @@
 NAME: "Stone Road Variant",
-DESC: "The road of choice for your subjects. Durable, but requires stone to construct",
+DESC: "The road of choice for your subjects. Durable, but requires stone to construct.",

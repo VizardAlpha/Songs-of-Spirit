@@ -4,6 +4,11 @@ INFO: {
 	DESC: "Gold mine extract gold from gold deposits.",
 },
 
+BONUS: {
+	NAME: "Gold mine extraction",
+	DESC: "Increases the output of your gold mine.",
+},
+
 WORK: {
 	TITLE: "Gold Digger",
 	VERB: "Extracting Gold",
@@ -19,12 +24,12 @@ STATS: [
 		DESC: "The average fidelity of the deposits. Higher increases production.",	
 	},
 	{
-		NAME: "",
-		DESC: "",
+		NAME: "Empty",
+		DESC: "Empty.",
 	},
 	{
-		NAME: "",
-		DESC: "",
+		NAME: "Empty",
+		DESC: "Empty.",
 	},
 ],
 
@@ -38,9 +43,3 @@ ITEMS: [
 		DESC: "Improves the performance of the mine.",	
 	},
 ],
-
-
-BONUS: {
-	NAME: "Gold mine extraction",
-	DESC: "Increases the output of your gold mine.",
-},
