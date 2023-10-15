@@ -1,5 +1,4 @@
 TECHS: [
-
 	**Initial Unlock
 	{
 		NAME: "Weaver (Crude)",
@@ -44,5 +43,4 @@ TECHS: [
 
 		DESC: "Your weavers learn more efficient ways to make use of their workshop.",
 	},
-
 ],

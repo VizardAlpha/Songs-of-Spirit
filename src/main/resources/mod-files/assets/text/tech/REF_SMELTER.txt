@@ -1,11 +1,10 @@
 TECHS: [
-
 	**Initial Unlock
 	{
 		NAME: "Metal Smelter (Crude)",
 		CATEGORY:"Refining",
 
-		DESC: "A rivulet of liquid metal is poured into an ingot cast from the crucible.  Your dependency on other nations for metal is finally at an end.  This marks a new age of progress and power for your city state.
+		DESC: "A rivulet of liquid metal is poured into an ingot cast from the crucible. Your dependency on other nations for metal is finally at an end. This marks a new age of progress and power for your city state.
 
 		%r%%r%
 
@@ -57,5 +56,4 @@ TECHS: [
 
 		DESC: "Bellows and advanced machinery pulley systems make your smeltery a marvel of gold production.",
 	},
-
 ],

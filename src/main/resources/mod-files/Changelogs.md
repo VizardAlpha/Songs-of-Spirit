@@ -1,3 +1,11 @@
+## 15-10-2023 0.3.2 Minor
+- Typo Fix
+- Accident per year for GlassMaker 0.3 --> 0.005 .
+- Accident per year for Refiner Vinification 0 --> 0.005 .
+- The degradation of researchers has been reduced since the 0.3.0 .
+- Some files were no longer in use, and have been deleted.
+- If you'd like to translate the mod into your native language, you can do so on GitHub, link available on the Discord.
+
 ## 14-10-2023 0.3.1 Minor
 - Reduce the size of all sprites. [1.41Mo -> 1.40Mo]
 - General text rewriting. [If something seems fishy or doesn't fit, please feel free to post a feedback on the Discord.]
