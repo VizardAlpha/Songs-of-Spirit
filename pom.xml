@@ -42,7 +42,7 @@
 
         <!-- Dependency versions -->
         <junit-jupiter-engine.version>5.9.2</junit-jupiter-engine.version>
-        <mockito-core.version>4.11.0</mockito-core.version>
+        <mockito-core.version>5.2.0</mockito-core.version>
         <assertj-core.version>3.24.2</assertj-core.version>
         <lombok.version>1.18.26</lombok.version>
 

@@ -1,0 +1,3 @@
+NAME: "Salt",
+NAMES: "Salt",
+DESC: "Salt is essential resource to preserve food .",

@@ -1,3 +1,10 @@
+## xx-xx-2023 0.4.0 Major
+- Ajout du Sel et les dérivers, certains plats nécessite du sel pour leur préparation.
+- Ajout de l'eau et les dérivers, certains plats nécessite de l'eau pour leur préparation.
+- L'écurie nécessite des planches pour être construit.
+- 
+
+---
 ## 15-10-2023 0.3.2 Minor
 - Typo Fix
 - Accident per year for GlassMaker 0.3 --> 0.005 .
@@ -12,7 +19,7 @@
 - The translation on GitHub is not yet available, I'm thinking about the procedure to put in place for a better readability for translators.
 
 ## 09-10-2023 0.3.0 Major
-- The horses now have 3 different sounds. If the sound is too quiet, send a feedback to Discord.
+- The horses now have 2 different sounds. If the sound is too quiet, send a feedback to Discord.
 - Crowdin's translations have been removed, find them on Github now!
 - Race stats updated to match changes made in vanilla.
 - Road speeds in general have been reduced.
