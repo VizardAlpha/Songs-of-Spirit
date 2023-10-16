@@ -1,7 +1,12 @@
 ## xx-xx-2023 0.4.0 Major
-- Ajout du Sel et les dérivers, certains plats nécessite du sel pour leur préparation.
-- Ajout de l'eau et les dérivers, certains plats nécessite de l'eau pour leur préparation.
-- L'écurie nécessite des planches pour être construit.
+- Ajout du Sel et les dériver, certains plats nécessite du sel pour leur préparation.
+- Ajout de l'eau et les dériver, certains plats nécessite de l'eau pour leur préparation.
+- Les pâturages nécessitent en plus des planches pour être construit.
+- Nouvelle maladie, la peste noire. Extrêmement dangereuse. Hygiène recommandée.
+- Ajout d'une arme à feu ! L'arme à feu est craftable depuis le forgeron.
+- Les chevaux dans la nature ne donnent plus de chevaux quand ils sont tués par des chasseurs.
+- L'écurie ne donne plus de viande et de peau, mais du livestock et des chevaux. [Pas d'inquiétude l'écurie prend dans les livestock pour se remplir]
+- Certaines mines avaient leur accident par année trop élevé, cela a été ajusté !
 - 
 
 ---

@@ -2,34 +2,8 @@ TYPE: PASTURE,
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
-ANIMAL: HORSE,
-FENCE: WOOD,
+ANIMAL: GLOBDIEN,
 FLOOR: DIRT,
-
-ICON: {
-	BG: 32->Backgrounds->0,
-	FG: 32->animal->Horse->0,
-	COLOR: 255_255_255,
-	OFFX: 0,
-	OFFY: 0,
-	SHADOW: 3,
-},
-
-BONUS: {
-	CLIMATE: {
-		TEMPERATE: 1.0,
-		COLD: 0.2,
-		HOT: 0.6,
-	},
-},
-
-**Rajouter plus tard? => LEATHER: 1.75,MEAT: 1.75,
-INDUSTRY: {
-	OUT: {
-		HORSES: 0.095,
-		LIVESTOCK: 0.04,
-	},
-},
 
 ITEMS: [
 	{
@@ -38,14 +12,16 @@ ITEMS: [
 	},
 ],
 
+
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	EDUCATION_FACTOR: 0.1,
-	ACCIDENTS_PER_YEAR: 0.002,
+	INDOCTRINATION_FACTOR: 0.1,
+   	ACCIDENTS_PER_YEAR: 0.002,		
 },
+
 
 SPRITES: {
 
@@ -55,7 +31,7 @@ SPRITES: {
 		SHADOW_LENGTH: 0,
 		COLOR: {R: 255, G: 255, B: 255,},
 		FRAMES: [
-			PASTURE_GATE: 0,
+			PASTURE_GATE: 1,
 		],
 		
 	},
@@ -69,12 +45,28 @@ SPRITES: {
 			STORAGE: 6,
 		],
 	},
-	
 	FENCE_COMBO: {
 		SHADOW_LENGTH: 6,
 		SHADOW_HEIGHT: 2,
 		FRAMES: [
 			FENCE: 3,
 		],
+	},
+},
+
+INDUSTRY: {
+	OUT: {
+		MEAT: 0.25,
+		EGG: 1.25,
+		LIVESTOCK: 0.0625,
+	},
+},
+
+BONUS: {
+	RACE: 0.8,
+	CLIMATE: {
+		TEMPERATE: 0.5,
+		COLD: 0.2,
+		HOT: 1.0,
 	},
 },
