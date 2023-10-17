@@ -3,7 +3,7 @@
 - Ajout de l'eau et les dériver, certains plats nécessite de l'eau pour leur préparation.
 - Les pâturages nécessitent en plus des planches pour être construit.
 - Nouvelle maladie, la peste noire. Extrêmement dangereuse. Hygiène recommandée.
-- Ajout du Musket ! Le musket est craftable depuis le forgeron. Si le son des tires est trop bas, passez sur Discord m'avertir !
+- Ajout du Musket ! Le musket est craftable depuis l'armurier. Si le son des tires est trop bas, passez sur Discord m'avertir !
 - Les chevaux dans la nature ne donnent plus de chevaux quand ils sont tués par des chasseurs.
 - L'écurie ne donne plus de viande et de peau, mais du livestock et des chevaux. [Pas d'inquiétude l'écurie prend dans les livestock pour se remplir]
 - Certaines mines avaient leur accident par année trop élevé, cela a été ajusté !
