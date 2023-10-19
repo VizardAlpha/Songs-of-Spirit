@@ -8,6 +8,7 @@
 - L'écurie ne donne plus de viande et de peau, mais du livestock et des chevaux. [Pas d'inquiétude l'écurie prend dans les livestock pour se remplir]
 - Certaines mines avaient leur accident par année trop élevé, cela a été ajusté !
 - Nouveau sprite pour le golden ingot.
+- Les mine de sel n'apparaitront plus dans des montagnes.
 - 
 
 ---

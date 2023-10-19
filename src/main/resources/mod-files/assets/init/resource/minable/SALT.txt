@@ -7,5 +7,5 @@ SPRITE: Salt,
 TERRAIN: {
     NONE: 0.2,
 	WET: 0.4,
-	MOUNTAIN: 0.2,
+	MOUNTAIN: 0,
 },
