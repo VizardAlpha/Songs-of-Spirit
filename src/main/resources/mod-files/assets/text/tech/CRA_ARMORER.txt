@@ -1,31 +1,16 @@
 TECHS: [
 
 	{
-		NAME: "Smithy",
+		NAME: "Armorer",
 		CATEGORY:"Crafting",
 
-		DESC: "Smiths toil near the intense heat of furnaces as they shape metal into powerful tools of industry.  This marks a whole new level of productivity for nearly every trade.
-
-		%r%%r%
-
-		(Tools can be set in individual workplaces or widely assigned in the Work Force tab.  Tools improve both output speed AND recipe efficiency.)",
+		DESC: "With the new advances your engineers and researchers are making. %r%%r% You can now manipulate metals and give them new, more advanced shapes. New, smaller, more precise parts.",
 	},
 
 	{
-		NAME: "Weaponsmithing",
+		NAME: "Weapon Specialization",
 		CATEGORY:"Crafting",
 
-		DESC: "Wooden clubs and rakes aren't the most intimidating sight to your adversaries.  Fine metal weapons can be forged to make your divisons a real threat in melee combat.
-
-		%r%%r%
-
-		(Weapons can be assigned to divisions in the Army tab.)",
-	},
-
-	{
-		NAME: "Smith Specialization",
-		CATEGORY:"Crafting",
-
-		DESC: "Smithing is equally science, art, and pure physical prowess.  Teach your smiths more advanced techniques to improve not only their production speed but also efficiency with goods.",
+		DESC: "Smithing is equally science, art, and pure physical prowess. Teach your smiths more advanced techniques to improve not only their production speed but also efficiency with goods.",
 	},
 ],
