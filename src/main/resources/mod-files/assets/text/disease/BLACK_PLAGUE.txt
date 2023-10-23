@@ -1,2 +1,2 @@
-NAME: "The Plague",
+NAME: "The Black Plague",
 DESC: "The vicious plague is deadly, tormenting its victims for days before usually ending their lives.",

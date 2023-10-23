@@ -1,14 +1,15 @@
 ## xx-xx-2023 0.4.0 Major
-- Ajout du Sel et les dériver, certains plats nécessite du sel pour leur préparation.
-- Ajout de l'eau et les dériver, certains plats nécessite de l'eau pour leur préparation.
-- Les pâturages nécessitent en plus des planches pour être construit.
-- Nouvelle maladie, la peste noire. Extrêmement dangereuse. Hygiène recommandée.
-- Ajout du Musket ! Le musket est craftable depuis l'armurier. Si le son des tires est trop bas, passez sur Discord m'avertir !
-- Les chevaux dans la nature ne donnent plus de chevaux quand ils sont tués par des chasseurs.
-- L'écurie ne donne plus de viande et de peau, mais du livestock et des chevaux. [Pas d'inquiétude l'écurie prend dans les livestock pour se remplir]
-- Certaines mines avaient leur accident par année trop élevé, cela a été ajusté !
-- Nouveau sprite pour le golden ingot.
-- Les mine de sel n'apparaitront plus dans des montagnes.
+- Adding salt and drifting, some dishes require salt for their preparation.
+- Adding water and drifting, some dishes require water for their preparation.
+- Pastures also required planks to build.
+- New disease, the Black Plague. Extremely dangerous. Hygiene recommended.
+- Musket added! The musket can be crafted from the armorer. If the sound of the shots is too low, go to Discord and let me know!
+- Horses in the wild no longer give horses when killed by hunters.
+- The stable no longer gives meat and leather, but livestock and horses. [Don't worry, the stable takes from the livestock to fill up].
+- Some mines had their accident per year too high, this has been adjusted!
+- New sprite for the golden ingot.
+- Salt mines will no longer appear in mountains.
+- Change World Map textures.
 - 
 
 ---
