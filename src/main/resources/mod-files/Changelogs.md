@@ -1,10 +1,3 @@
-## xx-xx-2023 0.4.0 Major
-- Ajout du Sel et les dérivers, certains plats nécessite du sel pour leur préparation.
-- Ajout de l'eau et les dérivers, certains plats nécessite de l'eau pour leur préparation.
-- L'écurie nécessite des planches pour être construit.
-- 
-
----
 ## 15-10-2023 0.3.2 Minor
 - Typo Fix
 - Accident per year for GlassMaker 0.3 --> 0.005 .
