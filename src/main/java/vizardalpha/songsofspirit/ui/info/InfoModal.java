@@ -125,9 +125,9 @@ public class InfoModal extends Interrupter {
             }.setDim(136, 32));
         });
 
+        discordButton = new GButt.ButtPanel("Discord");
         GuiSection versions = versions();
         int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 10;
-        discordButton = new GButt.ButtPanel("Discord");
 
         section.addRightC(space, discordButton);
         section.addRightC(10, versions);

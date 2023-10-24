@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import snake2d.util.file.Json;
 import util.info.INFO;
+import vizardalpha.songsofspirit.game.MessageHighlight;
 import vizardalpha.songsofspirit.game.SCRIPT;
 import vizardalpha.songsofspirit.game.api.GameModApi;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
@@ -18,13 +19,13 @@ import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 
 import java.util.logging.Level;
 
-public final class SongsofSpirit implements SCRIPT<Void> {
+public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
     private UIGameConfig uiGameConfig;
 
     public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
 
     @Getter
-    private State state;
+    private final State state;
 
     public SongsofSpirit() {
         state = State.builder().build();
@@ -67,7 +68,7 @@ public final class SongsofSpirit implements SCRIPT<Void> {
         ModInfo modInfo = gameModApi.getCurrentMod().orElse(null);
 
         if (modInfo != null) {
-            getState().setModVersion(modInfo.version);
+            getState().setModVersion(SemVersion.from(modInfo.version));
         }
 
         this.uiGameConfig = new UIGameConfig(
@@ -75,10 +76,22 @@ public final class SongsofSpirit implements SCRIPT<Void> {
             new InfoModal(changelogsStore, creditsStore, modInfo)
         );
         uiGameConfig.init();
+
+        SemVersion modVersion = state.getModVersion();
+        SemVersion savedModVersion = state.getSavedModVersion();
+
+        // did the mod had an update?
+        if (modVersion.isNewer(savedModVersion)) {
+            MessageHighlight messageHighlight = new MessageHighlight(
+                MOD_INFO.name,
+                String.format("%s has a new update %s! Check the changelogs.", MOD_INFO.name, state.getModVersion()),
+                uiGameConfig.getSettlementButton());
+            messageHighlight.send();
+        }
     }
 
     @Override
-    public void initGameSaveLoaded(Void config) {
+    public void initGameSaveLoaded(State state) {
 
     }
 
@@ -90,8 +103,8 @@ public final class SongsofSpirit implements SCRIPT<Void> {
         private boolean newGame = true;
 
         @Builder.Default
-        private String savedModVersion = "0.0.0";
+        private SemVersion savedModVersion = SemVersion.from("0.0.0");
         @Builder.Default
-        private String modVersion = "0.0.0";
+        private SemVersion modVersion = SemVersion.from("0.0.0");
     }
 }

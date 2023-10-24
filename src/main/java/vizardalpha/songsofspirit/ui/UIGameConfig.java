@@ -1,6 +1,7 @@
 package vizardalpha.songsofspirit.ui;
 
 import init.sprite.SPRITES;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import snake2d.util.datatypes.DIR;
 import snake2d.util.gui.GuiSection;
@@ -30,10 +31,13 @@ public class UIGameConfig {
 
     private final InfoModal infoModal;
 
+    @Getter
+    private CLICKABLE settlementButton;
+
     public void init() {
         log.debug("Initializing UI");
 
-        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
+        settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
             @Override
             protected void clickA() {
                 infoModal.activate();
