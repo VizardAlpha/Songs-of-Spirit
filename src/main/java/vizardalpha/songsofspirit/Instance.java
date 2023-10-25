@@ -19,9 +19,10 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 
 	private final static Logger log = Loggers.getLogger(Instance.class);
 
-	private boolean init = false;
+	private boolean initGameRunning = false;
 
 	private boolean initGamePresent = false;
+	private boolean initSettlementViewPresent = false;
 
 	private final SongsofSpirit script;
 
@@ -68,10 +69,10 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 
 	@Override
 	public void update(double ds) {
-		if (!init) {
+		if (!initGameRunning) {
 			log.debug("initGameRunning");
 			script.initGameRunning();
-			init = true;
+			initGameRunning = true;
 		}
 
 		if (!initGamePresent && !VIEW.inters().load.isActivated()) {
@@ -84,6 +85,11 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			Message();
 			script.getState().setNewGame(true);
 			log.debug("New game");
+		}
+
+		if (!initSettlementViewPresent && VIEW.s().isActive()) {
+			initSettlementViewPresent = true;
+			script.initSettlementViewPresent();
 		}
 	}
 

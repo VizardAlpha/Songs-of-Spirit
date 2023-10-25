@@ -12,6 +12,11 @@ public interface SCRIPT<T> extends script.SCRIPT {
     void initGamePresent();
 
     /**
+     * Executed right after the settlement is present
+     */
+    void initSettlementViewPresent();
+
+    /**
      * @param config nullable
      */
     void initGameSaveLoaded(T config);

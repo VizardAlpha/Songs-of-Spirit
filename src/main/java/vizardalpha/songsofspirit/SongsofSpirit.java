@@ -76,9 +76,21 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
             new InfoModal(changelogsStore, creditsStore, modInfo)
         );
         uiGameConfig.init();
+    }
 
+    @Override
+    public void initSettlementViewPresent() {
+        showModUpdateMessage();
+    }
+
+    private void showModUpdateMessage() {
         SemVersion modVersion = state.getModVersion();
         SemVersion savedModVersion = state.getSavedModVersion();
+
+        // don't show for new game
+        if (state.isNewGame()) {
+            return;
+        }
 
         // did the mod had an update?
         if (modVersion.isNewer(savedModVersion)) {
