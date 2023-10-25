@@ -100,7 +100,7 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
     @Builder
     public static class State {
         @Builder.Default
-        private boolean newGame = true;
+        private boolean newGame = false;
 
         @Builder.Default
         private SemVersion savedModVersion = SemVersion.from("0.0.0");
