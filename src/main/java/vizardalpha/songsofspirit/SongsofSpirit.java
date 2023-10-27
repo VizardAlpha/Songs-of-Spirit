@@ -2,34 +2,32 @@ package vizardalpha.songsofspirit;
 
 import init.paths.ModInfo;
 import init.paths.PATHS;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
 import snake2d.util.file.Json;
 import util.info.INFO;
+import view.interrupter.IDebugPanel;
+import view.ui.message.MessageText;
 import vizardalpha.songsofspirit.game.MessageHighlight;
 import vizardalpha.songsofspirit.game.SCRIPT;
 import vizardalpha.songsofspirit.game.api.GameModApi;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
+import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.UIGameConfig;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
 import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 
+import java.util.Optional;
 import java.util.logging.Level;
 
-public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
+public final class SongsofSpirit implements SCRIPT<Instance.State> {
+    private static final Logger log = Loggers.getLogger(SongsofSpirit.class);
+
     private UIGameConfig uiGameConfig;
 
+    private Optional<Instance> instance;
+
     public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
-
-    @Getter
-    private final State state;
-
-    public SongsofSpirit() {
-        state = State.builder().build();
-    }
 
     @Override
     public CharSequence desc() {
@@ -43,22 +41,30 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
 
     @Override
     public void initBeforeGameCreated() {
-
+        log.debug("PHASE: initBeforeGameCreated");
+        IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
     }
 
     @Override
     public SCRIPT_INSTANCE createInstance() {
+        log.debug("PHASE: createInstance");
         Loggers.setLevels(Level.FINEST);
-        return new Instance(this);
+        Instance instance = new Instance(this);
+        this.instance = Optional.of(instance);
+
+        return instance;
     }
 
     @Override
     public void initGameRunning() {
-
     }
 
     @Override
     public void initGamePresent() {
+    }
+
+    @Override
+    public void initSettlementViewPresent() {
         ChangelogsStore changelogsStore = ChangelogsStore.load()
             .orElse(ChangelogsStore.builder().line("No changelogs :(").build());
         CreditsStore creditsStore = CreditsStore.load()
@@ -68,7 +74,7 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
         ModInfo modInfo = gameModApi.getCurrentMod().orElse(null);
 
         if (modInfo != null) {
-            getState().setModVersion(SemVersion.from(modInfo.version));
+            instance.ifPresent(instance -> instance.getState().setModVersion(SemVersion.from(modInfo.version)));
         }
 
         this.uiGameConfig = new UIGameConfig(
@@ -76,21 +82,27 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
             new InfoModal(changelogsStore, creditsStore, modInfo)
         );
         uiGameConfig.init();
+
+        instance.map(Instance::getState).ifPresent(state -> {
+            if (state.isNewGame()) {
+                showWelcomeMessage();
+                state.setNewGame(false);
+            } else {
+                showModUpdateMessage(state);
+            }
+        });
     }
 
-    @Override
-    public void initSettlementViewPresent() {
-        showModUpdateMessage();
+    private void showWelcomeMessage(){
+        Json json = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
+        new MessageText(json.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
     }
 
-    private void showModUpdateMessage() {
+    private void showModUpdateMessage(Instance.State state) {
         SemVersion modVersion = state.getModVersion();
         SemVersion savedModVersion = state.getSavedModVersion();
-
-        // don't show for new game
-        if (state.isNewGame()) {
-            return;
-        }
+        boolean newGame = state.isNewGame();
+        log.trace("Saved Version: %s; Mod Version: %s; New Game: %s", savedModVersion, modVersion, newGame);
 
         // did the mod had an update?
         if (modVersion.isNewer(savedModVersion)) {
@@ -103,20 +115,9 @@ public final class SongsofSpirit implements SCRIPT<SongsofSpirit.State> {
     }
 
     @Override
-    public void initGameSaveLoaded(State state) {
+    public void initGameSaveLoaded(Instance.State state) {
 
     }
 
-    @Setter
-    @Getter
-    @Builder
-    public static class State {
-        @Builder.Default
-        private boolean newGame = false;
 
-        @Builder.Default
-        private SemVersion savedModVersion = SemVersion.from("0.0.0");
-        @Builder.Default
-        private SemVersion modVersion = SemVersion.from("0.0.0");
-    }
 }

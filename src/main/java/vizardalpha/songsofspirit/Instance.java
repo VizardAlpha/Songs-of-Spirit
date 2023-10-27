@@ -1,14 +1,12 @@
 package vizardalpha.songsofspirit;
 
-import init.paths.PATHS;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import script.SCRIPT;
-import settlement.stats.STATS;
 import snake2d.util.file.FileGetter;
 import snake2d.util.file.FilePutter;
-import snake2d.util.file.Json;
-import view.interrupter.IDebugPanel;
 import view.main.VIEW;
-import view.ui.message.MessageText;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 
@@ -24,28 +22,28 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	private boolean initGamePresent = false;
 	private boolean initSettlementViewPresent = false;
 
+	private boolean initNewGame = false;
+
 	private final SongsofSpirit script;
+
+	@Getter
+	private final State state = State.builder().build();
 
 	public Instance(SongsofSpirit script) {
 		this.script = script;
-		
-		IDebugPanel.add("Songs of Spirit: Welcome Message", this::Message);
-	}
-
-	public void Message(){
-		Json json = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
-		new MessageText(json.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
 	}
 
 	@Override
 	public void save(FilePutter file) {
-		file.bool(script.getState().isNewGame());
-		file.chars(script.getState().getModVersion().toString());
+		log.debug("PHASE: save");
+		file.bool(false); // newGame
+		file.chars(state.getModVersion().toString());
 	}
 
 	@Override
 	public void load(FileGetter file) throws IOException {
-		SongsofSpirit.State state = script.getState();
+		log.debug("PHASE: initGameSaveLoaded");
+		state.reset();
 		int position = file.getPosition();
 		try {
 			boolean newGame = file.bool();
@@ -70,26 +68,22 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	@Override
 	public void update(double ds) {
 		if (!initGameRunning) {
-			log.debug("initGameRunning");
+			log.debug("PHASE: initGameRunning");
 			script.initGameRunning();
 			initGameRunning = true;
 		}
 
 		if (!initGamePresent && !VIEW.inters().load.isActivated()) {
-			log.debug("initGamePresent");
+			log.debug("PHASE: initGamePresent");
 			script.initGamePresent();
 			initGamePresent = true;
 		}
 
-		if (STATS.POP().POP.data().get(null) > 0 && (!script.getState().isNewGame())) {
-			Message();
-			script.getState().setNewGame(true);
-			log.debug("New game");
-		}
 
 		if (!initSettlementViewPresent && VIEW.s().isActive()) {
-			initSettlementViewPresent = true;
+			log.debug("PHASE: initSettlementViewPresent");
 			script.initSettlementViewPresent();
+			initSettlementViewPresent = true;
 		}
 	}
 
@@ -97,5 +91,24 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 		return true;
 	}
 
+	@Setter
+	@Getter
+	@Builder
+	public static class State {
 
+		private final static SemVersion NO_VERSION = SemVersion.from("0.0.0");
+
+		@Builder.Default
+		private boolean newGame = true;
+
+		@Builder.Default
+		private SemVersion savedModVersion = NO_VERSION;
+		@Builder.Default
+		private SemVersion modVersion = NO_VERSION;
+
+		public void reset() {
+			newGame = true;
+			savedModVersion = NO_VERSION;
+		}
+	}
 }
