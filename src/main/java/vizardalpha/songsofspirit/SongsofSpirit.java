@@ -17,7 +17,6 @@ import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
 import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
 
-import java.util.Optional;
 import java.util.logging.Level;
 
 public final class SongsofSpirit implements SCRIPT<Instance.State> {
@@ -25,7 +24,10 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
 
     private UIGameConfig uiGameConfig;
 
-    private Optional<Instance> instance;
+    private Instance instance;
+
+    private final Json welcomeJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
+    private final Json updateJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_UPDATE"));
 
     public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
 
@@ -50,7 +52,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         log.debug("PHASE: createInstance");
         Loggers.setLevels(Level.FINEST);
         Instance instance = new Instance(this);
-        this.instance = Optional.of(instance);
+        this.instance = instance;
 
         return instance;
     }
@@ -73,8 +75,8 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         GameModApi gameModApi = GameModApi.getInstance();
         ModInfo modInfo = gameModApi.getCurrentMod().orElse(null);
 
-        if (modInfo != null) {
-            instance.ifPresent(instance -> instance.getState().setModVersion(SemVersion.from(modInfo.version)));
+        if (modInfo != null && instance != null) {
+            instance.getState().setModVersion(SemVersion.from(modInfo.version));
         }
 
         this.uiGameConfig = new UIGameConfig(
@@ -83,19 +85,19 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         );
         uiGameConfig.init();
 
-        instance.map(Instance::getState).ifPresent(state -> {
+        if (instance != null) {
+            Instance.State state = instance.getState();
             if (state.isNewGame()) {
                 showWelcomeMessage();
                 state.setNewGame(false);
             } else {
                 showModUpdateMessage(state);
             }
-        });
+        }
     }
 
     private void showWelcomeMessage(){
-        Json json = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
-        new MessageText(json.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
+        new MessageText(welcomeJson.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
     }
 
     private void showModUpdateMessage(Instance.State state) {
@@ -103,12 +105,13 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         SemVersion savedModVersion = state.getSavedModVersion();
         boolean newGame = state.isNewGame();
         log.trace("Saved Version: %s; Mod Version: %s; New Game: %s", savedModVersion, modVersion, newGame);
-
         // did the mod had an update?
         if (modVersion.isNewer(savedModVersion)) {
+            Json songsOfSpiritUpdate = updateJson.json("SONGS_OF_SPIRIT_UPDATE");
+
             MessageHighlight messageHighlight = new MessageHighlight(
-                MOD_INFO.name,
-                String.format("%s has a new update %s! Check the changelogs.", MOD_INFO.name, state.getModVersion()),
+                songsOfSpiritUpdate.text("NAME"),
+                String.format(songsOfSpiritUpdate.text("DESC"), state.getModVersion()),
                 uiGameConfig.getSettlementButton());
             messageHighlight.send();
         }

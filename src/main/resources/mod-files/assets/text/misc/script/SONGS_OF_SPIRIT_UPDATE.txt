@@ -1,0 +1,4 @@
+SONGS_OF_SPIRIT_UPDATE: {
+	NAME: "Songs of Spirit",
+	DESC: "Songs of Spirit has a new update: %s! You can check the changelogs.",
+},
