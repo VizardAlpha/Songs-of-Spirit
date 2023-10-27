@@ -21,11 +21,8 @@ import java.util.logging.Level;
 
 public final class SongsofSpirit implements SCRIPT<Instance.State> {
     private static final Logger log = Loggers.getLogger(SongsofSpirit.class);
-
     private UIGameConfig uiGameConfig;
-
     private Instance instance;
-
     private final Json welcomeJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
     private final Json updateJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_UPDATE"));
 
@@ -85,6 +82,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         );
         uiGameConfig.init();
 
+        // display messages
         if (instance != null) {
             Instance.State state = instance.getState();
             if (state.isNewGame()) {
@@ -97,14 +95,16 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     }
 
     private void showWelcomeMessage(){
+        log.debug("Show welcome message");
         new MessageText(welcomeJson.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
     }
 
     private void showModUpdateMessage(Instance.State state) {
+        log.debug("Show update message");
         SemVersion modVersion = state.getModVersion();
         SemVersion savedModVersion = state.getSavedModVersion();
-        boolean newGame = state.isNewGame();
-        log.trace("Saved Version: %s; Mod Version: %s; New Game: %s", savedModVersion, modVersion, newGame);
+        log.trace("Saved Version: %s; Mod Version: %s", savedModVersion, modVersion);
+
         // did the mod had an update?
         if (modVersion.isNewer(savedModVersion)) {
             Json songsOfSpiritUpdate = updateJson.json("SONGS_OF_SPIRIT_UPDATE");
@@ -121,6 +121,4 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     public void initGameSaveLoaded(Instance.State state) {
 
     }
-
-
 }

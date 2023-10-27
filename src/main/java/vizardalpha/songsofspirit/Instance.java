@@ -22,8 +22,6 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	private boolean initGamePresent = false;
 	private boolean initSettlementViewPresent = false;
 
-	private boolean initNewGame = false;
-
 	private final SongsofSpirit script;
 
 	@Getter
@@ -78,7 +76,6 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 			script.initGamePresent();
 			initGamePresent = true;
 		}
-
 
 		if (!initSettlementViewPresent && VIEW.s().isActive()) {
 			log.debug("PHASE: initSettlementViewPresent");
