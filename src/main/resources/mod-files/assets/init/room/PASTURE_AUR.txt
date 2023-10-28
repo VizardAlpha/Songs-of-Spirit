@@ -2,35 +2,17 @@ TYPE: PASTURE,
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
-ANIMAL: HORSE,
+ANIMAL: AUROCH,
 FENCE: WOOD,
 FLOOR: DIRT,
-
 ICON: {
 	BG: 32->Backgrounds->0,
-	FG: 32->animal->Horse->0,
+	FG: 32->animal->Auroch->0,
 	COLOR: 255_255_255,
 	OFFX: 0,
 	OFFY: 0,
 	SHADOW: 3,
 },
-
-BONUS: {
-	CLIMATE: {
-		TEMPERATE: 1.0,
-		COLD: 0.2,
-		HOT: 0.6,
-	},
-},
-
-**Rajouter plus tard? => LEATHER: 1.75,MEAT: 1.75,
-INDUSTRY: {
-	OUT: {
-		HORSES: 0.095,
-		LIVESTOCK: 0.04,
-	},
-},
-
 ITEMS: [
 	{
 		COSTS: [20,10,],
@@ -38,13 +20,14 @@ ITEMS: [
 	},
 ],
 
+
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	EDUCATION_FACTOR: 0.1,
-	ACCIDENTS_PER_YEAR: 0.002,
+	INDOCTRINATION_FACTOR: 0.1,
+    ACCIDENTS_PER_YEAR: 0.002,		
 },
 
 SPRITES: {
@@ -78,3 +61,20 @@ SPRITES: {
 		],
 	},
 },
+
+INDUSTRY: {
+	OUT: {
+		MEAT: 0.75,
+		LEATHER: 0.75,
+		LIVESTOCK: 0.0625,
+	},
+},
+
+BONUS: {
+	CLIMATE: {
+		TEMPERATE: 1.0,
+		COLD: 0.7,
+		HOT: 0.1,
+	},
+},
+

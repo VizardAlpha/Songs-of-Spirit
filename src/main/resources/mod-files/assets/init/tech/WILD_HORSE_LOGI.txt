@@ -7,7 +7,7 @@ TECHS: [
 		TREE_ORDER: 5965,		
 
 		REQUIRES_TECH_LEVEL: {
-				WILD_HORSE0: 1,
+			WILD_HORSE0: 1,
 		},
 
 		BONUS_ADD: {
