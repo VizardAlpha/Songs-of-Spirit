@@ -11,9 +11,11 @@
 - New sprite for the golden ingot.
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
-- 
+-
 
----
+## 26-10-2023 3.1.2 Patch
+- Fixed variant 2 route was unlocked by default. Thanks Meow Kat for this report.
+
 ## 15-10-2023 3.1.1 Patch
 - Typo Fix
 - Accident per year for GlassMaker 0.3 --> 0.005 .
