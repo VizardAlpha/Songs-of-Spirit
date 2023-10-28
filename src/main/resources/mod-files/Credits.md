@@ -6,6 +6,7 @@
 ## Bug Reporters
 - Shado,
 - Rebel of Exclusivity,
+- Meow Kat,
 
 ---
 
