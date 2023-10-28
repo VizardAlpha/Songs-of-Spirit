@@ -41,15 +41,20 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     @Override
     public void initBeforeGameCreated() {
         log.debug("PHASE: initBeforeGameCreated");
-        IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
     }
 
     @Override
     public SCRIPT_INSTANCE createInstance() {
         log.debug("PHASE: createInstance");
         Loggers.setLevels(Level.FINEST);
+
         Instance instance = new Instance(this);
         this.instance = instance;
+
+        IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
+        IDebugPanel.add("Songs of Spirit: Update Message", () -> {
+            showModUpdateMessage(instance.getState());
+        });
 
         return instance;
     }
