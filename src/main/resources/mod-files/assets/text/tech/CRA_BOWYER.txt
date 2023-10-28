@@ -1,9 +1,8 @@
 TECHS: [
-
 	{
 		NAME: "Bowyer",
 		CATEGORY:"Crafting",
-		DESC: "Elegant curved wood forms the bow, with carefully fletched arrows designed for maximum accuracy and distance.  Noone wants to fight on the front line, but a bow lets them dish out damage from afar.
+		DESC: "Elegant curved wood forms the bow, with carefully fletched arrows designed for maximum accuracy and distance. Noone wants to fight on the front line, but a bow lets them dish out damage from afar.
 
 		%r%%r%
 
@@ -22,7 +21,7 @@ TECHS: [
 		NAME: "Crossbow",
 		CATEGORY:"Crafting",
 		
-		DESC: "The crossbow is made of an elegant bentwood and carefully crafted arrows for maximum accuracy and distance.  No one wants to fight on the front line, but a crossbow allows them to do more damage at range than a bow!
+		DESC: "The crossbow is made of an elegant bentwood and carefully crafted arrows for maximum accuracy and distance. No one wants to fight on the front line, but a crossbow allows them to do more damage at range than a bow!
 
 		%r%%r%
 
@@ -35,5 +34,4 @@ TECHS: [
 		
 		DESC: "Finer material selection with wood and feathers make a better product. Teach your bowyers how to make less mistakes in the shaping process to increase output speed and efficiency.",
 	},
-
 ],

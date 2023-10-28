@@ -1,5 +1,4 @@
 TECHS: [
-
 	{
 		NAME: "Gold Mine",
 		CATEGORY:"Mining",
@@ -13,5 +12,4 @@ TECHS: [
 
 		DESC: "Better prospecting skills and particularly search methods of workers can kick up your gold mine production.",
 	},
-
 ],

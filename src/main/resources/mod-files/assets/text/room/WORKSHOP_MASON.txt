@@ -6,7 +6,7 @@ INFO: {
 
 BONUS: {
 	NAME: "Carver",
-	DESC: "Increases effectiveness of Masons",
+	DESC: "Increases effectiveness of Masons.",
 },
 
 WORK: {
@@ -17,14 +17,15 @@ WORK: {
 STATS: [
 	{
 		NAME: "Workers",
-		DESC: "The amount of workers",
+		DESC: "The amount of workers.",
 	},
 	{
 		NAME: "Efficiency",
-		DESC: "Efficiency increases production",
+		DESC: "Efficiency increases production.",
 	},
 	{
-		
+		NAME: "Empty",
+		DESC: "Empty.",
 	},
 ],
 
@@ -35,10 +36,10 @@ ITEMS: [
 	},
 	{
 		NAME: "Work Bench",
-		DESC: "Where subjects work",
+		DESC: "Where subjects work.",
 	},
 	{
 		NAME: "Auxiliary Station",
-		DESC: "Adds Efficiency to the room",
+		DESC: "Adds Efficiency to the room0",
 	},
 ],

@@ -1,14 +1,13 @@
 TECHS: [
-
 	{
 		NAME: "Jewelry",
 		CATEGORY:"Crafting",
 
-		DESC: "Brilliant colors sparkle from the myriad of cut facets in the gems.  Jewelry may have no functional purpose, but it makes people feel like they are important and beautiful.
+		DESC: "Brilliant colors sparkle from the myriad of cut facets in the gems. Jewelry may have no functional purpose, but it makes people feel like they are important and beautiful.
 		
 		%r%%r%
 		
-		(Jewelry equipment rates can be set in the Species -> Access tab.  Not all species appreciate luxuries the same.)",
+		(Jewelry equipment rates can be set in the Species -> Access tab. Not all species appreciate luxuries the same.)",
 	},
 
 	{
@@ -24,5 +23,4 @@ TECHS: [
 		
 		DESC: "Improved magnifying devices, weights, faceting tools, and quality assessments can all boost the performance of your jewelers.",
 	},
-
 ],

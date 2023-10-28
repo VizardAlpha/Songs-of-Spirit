@@ -1,0 +1,45 @@
+INFO: {
+	NAME: "Armorer",
+	NAMES: "Armorer",
+	DESC: "Workshop that produce weapon.",
+},
+
+BONUS: {
+	NAME: "Armorer",
+	DESC: "Increases effectiveness of Armorer",
+},
+
+WORK: {
+	TITLE: "Armorer",
+	VERB: "Crafting weapons",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production",
+	},
+	{
+	    NAME: "Empty",
+        DESC: "Empty",
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "The internal storage for produce.",
+	},
+	{
+		NAME: "Work Bench",
+		DESC: "Where subjects work",
+	},
+	{
+		NAME: "Auxiliary Station",
+		DESC: "Adds Efficiency to the room",
+	},
+],

@@ -1,5 +1,4 @@
 TECHS: [
-
 	{
 		NAME: "Edible Crop Optimization",
 		CATEGORY:"Farming",
@@ -20,7 +19,7 @@ TECHS: [
 		NAME: "Fruit Farm Bonus",
 		CATEGORY:"Farming",
 
-		DESC: "Bright bursts of flavor and texture.  Fruit satisfies species with a sweet tooth.
+		DESC: "Bright bursts of flavor and texture. Fruit satisfies species with a sweet tooth.
 		",
 	},
 
@@ -28,7 +27,7 @@ TECHS: [
 		NAME: "Grain Farm Bonus",
 		CATEGORY:"Farming",
 
-		DESC: "An ocean of golden stalks are bent low with precious grain.  The swish of scythes and the pounding of the thresh are the songs of a city state ready to feed its people.
+		DESC: "An ocean of golden stalks are bent low with precious grain. The swish of scythes and the pounding of the thresh are the songs of a city state ready to feed its people.
 
 		%r%%r%
 
@@ -40,7 +39,7 @@ TECHS: [
 		NAME: "Mushroom Farm Bonus",
 		CATEGORY:"Farming",
 
-		DESC: "A delicacy born from dark vaults, mushrooms are an acquired taste.  The slightest shift of air or moisture can have a big impact on the harvest.
+		DESC: "A delicacy born from dark vaults, mushrooms are an acquired taste. The slightest shift of air or moisture can have a big impact on the harvest.
 		",
 	},
 
@@ -75,6 +74,7 @@ TECHS: [
 		DESC: "Wide fields of colorful flowers hide a secret that can save (or even ruin) lives...
 		",
 	},
+	
 	{
 		NAME: "Opium Farming",
 		CATEGORY:"Farming",
@@ -96,5 +96,4 @@ TECHS: [
 
 		DESC: "More grapes but for what? Wine perhaps?",
 	},
-
 ],

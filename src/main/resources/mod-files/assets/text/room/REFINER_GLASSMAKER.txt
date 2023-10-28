@@ -17,21 +17,22 @@ WORK: {
 STATS: [
 	{
 		NAME: "Workers",
-		DESC: "The amount of workers",
+		DESC: "The amount of workers.",
 	},
 	{
 		NAME: "Efficiency",
-		DESC: "Efficiency increases production",
+		DESC: "Efficiency increases production.",
 	},
 	{
-		
+		NAME: "Empty",
+		DESC: "Empty.",
 	},
 ],
 
 ITEMS: [
 	{
 		NAME: "Furnace",
-		DESC: "Where subjects work",
+		DESC: "Where subjects work.",
 	},
 	{
 		NAME: "Storage",
@@ -39,6 +40,6 @@ ITEMS: [
 	},
 	{
 		NAME: "Auxiliary Furnace",
-		DESC: "Adds Efficiency to the room",
+		DESC: "Adds Efficiency to the room.",
 	},
 ],
