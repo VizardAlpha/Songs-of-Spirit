@@ -42,5 +42,4 @@ TECHS: [
 			WORKSHOP_JEWELRY: 1,
 		},
 	},
-
 ],

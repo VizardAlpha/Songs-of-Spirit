@@ -1,0 +1,126 @@
+TYPE: FISHERY,
+RESOURCES: [FURNITURE,STONE,],
+AREA_COSTS: [0,0,],
+MINI_COLOR: 74_119_14,
+
+ITEMS: [
+	{
+		COSTS: [1,0,],
+		STATS: [0,0,1,0,0,],
+	},
+	{
+		COSTS: [2,2,],
+		STATS: [0,0,0,1,0,],
+	},
+],
+
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: SQUISH,
+	FULFILLMENT: 0.0,
+	INDOCTRINATION_FACTOR: 0.25,
+	ACCIDENTS_PER_YEAR: 0.0015,
+},
+
+BONUS: {
+	CLIMATE: {
+		COLD: 1.2,
+	},
+},
+
+DEGRADE_RATE: 0.2,
+
+INDUSTRY: {
+    IN: {
+    	POTTERY: 4.0,
+    },
+	OUT: {
+		WATER: 4.0,
+	},
+},
+
+SPRITES: {
+	STORAGE_BOTTOM_1X1: [
+		{
+			SHADOW_LENGTH: 5,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 6,
+			],
+		},
+	],
+	STORAGE_TOP_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 7,
+			],
+		},
+	],
+	CANDLE_1X1: [
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: false,
+			FRAMES: [
+				TABLES: 2,
+			],
+		},
+	],
+	AUX_EDGE_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 0,
+			],
+		},
+	],
+	AUX_MID_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 1,
+			],
+		},
+	],
+	AUX_BIG_2X2: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: false,
+			FRAMES: [
+				HUT: 0,
+			],
+		},
+	],
+	WORKTABLE_1X1: [
+		{
+			SHADOW_LENGTH: 5,
+			FRAMES: [
+				TABLES: 0,
+			],
+		},
+	],
+	MISC_1X1: [
+		{
+			SHADOW_LENGTH: 4,
+			FRAMES: [
+				STORAGE: 0,
+				STORAGE: 1,
+				STORAGE: 5,
+				STORAGE: 10,
+			],
+		},
+	],
+	EDGE_COMBO: [
+		{
+			SHADOW_LENGTH: 2,
+			COLOR: {R:255,G:173,B:119,},
+			FRAMES: [
+				FRAMES: 1,
+			],
+		},
+	],
+},

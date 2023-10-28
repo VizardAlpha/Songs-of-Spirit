@@ -1,5 +1,4 @@
 TECHS: [
-
 	{
 		NAME: "Carpentry Basics",
 		CATEGORY:"Crafting",
@@ -24,7 +23,7 @@ TECHS: [
 		NAME: "Carpenter Specialization",
 		CATEGORY:"Crafting",
 
-		DESC: "Measure twice cut once.  Your carpenters learn how to improve their precision, joinery, and preparation of raw wood before processing.
+		DESC: "Measure twice cut once. Your carpenters learn how to improve their precision, joinery, and preparation of raw wood before processing.
 		",
 	},
 
@@ -51,6 +50,4 @@ TECHS: [
 		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
 		",
 	},
-
-
 ],

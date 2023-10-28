@@ -1,10 +1,11 @@
 TYPE: PASTURE,
-RESOURCES: [WOOD,],
-AREA_COSTS: [0.10,],
+RESOURCES: [WOOD,PLANK,],
+AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
 ANIMAL: HORSE,
 FENCE: WOOD,
 FLOOR: DIRT,
+
 ICON: {
 	BG: 32->Backgrounds->0,
 	FG: 32->animal->Horse->0,
@@ -13,13 +14,29 @@ ICON: {
 	OFFY: 0,
 	SHADOW: 3,
 },
+
+BONUS: {
+	CLIMATE: {
+		TEMPERATE: 1.0,
+		COLD: 0.2,
+		HOT: 0.6,
+	},
+},
+
+**Rajouter plus tard? => LEATHER: 1.75,MEAT: 1.75,
+INDUSTRY: {
+	OUT: {
+		HORSES: 0.095,
+		LIVESTOCK: 0.04,
+	},
+},
+
 ITEMS: [
 	{
-		COSTS: [20,],
+		COSTS: [20,10,],
 		STATS: [0,0,],
 	},
 ],
-
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
@@ -61,22 +78,3 @@ SPRITES: {
 		],
 	},
 },
-
-INDUSTRY: {
-	OUT: {
-		MEAT: 0.75,
-		LEATHER: 0.75,
-		HORSES: 0.082,
-	},
-},
-
-BONUS: {
-	CLIMATE: {
-		TEMPERATE: 1.0,
-		COLD: 0.2,
-		HOT: 0.6,
-	},
-},
-
-
-

@@ -1,0 +1,49 @@
+INFO: {
+	NAME: "Water",
+	NAMES: "Water",
+	DESC: "Catches fish along the shorelines.",
+},
+
+BONUS: {
+	NAME: "Fish catching",
+	DESC: "Increases the output of your fishermen",
+},
+
+WORK: {
+	TITLE: "Fisherman",
+	VERB: "Catching fish",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers",
+	},
+	{
+		NAME: "Water",
+		DESC: "The amount of water that can be taken",
+	},
+	{
+		NAME: "Storage",
+		DESC: "The amount of fish that can be stored",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "How well this room will perform. Increased by placing Auxiliaries",
+	},
+	{
+		NAME: "Production",
+		DESC: "How much will be produced per day. Depends on Workers, fish and Efficiency.",
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "Where fishermen will put the caught fish.",
+	},
+	{
+		NAME: "Auxiliaries",
+		DESC: "Adds Efficiency to the room.",
+	},
+],

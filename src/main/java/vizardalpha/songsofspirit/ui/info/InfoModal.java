@@ -4,6 +4,7 @@ import game.VERSION;
 import init.C;
 import init.paths.ModInfo;
 import init.sprite.UI.UI;
+import lombok.Getter;
 import snake2d.MButt;
 import snake2d.Renderer;
 import snake2d.util.color.COLOR;
@@ -35,12 +36,13 @@ public class InfoModal extends Interrupter {
 
     public final static int WIDTH = 800;
     public final static int HEIGHT = 600;
+    @Getter
+    private GButt.ButtPanel discordButton;
 
     public InfoModal(ChangelogsStore changelogsStore, CreditsStore creditsStore, ModInfo modInfo) {
         this.modInfo = modInfo;
         GPanelL pan = new GPanelL();
         pan.body.setDim(WIDTH, HEIGHT);
-//        D.t(this);
         pan.setTitle("Songs of Spirit Info");
         pan.setCloseAction(this::hide);
 
@@ -49,8 +51,8 @@ public class InfoModal extends Interrupter {
         this.section = new GuiSection();
         section.add(pan);
 
-        Credits credits = new Credits(creditsStore, WIDTH, HEIGHT - 50);
-        Changelogs changelogs = new Changelogs(changelogsStore, WIDTH, HEIGHT - 50);
+        Credits credits = new Credits(creditsStore, WIDTH, HEIGHT - 75);
+        Changelogs changelogs = new Changelogs(changelogsStore, WIDTH, HEIGHT - 75);
 
         panels.put("Changelogs", changelogs);
         panels.put("Credits", credits);
@@ -123,9 +125,12 @@ public class InfoModal extends Interrupter {
             }.setDim(136, 32));
         });
 
+        discordButton = new GButt.ButtPanel("Discord");
         GuiSection versions = versions();
-        int space = WIDTH - section.body().width() - versions.body().width();
-        section.addRightC(space, versions);
+        int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 10;
+
+        section.addRightC(space, discordButton);
+        section.addRightC(10, versions);
 
         return section;
     }
