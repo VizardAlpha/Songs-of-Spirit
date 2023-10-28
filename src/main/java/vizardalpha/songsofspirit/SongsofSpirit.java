@@ -41,15 +41,20 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     @Override
     public void initBeforeGameCreated() {
         log.debug("PHASE: initBeforeGameCreated");
-        IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
     }
 
     @Override
     public SCRIPT_INSTANCE createInstance() {
         log.debug("PHASE: createInstance");
         Loggers.setLevels(Level.FINEST);
+
         Instance instance = new Instance(this);
         this.instance = instance;
+
+        IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
+        IDebugPanel.add("Songs of Spirit: Update Message", () -> {
+            showModUpdateMessage(instance.getState().getModVersion().toString());
+        });
 
         return instance;
     }
@@ -89,7 +94,14 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
                 showWelcomeMessage();
                 state.setNewGame(false);
             } else {
-                showModUpdateMessage(state);
+                SemVersion modVersion = state.getModVersion();
+                SemVersion savedModVersion = state.getSavedModVersion();
+                log.trace("Saved Version: %s; Mod Version: %s", savedModVersion, modVersion);
+
+                // did the mod had an update?
+                if (modVersion.isNewer(savedModVersion)) {
+                    showModUpdateMessage(state.getModVersion().toString());
+                }
             }
         }
     }
@@ -99,22 +111,16 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         new MessageText(welcomeJson.json("SONGS_OF_SPIRIT_NEW_GAME")).send();
     }
 
-    private void showModUpdateMessage(Instance.State state) {
+    private void showModUpdateMessage(String newVersion) {
         log.debug("Show update message");
-        SemVersion modVersion = state.getModVersion();
-        SemVersion savedModVersion = state.getSavedModVersion();
-        log.trace("Saved Version: %s; Mod Version: %s", savedModVersion, modVersion);
 
-        // did the mod had an update?
-        if (modVersion.isNewer(savedModVersion)) {
-            Json songsOfSpiritUpdate = updateJson.json("SONGS_OF_SPIRIT_UPDATE");
+        Json songsOfSpiritUpdate = updateJson.json("SONGS_OF_SPIRIT_UPDATE");
 
-            MessageHighlight messageHighlight = new MessageHighlight(
-                songsOfSpiritUpdate.text("NAME"),
-                String.format(songsOfSpiritUpdate.text("DESC"), state.getModVersion()),
-                uiGameConfig.getSettlementButton());
-            messageHighlight.send();
-        }
+        MessageHighlight messageHighlight = new MessageHighlight(
+            songsOfSpiritUpdate.text("NAME"),
+            String.format(songsOfSpiritUpdate.text("DESC"), newVersion),
+            uiGameConfig.getSettlementButton());
+        messageHighlight.send();
     }
 
     @Override
