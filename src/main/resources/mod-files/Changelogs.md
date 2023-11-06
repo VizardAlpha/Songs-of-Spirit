@@ -11,10 +11,11 @@
 - New sprite for the golden ingot.
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
--
+- Fix typo
+- 
 
 ## 26-10-2023 3.1.2 Patch
-- Fixed variant 2 route was unlocked by default. Thanks Meow Kat for this report.
+- Fixed variant 2 road was unlocked by default. Thanks Meow Kat for this report.
 
 ## 15-10-2023 3.1.1 Patch
 - Typo Fix
@@ -97,4 +98,4 @@
 - Technology adjustments and fix.
 
 ## 08-01-2023 1.0.0 Initial Release
-- Publication of the Mods on Steam and Mod.io
+- Release of the Mods on Steam and Mod.io
