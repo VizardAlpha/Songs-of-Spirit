@@ -1,13 +1,13 @@
 package vizardalpha.songsofspirit.ui;
 
 import init.sprite.SPRITES;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import snake2d.util.datatypes.DIR;
 import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.clickable.CLICKABLE;
 import snake2d.util.sprite.SPRITE;
 import util.gui.misc.GButt;
+import view.sett.UISettMap;
 import view.ui.UIPanelTop;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Logger;
@@ -31,18 +31,20 @@ public class UIGameConfig {
 
     private final InfoModal infoModal;
 
-    @Getter
-    private CLICKABLE settlementButton;
+    public final static String SONGS_OF_SPIRIT_BUTTON_KEY = "songs-of-spirit";
 
     public void init() {
         log.debug("Initializing UI");
 
-        settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
+        CLICKABLE settlementButton = new SpiritInfoButton(SPRITES.icons().s.question, 32, UIPanelTop.HEIGHT) {
             @Override
             protected void clickA() {
                 infoModal.activate();
             }
         }.hoverInfoSet(MOD_INFO.name);
+
+        // needed for highlighting the button with a red line in the top navigation bar
+        UISettMap.add(settlementButton, SONGS_OF_SPIRIT_BUTTON_KEY);
 
         gameUiApi.findUIElementInSettlementView(UIPanelTop.class)
             .flatMap(uiPanelTop -> ReflectionUtil.getDeclaredField("right", uiPanelTop))

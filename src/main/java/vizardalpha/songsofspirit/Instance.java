@@ -35,6 +35,7 @@ public class Instance implements SCRIPT.SCRIPT_INSTANCE {
 	public void save(FilePutter file) {
 		log.debug("PHASE: save");
 		file.bool(false); // newGame
+		log.trace("Saving mod version: %s", state.getModVersion());
 		file.chars(state.getModVersion().toString());
 	}
 

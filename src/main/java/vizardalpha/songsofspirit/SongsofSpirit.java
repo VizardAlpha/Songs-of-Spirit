@@ -119,7 +119,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         MessageHighlight messageHighlight = new MessageHighlight(
             songsOfSpiritUpdate.text("NAME"),
             String.format(songsOfSpiritUpdate.text("DESC"), newVersion),
-            uiGameConfig.getSettlementButton());
+            UIGameConfig.SONGS_OF_SPIRIT_BUTTON_KEY);
         messageHighlight.send();
     }
 

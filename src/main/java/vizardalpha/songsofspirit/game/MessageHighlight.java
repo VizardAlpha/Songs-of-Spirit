@@ -6,16 +6,17 @@ import snake2d.util.color.OPACITY;
 import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.renderable.RENDEROBJ;
 import view.main.VIEW;
+import view.sett.UISettMap;
 import view.ui.message.MessageSection;
 
 public class MessageHighlight extends MessageSection {
 
-    private final RENDEROBJ elementToHighlight;
+    private final String UIKey;
     private final String body;
 
-    public MessageHighlight(CharSequence title, CharSequence body, RENDEROBJ elementToHighlight) {
-        super("" + title);
-        this.elementToHighlight = elementToHighlight;
+    public MessageHighlight(CharSequence title, CharSequence body, String UIKey) {
+        super(title);
+        this.UIKey = UIKey;
         this.body = "" + body;
     }
 
@@ -24,9 +25,11 @@ public class MessageHighlight extends MessageSection {
         paragraph(body);
 
         section.addDown(0, new RENDEROBJ.RenderImp(0) {
+            final RENDEROBJ o = UISettMap.getByKey(UIKey);
+
             @Override
             public void render(SPRITE_RENDERER r, float ds) {
-                highlight(section, r, elementToHighlight);
+                highlight(section, r, o);
                 if (!VIEW.s().isActive())
                     VIEW.s().activate();
             }
@@ -41,6 +44,7 @@ public class MessageHighlight extends MessageSection {
         c.render(r, o.body().x1() - 8, o.body().x2() + 8, o.body().y2() + 8, o.body().y2() + 4);
         c.render(r, o.body().x1() - 8, o.body().x1() - 4, o.body().y1() - 8, o.body().y2() + 8);
         c.render(r, o.body().x2() + 4, o.body().x2() + 8, o.body().y1() - 8, o.body().y2() + 8);
+
 
         if (o.body().cX() < s.body().cX()) {
             c.render(r, o.body().x2() + 4, s.body().cX() + 4, o.body().cY() - 4, o.body().cY() + 4);
@@ -57,8 +61,6 @@ public class MessageHighlight extends MessageSection {
             c.render(r, s.body().cX() - 4, s.body().cX() + 4, o.body().cY(), y2);
         }
 
-
         OPACITY.unbind();
     }
-
 }
