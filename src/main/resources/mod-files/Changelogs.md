@@ -1,4 +1,4 @@
-## xx-xx-2023 4.0.0 Major
+## xx-xx-2023 4.0.2 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
