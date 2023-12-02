@@ -68,6 +68,20 @@ public class UIGameConfig {
                 throw new RuntimeException(e);
             }
         });
+        infoModal.getGithubButton().clickActionSet(() -> {
+            Desktop desktop = java.awt.Desktop.getDesktop();
+            URI url;
+            try {
+                url = new URI("https://github.com/VizardAlpha/Songs-of-Spirit-Translation");
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                desktop.browse(url);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     private static class SpiritInfoButton extends GButt.ButtPanel{
