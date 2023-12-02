@@ -12,7 +12,11 @@
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
 - Fix typo
-- 
+- A button to link to translations on GitHub has been added.
+- When you get a mod update, you'll get a reminder to check out the changelogs!
+
+## 30-11-2023 3.1.4 Patch
+- Fix overlapping icon from recruit in provinces view. Thanks for the report on Steam and Discord.
 
 ## 26-10-2023 3.1.2 Patch
 - Fixed variant 2 road was unlocked by default. Thanks Meow Kat for this report.
