@@ -16,6 +16,8 @@ BIO_FILE: Normal,
 OPINION_FILE_SCARED: Normal,
 OPINION_FILE_NORMAL: Normal,
 OPINION_FILE_CONFIDENT: Normal,
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 
 TOURIST: {
 	OCCURENCE: 1.0,
@@ -40,7 +42,6 @@ PREFERRED: {
 	STRUCTURE: {
 		MOUNTAIN: 0.2,
 		STONE: 0.7,
-		GLASS: 0.9,
 		GRAND: 1,
 		WOOD: 0.5,
 		OUTDOORS: 0.3,
@@ -55,12 +56,18 @@ PREFERRED: {
 		PASTURE_HORSE: 0.7,
 		WORKSHOP_KITCHEN: 0.8,
 	},
+	OTHER_RACES: {
+		*: 0.75,
+	},
+	OTHER_RACES_REVERSE: {
+		*: 1,
+	},
 },
 
 POPULATION: {
 	MAX: 0.9,
-	GROWTH: 0.05,
-	IMMIGRATION_RATE: 1,
+	GROWTH: 0.075,
+	IMMIGRATION_RATE: 0.5,
 	CLIMATE: {
 		COLD: 0.8,
 		TEMPERATE: 1.0,
@@ -72,651 +79,63 @@ POPULATION: {
 		NONE: 1.2,
 	},
 },
-
-BONUS_MUL: {
-	
-	PHYSICS: {
-		RESISTANCE_COLD: 0.5,
-		RESISTANCE_HOT: 0.5,
-		DEATH_AGE: 0.8,
-	},
-	BATTLE: {
-		BLUNT_DAMAGE: 2,
-	},
-	ROOM: {
-		FARM: 1.2,
-		ORCHARD: 1.2,
-		LIBRARY_NORMAL: 1.25,
-		ADMIN_NORMAL: 1.25,
-		LABORATORY_NORMAL: 1.25,
-	},
-	RATES: {
-		LEARNING: 2.0,
-				
-	},
-	BEHAVIOUR: {
-		LAWFULNESS: 0.75,
-		SANITY: 0.8,	
-	},
-},
-
 TRAITS: {
 	FIGHTER: 0.1,
 	GLUTTON: 0.1,
 	SPRINTER: 0.1,
 },
-
 RESOURCE: {
 	MEAT: 30,
 	LEATHER: 10,
 },
-
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 0.3,
-	TEMPLE_AMINION: 0.2,
-	TEMPLE_ATHURI: 0.3,
-	TEMPLE_SHMALOR: 0.2,	
-},
-
 STATS: {
-	SERVICE: {
-		
+	EDUCATION_EDUCATION: {
+		CITIZEN: 1,
 	},
-	
-	EQUIP: {
-		
-	},
-	
-	EDUCATION: {
-		EDUCATION: {
-			CITIZEN: 1,		
-		},
-	},
-	
-	FOOD: {
-	
-	},
-	
-	BATTLE: {
-	
-	},
-	
-	WORK: {
-	
-	},
-	
-	POPULATION: {
-	
-	},
-	
-	ENVIRONMENT: {
-		
-	},
-	
 	ACCESS: {
-		*: {
-
-		},
-
-		NOISE: {
-			CITIZEN: 0.5,
-			INVERTED: true,
-		},
-
-		LIGHT: {
-			CITIZEN: 1.5,
-		},
-
-		AWE: {
-			CITIZEN: 1.0,
-		},
-
-		SPACE: {
-			CITIZEN: 0.5,
-		},
 
 	},
-	
-	STORED: {
-		GEM: {
-			CITIZEN: 1,
-			SLAVE: 0,
-			NOBLE: 1,
-			MULTIPLIER: 0.5,
-		},
+	ACCESS_NOISE: {
+		CITIZEN: 0.5,
+		INVERTED: true,
+	},
+	ACCESS_LIGHT: {
+		CITIZEN: 1.5,
+	},
+	ACCESS_AWE: {
+		CITIZEN: 1.0,
+	},
+	ACCESS_SPACE: {
+		CITIZEN: 0.5,
+	},
+	STORED_GEM: {
+		CITIZEN: 1,
+		SLAVE: 0,
+		NOBLE: 1,
+		MULTIPLIER: 0.5,
 	},
 },
+SPRITE_FILE: HUMAN,
+ICON_SMALL: 24->race->Human->0,
+ICON_BIG: 32->race->Human->0,
+WORLD_BUILDING_OVERRIDE: {
 
-APPEARANCE: {
-
-
-	ICON_SMALL: 24->race->Human->0,
-	ICON_BIG: 32->race->Human->0,
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: StdLastNoble,
-
-	CROWN: {
-		FILE: Human,
-		OFFX: 0,
-		OFFY: -2,
-	},
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-
-	COLORS: {
-		SKIN: {
-			TURNS_WHITE_WHEN_DEAD: true,
-			VALUES: [
-				{R: 183, G: 139, B: 119,},
-				{R: 198, G: 150, B: 131,},
-				{R: 214, G: 162, B: 141,},
-				{R: 226, G: 171, B: 149,},
-				{R: 221, G: 139, B: 119,},
-				{R: 232, G: 144, B: 125,},
-				{R: 244, G: 152, B: 132,},
-				{R: 244, G: 170, B: 154,},
-				{R: 221, G: 139, B: 93,},
-				{R: 206, G: 130, B: 88,},
-				{R: 206, G: 139, B: 103,},
-				{R: 206, G: 160, B: 136,},
-				{R: 221, G: 120, B: 93,},
-				{R: 237, G: 129, B: 101,},
-				{R: 237, G: 142, B: 118,},
-			],
-		},
-		HAIR: {
-			TURNS_GRAY_WHEN_OLD: true,
-			VALUES: [
-				{R: 198, G: 114, B: 54,},
-				{R: 96, G: 27, B: 11,},
-				{R: 196, G: 174, B: 153,},
-				{R: 154, G: 128, B: 101,},
-				{R: 18, G: 18, B: 18,},
-				{R: 35, G: 35, B: 35,},
-				{R: 32, G: 26, B: 26,},
-				{R: 136, G: 46, B: 20,},
-				{R: 84, G: 21, B: 3,},
-				{R: 54, G: 4, B: 7,},
-				{R: 61, G: 9, B: 11,},
-				{R: 35, G: 19, B: 15,},
-				{R: 102, G: 59, B: 16,},
-				{R: 58, G: 36, B: 15,},
-				{R: 116, G: 92, B: 66,},
-			],
-		},
-
-		EYE: {
-			VALUES: [
-			{R: 128, G: 173, B: 206,},
-				{R: 104, G: 141, B: 168,},
-				{R: 142, G: 193, B: 229,},
-				{R: 32, G: 74, B: 104,},
-				{R: 9, G: 110, B: 183,},
-				{R: 75, G: 196, B: 23,},
-				{R: 142, G: 196, B: 222,},
-				{R: 29, G: 114, B: 119,},
-				{R: 162, G: 151, B: 131,},
-				{R: 87, G: 95, B: 132,},
-				{R: 19, G: 80, B: 36,},
-			],
-		},
-		LEG: {
-			VALUES: [
-				{R: 80, G: 40, B: 20,},
-			],
-		},
-		LIPS: {
-			VALUES: [
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-				{R: 255, G: 150, B: 150,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: ChildHumanoid,
-		SPRITE_SKELLETON_FILE: Humanoid_small,
-		NAMESET_FILE_FIRST: StdFirst,
-		NAMESET_FILE_SURNAME: StdLast,
-
-		ADDONS: [
-			{
-				BELOW_HEAD: false,
-				SPRITE_FILE: HairHuman,
-				COLOR: HAIR,
-			},
-		],
-	},
-
-	TYPES: [
-		{
-			OCCURRENCE: 0.5,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			SPRITE_FILE: Human,
-			SPRITE_SKELLETON_FILE: Humanoid,
-			NAMESET_FILE_FIRST: StdFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			PORTRAIT_FILE: Human,
-
-			ADDONS: [
-
-				{
-					BELOW_HEAD: true,
-					SPRITE_FILE: BeardHuman,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.25,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: HairHuman,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourHuman,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 18,
-				},
-				**Faces Male
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					COLOR: SKIN,
-				},
-				**Olden lines
-				{
-					CONDITIONS: {
-						GREATER: {
-							POPULATION_AGE_F: 0.75,
-						},
-					},
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 3,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -20,
-					OPACITY: 127,
-					COLOR: SKIN,
-				},
-				**Eyes Male
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 2,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -21,
-				},
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 3,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 2,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -23,
-				},
-				**eyebrows
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: 8,
-				},
-				**mouth
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: 15,
-					**OPACITY: 0,
-					COLOR: SKIN,
-				},
-				**mustage
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_3_F: 0.5,
-						},
-					},
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: true,
-					OFF_Y: 10,
-					COLOR: HAIR,
-				},
-
-				**nose male
-				{
-					FRAME_START: 16,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					COLOR: SKIN,
-					SPLIT: 2,
-					OFF_Y: -12,
-					**OPACITY: 0,
-				},
-				**freckles
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.25,
-						},
-					},
-					FRAME_START: 21,
-					FRAME_VARIATIONS: 3,
-					OFF_Y: -15,
-					SPLITS: 3,
-					SPLIT: 2,
-					COLOR: SKIN,
-				},
-
-				**hair male
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					FRAME_START: 26,
-					FRAME_VARIATIONS: 6,
-					COLOR: HAIR,
-					OFF_Y: -10,
-					STAINS: false,
-				},
-				**beard1
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.25,
-						},
-					},
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					FRAME_RANDOM: 5,
-					SPLITS: 2,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: 24,
-				},
-			],
-		},
-		{
-			OCCURRENCE: 0.5,
-			OCCURRENCE_EXTRA1: 0,
-			OCCURRENCE_EXTRA2: 0.95,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-			COLOR_EXTRA1: HAIR,
-			COLOR_EXTRA2: HAIR,
-
-			SPRITE_FILE: Human,
-			SPRITE_SKELLETON_FILE: Humanoid,
-			NAMESET_FILE_FIRST: StdFemaleFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			PORTRAIT_FILE: Human,
-
-			SET_APPEARANCE_STATS: {
-				**hair
-				EXTRA1: 0.95,
-				EXTRA2: 0.5,
-				EXTRA4: 0.5,
-			},
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: HairHuman,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.95,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourHuman,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-				**hair extension
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 1,
-					COLOR: HAIR,
-					STAINS: false,
-				},
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 18,
-				},
-				**Faces Female
-				{
-					FRAME_START: 8,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-				},
-				**Roughe
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 1,
-					OFF_Y: -12,
-					SPLITS: 3,
-					SPLIT: 2,
-				},
-
-				**Olden lines
-				{
-					CONDITIONS: {
-						GREATER: {
-							POPULATION_AGE_F: 0.75,
-						},
-					},
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 3,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -20,
-					OPACITY: 127,
-					COLOR: SKIN,
-				},
-				**Eyes
-				{
-					FRAME_START: 14,
-					FRAME_VARIATIONS: 2,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -21,
-
-				},
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 3,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 2,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -23,
-				},
-				**eyebrows
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: 8,
-				},
-				**mouth
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: 14,
-					COLOR: LIPS,
-				},
-				{
-					FRAME_START: 16,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					COLOR: SKIN,
-					SPLIT: 2,
-					OFF_Y: -12,
-				},
-				**freckles
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_3_F: 0.25,
-						},
-					},
-					FRAME_START: 21,
-					FRAME_VARIATIONS: 3,
-					COLOR: SKIN,
-					OFF_Y: -15,
-					SPLITS: 3,
-					SPLIT: 2,
-				},
-
-				**hair
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.95,
-						},
-					},
-					FRAME_START: 25,
-					FRAME_VARIATIONS: 5,
-					COLOR: HAIR,
-					OFF_Y: -9,
-					STAINS: false,
-				},
-			],
-		},
-	],	
+},
+BOOST: {
+	RELIGION_CRATOR>ADD: -0.7,
+	RELIGION_AMINION>ADD: -0.8,
+	RELIGION_ATHURI>ADD: -0.7,
+	RELIGION_SHMALOR>ADD: -0.8,
+	PHYSICS_RESISTANCE_COLD>MUL: 0.5,
+	PHYSICS_RESISTANCE_HOT>MUL: 0.5,
+	PHYSICS_DEATH_AGE>MUL: 0.8,
+	BATTLE_BLUNT_ATTACK>ADD: 10,
+	ROOM_FARM>MUL: 1.2,
+	ROOM_ORCHARD>MUL: 1.2,
+	ROOM_LIBRARY_NORMAL>MUL: 1.25,
+	ROOM_ADMIN_NORMAL>MUL: 1.25,
+	ROOM_LABORATORY_NORMAL>MUL: 1.25,
+	ROOM_UNIVERSITY>MUL: 2.0,
+	BEHAVIOUR_LAWFULNESS>MUL: 0.75,
+	BEHAVIOUR_SANITY>MUL: 0.8,
 },

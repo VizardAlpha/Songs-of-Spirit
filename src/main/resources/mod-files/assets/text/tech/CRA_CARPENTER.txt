@@ -38,16 +38,4 @@ TECHS: [
 		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
 		",
 	},
-
-	{
-		NAME: "Makeshift Shield",
-		CATEGORY:"Crafting",
-		
-		DESC: "Having a wooden shield is not very terrifying... but it's better than nothing.
-
-		%r%%r%
-
-		(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)
-		",
-	},
 ],

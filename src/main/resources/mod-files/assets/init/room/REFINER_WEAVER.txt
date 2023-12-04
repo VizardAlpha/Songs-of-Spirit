@@ -1,4 +1,4 @@
-TYPE: REFINER,
+ICON: 32->REFINER->4,
 RESOURCES: [STONE,WOOD,FURNITURE,MACHINERY,],
 AREA_COSTS: [0.2,0,0,0,],
 FLOOR: [DIRT,WOOD_SQUARE,WOOD,],
@@ -6,15 +6,15 @@ MINI_COLOR: 226_195_38,
 
 ITEMS: [
 	{
-		COSTS: [2,6,3,4,],
+		COSTS: [1,2,1,1,],
 		STATS: [1.2,0,1,],
 	},
 	{
-		COSTS: [1,1,2,3,],
+		COSTS: [1,1,0,0,],
 		STATS: [0,0,0,],
 	},
 	{
-		COSTS: [0.5,1,2,3,],
+		COSTS: [1,3,1,1,],
 		STATS: [0,0.5,0,],
 	},
 ],
@@ -25,12 +25,12 @@ UPGRADES: [
 		BOOST: 0,
 	},
 	{
-		RESOURCE_MASK: [2,2,1,0,],
-		BOOST: 0.25,
+		RESOURCE_MASK: [1,1,2,0,],
+		BOOST: 0.5,
 	},
 	{
-		RESOURCE_MASK: [3,3,3,1,],
-		BOOST: 0.5,
+		RESOURCE_MASK: [1,1,5,1,],
+		BOOST: 1,
 	},
 ],
 
@@ -38,7 +38,6 @@ WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: MACHINE,
 	FULFILLMENT: 0.2,
-	EDUCATION_FACTOR: 0.15,
     ACCIDENTS_PER_YEAR: 0.005,
 },
 

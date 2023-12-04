@@ -1,4 +1,4 @@
-TYPE: WORKSHOP,
+ICON: 32->WORKSHOP->1,
 RESOURCES: [STONE,WOOD,METAL,],
 AREA_COSTS: [0.2,0.2,0,],
 FLOOR: [DIRT,WOOD_SQUARE,],
@@ -35,7 +35,6 @@ WORK: {
 	SOUND: AXE,
 	ACCIDENTS_PER_YEAR: 0.0025,	
 	FULFILLMENT: 1.0,
-	EDUCATION_FACTOR: 0.4,
 },
 
 INDUSTRIES: [
@@ -49,7 +48,6 @@ INDUSTRIES: [
 			},
 		},
 	},
-
     {
 		INDUSTRY: {
 			IN: {
@@ -60,7 +58,6 @@ INDUSTRIES: [
 			},
 		},
 	},
-
 	{
     	INDUSTRY: {
     		IN: {
@@ -71,7 +68,6 @@ INDUSTRIES: [
     		},
     	},
     },
-
 	{
 		INDUSTRY: {
 			IN: {
@@ -83,19 +79,28 @@ INDUSTRIES: [
 			},
 		},
 	},
-
 	{
-		INDUSTRY: {
-			IN: {
-				PLANK: 5.0,
-				METAL: 1.0,
-			},
-			OUT: {
-				SHIELD: 1.0,
-			},
-		},
-	},
-
+    	INDUSTRY: {
+    		IN: {
+    			WOOD: 6.0,
+    			STONE: 4.0,
+    		},
+    		OUT: {
+    			WEAPON_HAMMER: 0.2,
+    		},
+    	},
+    },
+    {
+    	INDUSTRY: {
+    		IN: {
+    			WOOD: 6.0,
+    			LEATHER: 2.0,
+    		},
+    		OUT: {
+    			WEAPON_SHIELD: 0.2,
+    		},
+    	},
+    },
 ],
 
 ENVIRONMENT_EMIT: {

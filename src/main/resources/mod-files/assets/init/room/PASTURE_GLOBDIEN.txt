@@ -1,4 +1,11 @@
-TYPE: PASTURE,
+ICON: {
+	BG: 32->BG->2,
+	FG: 32->animal->Globdien->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
+
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -8,23 +15,24 @@ FLOOR: DIRT,
 ITEMS: [
 	{
 		COSTS: [20,10,],
-		STATS: [0,0,],
+		STATS: [0,0,0,],
+	},
+	{
+		COSTS: [20,10,],
+		STATS: [0,0,1,],
 	},
 ],
-
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	INDOCTRINATION_FACTOR: 0.1,
-   	ACCIDENTS_PER_YEAR: 0.002,		
+	ACCIDENTS_PER_YEAR: 0.002,
 },
 
-
 SPRITES: {
-
+	
 	GATE_TOP_3X3: {
 		ROTATES: true,
 		SHADOW_HEIGHT: 8,
@@ -52,12 +60,39 @@ SPRITES: {
 			FENCE: 3,
 		],
 	},
+	AUX_BIG_2X2: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: false,
+			FRAMES: [
+				HUT: 0,
+			],
+		},
+	],
+	AUX_EDGE_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 0,
+			],
+		},
+	],
+	AUX_MID_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 1,
+			],
+		},
+	],
 },
 
 INDUSTRY: {
 	OUT: {
-		MEAT: 0.25,
-		EGG: 1.25,
+		MEAT: 0.15,
+		EGG: 0.85,
 		LIVESTOCK: 0.0625,
 	},
 },
@@ -65,8 +100,8 @@ INDUSTRY: {
 BONUS: {
 	RACE: 0.8,
 	CLIMATE: {
-		TEMPERATE: 0.5,
-		COLD: 0.2,
-		HOT: 1.0,
+		TEMPERATE: 1.0,
+		COLD: 0.25,
+		HOT: 1.5,
 	},
 },

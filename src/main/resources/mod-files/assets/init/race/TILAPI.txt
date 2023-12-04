@@ -3,7 +3,7 @@ PLAYABLE: true,
 PROPERTIES: {
 	HEIGHT: 7,
 	WIDTH: 8,
-	ADULT_AT_DAY: 48,
+	ADULT_AT_DAY: 64,
 	CORPSE_DECAY: true,
 	SLEEPS: true,
 },
@@ -16,6 +16,8 @@ BIO_FILE: Normal,
 OPINION_FILE_SCARED: Normal,
 OPINION_FILE_NORMAL: Normal,
 OPINION_FILE_CONFIDENT: Normal,
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 
 TOURIST: {
 	OCCURENCE: 0.05,
@@ -35,7 +37,6 @@ PREFERRED: {
 	STRUCTURE: {
 		MOUNTAIN: 0,
 		STONE: 0.2,
-		GLASS: 0.4,
 		GRAND: 0.3,
 		WOOD: 1.0,
 		OUTDOORS: 1.0,
@@ -52,16 +53,19 @@ PREFERRED: {
 		MINE_SAND: 0.0,		
 	},
 	OTHER_RACES: {
-		DONDORIAN: -0.25,
-		GARTHIMI: -0.5,
+		*: 0.4,
+		DONDORIAN: 0,
+		GARTHIMI: 0.01,
+	},
+	OTHER_RACES_REVERSE: {
+		*: 1,
 	},
 },
 
-
 POPULATION: {
 	MAX: 0.55,
-	GROWTH: 0.025,
-	IMMIGRATION_RATE: 2,
+	GROWTH: 0.03,
+	IMMIGRATION_RATE: 1,
 	CLIMATE: {
 		COLD: 0.8,
 		TEMPERATE: 1.0,
@@ -74,378 +78,84 @@ POPULATION: {
 		WET: 0.03,
 	},
 },
-
-BONUS_MUL: {
-	
-	PHYSICS: {
-		RESISTANCE_COLD: 0.75,
-		RESISTANCE_HOT: 0.75,
-		DEATH_AGE: 1.4,
-		MASS: 0.7,
-		SPEED: 1.4,
-	},
-	RATES: {
-		SOIL: 0.5,
-		HUNGER: 0.8,
-		LEARNING: 0.8,			
-	},
-	BATTLE: {
-		RANGED_SKILL: 2.5,
-		BLUNT_DAMAGE: 1,
-		MORALE: 1.2,
-	},
-	ROOM: {
-		PASTURE_AUR: 1.4,
-		PASTURE_ENT: 1.4,
-		PASTURE_GLOBDIEN: 1.0,
-		PASTURE_ONX: 1.4,						
-		PASTURE_BALTI: 0.1,
-		PASTURE_HORSE: 1.2,
-		ORCHARD: 1.2,
-		_WOODCUTTER: 1.3,
-		WORKSHOP_BOWYER: 1.4,			
-	},
-},
-
 TRAITS: {
 	FIGHTER: 0.1,
 	SPRINTER: 0.1,
 	GLUTTON: 0,
 },
-
 RESOURCE: {
 	MEAT: 15,
 	COTTON: 15,
 },
-
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 0.6,
-	TEMPLE_AMINION: 0.1,
-	TEMPLE_ATHURI: 0.1,
-	TEMPLE_SHMALOR: 0.1,	
-},
-
 STATS: {
-	SERVICE: {
-		
-	},
-	
-	EQUIP: {
-
-	},
-	
 	ACCESS: {
-		*: {
-
-		},
-		NOISE: {
-			CITIZEN: 0.5,
-			INVERTED: true,
-		},
-		HARMONY: {
-			NOBLE: 2.0,
-			SLAVE: 1.0,
-			CITIZEN: 1.5,
-		},
-		DREAD: {
-			CITIZEN: 0.5,
-		},
-	},
-	
-	FOOD: {
-	
-	},
-	
-	BATTLE: {
-		ARCHERY_TRAINING: {
-			CITIZEN: 1.0,
-		},
 
 	},
-	
-	WORK: {
-	
+	ACCESS_NOISE: {
+		CITIZEN: 0.5,
+		INVERTED: true,
 	},
-
-	ENVIRONMENT: {
-		ROUNDNESS: {
-			SLAVE: 0.7,
-			CITIZEN: 1.5,
-			NOBLE: 2.0,
-			MULTIPLIER: 2.0,
-		},
-		CANNIBALISM: {
-			CITIZEN: 1,
-		},
+	ACCESS_HARMONY: {
+		NOBLE: 2.0,
+		SLAVE: 1.0,
+		CITIZEN: 1.5,
 	},
-	
-	POPULATION: {
-		SLAVES_SELF: {
-			INVERTED: true,
-			CITIZEN: 2.5,
-		},
-		
-		SLAVES_OTHER: {
-			CITIZEN: 2,
-		},
+	ACCESS_DREAD: {
+		CITIZEN: 0.5,
 	},
-	
-	STORED: {
-		MEAT: {
-			CITIZEN: 1,
-		},
+	BATTLE_ARCHERY_VANILLA: {
+		CITIZEN: 1.0,
 	},
-	
-	EDUCATION: {
-	
+	ENVIRONMENT_ROUNDNESS: {
+		SLAVE: 0.7,
+		CITIZEN: 1.5,
+		NOBLE: 2.0,
+		MULTIPLIER: 2.0,
+	},
+	ENVIRONMENT_CANNIBALISM: {
+		CITIZEN: 1,
+	},
+	POPULATION_SLAVES_SELF: {
+		INVERTED: true,
+		CITIZEN: 2.5,
+	},
+	POPULATION_SLAVES_OTHER: {
+		CITIZEN: 2,
+	},
+	STORED_MEAT: {
+		CITIZEN: 1,
 	},
 },
+SPRITE_FILE: TILAPI,
+ICON_SMALL: 24->race->Tilapi->0,
+ICON_BIG: 32->race->Tilapi->0,
+WORLD_BUILDING_OVERRIDE: {
 
-APPEARANCE: {
-
-	ICON_SMALL: 24->race->Tilapi->0,
-	ICON_BIG: 32->race->Tilapi->0,
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: StdLastNoble,
-
-	CROWN: {
-		FILE: Human,
-		OFFX: 0,
-		OFFY: -2,
-	},
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-
-	COLORS: {
-		SKIN: {
-			GENERATE_RANDOMIZE: 0.2,
-			TURNS_WHITE_WHEN_DEAD: true,
-			TURNS_SICKLY: true,
-			VALUES: [
-				{R: 209, G: 230, B: 188,},
-				{R: 209, G: 225, B: 188,},
-				{R: 209, G: 219, B: 188,},
-				{R: 209, G: 219, B: 148,},
-				{R: 209, G: 219, B: 158,},
-				{R: 209, G: 219, B: 168,},
-			],
-		},
-		HAIR: {
-			GENERATE_RANDOMIZE: 0.5,
-			TURNS_GRAY_WHEN_OLD: true,
-			VALUES: [
-				{R: 220, G: 80, B: 40,},
-
-			],
-		},
-
-		EYE: {
-			GENERATE_RANDOMIZE: 0.2,
-			VALUES: [
-				{R: 0, G: 186, B: 0,},
-			],
-		},
-		LEG: {
-			VALUES: [
-				{R: 80, G: 40, B: 20,},
-			],
-		},
-		LIPS: {
-			GENERATE_RANDOMIZE: 0.2,
-			VALUES: [
-				{R: 255, G: 150, B: 150,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: ChildHumanoid,
-		SPRITE_SKELLETON_FILE: Humanoid_small,
-		NAMESET_FILE_FIRST: StdFemaleFirst,
-		NAMESET_FILE_SURNAME: StdLast,
-
-		ADDONS: [
-			{
-				BELOW_HEAD: false,
-				SPRITE_FILE: HairTilapi,
-				COLOR: HAIR,
-			},
-		],
-	},
-
-	TYPES: [
-		{
-			OCCURRENCE: 1.0,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			SPRITE_FILE: Tilapi,
-			SPRITE_SKELLETON_FILE: Humanoid,
-			NAMESET_FILE_FIRST: StdFemaleFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			PORTRAIT_FILE: Tilapi,
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: HairTilapi,
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourTilapi,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-
-
-			PORTRAIT: [
-				**hair extension
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_3_F: 0.25,
-						},
-					},
-					FRAME_START: 28,
-					FRAME_VARIATIONS: 1,
-					COLOR: HAIR,
-					STAINS: false,
-				},
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 2,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: -18,
-				},
-				**Faces
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					COLOR: SKIN,
-				},
-				**Olden lines
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 3,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -20,
-					OPACITY: 127,
-					COLOR: SKIN,
-					CONDITIONS: {
-						GREATER: {
-							POPULATION_AGE_F: 0.75,
-						},
-					},
-				},
-				**Eyes
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: false,
-					OFF_Y: 9,
-				},
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 3,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 1,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -7,
-				},
-				**eyebrows
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: 8,
-				},
-				**mouth
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -5,
-					COLOR: LIPS,
-				},
-				**nose
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 1,
-					COLOR: SKIN,
-					OFF_Y: 1,
-				},
-				
-				
-				**hair
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 8,
-					COLOR: HAIR,
-					OFF_Y: -2,
-				},
-			],
-		},
-	],	
 },
+BOOST: {
+	RELIGION_CRATOR>ADD: -0.4,
+	RELIGION_AMINION>ADD: -0.9,
+	RELIGION_ATHURI>ADD: -0.9,
+	RELIGION_SHMALOR>ADD: -0.9,
+	PHYSICS_RESISTANCE_COLD>MUL: 0.75,
+	PHYSICS_RESISTANCE_HOT>MUL: 0.75,
+	PHYSICS_DEATH_AGE>MUL: 1.4,
+	PHYSICS_MASS>MUL: 0.7,
+	PHYSICS_SPEED>MUL: 1.4,
+	PHYSICS_SOILING>MUL: 0.5,
+	RATES_HUNGER>MUL: 0.8,
+	BATTLE_RANGED_BOW>MUL: 1.5,
+	BATTLE_MORALE>MUL: 1.2,
+	ROOM_PASTURE_AUR>MUL: 1.4,
+	ROOM_PASTURE_ENT>MUL: 1.4,
+	ROOM_PASTURE_GLOBDIEN>MUL: 1.0,
+	ROOM_PASTURE_ONX>MUL: 1.4,
+	ROOM_PASTURE_BALTI>MUL: 0.1,
+	ROOM_HUNTER>MUL: 1.2,
+	ROOM_ORCHARD>MUL: 1.2,
+	ROOM_WOODCUTTER>MUL: 1.3,
+	ROOM_WORKSHOP_BOWYER>MUL: 1.4,
+	WORLD_BUILDING_MINE_WOODCUTTER>MUL: 1.25,
+	WORLD_BUILDING_PASTURE>MUL: 1.25,
+},
+

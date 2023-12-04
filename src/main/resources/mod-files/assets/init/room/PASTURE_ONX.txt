@@ -1,4 +1,11 @@
-TYPE: PASTURE,
+ICON: {
+	BG: 32->BG->2,
+	FG: 32->animal->Onx->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
+
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -9,8 +16,12 @@ FLOOR: DIRT,
 ITEMS: [
 	{
 		COSTS: [20,10,],
-		STATS: [0,0,],
+		STATS: [0,0,0,],
 	},
+	{
+    	COSTS: [20,10,],
+    	STATS: [0,0,1,],
+    },
 ],
 
 WORK: {
@@ -18,7 +29,6 @@ WORK: {
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	INDOCTRINATION_FACTOR: 0.1,
     ACCIDENTS_PER_YEAR: 0.002,	
 },
 

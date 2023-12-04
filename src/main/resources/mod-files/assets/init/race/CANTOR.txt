@@ -16,7 +16,8 @@ BIO_FILE: Dry,
 OPINION_FILE_SCARED: Dry,
 OPINION_FILE_NORMAL: Dry,
 OPINION_FILE_CONFIDENT: Dry,
-
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 HOME: CANTOR,
 
 PREFERRED: {
@@ -28,7 +29,6 @@ PREFERRED: {
 	],
 	STRUCTURE: {
 		MOUNTAIN: 0.2,
-		GLASS: 0.5,
 		STONE: 0.5,
 		WOOD: 0.3,
 		GRAND: 1.0,
@@ -53,69 +53,20 @@ PREFERRED: {
 		TEMPLE_ATHURI: 1.0,
 		TEMPLE_CRATOR: 0.0,
 		TEMPLE_SHMALOR: 0.0,
-		_BARRACKS: 1.0,
+		BARRACKS_VANILLA: 1.0,
 		_COURT: 1.0,
 		_GUARD: 1.0,
 		WORKSHOP_SMITHY: 1.0,
 	},
 	OTHER_RACES: {
-		DONDORIAN: 1.0,
-		GARTHIMI: -1.0,
-		HUMAN: -1,
-	},
-},
-
-BONUS_MUL: {
-	
-	PHYSICS: {
-		RESISTANCE_COLD: 2,
-		RESISTANCE_HOT: 0.75,
-		DEATH_AGE: 10,
-		MASS: 5,
-		SPEED: 0.75,
-		ACCELERATION: 0.75,
-		STAMINA: 2,
-		HEALTH: 10,
-	},
-	
-	BATTLE: {
-		RANGED_SKILL: 0,
-		MORALE: 3,
-		BLUNT_DAMAGE: 25,
-	},
-
-	ROOM: {
-		MINE: 2,
-		REFINER: 2,
-		WORKSHOP: 2,
-		FARM: 0.6,
-		ORCHARD: 0.6,
-		PASTURE: 0.8,
-		_WOODCUTTER: 2,
-		FISHERY: 0.8,
-	},
-	
-	BEHAVIOUR: {
-		LAWFULNESS: 10,
-		SUBMISSION: 0.2,
-		SANITY: 10000,
-	},
-	
-	RATES: {
-		
-		DEFECATE: 0.0,
-		SOIL: 0.1,
-		HUNGER: 0.1,
-		THIRST: 0,
-		PIETY: 4,
-		LEARNING: 0,	
-	},	
-},
-
-BONUS_ADD: {
-	BATTLE: {
-		ARMOUR: 3,
-	},
+    	*: 1.0,
+    	DONDORIAN: 1.0,
+    	GARTHIMI: 0.01,
+    	HUMAN: 0.05,
+    },
+    OTHER_RACES_REVERSE: {
+    	*: 1,
+    },
 },
 
 TRAITS: {
@@ -128,281 +79,108 @@ RESOURCE: {
 	LEATHER: 20,
 },
 
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 0,
-	TEMPLE_AMINION: 0,
-	TEMPLE_ATHURI: 1,
-	TEMPLE_SHMALOR: 0,	
-},
-
 STATS: {
 	SERVICE: {
-		*: {
-		
-		},
-		
-		WELL_NORMAL: {
-			CITIZEN: 1,
-			NOBLE: 1,
-		},
-		
-		BATH_NORMAL: {
-			CITIZEN: 2,
-		},
-		
-	},
-	
-	EQUIP: {
 
 	},
-
+	SERVICE_WELL_NORMAL: {
+		CITIZEN: 1,
+		NOBLE: 1,
+	},
+	SERVICE_BATH_NORMAL: {
+		CITIZEN: 2,
+	},
 	BURIAL: {
-		*: {
 
-		},
-		TOMB_NORMAL: {
-			CITIZEN: 4,
-			NOBLE: 4,
-		},
 	},
-
-	ACCESS: {
-		AWE: {
-			CITIZEN: 3,
-			SLAVE: 3,
-			NOBLE: 3,
-		},
+	BURIAL_TOMB_NORMAL: {
+		CITIZEN: 4,
+		NOBLE: 4,
 	},
-
+	ACCESS_AWE: {
+		CITIZEN: 3,
+		SLAVE: 3,
+		NOBLE: 3,
+	},
 	FOOD: {
-		*: {
 
-		},
 	},
-
-	BATTLE: {
-		SOLDIERS: {
-			SLAVE: 2,
-			CITIZEN: 2,
-			NOBLE: 2,
-		},
+	BATTLE_SOLDIERS: {
+		SLAVE: 2,
+		CITIZEN: 2,
+		NOBLE: 2,
 	},
+	WORK_RETIREMENT_AGE: {
 
-	WORK: {
-		RETIREMENT_AGE: {
-
-		},
-		EMPLOYED: {
-
-		},
 	},
+	WORK_EMPLOYED: {
 
+	},
 	POPULATION: {
-		*: {
 
-		},
-		SLAVES_SELF: {
-			INVERTED: true,
-			CITIZEN: 6,
-			NOBLE: 6,
-		},
-		WRONGFUL_DEATHS: {
-			INVERTED: true,
-			CITIZEN: 4,
-			NOBLE: 4,
-		},
 	},
-
+	POPULATION_SLAVES_SELF: {
+		INVERTED: true,
+		CITIZEN: 6,
+		NOBLE: 6,
+	},
+	POPULATION_WRONGFUL_DEATHS: {
+		INVERTED: true,
+		CITIZEN: 4,
+		NOBLE: 4,
+	},
 	ENVIRONMENT: {
-		*: {
-
-		},
-		UNBURRIED: {
-			CITIZEN: 3,
-			INVERTED: true,
-		},
-	},
-
-	STORED: {
 
 	},
-
-	EDUCATION: {
-		INDOCTRINATION: {
-			INVERTED: true,
-			CITIZEN: 3,
-			NOBLE: 3,
-		},
+	ENVIRONMENT_UNBURRIED: {
+		CITIZEN: 3,
+		INVERTED: true,
 	},
-
-	RELIGION: {
-		FAITH: {
-			CITIZEN: 5,
-		},
+	EDUCATION_INDOCTRINATION: {
+		INVERTED: true,
+		CITIZEN: 3,
+		NOBLE: 3,
+	},
+	RELIGION_TEMPLE: {
+		CITIZEN: 5,
 	},
 },
-
-APPEARANCE: {
-
-	ICON_SMALL: 24->race->Cantor->0,
-	ICON_BIG: 32->race->Cantor->0,
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: StdLastNoble,
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 80, G: 150, B: 150,},
-
-	COLORS: {
-		SKIN: {
-			TURNS_WHITE_WHEN_DEAD: true,
-			VALUES:[
-				{R: 164, G: 172, B: 216,},
-				{R: 129, G: 139, B: 199,},
-				{R: 117, G: 127, B: 181,},
-			],
-
-		},
-		EYE: {
-			VALUES: [
-				{R: 128, G: 173, B: 206,},
-				{R: 104, G: 141, B: 168,},
-				{R: 142, G: 193, B: 229,},
-				{R: 32, G: 74, B: 104,},
-				{R: 9, G: 110, B: 183,},
-				{R: 75, G: 196, B: 23,},
-				{R: 142, G: 196, B: 222,},
-				{R: 29, G: 114, B: 119,},
-				{R: 162, G: 151, B: 131,},
-				{R: 87, G: 95, B: 132,},
-				{R: 19, G: 80, B: 36,},
-			],
-		},
-		LEG: {
-			VALUES: [
-				{R: 80, G: 40, B: 20,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: Cantor,
-		SPRITE_SKELLETON_FILE: Cantor,
-		NAMESET_FILE_FIRST: StdFirstNoble,
-		NAMESET_FILE_SURNAME: StdLastNoble,
-	},
-
-	TYPES: [
-		{
-			OCCURRENCE: 1,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			PORTRAIT_FILE: Cantor,
-			SPRITE_FILE: Cantor,
-			SPRITE_SKELLETON_FILE: Cantor,
-			NAMESET_FILE_FIRST: StdFirstNoble,
-			NAMESET_FILE_SURNAME: StdLastNoble,
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourCantor,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-				**Chest
-				{
-					FRAME_START: 28,
-					SPLITS: 1,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 2,
-					COLOR: SKIN,
-					OFF_Y: 6,
-				},
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 3,
-					COLOR: SKIN,
-				},
-
-				**Eyes
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: false,
-					OFF_Y: 12,
-				},
-
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 23,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: 12,
-				},
-				**crest
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 24,
-					SPLITS: 3,
-					SPLIT: 2,
-					COLOR: SKIN,
-					OFF_Y: -29,
-				},
-			],
-		},
-	],
+SPRITE_FILE: CANTOR,
+ICON_SMALL: 24->race->Cantor->0,
+ICON_BIG: 32->race->Cantor->0,
+BOOST: {
+	RELIGION_CRATOR>ADD: -1.0,
+	RELIGION_AMINION>ADD: -1.0,
+	RELIGION_ATHURI>ADD: 0.0,
+	RELIGION_SHMALOR>ADD: -1.0,
+	PHYSICS_RESISTANCE_COLD>MUL: 2.0,
+	PHYSICS_RESISTANCE_HOT>MUL: 0.75,
+	PHYSICS_DEATH_AGE>MUL: 10.0,
+	PHYSICS_MASS>MUL: 5.0,
+	PHYSICS_SPEED>MUL: 0.75,
+	PHYSICS_ACCELERATION>MUL: 0.75,
+	PHYSICS_STAMINA>MUL: 2.0,
+	PHYSICS_HEALTH>MUL: 10.0,
+	BATTLE_RANGED_BOW>MUL: 0.0,
+	BATTLE_MORALE>MUL: 3.0,
+	BATTLE_BLUNT_ATTACK>ADD: 300.0,
+	BATTLE_BLUNT_DEFENCE>ADD: 150.0,
+	ROOM_MINE>MUL: 2.0,
+	ROOM_REFINER>MUL: 2.0,
+	ROOM_WORKSHOP>MUL: 2.0,
+	ROOM_FARM>MUL: 0.6,
+	ROOM_ORCHARD>MUL: 0.6,
+	ROOM_PASTURE>MUL: 0.8,
+	ROOM_WOODCUTTER>MUL: 2.0,
+	ROOM_FISHERY>MUL: 0.8,
+	BEHAVIOUR_LAWFULNESS>MUL: 10.0,
+	BEHAVIOUR_SUBMISSION>MUL: 0.2,
+	BEHAVIOUR_SANITY>MUL: 10000.0,
+	RATES_CONSTIPATION>MUL: 0.0,
+	PHYSICS_SOILING>MUL: 0.1,
+	RATES_HUNGER>MUL: 0.1,
+	RATES_THIRST>MUL: 0.0,
+	RATES_TEMPLE>MUL: 4.0,
+	ROOM_UNIVERSITY>MUL: 0.0,
+	BATTLE_PIERCE_DEFENCE>ADD: 3.0,
 },

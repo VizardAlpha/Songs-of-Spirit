@@ -19,8 +19,8 @@
         <mod.description>Songs of Spirit is a mod adding new content and working on basic game settings.</mod.description>
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
-        <game.version.major>64</game.version.major>
-        <game.version.minor>40</game.version.minor>
+        <game.version.major>65</game.version.major>
+        <game.version.minor>01</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>

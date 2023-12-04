@@ -63,21 +63,4 @@ TECHS: [
 			WORKSHOP_CARPENTER: 3,
 		},
 	},
-
-	**Makeshift Shield
-	{
-		LEVEL_COST: 150,
-
-		TREE_ORDER: 5527,
-
-		REQUIRES_TECH_LEVEL: {
-			CRA_CARPENTER0: 1,
-		},		
-
-		INDUSTRIES: {
-			WORKSHOP_CARPENTER: 4,
-		},
-	},
-
 ],
-

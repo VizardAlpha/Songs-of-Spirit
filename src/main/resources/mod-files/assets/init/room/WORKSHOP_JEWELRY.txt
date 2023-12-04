@@ -1,4 +1,4 @@
-TYPE: WORKSHOP,
+ICON: 32->WORKSHOP->2,
 RESOURCES: [STONE_CUT,FURNITURE,METAL,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_LARGE_FINE,
@@ -25,25 +25,26 @@ WORK: {
 	SOUND: METAL,
 	ACCIDENTS_PER_YEAR: 0.0025,	
 	FULFILLMENT: 1.0,
-	EDUCATION_FACTOR: 0.4,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				COAL: 4,
-				GEM: 2,
+			    METAL: 1,
+				COAL: 1.5,
+				GEM: 1,
 			},
 			OUT: {
-				JEWELRY: 0.5,
+				JEWELRY: 0.25,
 			},
 		},
 	},
 	{
 		INDUSTRY: {
 			IN: {
-				TOOL: 4,
+				TOOL: 3,
+				COAL: 2,
 				GOLD_INGOT: 6,
 			},
 			OUT: {
@@ -52,8 +53,6 @@ INDUSTRIES: [
 		},
 	},
 ],
-
-
 
 ENVIRONMENT_EMIT: {
 	_NOISE: {

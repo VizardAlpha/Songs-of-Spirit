@@ -1,4 +1,4 @@
-## xx-xx-2023 4.0.2 Major
+## xx-xx-2023 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
@@ -14,6 +14,10 @@
 - Fix typo
 - A button to link to translations on GitHub has been added.
 - When you get a mod update, you'll get a reminder to check out the changelogs!
+- Le bouclier ayant été rajouter au vanilla, il n'a plus sa place ici. Il à été donc supprimé.
+- Les structures en verre et de métal on été supprimé.
+- La probabiliter de trouver de l'or en montagne et en terrain humide a été augmenter.
+- 
 
 ## 30-11-2023 3.1.4 Patch
 - Fix overlapping icon from recruit in provinces view. Thanks for the report on Steam and Discord.
