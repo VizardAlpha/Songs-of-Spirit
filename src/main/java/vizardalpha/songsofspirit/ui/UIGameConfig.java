@@ -8,7 +8,7 @@ import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.clickable.CLICKABLE;
 import snake2d.util.sprite.SPRITE;
 import util.gui.misc.GButt;
-import view.ui.UIPanelTop;
+import view.ui.top.UIPanelTop;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
