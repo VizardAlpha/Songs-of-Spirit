@@ -7,6 +7,7 @@
 - Shado,
 - Rebel of Exclusivity,
 - Meow Kat,
+- Fraggenstein,
 
 ---
 

@@ -1,9 +1,8 @@
-TYPE: WORKSHOP,
+ICON: 32->WORKSHOP->1,
 RESOURCES: [STONE,WOOD,METAL,],
 AREA_COSTS: [0.2,0.2,0,],
 FLOOR: [DIRT,WOOD_SQUARE,],
 MINI_COLOR: 226_195_38,
-
 ITEMS: [
 	{
 		COSTS: [1,1,1,],
@@ -18,7 +17,6 @@ ITEMS: [
 		STATS: [0,3,0,],
 	},
 ],
-
 UPGRADES: [
 	{
 		RESOURCE_MASK: [1,1,0,0,],
@@ -29,23 +27,33 @@ UPGRADES: [
 		BOOST: 0.5,
 	},
 ],
-
 WORK: {
 	SHIFT_OFFSET: 0.325,
 	SOUND: AXE,
-	ACCIDENTS_PER_YEAR: 0.0025,	
+	ACCIDENTS_PER_YEAR: 0.0025,
 	FULFILLMENT: 1.0,
-	EDUCATION_FACTOR: 0.4,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 3.2,
+				WOOD: 3.0,
 			},
 			OUT: {
-				PLANK: 2.5,
+				PLANK: 4.0,
+			},
+		},
+	},
+
+	{
+		INDUSTRY: {
+			IN: {
+				WOOD: 6.0,
+				STONE: 4.0,
+			},
+			OUT: {
+				WEAPON_HAMMER: 0.2,
 			},
 		},
 	},
@@ -53,7 +61,7 @@ INDUSTRIES: [
     {
 		INDUSTRY: {
 			IN: {
-				WOOD: 5.5,
+				WOOD: 5.0,
 			},
 			OUT: {
 				WOODEN_WEAPON: 0.20,
@@ -79,7 +87,7 @@ INDUSTRIES: [
 				STONE: 4.0,
 			},
 			OUT: {
-				WEAPON: 0.2,
+				WEAPON: 1.0,
 			},
 		},
 	},
@@ -87,11 +95,11 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				PLANK: 5.0,
-				METAL: 1.0,
+				WOOD: 6.0,
+				LEATHER: 2.0,
 			},
 			OUT: {
-				SHIELD: 1.0,
+				WEAPON_SHIELD: 1.0,
 			},
 		},
 	},

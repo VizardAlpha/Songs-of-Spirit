@@ -16,7 +16,8 @@ BIO_FILE: Dry,
 OPINION_FILE_SCARED: Normal,
 OPINION_FILE_NORMAL: Normal,
 OPINION_FILE_CONFIDENT: Normal,
-
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 HOME: GARTHIMI,
 
 TECH: [
@@ -32,7 +33,6 @@ PREFERRED: {
 	STRUCTURE: {
 		MOUNTAIN: 1.0,
 		STONE: 0.7,
-		GLASS: 0.6,
 		GRAND: 0.2,
 		WOOD: 0.2,
 		OUTDOORS: 0,
@@ -54,10 +54,13 @@ PREFERRED: {
 	},
 
 	OTHER_RACES: {
-		DONDORIAN: -0.5,
-		TILAPI: 0.5,
-	},
-
+        *: 0.02,
+        Q_AMEVIA: 1,
+        ARGONOSH: 1,
+    },
+    OTHER_RACES_REVERSE: {
+        *: 0.05,
+    },
 },
 
 POPULATION: {
@@ -76,497 +79,108 @@ POPULATION: {
 	},
 },
 
-BONUS_MUL: {
-	
-	PHYSICS: {
-		MASS: 0.7,
-		SPEED: 1.4,
-		RESISTANCE_COLD: 0.5,
-		RESISTANCE_HOT: 1.2,
-		DEATH_AGE: 0.5,
+POPULATION: {
+	MAX: 1.0,
+	GROWTH: 0.2,
+	IMMIGRATION_RATE: 0.5,
+	CLIMATE: {
+		COLD: 0.2,
+		TEMPERATE: 0.8,
+		HOT: 1.0,
 	},
-
-	ROOM: {
-		WORKSHOP: 0.6,
-		FARM: 0.75,
-		ORCHARD: 0.75,
-		PASTURE_AUR: 1.0,
-		PASTURE_ENT: 1.0,
-		PASTURE_GLOBDIEN: 1.1,
-		PASTURE_ONX: 1.0,						
-		PASTURE_BALTI: 1.2,
-		PASTURE_HORSE: 1.1,	
-		REFINER: 0.75,
-		FISHERY: 1.3,
-		LABORATORY: 0.8,
-		LIBRARY: 0.6,
-		ADMIN: 0.6,
-		MINE: 1.40,	
-		_STOCKPILE: 1.25,		
-		WORKSHOP_RATION: 0.9,
-	},
-	
-	BATTLE: {
-		MORALE: 0.5,
-	},
-
-	RATES: {
-		LEARNING: 0.1,
-	},
-	
-	BEHAVIOUR: {
-		LAWFULNESS: 0.5,
+	TERRAIN: {
+		MOUNTAIN: 1.2,
+		FOREST: 0.4,
+		NONE: 0.2,
 	},
 },
-
-BONUS_ADD: {
-
-	BATTLE: {
-		ARMOUR: 2,
-		PIERCE_DAMAGE: 1,
-	},
-
-	RATES: {
-		LEARNING: 0.1,
-	},
-	
-	BEHAVIOUR: {
-		LAWFULNESS: 0.7,
-	},
-},
-
 TRAITS: {
 	FIGHTER: 0.1,
 	GLUTTON: 0.1,
 	SPRINTER: 0.1,
 },
-
 RESOURCE: {
 	MEAT: 30,
 },
-
-
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 0.01,
-	TEMPLE_AMINION: 1,
-	TEMPLE_ATHURI: 0.01,
-	TEMPLE_SHMALOR: 0.5,
-},
-
 STATS: {
-	
-	HOME: {
-		FURNITURE: {
-			CITIZEN: 3.5,
-			SLAVE: 1,
-			NOBLE: 2,
-			PRIO: 100000,
-		},
+	HOME_FURNITURE: {
+		CITIZEN: 3.5,
+		SLAVE: 1,
+		NOBLE: 2,
+		PRIO: 100000,
 	},
-
-	SERVICE: {
-
+	BATTLE_BARRACKS_VANILLA: {
+		CITIZEN: 1.0,
 	},
-
-	EQUIP: {
-
-	},
-
-	EDUCATION: {
-
-	},
-
-	FOOD: {
-
-	},
-
-	BATTLE: {
-
-		COMBAT_TRAINING: {
-			CITIZEN: 1.0,
-		},
-
-	},
-
-	WORK: {
-
-	},
-
-	POPULATION: {
-
-	},
-
-	ENVIRONMENT: {
-
-	},
-
 	ACCESS: {
-		*: {
-
-		},
-
-		LIGHT: {
-			CITIZEN: 0.5,
-		},
-
-		DREAD: {
-			CITIZEN: 1.5,
-		},
 
 	},
-
-	MONUMENTS: {
-		MONUMENT_BLOB: {
-			CITIZEN: 1,
-			SLAVE: 0.5,
-			PRIO: 50,
-		},
+	ACCESS_LIGHT: {
+		CITIZEN: 0.5,
 	},
-
-	STORED: {
-		MEAT: {
-			CITIZEN: 2.0,
-			SLAVE: 0,
-			NOBLE: 3,
-			MULTIPLIER: 0.1,
-		},
+	ACCESS_DREAD: {
+		CITIZEN: 1.5,
+	},
+	MONUMENTS_MONUMENT_BLOB: {
+		CITIZEN: 1,
+		SLAVE: 0.5,
+		PRIO: 50,
+	},
+	STORED_MEAT: {
+		CITIZEN: 2.0,
+		SLAVE: 0,
+		NOBLE: 3,
+		MULTIPLIER: 0.1,
+	},
+	ACCESS_ROUNDNESS: {
+		SLAVE: 0.5,
+		CITIZEN: 1,
+		NOBLE: 1.5,
+	},
+	ENVIRONMENT_CANNIBALISM: {
+		SLAVE: 0,
+		CITIZEN: 0.5,
+		NOBLE: 0.5,
 	},
 },
+SPRITE_FILE: GARTHIMI,
+ICON_SMALL: 24->race->Garthimi->0,
+ICON_BIG: 32->race->Garthimi->0,
+WORLD_BUILDING_OVERRIDE: {
 
-APPEARANCE: {
-
-
-	ICON_SMALL: 24->race->Garthimi->0,
-	ICON_BIG: 32->race->Garthimi->0,
-
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: LzmLastNoble,
-
-	CROWN: {
-		FILE: Amevia,
-		OFFX: 0,
-		OFFY: 0,
-	},
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 80, G: 40, B: 100,},
-
-	COLORS: {
-		SKIN: {
-			TURNS_WHITE_WHEN_DEAD: true,
-			TURNS_SICKLY: true,
-			VALUES: [
-				{R: 120, G: 127, B: 110,},
-				{R: 98, G: 105, B: 88,},
-				{R: 117, G: 128, B: 103,},
-				{R: 137, G: 148, B: 121,},
-
-				{R: 137, G: 156, B: 110,},
-				{R: 110, G: 130, B: 156,},
-				{R: 87, G: 117, B: 143,},
-				{R: 123, G: 149, B: 184,},
-
-				{R: 99, G: 89, B: 62,},
-				{R: 128, G: 116, B: 83,},
-				{R: 158, G: 143, B: 103,},
-				{R: 115, G: 105, B: 78,},
-
-				{R: 189, G: 182, B: 125,},
-				{R: 171, G: 166, B: 120,},
-				{R: 176, G: 171, B: 130,},
-			],
-		},
-		EYE: {
-			VALUES: [
-				{R: 255, G: 255, B: 255,},
-			],
-		},
-		LEG: {
-			VALUES: [
-				{R: 80, G: 40, B: 20,},
-			],
-		},
-		PAINT1: {
-			VALUES: [
-				{R: 25, G: 135, B: 19,},
-				{R: 173, G: 24, B: 24,},
-				{R: 224, G: 224, B: 20,},
-				{R: 20, G: 54, B: 224,},
-				{R: 23, G: 24, B: 25,},
-				{R: 255, G: 255, B: 255,},
-			],
-		},
-		PAINT2: {
-			VALUES: [
-				{R: 25, G: 135, B: 19,},
-				{R: 173, G: 24, B: 24,},
-				{R: 224, G: 224, B: 20,},
-				{R: 20, G: 54, B: 224,},
-				{R: 23, G: 24, B: 25,},
-				{R: 255, G: 255, B: 255,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: ChildHumanoid,
-		SPRITE_SKELLETON_FILE: Humanoid_small,
-		NAMESET_FILE_FIRST: StdFirst,
-		NAMESET_FILE_SURNAME: StdLast,
-
-		ADDONS: [
-			{
-				BELOW_HEAD: false,
-				SPRITE_FILE: PaintGarthimi1,
-				CONDITIONS: {
-					GREATER: {
-						RANDOM_1_F: 0.5,
-					},
-				},
-				COLOR: PAINT1,
-			},
-			{
-				BELOW_HEAD: false,
-				SPRITE_FILE: PaintGarthimi1,
-				CONDITIONS: {
-					GREATER: {
-						RANDOM_2_F: 0.5,
-					},
-				},
-				COLOR: PAINT2,
-			},
-		],
-	},
-
-	TYPES: [
-		{
-			OCCURRENCE: 1.0,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			SPRITE_FILE: Garthimi,
-			SPRITE_SKELLETON_FILE: Humanoid_small,
-			NAMESET_FILE_FIRST: StdFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-			PORTRAIT_FILE: Garthimi,
-
-			SET_APPEARANCE_STATS: {
-				EXTRA1: 0.5,
-				EXTRA2: 0.5,
-				EXTRA3: 0.3,
-				EXTRA4: 0.5,
-			},
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: PaintGarthimi1,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.5,
-						},
-					},
-					COLOR: PAINT1,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: PaintGarthimi1,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					COLOR: PAINT2,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourGarthimi,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 18,
-				},
-				**Faces
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					STAINS: true, **OPTIONAL(default = true). If blood and filth is rendered on this frame.
-					COLOR: SKIN,
-				},
-				**warpaint large
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.5,
-						},
-					},
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 2,
-					SPLIT: 0,
-					OFF_Y: 8,
-					STAINS: true,
-					COLOR: PAINT1,
-				},
-				**warpaint small
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -9,
-					STAINS: true,
-					COLOR: PAINT2,
-				},
-				**Eyes
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: -5,
-				},
-				**Eye Injury
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_3_F: 0.25,
-						},
-					},
-					FRAME_START: 1,
-					FRAME_VARIATIONS: 2,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -20,
-
-				},
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 3,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 2,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -21,
-				},
-				**Face Chitin
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 2,
-					SPLIT: 0,
-					STAINS: false,
-					OFF_Y: 19,
-					COLOR: SKIN,
-				},
-				**mouth
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -8,
-					COLOR: SKIN,
-				},
-				**mouth extension
-				{
-					FRAME_START: 16,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					COLOR: SKIN,
-					SPLIT: 1,
-					OFF_Y: 15,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_4_F: 0.5,
-						},
-					},
-				},
-				**Brow Chitin
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: false,
-					OFF_Y: 7,
-					COLOR: SKIN,
-				},
-				**Brow Injury
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: -9,
-					COLOR: SKIN,
-				},
-			],
-		},
-	],
+},
+BOOST: {
+	RELIGION_CRATOR>ADD: -0.99,
+	RELIGION_AMINION>ADD: 0.0,
+	RELIGION_ATHURI>ADD: -0.99,
+	RELIGION_SHMALOR>ADD: -0.5,
+	PHYSICS_MASS>MUL: 0.7,
+	PHYSICS_SPEED>MUL: 1.4,
+	PHYSICS_RESISTANCE_COLD>MUL: 0.5,
+	PHYSICS_RESISTANCE_HOT>MUL: 1.2,
+	PHYSICS_DEATH_AGE>MUL: 0.5,
+	ROOM_WORKSHOP>MUL: 0.6,
+	ROOM_FARM>MUL: 0.5,
+	ROOM_ORCHARD>MUL: 0.5,
+	ROOM_PASTURE>MUL: 0.25,
+	ROOM_PASTURE_BALTI>MUL: 1.5,
+	ROOM_REFINER>MUL: 0.75,
+	ROOM_FISHERY>MUL: 1.3,
+	ROOM_LABORATORY>MUL: 0.8,
+	ROOM_LIBRARY>MUL: 0.6,
+	ROOM_ADMIN>MUL: 0.6,
+	ROOM_MINE>MUL: 1.4,
+	ROOM_STOCKPILE>MUL: 1.25,
+	ROOM_WORKSHOP_RATION>MUL: 0.9,
+	BATTLE_MORALE>MUL: 0.5,
+	BEHAVIOUR_LAWFULNESS>MUL: 0.5,
+	BATTLE_PIERCE_DEFENCE>ADD: 2.0,
+	BATTLE_PIERCE_ATTACK>ADD: 1.0,
+	ROOM_UNIVERSITY>MUL: 0.5,
+	BEHAVIOUR_LAWFULNESS>ADD: 0.7,
+	WORLD_WORKFORCE>MUL: 1.25,
+	WORLD_BUILDING_AGRICULTURE>MUL: 0.5,
+	WORLD_BUILDING_PASTURE>MUL: 0.6,
+	WORLD_BUILDING_MINE>MUL: 1.5,
+	WORLD_BUILDING_PASTURE_PASTURE_BALTI>MUL: 1.5,
 },

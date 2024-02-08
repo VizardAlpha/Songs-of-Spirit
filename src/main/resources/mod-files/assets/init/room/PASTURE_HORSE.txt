@@ -1,4 +1,10 @@
-TYPE: PASTURE,
+ICON: {
+	BG: 32->BG->2,
+	FG: 32->animal->Horse->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -6,14 +12,16 @@ ANIMAL: HORSE,
 FENCE: WOOD,
 FLOOR: DIRT,
 
-ICON: {
-	BG: 32->Backgrounds->0,
-	FG: 32->animal->Horse->0,
-	COLOR: 255_255_255,
-	OFFX: 0,
-	OFFY: 0,
-	SHADOW: 3,
-},
+ITEMS: [
+	{
+		COSTS: [20,10,],
+		STATS: [0,0,],
+	},
+	{
+        COSTS: [20,5,],
+        STATS: [0,0,],
+    },
+],
 
 BONUS: {
 	CLIMATE: {
@@ -31,19 +39,11 @@ INDUSTRY: {
 	},
 },
 
-ITEMS: [
-	{
-		COSTS: [20,10,],
-		STATS: [0,0,],
-	},
-],
-
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	EDUCATION_FACTOR: 0.1,
 	ACCIDENTS_PER_YEAR: 0.002,
 },
 
@@ -57,9 +57,9 @@ SPRITES: {
 		FRAMES: [
 			PASTURE_GATE: 0,
 		],
-		
+
 	},
-	
+
 	STORAGE_1X1: {
 		ROTATES: false,
 		SHADOW_HEIGHT: 0,
@@ -69,7 +69,6 @@ SPRITES: {
 			STORAGE: 6,
 		],
 	},
-	
 	FENCE_COMBO: {
 		SHADOW_LENGTH: 6,
 		SHADOW_HEIGHT: 2,
@@ -77,4 +76,38 @@ SPRITES: {
 			FENCE: 3,
 		],
 	},
+	FENCE_D_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 4,
+		],
+	},
+	AUX_BIG_2X2: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: false,
+			FRAMES: [
+				HUT: 0,
+			],
+		},
+	],
+	AUX_EDGE_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 0,
+			],
+		},
+	],
+	AUX_MID_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 1,
+			],
+		},
+	],
 },

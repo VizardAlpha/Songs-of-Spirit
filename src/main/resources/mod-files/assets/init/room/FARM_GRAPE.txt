@@ -1,4 +1,8 @@
-TYPE: FARM,
+ICON: {
+	BG: 32->BG->3,
+	FG: 24->resource->Grape->0,
+	SHADOW: 2,
+},
 GROWABLE: GRAPE,
 RESOURCES: [GRAPE,],
 AREA_COSTS: [0.1,],
@@ -16,7 +20,6 @@ WORK: {
 	SOUND: DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0,
-	INDOCTRINATION_FACTOR: 0.25,
 },
 
 INDUSTRY: {

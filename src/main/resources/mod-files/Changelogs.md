@@ -11,7 +11,9 @@
 - New sprite for the golden ingot.
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
-- Fix typo
+- Fix typo.
+- Glass structure delete.
+- Fix Admin output.
 - 
 
 ## 26-10-2023 3.1.2 Patch

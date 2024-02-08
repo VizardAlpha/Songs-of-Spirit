@@ -1,4 +1,10 @@
-TYPE: PASTURE,
+ICON: {
+	BG: 32->BG->2,
+	FG: 32->animal->Onx->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -11,6 +17,10 @@ ITEMS: [
 		COSTS: [20,10,],
 		STATS: [0,0,],
 	},
+	{
+		COSTS: [20,5,],
+		STATS: [0,0,1,],
+	},
 ],
 
 WORK: {
@@ -18,8 +28,7 @@ WORK: {
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	INDOCTRINATION_FACTOR: 0.1,
-    ACCIDENTS_PER_YEAR: 0.002,	
+	ACCIDENTS_PER_YEAR: 0.002,
 },
 
 SPRITES: {
@@ -32,9 +41,9 @@ SPRITES: {
 		FRAMES: [
 			PASTURE_GATE: 0,
 		],
-		
+
 	},
-	
+
 	STORAGE_1X1: {
 		ROTATES: false,
 		SHADOW_HEIGHT: 0,
@@ -51,20 +60,52 @@ SPRITES: {
 			FENCE: 3,
 		],
 	},
+	FENCE_D_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 4,
+		],
+	},
+	AUX_BIG_2X2: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: false,
+			FRAMES: [
+				HUT: 0,
+			],
+		},
+	],
+	AUX_EDGE_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 0,
+			],
+		},
+	],
+	AUX_MID_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 1,
+			],
+		},
+	],
 },
-
 INDUSTRY: {
 	OUT: {
-		MEAT: 0.75,
-		COTTON: 0.75,
+		MEAT: 0.5,
+		COTTON: 0.5,
 		LIVESTOCK: 0.0625,
 	},
 },
-
 BONUS: {
 	CLIMATE: {
-		TEMPERATE: 0.5,
-		COLD: 1.0,
-		HOT: 0.2,
+		TEMPERATE: 1,
+		COLD: 1.5,
+		HOT: 0.5,
 	},
 },

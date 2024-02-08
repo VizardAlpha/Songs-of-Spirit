@@ -1,4 +1,4 @@
-TYPE: REFINER,
+ICON: 32->REFINER->4,
 RESOURCES: [WOOD,STONE,POTTERY,METAL,],
 AREA_COSTS: [0,0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
@@ -25,7 +25,6 @@ WORK: {
 	SOUND: MACHINE,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	EDUCATION_FACTOR: 0.15,
 	ACCIDENTS_PER_YEAR: 0.005,
 },
 
@@ -33,11 +32,11 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				GRAPE: 5.0,
-				GLASS: 2.0,
+				GRAPE: 3.0,
+				GLASS: 1.0,
 			},
 			OUT: {
-				WINE: 6.0,
+				WINE: 3.0,
 			},
 		},
 	},
@@ -45,11 +44,11 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				GRAPE: 9.0,
-				COAL: 3.5,
-				GLASS: 5.5,
+				COAL: 3.0,
+				GLASS: 3.0,
 			},
 			OUT: {
-				WINE: 12.0,
+				WINE: 9.0,
 			},
 		},
 	},
