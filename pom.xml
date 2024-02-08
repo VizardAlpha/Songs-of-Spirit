@@ -19,8 +19,8 @@
         <mod.description>Songs of Spirit is a mod adding new content and working on basic game settings.</mod.description>
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
-        <game.version.major>64</game.version.major>
-        <game.version.minor>40</game.version.minor>
+        <game.version.major>65</game.version.major>
+        <game.version.minor>65</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>
@@ -70,7 +70,7 @@
             <id>windows-vizard</id>
             <properties>
                 <game.mod.directory>${user.home}/AppData/Roaming/songsofsyx/mods</game.mod.directory>
-                <game.install.directory>E:/Games/steamapps/common/Songs of Syx</game.install.directory>
+                <game.install.directory>E:/Steam/steamapps/common/Songs of Syx</game.install.directory>
                 <game.mod.uploader.directory>${user.home}/AppData/Roaming/songsofsyx/mods-uploader</game.mod.uploader.directory>
             </properties>
         </profile>
