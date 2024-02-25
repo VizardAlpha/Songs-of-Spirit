@@ -129,11 +129,11 @@ public class InfoModal extends Interrupter {
         githubButton = new GButt.ButtPanel("Translation");
         discordButton = new GButt.ButtPanel("Discord");
         GuiSection versions = versions();
-        int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 155;
+        int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 175;
 
         section.addRightC(space, discordButton);
         section.addRightC(0, githubButton);
-        section.addRightC(10, versions);
+        section.addRightC(8, versions);
 
         return section;
     }
@@ -154,7 +154,7 @@ public class InfoModal extends Interrupter {
         modVersion.color(color);
 
         versions.addDown(0, gameVersion);
-        versions.addDown(2, modVersion);
+        versions.addDown(8, modVersion);
 
         return versions;
     }

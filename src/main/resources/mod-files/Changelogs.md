@@ -22,7 +22,6 @@
 - A button to link to translations on GitHub has been added.
 - When you get a mod update, you'll get a reminder to check out the changelogs!
 - As the shield has been added to the vanilla, it no longer belongs here. It has therefore been removed.
-- Glass and metal structures have been removed.
 - The probability of finding gold in mountains and wetlands has been increased.
 
 ## 30-11-2023 3.1.4 Patch

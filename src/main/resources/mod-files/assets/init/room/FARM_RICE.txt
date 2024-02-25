@@ -28,12 +28,6 @@ WORK: {
 	FULFILLMENT: 0,
 },
 
-INDUSTRY: {
-	OUT: {
-		RICE: 4.0,
-	},
-},
-
 BONUS: {
 	CLIMATE: {
 		HOT: 1.4,

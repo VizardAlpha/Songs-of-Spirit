@@ -28,12 +28,6 @@ WORK: {
 	FULFILLMENT: 0,
 },
 
-INDUSTRY: {
-	OUT: {
-		GRAPE: 3.0,
-	},
-},
-
 BONUS: {
 	CLIMATE: {
 		HOT: 1.9,
