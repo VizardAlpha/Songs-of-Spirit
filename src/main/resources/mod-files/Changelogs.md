@@ -1,4 +1,4 @@
-## xx-xx-2023 4.0.0 Major
+## xx-02-2024 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
@@ -14,6 +14,7 @@
 - Fix typo.
 - Glass structure delete.
 - Fix Admin output.
+- For unlock kitchen you need 200pop now.
 - 
 
 ## 26-10-2023 3.1.2 Patch

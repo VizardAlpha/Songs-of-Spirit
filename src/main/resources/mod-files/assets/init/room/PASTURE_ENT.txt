@@ -15,7 +15,7 @@ FLOOR: DIRT,
 ITEMS: [
 	{
 		COSTS: [20,10,],
-		STATS: [0,0,],
+		STATS: [0,0,0,],
 	},
 	{
 		COSTS: [20,5,],
@@ -69,14 +69,14 @@ SPRITES: {
 		],
 	},
 
-		AUX_BIG_2X2: [
+	AUX_BIG_2X2: {
 
-			SHADOW_HEIGHT: 9,
-			ROTATES: false,
-			FRAMES: [
-				HUT: 0,
-			],
-	],
+		SHADOW_HEIGHT: 9,
+		ROTATES: false,
+		FRAMES: [
+			HUT: 0,
+		],
+	},
 	AUX_EDGE_1X1: [
 		{
 			SHADOW_HEIGHT: 9,
@@ -96,6 +96,7 @@ SPRITES: {
 		},
 	],
 },
+
 INDUSTRY: {
 	OUT: {
 		MEAT: 1,

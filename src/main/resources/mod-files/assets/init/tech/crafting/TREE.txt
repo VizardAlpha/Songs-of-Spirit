@@ -1,0 +1,8 @@
+TREE: {
+	0: [_____,META0,_____,_____,_____,CARP0,_____,],
+	1: [META1,META2,MACH0,META3,BOWY0,CARP1,CARP3,],
+	2: [_____,_____,MACH1,BOWY2,BOWY1,CARP2,_____,],
+	3: [JEWE0,_____,TAIL0,_____,POTT0,MASO0,_____,],
+	4: [JEWE1,TAIL3,TAIL1,TAIL4,POTT1,MASO1,ARM0,],
+	5: [JEWE2,_____,TAIL2,_____,_____,MASO2,ARM1,],
+},

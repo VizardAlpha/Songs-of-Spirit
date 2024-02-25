@@ -16,7 +16,7 @@ INDOORS: true,
 ITEMS: [
 	{
 		COSTS: [20,10,],
-		STATS: [0,0,],
+		STATS: [0,0,0,],
 	},
     {
         COSTS: [20,5,],

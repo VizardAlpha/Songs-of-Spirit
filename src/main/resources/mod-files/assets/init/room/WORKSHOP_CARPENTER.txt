@@ -87,7 +87,7 @@ INDUSTRIES: [
 				STONE: 4.0,
 			},
 			OUT: {
-				WEAPON: 1.0,
+				WEAPON_HAMMER: 1.0,
 			},
 		},
 	},
@@ -96,10 +96,10 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				WOOD: 6.0,
-				LEATHER: 2.0,
+				LEATHER: 1.0,
 			},
 			OUT: {
-				WEAPON_SHIELD: 1.0,
+				WOODEN_WEAPON: 1.0,
 			},
 		},
 	},

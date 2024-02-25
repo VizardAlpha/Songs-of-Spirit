@@ -1,7 +1,0 @@
-TECHS: [
-	{
-		NAME: "Horse Logistics",
-        CATEGORY:"Animal Science",
-		DESC: "Your faster and stronger horses help in the transport of resources which allows a better delivery.",
-	},
-],

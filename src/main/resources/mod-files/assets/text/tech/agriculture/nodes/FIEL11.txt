@@ -1,0 +1,2 @@
+NAME: "Rice Farm Bonus",
+DESC: "A rice seed will generate a mountain of rice seed, who likes farms?",
