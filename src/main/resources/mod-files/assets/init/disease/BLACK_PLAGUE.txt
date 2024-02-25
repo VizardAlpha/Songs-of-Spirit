@@ -5,5 +5,5 @@ SPREAD: 0.5,
 INFECTION_DAYS: 2,
 COLOR: {R: 20, G: 40, B: 20,},
 OCCURRENCE_CLIMATE: {
-	*: 0.2,
+	*: 0.5,
 },

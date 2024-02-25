@@ -1,0 +1,2 @@
+NAME: "Filleted fish",
+DESC: "Allows to prepare the fish and to recover its flesh.",

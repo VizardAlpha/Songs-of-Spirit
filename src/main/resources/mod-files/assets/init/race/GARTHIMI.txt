@@ -53,14 +53,14 @@ PREFERRED: {
 		FISHERY_NORMAL: 1,
 	},
 
-OTHER_RACES: {
-	    *: 0.02,
-	    Q_AMEVIA: 1,
-	    ARGONOSH: 1,
-	},
-	OTHER_RACES_REVERSE: {
-		*: 0.05,
-	},
+	OTHER_RACES: {
+        *: 0.02,
+        Q_AMEVIA: 1,
+        ARGONOSH: 1,
+    },
+    OTHER_RACES_REVERSE: {
+        *: 0.05,
+    },
 },
 
 POPULATION: {
@@ -116,10 +116,15 @@ STATS: {
 		NOBLE: 3,
 		MULTIPLIER: 0.1,
 	},
-	ENVIRONMENT_ROUNDNESS: {
+	ACCESS_ROUNDNESS: {
 		SLAVE: 0.5,
 		CITIZEN: 1,
 		NOBLE: 1.5,
+	},
+	ENVIRONMENT_CANNIBALISM: {
+		SLAVE: 0,
+		CITIZEN: 0.5,
+		NOBLE: 0.5,
 	},
 },
 SPRITE_FILE: GARTHIMI,

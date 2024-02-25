@@ -58,12 +58,12 @@ PREFERRED: {
 		MINE_GOLD: 1.0,
 		MINE_SAND: 0.5,
 	},
-    OTHER_RACES: {
-		*: 1.0,
-		GARTHIMI: 0.02,
-		TILAPI: 0.75,
-		CANTOR: 1.0,
-		ARGONOSH: 0.01,
+	OTHER_RACES: {
+        *: 1.0,
+        GARTHIMI: 0.02,
+        TILAPI: 0.75,
+        CANTOR: 1.0,
+        ARGONOSH: 0.01,
 	},
 	OTHER_RACES_REVERSE: {
 		*: 1,
@@ -119,7 +119,7 @@ STATS: {
 	ACCESS_HARMONY: {
 
 	},
-	ENVIRONMENT_ROUNDNESS: {
+	ACCESS_ROUNDNESS: {
 		CITIZEN: 1.0,
 		SLAVE: 0.5,
 		NOBLE: 1.5,

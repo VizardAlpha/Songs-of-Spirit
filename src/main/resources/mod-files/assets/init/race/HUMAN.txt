@@ -24,9 +24,7 @@ TOURIST: {
 	CREDITS: 0.75,
 	TOURIST_TEXT_FILE: NORMAL,
 },
-
 HOME: HUMAN,
-
 TECH: [
 	*,
 ],
@@ -56,12 +54,12 @@ PREFERRED: {
 		PASTURE_HORSE: 0.7,
 		WORKSHOP_KITCHEN: 0.8,
 	},
-	OTHER_RACES: {
-		*: 0.75,
-	},
-	OTHER_RACES_REVERSE: {
-		*: 1,
-	},
+    OTHER_RACES: {
+        *: 0.75,
+    },
+    OTHER_RACES_REVERSE: {
+        *: 1,
+    },
 },
 
 POPULATION: {

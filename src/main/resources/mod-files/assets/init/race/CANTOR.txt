@@ -53,19 +53,19 @@ PREFERRED: {
 		TEMPLE_ATHURI: 1.0,
 		TEMPLE_CRATOR: 0.0,
 		TEMPLE_SHMALOR: 0.0,
-		BARRACKS_VANILLA: 1.0,
+	    BARRACKS_VANILLA: 1.0,
 		_COURT: 1.0,
 		_GUARD: 1.0,
 		WORKSHOP_SMITHY: 1.0,
 	},
 	OTHER_RACES: {
-    	*: 1.0,
-    	DONDORIAN: 1.0,
-    	GARTHIMI: 0.01,
-    	HUMAN: 0.05,
-    },
+		*: 1.0,
+		DONDORIAN: 1.0,
+		GARTHIMI: 0.01,
+		HUMAN: 0.05,
+	},
     OTHER_RACES_REVERSE: {
-    	*: 1,
+        *: 1,
     },
 },
 
@@ -73,12 +73,10 @@ TRAITS: {
 	*: 0,
 	FIGHTER: 0.1,
 },
-
 RESOURCE: {
 	MEAT: 100,
 	LEATHER: 20,
 },
-
 STATS: {
 	SERVICE: {
 

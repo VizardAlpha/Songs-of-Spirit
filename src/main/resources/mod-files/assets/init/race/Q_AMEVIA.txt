@@ -19,9 +19,8 @@ OPINION_FILE_CONFIDENT: Normal,
 KING_FILE: Normal,
 WORLD_NAME_FILE: Misc,
 HOME: AMEVIA,
-
 TECH: [
-    *,
+	    *,
 ],
 
 PREFERRED: {
@@ -33,15 +32,17 @@ PREFERRED: {
     ],
     STRUCTURE: {
         MOUNTAIN: 0,
-        STONE: 0.5,
+        STONE: 0.7,
         GRAND: 1.0,
         WOOD: 0.2,
         MUD: 1.0,
         OUTDOORS: 0.3,
     },
+
     EMPLOYED: {
         
     },
+
     WORK: {
     	FISHERY: 1.0,
     	NURSERY_AMEVIA: 1.0,
@@ -97,12 +98,6 @@ STATS: {
 		SLAVE: 0,
 		NOBLE: 3,
 		MULTIPLIER: 0.5,
-	},
-	LAW_EQUALITY: {
-		CITIZEN: 1.5,
-		SLAVE: 0,
-		NOBLE: 1.5,
-		INVERTED: true,
 	},
 },
 SPRITE_FILE: Q_AMEVIA,

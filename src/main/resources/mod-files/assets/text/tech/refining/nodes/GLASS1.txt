@@ -1,0 +1,2 @@
+NAME: "Smelter Bonus",
+DESC: "Precisely controlled temperatures and better processing of ores can improve output of the Smelteries.",

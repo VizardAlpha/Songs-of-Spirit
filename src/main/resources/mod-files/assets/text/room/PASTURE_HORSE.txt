@@ -23,6 +23,10 @@ STATS: [
 		NAME: "Horses",
 		DESC: "The maximum amount of animals this pasture can hold. Increased by placing the room over high fertility regions, or increasing its size.",
 	},
+	{
+        NAME: "",
+        DESC: "",
+    },
 ],
 
 ITEMS: [
@@ -30,4 +34,8 @@ ITEMS: [
 		NAME: "Gate",
 		DESC: "Entrance and resource storage for pasture.",
 	},
+	{
+	    NAME: "Hut",
+        DESC: "Small huts and shacks where the cattle can relax.",
+    },
 ],

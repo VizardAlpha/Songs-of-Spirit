@@ -1,4 +1,4 @@
-## xx-xx-2023 4.0.0 Major
+## 25-02-2024 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
@@ -11,13 +11,19 @@
 - New sprite for the golden ingot.
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
-- Fix typo
+- Fix typo.
+- Glass structure delete. (Sorry, The metal structure may also be remove, to be replaced by a new structure in the next update. That better matches the sand biome.)
+- Fix Admin output.
+- For unlock kitchen you need 200pop now.
+- For unlock logistics horse you need to build 3 pastures of Horse.
+- Kitchen workshop sound corrected.
+- Fix the farms (Rice and Grapes) to better match the climate.
+- Fix LandingParty have no tool.
 - A button to link to translations on GitHub has been added.
 - When you get a mod update, you'll get a reminder to check out the changelogs!
-- Le bouclier ayant été rajouter au vanilla, il n'a plus sa place ici. Il à été donc supprimé.
-- Les structures en verre et de métal on été supprimé.
-- La probabiliter de trouver de l'or en montagne et en terrain humide a été augmenter.
-- 
+- As the shield has been added to the vanilla, it no longer belongs here. It has therefore been removed.
+- Glass and metal structures have been removed.
+- The probability of finding gold in mountains and wetlands has been increased.
 
 ## 30-11-2023 3.1.4 Patch
 - Fix overlapping icon from recruit in provinces view. Thanks for the report on Steam and Discord.

@@ -1,0 +1,14 @@
+LEVEL_COST: 1100,
+
+REQUIRES: {
+},
+
+UNLOCKS_FACTION: [
+	ROOM_MINE_SAND,
+],
+
+UNLOCKS_REGION: [
+],
+
+BOOST: {
+},

@@ -54,24 +54,21 @@ PREFERRED: {
 		_EXECUTION: 1,
 	},
 	OTHER_RACES: {
-	    *: 1.0
-		TILAPI: -1,
-		DONDORIAN: -1,		
-	},
-	OTHER_RACES_REVERSE: {
-    	*: 0.01,
+        *: 1.0,
+        TILAPI: 0.01,
+        DONDORIAN: 0.01,
     },
+	OTHER_RACES_REVERSE: {
+		*: 0.01,
+	},
 },
-
 TRAITS: {
 	*: 0,
 },
-
 RESOURCE: {
 	MEAT: 100,
 	LEATHER: 20,
 },
-
 STATS: {
 	SERVICE: {
 

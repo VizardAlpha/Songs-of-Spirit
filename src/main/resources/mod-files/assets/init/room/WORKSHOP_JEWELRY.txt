@@ -3,7 +3,6 @@ RESOURCES: [STONE_CUT,FURNITURE,METAL,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_LARGE_FINE,
 MINI_COLOR: 226_195_38,
-
 ITEMS: [
 	{
 		COSTS: [1,1,1,],
@@ -18,33 +17,29 @@ ITEMS: [
 		STATS: [0,3,0,],
 	},
 ],
-
-
 WORK: {
 	SHIFT_OFFSET: 0.325,
 	SOUND: METAL,
-	ACCIDENTS_PER_YEAR: 0.0025,	
+	ACCIDENTS_PER_YEAR: 0.0025,
 	FULFILLMENT: 1.0,
 },
 
 INDUSTRIES: [
 	{
-		INDUSTRY: {
-			IN: {
-			    METAL: 1,
-				COAL: 1.5,
-				GEM: 1,
-			},
-			OUT: {
-				JEWELRY: 0.25,
-			},
-		},
-	},
+        INDUSTRY: {
+            IN: {
+                METAL: 0.1,
+                GEM: 0.1,
+            },
+            OUT: {
+                JEWELRY: 0.1,
+            },
+        },
+    },
 	{
 		INDUSTRY: {
 			IN: {
-				TOOL: 3,
-				COAL: 2,
+				TOOL: 4,
 				GOLD_INGOT: 6,
 			},
 			OUT: {
@@ -53,6 +48,8 @@ INDUSTRIES: [
 		},
 	},
 ],
+
+
 
 ENVIRONMENT_EMIT: {
 	_NOISE: {

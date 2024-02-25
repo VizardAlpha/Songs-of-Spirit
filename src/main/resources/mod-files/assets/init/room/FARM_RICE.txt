@@ -3,7 +3,6 @@ ICON: {
 	FG: 24->resource->Rice->0,
 	SHADOW: 2,
 },
-
 GROWABLE: RICE,
 RESOURCES: [RICE,],
 AREA_COSTS: [0.1,],
@@ -29,10 +28,16 @@ WORK: {
 	FULFILLMENT: 0,
 },
 
+INDUSTRY: {
+	OUT: {
+		RICE: 4.0,
+	},
+},
+
 BONUS: {
 	CLIMATE: {
-		HOT: 0.4,
-		TEMPERATE: 0.8,
+		HOT: 1.4,
+		TEMPERATE: 1.8,
 		COLD: 0.2,
 	},
 },

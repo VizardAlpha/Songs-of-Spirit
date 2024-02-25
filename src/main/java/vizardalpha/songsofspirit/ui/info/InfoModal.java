@@ -9,13 +9,12 @@ import snake2d.MButt;
 import snake2d.Renderer;
 import snake2d.util.color.COLOR;
 import snake2d.util.datatypes.COORDINATE;
-import snake2d.util.datatypes.DIR;
 import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.clickable.CLICKABLE;
 import util.gui.misc.GBox;
 import util.gui.misc.GButt;
 import util.gui.misc.GText;
-import util.gui.panel.GPanelL;
+import util.gui.panel.GPanel;
 import view.interrupter.Interrupter;
 import view.main.VIEW;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
@@ -28,7 +27,7 @@ public class InfoModal extends Interrupter {
 
     private final GuiSection section;
 
-    private final CLICKABLE.Switcher switcher;
+    private final CLICKABLE.ClickSwitch switcher;
 
     private final Map<String, GuiSection> panels = new LinkedHashMap<>();
 
@@ -43,7 +42,7 @@ public class InfoModal extends Interrupter {
 
     public InfoModal(ChangelogsStore changelogsStore, CreditsStore creditsStore, ModInfo modInfo) {
         this.modInfo = modInfo;
-        GPanelL pan = new GPanelL();
+        GPanel pan = new GPanel();
         pan.body.setDim(WIDTH, HEIGHT);
         pan.setTitle("Songs of Spirit Info");
         pan.setCloseAction(this::hide);
@@ -60,14 +59,14 @@ public class InfoModal extends Interrupter {
         panels.put("Credits", credits);
 
         GuiSection header = header();
-        header.body().moveY1(pan.getInnerArea().y1());
+        header.body().moveY1(pan.inner().y1());
         header.body().centerX(pan);
         section.add(header);
 
         changelogs.body().moveY1(header.body().y2() + 16);
         changelogs.body().centerX(header);
 
-        switcher = new CLICKABLE.Switcher(changelogs);
+        switcher = new CLICKABLE.ClickSwitch(changelogs);
         section.add(switcher);
     }
 
@@ -117,12 +116,12 @@ public class InfoModal extends Interrupter {
             section.addRightC(0, new GButt.ButtPanel(title) {
                 @Override
                 protected void clickA() {
-                    switcher.set(panel, DIR.N);
+                    switcher.set(panel);
                 }
 
                 @Override
                 protected void renAction() {
-                    selectedSet(switcher.get() == panel);
+                    selectedSet(switcher.current() == panel);
                 }
             }.setDim(136, 32));
         });

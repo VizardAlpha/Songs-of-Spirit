@@ -5,7 +5,6 @@ ICON: {
 	OFFY: -2,
 	SHADOW: 2,
 },
-
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -18,21 +17,22 @@ ITEMS: [
 		STATS: [0,0,0,],
 	},
 	{
-		COSTS: [20,10,],
-		STATS: [0,0,1,],
-	},
+        COSTS: [20,5,],
+        STATS: [0,0,1,],
+    },
 ],
+
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,
 	USES_TOOL: true,
 	FULFILLMENT: 0.2,
-	ACCIDENTS_PER_YEAR: 0.002,
+   	ACCIDENTS_PER_YEAR: 0.002,		
 },
 
 SPRITES: {
-	
+
 	GATE_TOP_3X3: {
 		ROTATES: true,
 		SHADOW_HEIGHT: 8,
@@ -41,9 +41,9 @@ SPRITES: {
 		FRAMES: [
 			PASTURE_GATE: 1,
 		],
-		
+
 	},
-	
+
 	STORAGE_1X1: {
 		ROTATES: false,
 		SHADOW_HEIGHT: 0,
@@ -58,6 +58,13 @@ SPRITES: {
 		SHADOW_HEIGHT: 2,
 		FRAMES: [
 			FENCE: 3,
+		],
+	},
+	FENCE_D_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 4,
 		],
 	},
 	AUX_BIG_2X2: [
@@ -88,7 +95,6 @@ SPRITES: {
 		},
 	],
 },
-
 INDUSTRY: {
 	OUT: {
 		MEAT: 0.15,
@@ -96,7 +102,6 @@ INDUSTRY: {
 		LIVESTOCK: 0.0625,
 	},
 },
-
 BONUS: {
 	RACE: 0.8,
 	CLIMATE: {

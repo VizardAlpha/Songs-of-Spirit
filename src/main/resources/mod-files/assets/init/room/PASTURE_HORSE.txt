@@ -5,7 +5,6 @@ ICON: {
 	OFFY: -2,
 	SHADOW: 2,
 },
-
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -19,10 +18,26 @@ ITEMS: [
 		STATS: [0,0,0,],
 	},
 	{
-		COSTS: [20,10,],
-		STATS: [0,0,1,],
-	},
+        COSTS: [20,5,],
+        STATS: [0,0,1,],
+    },
 ],
+
+BONUS: {
+	CLIMATE: {
+		TEMPERATE: 1.0,
+		COLD: 0.2,
+		HOT: 0.6,
+	},
+},
+
+**Rajouter plus tard? => LEATHER: 1.75,MEAT: 1.75,
+INDUSTRY: {
+	OUT: {
+		HORSES: 0.095,
+		LIVESTOCK: 0.04,
+	},
+},
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
@@ -60,7 +75,13 @@ SPRITES: {
 			FENCE: 3,
 		],
 	},
-
+	FENCE_D_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 4,
+		],
+	},
 	AUX_BIG_2X2: [
 		{
 			SHADOW_HEIGHT: 9,
@@ -88,21 +109,4 @@ SPRITES: {
 			],
 		},
 	],
-},
-
-INDUSTRY: {
-	OUT: {
-		MEAT: 0.75,
-		HORSES: 0.85,
-		LIVESTOCK: 0.0625,
-	},
-},
-
-BONUS: {
-	RACE: 0.8,
-    CLIMATE: {
-		TEMPERATE: 1.5,
-		COLD: 0.25,
-		HOT: 1,
-	},
 },

@@ -5,7 +5,6 @@ ICON: {
 	OFFY: -2,
 	SHADOW: 2,
 },
-
 RESOURCES: [WOOD,PLANK,],
 AREA_COSTS: [0.10,0.05,],
 MINI_COLOR: 101_124_14,
@@ -19,7 +18,7 @@ ITEMS: [
 		STATS: [0,0,0,],
 	},
 	{
-		COSTS: [20,10,],
+		COSTS: [20,5,],
 		STATS: [0,0,1,],
 	},
 ],
@@ -62,16 +61,22 @@ SPRITES: {
 			FENCE: 3,
 		],
 	},
+	FENCE_D_COMBO: {
+		SHADOW_LENGTH: 6,
+		SHADOW_HEIGHT: 2,
+		FRAMES: [
+			FENCE: 4,
+		],
+	},
 
-		AUX_BIG_2X2: [
-		{
-			SHADOW_HEIGHT: 9,
-			ROTATES: false,
-			FRAMES: [
-				HUT: 0,
-			],
-		},
-	],
+	AUX_BIG_2X2: {
+
+		SHADOW_HEIGHT: 9,
+		ROTATES: false,
+		FRAMES: [
+			HUT: 0,
+		],
+	},
 	AUX_EDGE_1X1: [
 		{
 			SHADOW_HEIGHT: 9,
@@ -98,7 +103,6 @@ INDUSTRY: {
 		LIVESTOCK: 0.0625,
 	},
 },
-
 BONUS: {
 	CLIMATE: {
 		TEMPERATE: 1.5,
