@@ -12,10 +12,12 @@
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
 - Fix typo.
-- Glass structure delete.
+- Glass structure delete. (Sorry, The metal structure may also be removed, to be replaced by a new structure that better matches the sand biome.)
 - Fix Admin output.
 - For unlock kitchen you need 200pop now.
-- Correction du son du workshop cuisine.
+- For unlock logistics horse you need to build 3 pastures of Horse.
+- Kitchen workshop sound corrected.
+- Fix the farms (Rice and Grapes) to better match the climate.
 
 ## 26-10-2023 3.1.2 Patch
 - Fixed variant 2 road was unlocked by default. Thanks Meow Kat for this report.

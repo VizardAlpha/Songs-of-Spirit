@@ -30,8 +30,8 @@ INDUSTRY: {
 
 BONUS: {
 	CLIMATE: {
-		HOT: 0.4,
-		TEMPERATE: 0.8,
+		HOT: 1.4,
+		TEMPERATE: 1.8,
 		COLD: 0.2,
 	},
 },

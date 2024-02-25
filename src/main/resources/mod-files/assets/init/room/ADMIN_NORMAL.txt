@@ -33,7 +33,6 @@ INDUSTRY: {
 	IN: {
 		PAPER: 0.5,
 	},
-	EDUCATION_FACTOR: 0.5,
 },
 
 SPRITES: {

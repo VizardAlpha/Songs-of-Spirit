@@ -45,6 +45,16 @@ INDUSTRIES: [
 			},
 		},
 	},
+	{
+    	INDUSTRY: {
+    		IN: {
+    			PLANK: 3.0,
+    		},
+    		OUT: {
+    			FURNITURE: 0.75,
+    		},
+    	},
+    },
     {
 		INDUSTRY: {
 			IN: {
@@ -56,19 +66,9 @@ INDUSTRIES: [
 		},
 	},
 	{
-    	INDUSTRY: {
-    		IN: {
-    			PLANK: 3.0,
-    		},
-    		OUT: {
-    			FURNITURE: 0.75,
-    		},
-    	},
-    },
-	{
 		INDUSTRY: {
 			IN: {
-				PLANK: 6.0,
+				WOOD: 6.0,
 				STONE: 4.0,
 			},
 			OUT: {
@@ -79,7 +79,7 @@ INDUSTRIES: [
 	{
         INDUSTRY: {
             IN: {
-                WOOD: 6.0,
+                PLANK: 6.0,
                 LEATHER: 2.0,
             },
             OUT: {
@@ -87,7 +87,7 @@ INDUSTRIES: [
             },
 
         },
-    }
+    },
 ],
 
 ENVIRONMENT_EMIT: {
