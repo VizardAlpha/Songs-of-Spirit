@@ -37,6 +37,8 @@ public class InfoModal extends Interrupter {
     public final static int HEIGHT = 600;
     @Getter
     private GButt.ButtPanel discordButton;
+    @Getter
+    private GButt.ButtPanel githubButton;
 
     public InfoModal(ChangelogsStore changelogsStore, CreditsStore creditsStore, ModInfo modInfo) {
         this.modInfo = modInfo;
@@ -124,11 +126,13 @@ public class InfoModal extends Interrupter {
             }.setDim(136, 32));
         });
 
+        githubButton = new GButt.ButtPanel("Translation");
         discordButton = new GButt.ButtPanel("Discord");
         GuiSection versions = versions();
-        int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 10;
+        int space = WIDTH - section.body().width() - versions.body().width() - discordButton.body().width() - 155;
 
         section.addRightC(space, discordButton);
+        section.addRightC(0, githubButton);
         section.addRightC(10, versions);
 
         return section;
