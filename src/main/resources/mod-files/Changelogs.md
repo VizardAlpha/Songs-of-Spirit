@@ -1,4 +1,4 @@
-## xx-02-2024 4.0.0 Major
+## 25-02-2024 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
@@ -18,6 +18,7 @@
 - For unlock logistics horse you need to build 3 pastures of Horse.
 - Kitchen workshop sound corrected.
 - Fix the farms (Rice and Grapes) to better match the climate.
+- Fix LandingParty have no tool.
 
 ## 26-10-2023 3.1.2 Patch
 - Fixed variant 2 road was unlocked by default. Thanks Meow Kat for this report.

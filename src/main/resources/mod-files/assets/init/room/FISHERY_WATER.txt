@@ -1,0 +1,212 @@
+ICON: {
+	BG: 32->BG->5,
+	FG: 24->resource->Water->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
+
+RESOURCES: [WOOD,POTTERY,],
+AREA_COSTS: [0,0,],
+MINI_COLOR: 74_119_14,
+
+ITEMS: [
+	{
+		COSTS: [1,1,],
+		STATS: [0,1,0,0,],
+	},
+	{
+		COSTS: [2,2,],
+		STATS: [0,0,1,0,],
+	},
+],
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: SQUISH,
+	FULFILLMENT: 0.0,
+},
+
+DEGRADE_RATE: 0.2,
+
+INDUSTRY: {
+	OUT: {
+		WATER: 1.0,
+	},
+},
+
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,0,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,1,0,],
+		BOOST: 0.5,
+	},
+],
+
+SPRITES: {
+	STORAGE_BOTTOM_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 5,
+			],
+		},
+		{
+			SHADOW_LENGTH: 5,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 6,
+			],
+		},
+	],
+	STORAGE_TOP_1X1: [
+		{
+			ROTATES: false,
+			FRAMES: [
+				
+			],
+		},
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 7,
+			],
+		},
+	],
+	CANDLE_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				NATURE: 13,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			ROTATES: false,
+			FRAMES: [
+				TABLES: 2,
+			],
+		},
+	],
+	AUX_EDGE_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 0,
+			],
+		},
+	],
+	AUX_MID_1X1: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: true,
+			FRAMES: [
+				2xROOF: 1,
+			],
+		},
+	],
+	AUX_BIG_2X2: [
+		{
+			SHADOW_HEIGHT: 9,
+			ROTATES: false,
+			FRAMES: [
+				HUT: 0,
+			],
+		},
+	],
+	WORKTABLE_1X1: [
+		{
+			SHADOW_LENGTH: 5,
+			FRAMES: [
+				TABLES: 0,
+			],
+		},
+		{
+			SHADOW_LENGTH: 5,
+			FRAMES: [
+				TABLES: 6,
+			],
+		},
+	],
+	MISC_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+			],
+		},
+		{
+			SHADOW_LENGTH: 4,
+			FRAMES: [
+				STORAGE: 0,
+				STORAGE: 1,
+				STORAGE: 5,
+				STORAGE: 10,
+			],
+		},
+	],
+	MISC_TOP_1X1: [
+		{
+			SHADOW_LENGTH: 1,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+			],
+		},
+		{
+			SHADOW_LENGTH: 1,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+			],
+		},
+	],
+	EDGE_COMBO: [
+		{
+			SHADOW_LENGTH: 2,
+			COLOR: {R:255,G:173,B:119,},
+			FRAMES: [
+				FRAMES: 1,
+			],
+		},
+	],
+	MISC_GROUND_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			TINT: true,
+			ROTATES: false,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+				ANIMAL: 8,
+			],
+		},
+	],
+	
+},
+

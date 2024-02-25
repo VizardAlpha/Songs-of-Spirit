@@ -13,5 +13,5 @@
 
 ## Translators
 ### Chinese
-- Prototype-alpha [Crowdin],
-- sizhentao03 [Crowdin],
+- Prototype-alpha,
+- sizhentao03,
