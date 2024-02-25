@@ -1,0 +1,2 @@
+NAME: "Rope Specialization",
+DESC: "Your weavers learn more efficient ways to make use of their workshop.",

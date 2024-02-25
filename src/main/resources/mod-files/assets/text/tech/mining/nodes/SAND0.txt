@@ -1,0 +1,2 @@
+NAME: "Sand Mine",
+DESC: "Who doesn't like playing in the sand? Your subjects will be able to collect sand to make something extraordinary!",

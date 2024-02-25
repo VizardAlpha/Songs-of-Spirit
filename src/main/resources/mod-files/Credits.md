@@ -7,11 +7,12 @@
 - Shado,
 - Rebel of Exclusivity,
 - Meow Kat,
+- Fraggenstein,
 - No_one2000,
 
 ---
 
 ## Translators
 ### Chinese
-- Prototype-alpha [Crowdin],
-- sizhentao03 [Crowdin],
+- Prototype-alpha,
+- sizhentao03,

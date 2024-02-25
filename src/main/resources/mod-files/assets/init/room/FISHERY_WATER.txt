@@ -1,47 +1,60 @@
-TYPE: FISHERY,
-RESOURCES: [FURNITURE,STONE,],
+ICON: {
+	BG: 32->BG->5,
+	FG: 24->resource->Water->0,
+	OFFX: -2,
+	OFFY: -2,
+	SHADOW: 2,
+},
+
+RESOURCES: [WOOD,POTTERY,],
 AREA_COSTS: [0,0,],
 MINI_COLOR: 74_119_14,
 
 ITEMS: [
 	{
-		COSTS: [1,0,],
-		STATS: [0,0,1,0,0,],
+		COSTS: [1,1,],
+		STATS: [0,1,0,0,],
 	},
 	{
 		COSTS: [2,2,],
-		STATS: [0,0,0,1,0,],
+		STATS: [0,0,1,0,],
 	},
 ],
-
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: SQUISH,
 	FULFILLMENT: 0.0,
-	INDOCTRINATION_FACTOR: 0.25,
-	ACCIDENTS_PER_YEAR: 0.0015,
-},
-
-BONUS: {
-	CLIMATE: {
-		COLD: 1.2,
-	},
 },
 
 DEGRADE_RATE: 0.2,
 
 INDUSTRY: {
-    IN: {
-    	POTTERY: 4.0,
-    },
 	OUT: {
-		WATER: 4.0,
+		WATER: 1.0,
 	},
 },
 
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,0,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,1,0,],
+		BOOST: 0.5,
+	},
+],
+
 SPRITES: {
 	STORAGE_BOTTOM_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				STORAGE: 5,
+			],
+		},
 		{
 			SHADOW_LENGTH: 5,
 			ROTATES: false,
@@ -52,6 +65,12 @@ SPRITES: {
 	],
 	STORAGE_TOP_1X1: [
 		{
+			ROTATES: false,
+			FRAMES: [
+				
+			],
+		},
+		{
 			SHADOW_LENGTH: 2,
 			ROTATES: false,
 			FRAMES: [
@@ -60,6 +79,13 @@ SPRITES: {
 		},
 	],
 	CANDLE_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			ROTATES: false,
+			FRAMES: [
+				NATURE: 13,
+			],
+		},
 		{
 			SHADOW_LENGTH: 4,
 			ROTATES: false,
@@ -102,8 +128,24 @@ SPRITES: {
 				TABLES: 0,
 			],
 		},
+		{
+			SHADOW_LENGTH: 5,
+			FRAMES: [
+				TABLES: 6,
+			],
+		},
 	],
 	MISC_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+			],
+		},
 		{
 			SHADOW_LENGTH: 4,
 			FRAMES: [
@@ -111,6 +153,28 @@ SPRITES: {
 				STORAGE: 1,
 				STORAGE: 5,
 				STORAGE: 10,
+			],
+		},
+	],
+	MISC_TOP_1X1: [
+		{
+			SHADOW_LENGTH: 1,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+			],
+		},
+		{
+			SHADOW_LENGTH: 1,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
 			],
 		},
 	],
@@ -123,4 +187,26 @@ SPRITES: {
 			],
 		},
 	],
+	MISC_GROUND_1X1: [
+		{
+			SHADOW_LENGTH: 2,
+			TINT: true,
+			ROTATES: false,
+			FRAMES: [
+				NATURE: 0,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 1,
+				NATURE: 2,
+				NATURE: 3,
+				NATURE: 4,
+				ANIMAL: 8,
+			],
+		},
+	],
+	
 },
+

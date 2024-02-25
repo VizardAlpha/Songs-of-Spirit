@@ -79,7 +79,7 @@ public class RichTextLines extends RENDEROBJ.RenderImp {
 
             if (line.length() > 1 && line.charAt(1) == '#') {
                 GCOLOR.T().H1.bind();
-                font = UI.FONT().H1S;
+                font = UI.FONT().S;
                 start = 2;
                 headerSpace = 8;
                 if (line.length() > 2 && line.charAt(2) == '#') {

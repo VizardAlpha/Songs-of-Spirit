@@ -1,9 +1,8 @@
-TYPE: WORKSHOP,
+ICON: 32->WORKSHOP->3,
 RESOURCES: [STONE,FURNITURE,METAL,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
 MINI_COLOR: 226_195_38,
-
 ITEMS: [
 	{
 		COSTS: [1,1,1,],
@@ -18,24 +17,21 @@ ITEMS: [
 		STATS: [0,3,0,],
 	},
 ],
-
-
 WORK: {
 	SHIFT_OFFSET: 0.325,
 	SOUND: STONE,
-	ACCIDENTS_PER_YEAR: 0.0025,	
+	ACCIDENTS_PER_YEAR: 0.0025,
 	FULFILLMENT: 1.0,
-	EDUCATION_FACTOR: 0.4,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				STONE: 4,
+				STONE: 2,
 			},
 			OUT: {
-				STONE_CUT: 1.0,
+				STONE_CUT: 0.5,
 			},
 		},
 	},
@@ -43,10 +39,10 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				SAND: 4,
+				SAND: 2,
 			},
 			OUT: {
-				SANDSTONE_BRICK: 1.0,
+				SANDSTONE_BRICK: 0.5,
 			},
 		},
 	},

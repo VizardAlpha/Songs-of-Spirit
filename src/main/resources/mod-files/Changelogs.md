@@ -1,4 +1,4 @@
-## xx-xx-2023 4.0.2 Major
+## 25-02-2024 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.
 - Adding water and drifting, some dishes require water for their preparation.
@@ -11,7 +11,14 @@
 - New sprite for the golden ingot.
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
-- Fix typo
+- Fix typo.
+- Glass structure delete. (Sorry, The metal structure may also be removed, to be replaced by a new structure that better matches the sand biome.)
+- Fix Admin output.
+- For unlock kitchen you need 200pop now.
+- For unlock logistics horse you need to build 3 pastures of Horse.
+- Kitchen workshop sound corrected.
+- Fix the farms (Rice and Grapes) to better match the climate.
+- Fix LandingParty have no tool.
 - A button to link to translations on GitHub has been added.
 - When you get a mod update, you'll get a reminder to check out the changelogs!
 

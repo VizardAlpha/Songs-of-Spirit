@@ -1,0 +1,2 @@
+NAME: "Vinification Bonus",
+DESC: "With a better foot, hmm machine I mean, your subjects will increase wine production instantly!",

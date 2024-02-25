@@ -1,0 +1,2 @@
+NAME: "Weapon Specialization",
+DESC: "Smithing is equally science, art, and pure physical prowess. Teach your smiths more advanced techniques to improve not only their production speed but also efficiency with goods.",

@@ -17,7 +17,8 @@ BIO_FILE: Normal,
 OPINION_FILE_SCARED: Normal,
 OPINION_FILE_NORMAL: Normal,
 OPINION_FILE_CONFIDENT: Normal,
-
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 HOME: CRETONIAN,
 
 TOURIST: {
@@ -34,7 +35,6 @@ PREFERRED: {
 	],
 	STRUCTURE: {
 		STONE: 0.5,
-		GLASS: 0.5,
 		GRAND: 0.3,
 		WOOD: 1.0,
 		MOUNTAIN: 0,
@@ -54,12 +54,23 @@ PREFERRED: {
 		WORKSHOP_RATION: 1.0,
 		WORKSHOP_KITCHEN: 1.0,
 	},
+	OTHER_RACES: {
+		*: 0.75,
+		Q_AMEVIA: 0.05,
+		GARTHIMI: 0.02,
+		HUMAN: 0.5,
+		ARGONOSH: 0,
+		CANTOR: 1,
+	},
+	OTHER_RACES_REVERSE: {
+		*: 1.0,
+	},
 },
 
 POPULATION: {
 	MAX: 0.8,
-	GROWTH: 0.05,
-	IMMIGRATION_RATE: 2,
+	GROWTH: 0.10,
+	IMMIGRATION_RATE: 1,
 	CLIMATE: {
 		COLD: 0.2,
 		TEMPERATE: 1,
@@ -72,695 +83,117 @@ POPULATION: {
 		NONE: 0.9,
 	},
 },
-
-BONUS_MUL: {
-
-	PHYSICS: {
-		RESISTANCE_COLD: 0.25,
-		RESISTANCE_HOT: 1.0,
-		DEATH_AGE: 0.75,
-		MASS: 0.9,
-	},
-	
-	BATTLE: {
-		MORALE: 0.75,
-	},
-	
-	BEHAVIOUR: {
-		LAWFULNESS: 4,
-		SUBMISSION: 1.25,	
-	},
-	
-	ROOM: {
-		FARM: 1.4,
-		ORCHARD: 1.4,
-		PASTURE_AUR: 1.0,
-		PASTURE_ENT: 1.0,
-		PASTURE_ONX: 1.0,
-		PASTURE_HORSE: 1.2,
-		FISHERY: 1.2,
-		WORKSHOP: 0.5,
-		WORKSHOP_RATION: 1.2,
-		WORKSHOP_KITCHEN: 1.2,
-	},
-	
-	RATES: {
-		LEARNING: 0.5,	
-	},
-},
-
 TRAITS: {
 	FIGHTER: 0.0,
 	GLUTTON: 0.2,
 	SPRINTER: 0.0,
 },
-
 RESOURCE: {
 	MEAT: 20,
 	LEATHER: 10,
 },
-
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 1,
-	TEMPLE_AMINION: 0.01,
-	TEMPLE_ATHURI: 0.1,
-	TEMPLE_SHMALOR: 0.01,
-},
-
 STATS: {
-	SERVICE: {
-		TAVERN_NORMAL: {
-			NOBLE: 1,
-			SLAVE: 0,
-			CITIZEN: 3,
-		},
-		CANTEEN_NORMAL: {
-			CITIZEN: 3.5,
-		},
-
+	SERVICE_TAVERN_NORMAL: {
+		NOBLE: 1,
+		SLAVE: 0,
+		CITIZEN: 3,
 	},
-	
-	EQUIP: {
-
+	SERVICE_CANTEEN_NORMAL: {
+		CITIZEN: 3.5,
 	},
-	
-	FOOD: {
-	
-	},
-	
-	BATTLE: {
-	
-	},
-	
-	WORK: {
-
-
-	},
-	
 	ACCESS: {
-		*: {
-
-		},
-		DREAD: {
-			CITIZEN: 0.5,
-			INVERTED: true,
-		},
-		HARMONY: {
-			SLAVE: 0.5,
-			CITIZEN: 1.5,
-			NOBLE: 1.5,
-		},
-		
-		LIGHT: {
-			CITIZEN: 1,
-		},
-
-		SPACE: {
-			CITIZEN: 0.5,
-		},
 
 	},
-	
-	ENVIRONMENT: {
-		ROUNDNESS: {
-			SLAVE: 0.5,
-			CITIZEN: 1,
-			NOBLE: 1.5,
-			MULTIPLIER: 2.0,
-		},
+	ACCESS_DREAD: {
+		CITIZEN: 0.5,
+		INVERTED: true,
 	},
-	
-	POPULATION: {
-		SLAVES_SELF: {
-			INVERTED: true,
-			CITIZEN: 1.5,
-		},
+	ACCESS_HARMONY: {
+		SLAVE: 0.5,
+		CITIZEN: 1.5,
+		NOBLE: 1.5,
 	},
-	
-	STORED: {
-		RATION: {
-			CITIZEN: 2,
-			SLAVE: 0,
-			NOBLE: 1,
-			MULTIPLIER: 0.05,
-		},
+	ACCESS_LIGHT: {
+		CITIZEN: 1,
 	},
-	
-	RELIGION: {
-		FAITH: {
-			CITIZEN: 4,
-			NOBLE: 3,
-			SLAVE: 2,
-		},
+	ACCESS_SPACE: {
+		CITIZEN: 0.5,
 	},
-
-	EDUCATION: {
-	
+	ACCESS_ROUNDNESS: {
+		SLAVE: 0.5,
+		CITIZEN: 1,
+		NOBLE: 1.5,
 	},
-	
-	BURIAL: {
-		TOMB_NORMAL: {
-			CITIZEN: 0.5,
-		},
-		
+	POPULATION_SLAVES_SELF: {
+		INVERTED: true,
+		CITIZEN: 1.5,
 	},
-	
-	MONUMENTS: {
-		MONUMENT_TREE: {
-			CITIZEN: 0.5,
-			NOBLE: 0.5,
-			SLAVE: 0.25,
-			MULTIPLIER: 8,
-		},
+	STORED_RATION: {
+		CITIZEN: 2,
+		SLAVE: 0,
+		NOBLE: 1,
+		MULTIPLIER: 0.05,
 	},
-	
+	RELIGION_TEMPLE: {
+		CITIZEN: 4,
+		NOBLE: 3,
+		SLAVE: 2,
+	},
+	BURIAL_TOMB_NORMAL: {
+		CITIZEN: 0.5,
+	},
+	MONUMENTS_MONUMENT_TREE: {
+		CITIZEN: 0.5,
+		NOBLE: 0.5,
+		SLAVE: 0.25,
+		MULTIPLIER: 8,
+	},
 	LAW: {
-		*: {
-			CITIZEN: 0,
-		},
-		
-		PRISON: {
-			CITIZEN: 1,
-		},
-		STOCKS: {
-			CITIZEN: 0.5,
-			INVERTED: true,	
-		},
-		EXECUTION: {
-			CITIZEN: 1.0,	
-			INVERTED: true,
-		},
-		ENSLAVED: {
-			CITIZEN: 0.5,
-			INVERTED: true,	
-		},
-		JUDGEMENT: {
-			CITIZEN: 1.0,	
-			PRIO: 5.000,
-		},
-		EQUALITY: {
-			CITIZEN: 1.5,	
-			PRIO: 10.000,
-		},
+		CITIZEN: 0,
 	},
-	
+	LAW_PRISON: {
+		CITIZEN: 1,
+	},
+	LAW_STOCKS: {
+		CITIZEN: 0.5,
+		INVERTED: true,
+	},
+	LAW_EXECUTION: {
+		CITIZEN: 1.0,
+		INVERTED: true,
+	},
+	LAW_ENSLAVED: {
+		CITIZEN: 0.5,
+		INVERTED: true,
+	},
+	LAW_JUDGEMENT: {
+		CITIZEN: 1.0,
+		PRIO: 5.000,
+	},
 },
-
-APPEARANCE: {
-
-	ICON_SMALL: 24->race->Cretonian->0,
-	ICON_BIG: 32->race->Cretonian->0,
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: StdLastNoble,
-
-	CROWN: {
-		FILE: Cretonian,
-		OFFX: 0,
-		OFFY: 0,
-	},
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 255, G: 30, B: 30,},
-
-	COLORS: {
-		SKIN: {
-			TURNS_WHITE_WHEN_DEAD: true,
-			TURNS_SICKLY: true,
-			VALUES: [
-				{R: 224, G: 128, B: 109,},
-				{R: 226, G: 128, B: 109,},
-				{R: 220, G: 128, B: 109,},
-				{R: 215, G: 128, B: 109,},
-
-				{R: 224, G: 120, B: 109,},
-				{R: 224, G: 134, B: 109,},
-				{R: 224, G: 138, B: 109,},
-				{R: 224, G: 110, B: 109,},
-
-				{R: 224, G: 128, B: 100,},
-				{R: 224, G: 128, B: 95,},
-				{R: 224, G: 128, B: 112,},
-				{R: 224, G: 128, B: 115,},
-
-				{R: 222, G: 122, B: 101,},
-				{R: 224, G: 128, B: 102,},
-				{R: 228, G: 127, B: 103,},
-			],
-		},
-		HAIR: {
-			TURNS_GRAY_WHEN_OLD: true,
-			VALUES: [
-				{R: 173, G: 50, B: 50,},
-				{R: 175, G: 59, B: 52,},
-				{R: 177, G: 66, B: 53,},
-				{R: 181, G: 80, B: 56,},
-				{R: 185, G: 96, B: 60,},
-				{R: 192, G: 123, B: 66,},
-				{R: 193, G: 126, B: 67,},
-			],
-		},
-		JEWELLERY: {
-			VALUES: [
-				{R: 216, G: 202, B: 0,},
-				{R: 216, G: 163, B: 0,},
-				{R: 114, G: 66, B: 85,},
-				{R: 134, G: 133, B: 82,},
-				{R: 150, G: 150, B: 180,},
-				{R: 180, G: 150, B: 150,},
-			],
-		},
-		EYE: {
-			VALUES: [
-				{R: 10, G: 10, B: 10,},
-				{R: 15, G: 10, B: 10,},
-				{R: 20, G: 10, B: 10,},
-				{R: 25, G: 15, B: 10,},
-				{R: 10, G: 15, B: 10,},
-				{R: 15, G: 15, B: 10,},
-				{R: 20, G: 15, B: 10,},
-				{R: 25, G: 20, B: 10,},
-				{R: 10, G: 20, B: 10,},
-				{R: 15, G: 20, B: 10,},
-				{R: 20, G: 20, B: 10,},
-				{R: 25, G: 25, B: 10,},
-				{R: 10, G: 25, B: 10,},
-				{R: 15, G: 25, B: 10,},
-				{R: 20, G: 25, B: 10,},
-			],
-		},
-		PAINT: {
-			VALUES: [
-				{R: 10, G: 10, B: 200,},
-				{R: 100, G: 10, B: 200,},
-				{R: 10, G: 100, B: 200,},
-				{R: 200, G: 10, B: 200,},
-				{R: 10, G: 200, B: 200,},
-				{R: 10, G: 10, B: 100,},
-				{R: 100, G: 10, B: 100,},
-				{R: 10, G: 100, B: 100,},
-				{R: 100, G: 50, B: 200,},
-			],
-		},
-		LIPS: {
-			VALUES: [
-				{R: 200, G: 100, B: 100,},
-			],
-		},
-		LEG: {
-			VALUES: [
-				{R: 80, G: 40, B: 20,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: ChildHumanoid,
-		SPRITE_SKELLETON_FILE: Humanoid_small,
-		NAMESET_FILE_FIRST: StdFirst,
-		NAMESET_FILE_SURNAME: StdLast,
-
-		ADDONS: [
-			{
-				BELOW_HEAD: false,
-				SPRITE_FILE: HairCretonian,
-				COLOR: HAIR,
-			},
-		],
-	},
-
-	TYPES: [
-		{
-			OCCURRENCE: 0.5,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			PORTRAIT_FILE: Cretonian,
-			SPRITE_FILE: Cretonian,
-			SPRITE_SKELLETON_FILE: Humanoid,
-			NAMESET_FILE_FIRST: StdFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: HairCretonian,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.25,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourCretonian,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 12,
-				},
-				**head
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 6,
-					COLOR: SKIN,
-				},
-				**Brow
-				{
-					FRAME_START: 12,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 11,
-				},
-				**Earring
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_2_F: 0.5,
-						},
-					},
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					OFF_Y: -4,
-					COLOR: JEWELLERY,
-				},
-				**Olden lines
-				{
-					CONDITIONS: {
-						GREATER: {
-							POPULATION_AGE_F: 0.75,
-						},
-					},
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -16,
-				},
-
-				**Eyes
-				{
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: -1,
-				},
-
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 19,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 1,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -2,
-				},
-				**mouth
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: false,
-					COLOR: SKIN,
-					OFF_Y: 27,
-				},
-				**tusks
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: 4,
-				},
-				**lower jewellery
-				{
-					CONDITIONS: {
-						EQUAL: {
-							RANDOM_3_F: 0.5,
-						},
-					},
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: false,
-					OFF_Y: -11,
-					COLOR: JEWELLERY,
-				},
-				**nose
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					COLOR: SKIN,
-					SPLIT: 2,
-					OFF_Y: -13,
-				},
-				**hair
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.25,
-						},
-					},
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: -3,
-				},
-			],
-		},
-		{
-			OCCURRENCE: 0.5,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			PORTRAIT_FILE: Cretonian,
-			SPRITE_FILE: Cretonian,
-			SPRITE_SKELLETON_FILE: Humanoid,
-			NAMESET_FILE_FIRST: StdFemaleFirst,
-			NAMESET_FILE_SURNAME: StdLast,
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: HairCretonian,
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.1,
-						},
-					},
-					COLOR: HAIR,
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: NobilityCloakMedium,
-					CONDITIONS: {
-						EQUAL: {
-							POPULATION_NOBLES_I: 1,
-						},
-					},
-				},
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourCretonian,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-
-					COLOR: ARMOUR,
-				},
-			],
-
-			PORTRAIT: [
-
-				**Ears
-				{
-					FRAME_START: 0,
-					SPLITS: 3,
-					SPLIT: 0,
-					FRAME_VARIATIONS: 4,
-					COLOR: SKIN,
-					OFF_Y: 12,
-				},
-				**head
-				{
-					FRAME_START: 6,
-					FRAME_VARIATIONS: 6,
-					COLOR: SKIN,
-				},
-				**Paint
-				{
-					FRAME_START: 12,
-					SPLITS: 3,
-					SPLIT: 2,
-					FRAME_VARIATIONS: 4,
-					COLOR: PAINT,
-					OFF_Y: -22,
-					OPACITY: 120,
-				},
-				**Earring
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					OFF_Y: -4,
-					COLOR: JEWELLERY,
-				},
-				**Olden lines
-				{
-					CONDITIONS: {
-						GREATER: {
-							POPULATION_AGE_F: 0.75,
-						},
-					},
-					FRAME_START: 12,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 2,
-					OFF_Y: -16,
-				},
-
-				**Eyes
-				{
-					FRAME_START: 16,
-					FRAME_VARIATIONS: 3,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: -1,
-				},
-
-				**iris
-				{
-					CONDITIONS: {
-						EQUAL: {
-							APPEARANCE_DEAD_I: 0,
-						},
-					},
-					FRAME_START: 19,
-					FRAME_VARIATIONS: 1,
-					SPLITS: 3,
-					SPLIT: 1,
-					COLOR: EYE,
-					STAINS: false,
-					OFF_Y: -2,
-				},
-				**mouth
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: false,
-					COLOR: LIPS,
-					OFF_Y: 27,
-				},
-				**tusks
-				{
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-					OFF_Y: 4,
-				},
-				**nose
-				{
-					FRAME_START: 20,
-					FRAME_VARIATIONS: 4,
-					SPLITS: 3,
-					COLOR: SKIN,
-					SPLIT: 2,
-					OFF_Y: -13,
-				},
-				**hair
-				{
-					CONDITIONS: {
-						GREATER: {
-							RANDOM_1_F: 0.1,
-						},
-					},
-					FRAME_START: 24,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					COLOR: HAIR,
-					OFF_Y: -3,
-				},
-			],
-		},
-	],	
+SPRITE_FILE: CRETONIAN,
+ICON_SMALL: 24->race->Cretonian->0,
+ICON_BIG: 32->race->Cretonian->0,
+WORLD_BUILDING_OVERRIDE: {
+	INFRA_03_ARENA: 0.1,
+},
+BOOST: {
+	RELIGION_CRATOR>ADD: 0.0,
+	RELIGION_AMINION>ADD: -0.99,
+	RELIGION_ATHURI>ADD: -0.9,
+	RELIGION_SHMALOR>ADD: -0.99,
+	PHYSICS_RESISTANCE_COLD>MUL: 0.25,
+	PHYSICS_RESISTANCE_HOT>MUL: 1.0,
+	PHYSICS_DEATH_AGE>MUL: 0.75,
+	PHYSICS_MASS>MUL: 0.9,
+	BATTLE_MORALE>MUL: 0.75,
+	BEHAVIOUR_LAWFULNESS>MUL: 4.0,
+	BEHAVIOUR_SUBMISSION>MUL: 1.25,
+	ROOM_FARM>MUL: 1.4,
+	ROOM_ORCHARD>MUL: 1.4,
+	ROOM_WORKSHOP>MUL: 0.5,
+	ROOM_WORKSHOP_RATION>MUL: 1.2,
+	ROOM_UNIVERSITY>MUL: 0.5,
+	WORLD_BUILDING_AGRICULTURE>MUL: 1.5,
+	WORLD_BUILDING_MINE>MUL: 0.75,
 },

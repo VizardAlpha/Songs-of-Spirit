@@ -9,7 +9,6 @@ import snake2d.MButt;
 import snake2d.Renderer;
 import snake2d.util.color.COLOR;
 import snake2d.util.datatypes.COORDINATE;
-import snake2d.util.datatypes.DIR;
 import snake2d.util.gui.GuiSection;
 import snake2d.util.gui.clickable.CLICKABLE;
 import util.gui.misc.GBox;
@@ -60,7 +59,7 @@ public class InfoModal extends Interrupter {
         panels.put("Credits", credits);
 
         GuiSection header = header();
-        header.body().moveY1(pan.getInnerArea().y1());
+        header.body().moveY1(pan.inner().y1());
         header.body().centerX(pan);
         section.add(header);
 
@@ -117,7 +116,7 @@ public class InfoModal extends Interrupter {
             section.addRightC(0, new GButt.ButtPanel(title) {
                 @Override
                 protected void clickA() {
-                    switcher.set(panel, DIR.N);
+                    switcher.set(panel);
                 }
 
                 @Override

@@ -1,0 +1,2 @@
+NAME: "Horse Bonus",
+DESC: "Our stablehands raise better, faster and stronger horses.",

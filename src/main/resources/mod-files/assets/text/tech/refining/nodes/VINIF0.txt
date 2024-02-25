@@ -1,0 +1,4 @@
+NAME: "Vinification",
+DESC: "From grapes to quality wine!
+       %r%%r%
+       (Drink rations can be set in the species -> access tab.  Very high rations of Vin can have negative health and work impacts on your people.)",

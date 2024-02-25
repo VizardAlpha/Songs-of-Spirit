@@ -1,0 +1,2 @@
+NAME: "Kitchen Bonus",
+DESC: "Better knife sharpening, more speed and agility for your chefs!",

@@ -1,32 +1,27 @@
-TYPE: WORKSHOP,
-RESOURCES: [WOOD,POTTERY,TOOL,],
+ICON: 32->WORKSHOP_KITCHEN->0,
+RESOURCES: [WOOD,CLAY,TOOL,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
 MINI_COLOR: 226_195_38,
-
 ITEMS: [
 	{
-		COSTS: [4,0,0.1,],
+		COSTS: [1,1,0,],
+		STATS: [0,0,0,],
+	},
+	{
+		COSTS: [4,1,0,],
 		STATS: [1.2,0,1,],
 	},
 	{
-		COSTS: [1,4,0,],
-		STATS: [0,3,0,],
-	},
-	{
-		COSTS: [1,4,0,],
+		COSTS: [1,1,2,],
 		STATS: [0,3,0,],
 	},
 ],
-
-
 WORK: {
-	SHIFT_OFFSET: 0.325,
-	SOUND: AXE,
-	USES_TOOL: true,
-	FULFILLMENT: 0.7,
+	SHIFT_OFFSET: 0.5,
+	SOUND: SQUISH,
 	ACCIDENTS_PER_YEAR: 0.0025,
-	EDUCATION_FACTOR: 0.4,
+	FULFILLMENT: 0,
 },
 
 INDUSTRIES: [
@@ -83,7 +78,7 @@ SPRITES: {
 				CHAIRS: 7,
 			],
 		},
-	], 
+	],
 	TABLE_COMBO: [
 		{
 			SHADOW_HEIGHT: 4,
@@ -106,7 +101,7 @@ SPRITES: {
 			TINT: true,
 			FPS: 15,
 			CIRCULAR: true,
-			FRAMES: [ 
+			FRAMES: [
 				-,
 				-,
 				BASIN: 0,
@@ -180,7 +175,7 @@ SPRITES: {
 				STORAGE: 0,
 				STORAGE: 1,
 				STORAGE: 2,
-				STORAGE: 10,			
+				STORAGE: 10,
 			],
 		},
 	],

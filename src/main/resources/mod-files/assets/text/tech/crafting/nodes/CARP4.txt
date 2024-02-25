@@ -1,0 +1,4 @@
+NAME: "Makeshift Weapons",
+DESC: "Cudgels, wooden spears, and stone hammers aren't very terrifying... but they're better than nothing.
+       	%r%%r%
+       	(This recipe is extremely inefficient but can help hold off bandits until you get metal industry up and running.)",

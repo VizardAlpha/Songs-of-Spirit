@@ -1,0 +1,2 @@
+NAME: "Armorer",
+DESC: "With the new advances your engineers and researchers are making. %r%%r% You can now manipulate metals and give them new, more advanced shapes. New, smaller, more precise parts.",

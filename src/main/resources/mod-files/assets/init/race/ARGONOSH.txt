@@ -17,7 +17,8 @@ BIO_FILE: Dry,
 OPINION_FILE_SCARED: Dry,
 OPINION_FILE_NORMAL: Dry,
 OPINION_FILE_CONFIDENT: Dry,
-
+KING_FILE: Normal,
+WORLD_NAME_FILE: Misc,
 HOME: ARGONOSH,
 
 PREFERRED: {
@@ -29,7 +30,6 @@ PREFERRED: {
 	],
 	STRUCTURE: {
 		MOUNTAIN: 1.0,
-		GLASS: 0.6,
 		STONE: 0.6,
 		GRAND: 0.3,
 		WOOD: 0,
@@ -48,386 +48,164 @@ PREFERRED: {
 		TEMPLE_ATHURI: 0.0,
 		TEMPLE_CRATOR: 0.0,
 		TEMPLE_SHMALOR: 1.0,
-		_BARRACKS: 1.0,
+		BARRACKS_VANILLA: 1.0,
 		_GUARD: 1.0,
 		_SLAVER: 1,
 		_EXECUTION: 1,
 	},
 	OTHER_RACES: {
-		TILAPI: -1,
-		DONDORIAN: -1,		
+        *: 1.0,
+        TILAPI: 0.01,
+        DONDORIAN: 0.01,
+    },
+	OTHER_RACES_REVERSE: {
+		*: 0.01,
 	},
 },
-
-BONUS_ADD: {
-	
-	BATTLE: {
-		ARMOUR: 2,
-		PIERCE_DAMAGE: 1,
-	},
-},
-
-BONUS_MUL: {
-	PHYSICS: {
-		HEALTH: 3,
-		DEATH_AGE: 5,
-		MASS: 3,
-		SPEED: 2,
-		ACCELERATION: 0.75,
-		RESISTANCE_COLD: 1,
-		RESISTANCE_HOT: 2,
-		
-	},
-	
-	BATTLE: {
-		RANGED_SKILL: 0,
-		MORALE: 3,
-		BLUNT_DAMAGE: 20,
-	},
-
-	ROOM: {
-		*: 0.1,
-	},
-	
-	BEHAVIOUR: {
-		LAWFULNESS: 5.0,
-		SUBMISSION: 0.3,
-		SANITY: 1000,
-	},
-	
-	RATES: {
-		
-		LEARNING: 0,
-		HUNGER: 2,
-		PIETY: 4,			
-	},	
-},
-
 TRAITS: {
 	*: 0,
 },
-
 RESOURCE: {
 	MEAT: 100,
 	LEATHER: 20,
 },
-
-RELIGION_INCLINATION: {
-	TEMPLE_CRATOR: 0,
-	TEMPLE_AMINION: 0,
-	TEMPLE_ATHURI: 0,
-	TEMPLE_SHMALOR: 1,
-},
-
 STATS: {
 	SERVICE: {
-		
-		*: {
-		
-		},
-	
-		EATERY_NORMAL: {
-			CITIZEN: 1.0,
-		},
 
-		CANTEEN_NORMAL: {
-			CITIZEN: 2.5,
-		},
-
-		TAVERN_NORMAL: {
-			CITIZEN: 1.5,
-		},
-
-		ARENA_NORMAL: {
-			CITIZEN: 2,
-		},
 	},
-	
+	SERVICE_EATERY_NORMAL: {
+		CITIZEN: 1.0,
+	},
+	SERVICE_CANTEEN_NORMAL: {
+		CITIZEN: 2.5,
+	},
+	SERVICE_TAVERN_NORMAL: {
+		CITIZEN: 1.5,
+	},
+	SERVICE_ARENA_NORMAL: {
+		CITIZEN: 2,
+	},
 	EQUIP: {
-		*: {
-		
-		},
 
 	},
-	
 	BURIAL: {
-		*: {
-	
-		},
 
-		TOMB_NORMAL: {
-			CITIZEN: 1.0,
-		},
 	},
-	
+	BURIAL_TOMB_NORMAL: {
+		CITIZEN: 1.0,
+	},
 	ACCESS: {
-		*: {
-		
-		},
 
-		DREAD: {
-			CITIZEN: 1.5,
-		},
-
-		HARMONY: {
-			CITIZEN: 0.5,
-			INVERTED: true,
-		},
 	},
-	
-	FOOD: {
-		STARVATION: {
-			CITIZEN: 3,
-			INVERTED: true,
-			MULTIPLIER: 5,
-		},
-		FOOD_PREFFERENCE: {
-			CITIZEN: 2.5,
-		},
-		FOOD_DAYS: {
-			CITIZEN: 2,
-			MULTIPLIER: 0.8,
-		},
-		FOOD_RATIONS: {
-			CITIZEN: 8,
-		},
-		DRINK_RATIONS: {
-			CITIZEN: 3.5,
-		},
+	ACCESS_DREAD: {
+		CITIZEN: 1.5,
 	},
-	
-	HOME: {
-		HOUSED: {
-			CITIZEN: 2,	
-		},
-		FURNITURE: {
-			CITIZEN: 2,
-		},
+	ACCESS_HARMONY: {
+		CITIZEN: 0.5,
+		INVERTED: true,
 	},
-
+	FOOD_STARVATION: {
+		CITIZEN: 3,
+		INVERTED: true,
+		MULTIPLIER: 5,
+	},
+	FOOD_FOOD_PREFFERENCE: {
+		CITIZEN: 2.5,
+	},
+	FOOD_FOOD_DAYS: {
+		CITIZEN: 2,
+		MULTIPLIER: 0.8,
+	},
+	FOOD_FOOD_RATIONS: {
+		CITIZEN: 8,
+	},
+	FOOD_DRINK_RATIONS: {
+		CITIZEN: 3.5,
+	},
+	HOME_HOUSED: {
+		CITIZEN: 2,
+	},
+	HOME_FURNITURE: {
+		CITIZEN: 2,
+	},
 	BATTLE: {
-		*: {
 
-		},
-
-		COMBAT_TRAINING: {
-			CITIZEN: 1.5,
-		},
 	},
-
+	BATTLE_BARRACKS_VANILLA: {
+		CITIZEN: 1.5,
+	},
 	WORK: {
-		*: {
 
-		},
 	},
-
 	POPULATION: {
-		*: {
 
-		},
-
-		WRONGFUL_DEATHS: {
-			CITIZEN: 2,
-			INVERTED: true,
-		},
-		SLAVES_SELF: {
-			INVERTED: true,
-			CITIZEN: 6,
-			NOBLE: 6,
-		},
-		SLAVES_OTHER: {
-			CITIZEN: 1.5,
-		},
 	},
-
+	POPULATION_WRONGFUL_DEATHS: {
+		CITIZEN: 2,
+		INVERTED: true,
+	},
+	POPULATION_SLAVES_SELF: {
+		INVERTED: true,
+		CITIZEN: 6,
+		NOBLE: 6,
+	},
+	POPULATION_SLAVES_OTHER: {
+		CITIZEN: 1.5,
+	},
 	ENVIRONMENT: {
-		*: {
 
-		},
-
-		BUILDING_PREF: {
-			CITIZEN: 0.5,
-			SLAVE: 0.5,
-		},
 	},
-
+	ENVIRONMENT_BUILDING_PREF: {
+		CITIZEN: 0.5,
+		SLAVE: 0.5,
+	},
 	STORED: {
-		*: {
 
-		},
 	},
-
 	EDUCATION: {
-		*: {
 
-		},
 	},
-
-	RELIGION: {
-		FAITH: {
-			CITIZEN: 6,
-		},
-		RELIGION_OPPOSITION: {
-			INVERTED: true,
-			CITIZEN: 2,
-			NOBLE: 0,
-			SLAVE: 0,
-		},
+	RELIGION_TEMPLE: {
+		CITIZEN: 6,
 	},
-
-	MONUMENTS: {
-		MONUMENT_BLOB: {
-			CITIZEN: 1,
-			SLAVE: 0.5,
-			PRIO: 50,
-		},
+	RELIGION_RELIGION_OPPOSITION: {
+		INVERTED: true,
+		CITIZEN: 2,
+		NOBLE: 0,
+		SLAVE: 0,
+	},
+	MONUMENTS_MONUMENT_BLOB: {
+		CITIZEN: 1,
+		SLAVE: 0.5,
+		PRIO: 50,
 	},
 },
-
-APPEARANCE: {
-
-
-
-	ICON_SMALL: 24->race->Argonosh->0,
-	ICON_BIG: 32->race->Argonosh->0,
-
-	SLEEP_FILE: Blanket,
-	SPRITE_EXTRA_FILE: Normal,
-	NAMESET_FILE_NOBLE: LzmLastNoble,
-	CROWN: {
-		FILE: Amevia,
-		OFFX: 0,
-		OFFY: 0,
-	},
-
-	COLOR_CLOTHES: [
-		{R: 114, G: 101, B: 35,},
-		{R: 142, G: 126, B: 44,},
-		{R: 83, G: 181, B: 94,},
-		{R: 62, G: 135, B: 70,},
-		{R: 105, G: 125, B: 239,},
-		{R: 79, G: 94, B: 181,},
-		{R: 53, G: 64, B: 122,},
-		{R: 193, G: 77, B: 0,},
-	],
-
-	COLOR_BLOOD: {R: 70, G: 40, B: 40,},
-
-	COLORS: {
-		SKIN: {
-			TURNS_WHITE_WHEN_DEAD: false,
-			VALUES:[
-				{R: 100, G: 60, B: 20,},
-				{R: 105, G: 60, B: 20,},
-				{R: 110, G: 60, B: 20,},
-				{R: 115, G: 60, B: 20,},
-				{R: 100, G: 65, B: 20,},
-				{R: 105, G: 70, B: 20,},
-				{R: 110, G: 75, B: 20,},
-				{R: 115, G: 80, B: 20,},
-				{R: 100, G: 65, B: 25,},
-				{R: 105, G: 70, B: 30,},
-				{R: 110, G: 75, B: 35,},
-				{R: 115, G: 80, B: 40,},
-			],
-
-		},
-		LEG: {
-			VALUES: [
-				{R: 29, G: 12, B: 4,},
-				{R: 119, G: 48, B: 16,},
-				{R: 96, G: 39, B: 13,},
-				{R: 74, G: 26, B: 10,},
-				{R: 52, G: 18, B: 7,},
-				{R: 21, G: 9, B: 3,},
-				{R: 54, G: 28, B: 7,},
-				{R: 77, G: 34, B: 10,},
-			],
-		},
-		ARMOUR: {
-			PICK_BY_STAT: {
-				EQUIP: ARMOUR,
-			},
-			VALUES: [
-				107_079_065,
-				099_099_099,
-				168_168_180,
-				209_159_054,
-			],
-		},
-	},
-
-	CHILD: {
-		COLOR_SKIN: SKIN,
-		COLOR_LEG: LEG,
-
-		SPRITE_FILE: Argonosh,
-		SPRITE_SKELLETON_FILE: Argonosh,
-		NAMESET_FILE_FIRST: LzmFirst,
-		NAMESET_FILE_SURNAME: LzmLast,
-	},
-
-
-
-	TYPES: [
-		{
-			OCCURRENCE: 1,
-			COLOR_SKIN: SKIN,
-			COLOR_LEG: LEG,
-
-			SPRITE_FILE: Argonosh,
-			SPRITE_SKELLETON_FILE: Argonosh,
-			PORTRAIT_FILE: Argonosh,
-			NAMESET_FILE_FIRST: LzmFirst,
-			NAMESET_FILE_SURNAME: LzmLast,
-
-			ADDONS: [
-				{
-					BELOW_HEAD: false,
-					SPRITE_FILE: ArmourArgonosh,
-					CONDITIONS: {
-						GREATER: {
-							EQUIP_ARMOUR_I: 0,
-						},
-					},
-					COLOR: ARMOUR,
-				},
-			],
-			
-			PORTRAIT: [
-				**head
-				{
-					FRAME_START: 0,
-					FRAME_VARIATIONS: 4, 
-					COLOR: SKIN,
-				},
-				**Top
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 0,
-					STAINS: true,
-					COLOR: SKIN,
-				},
-				**Eyes
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 1,
-					STAINS: false,
-				},
-				**jaw
-				{
-					FRAME_START: 4,
-					FRAME_VARIATIONS: 8,
-					SPLITS: 3,
-					SPLIT: 2,
-					STAINS: true,
-					COLOR: SKIN,
-				},
-			],
-		},
-	],
+SPRITE_FILE: ARGONOSH,
+ICON_SMALL: 24->race->Argonosh->0,
+ICON_BIG: 32->race->Argonosh->0,
+BOOST: {
+	RELIGION_CRATOR>ADD: -1.0,
+	RELIGION_AMINION>ADD: -1.0,
+	RELIGION_ATHURI>ADD: -1.0,
+	RELIGION_SHMALOR>ADD: 0.0,
+	BATTLE_PIERCE_DEFENCE>ADD: 2.0,
+	BATTLE_PIERCE_ATTACK>ADD: 1.0,
+	PHYSICS_HEALTH>MUL: 3.0,
+	PHYSICS_DEATH_AGE>MUL: 5.0,
+	PHYSICS_MASS>ADD: 160,
+	PHYSICS_SPEED>MUL: 2.0,
+	PHYSICS_ACCELERATION>MUL: 0.75,
+	PHYSICS_RESISTANCE_COLD>MUL: 1.0,
+	PHYSICS_RESISTANCE_HOT>MUL: 2.0,
+	BATTLE_RANGED_BOW>MUL: 0.0,
+	BATTLE_MORALE>MUL: 3.0,
+	BATTLE_BLUNT_ATTACK>ADD: 240.0,
+	BATTLE_BLUNT_DEFENCE>ADD: 120.0,
+	ROOM>MUL: 0.1,
+	BEHAVIOUR_LAWFULNESS>MUL: 5.0,
+	BEHAVIOUR_SUBMISSION>MUL: 0.3,
+	BEHAVIOUR_SANITY>MUL: 1000.0,
+	ROOM_UNIVERSITY>MUL: 0,
+	RATES_HUNGER>MUL: 2.0,
+	RATES_TEMPLE>MUL: 4.0,
 },

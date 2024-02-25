@@ -1,12 +1,11 @@
-TYPE: WORKSHOP,
-RESOURCES: [WOOD,POTTERY,METAL,],
+ICON: 32->WORKSHOP->7,
+RESOURCES: [WOOD,CLAY,POTTERY,],
 AREA_COSTS: [0.2,0,0,],
 FLOOR: STONE_MEDIUM_DARK,
 MINI_COLOR: 226_195_38,
-
 ITEMS: [
 	{
-		COSTS: [1,1,1,],
+		COSTS: [1,1,0,],
 		STATS: [0,0,0,],
 	},
 	{
@@ -18,22 +17,19 @@ ITEMS: [
 		STATS: [0,3,0,],
 	},
 ],
-
-
 WORK: {
 	SHIFT_OFFSET: 0.325,
 	SOUND: AXE,
-	ACCIDENTS_PER_YEAR: 0.0025,	
+	ACCIDENTS_PER_YEAR: 0.0025,
 	FULFILLMENT: 0.7,
-	EDUCATION_FACTOR: 0.4,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				MEAT: 4,
-				HERB: 2,
+				MEAT: 3,
+				HERB: 1,
 			},
 			OUT: {
 				RATION: 3.0,
@@ -43,8 +39,8 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				BREAD: 5,
-				HERB: 2,
+				BREAD: 4,
+				HERB: 1,
 			},
 			OUT: {
 				RATION: 3.0,
@@ -54,8 +50,8 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				FISH: 4,
-				HERB: 2,
+				FISH: 3,
+				HERB: 1,
 			},
 			OUT: {
 				RATION: 3.0,
@@ -65,33 +61,33 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				FRUIT: 6,
-				HERB: 2,
+				FRUIT: 4,
+				HERB: 1,
 			},
 			OUT: {
-				RATION: 2.0,
+				RATION: 3.0,
 			},
 		},
 	},
 	{
 		INDUSTRY: {
 			IN: {
-				VEGETABLE: 6,
-				HERB: 2,
-			},
-			OUT: {
-				RATION: 2.0,
-			},
-		},
-	},
-	{
-		INDUSTRY: {
-			IN: {
-				RICE: 6,
+				VEGETABLE: 4,
 				HERB: 1,
 			},
 			OUT: {
 				RATION: 2.0,
+			},
+		},
+	},
+	{
+		INDUSTRY: {
+			IN: {
+				RICE: 4,
+				HERB: 1,
+			},
+			OUT: {
+				RATION: 3.0,
 			},
 		},
 	},
