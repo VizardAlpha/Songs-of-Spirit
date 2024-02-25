@@ -48,7 +48,7 @@ INDUSTRIES: [
 				WOOD: 1.0,
 			},
 			OUT: {
-				BREAD: 6,
+				BREAD: 7,
 			},
 		},
 	},

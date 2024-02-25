@@ -35,6 +35,7 @@ PREFERRED: {
         STONE: 0.7,
         GRAND: 1.0,
         WOOD: 0.2,
+        MUD: 1.0,
         OUTDOORS: 0.3,
     },
 

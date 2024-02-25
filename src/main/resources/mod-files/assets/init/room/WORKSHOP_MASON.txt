@@ -35,7 +35,6 @@ INDUSTRIES: [
 			},
 		},
 	},
-
 	{
 		INDUSTRY: {
 			IN: {

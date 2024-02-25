@@ -30,7 +30,6 @@ SERVICE: {
 	SOUND: SLEEP,
 },
 
-
 SPRITES: {
 	CARPET_COMBO: [
 		{	

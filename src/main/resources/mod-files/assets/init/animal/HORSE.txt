@@ -27,3 +27,7 @@ TERRAIN: {
 
 PACK: true,
 GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.2,
+},

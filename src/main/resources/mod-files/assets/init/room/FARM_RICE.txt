@@ -15,6 +15,12 @@ MINI_COLOR_PATTERN: [
 ],
 INDOORS: false,
 
+INDUSTRY: {
+	OUT: {
+		RICE: 4.0,
+	},
+},
+
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: DIG,

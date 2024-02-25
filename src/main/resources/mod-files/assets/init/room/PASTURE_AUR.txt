@@ -22,7 +22,6 @@ ITEMS: [
     },
 ],
 
-
 WORK: {
 	SHIFT_OFFSET: 0.125,
 	SOUND: _DIG,

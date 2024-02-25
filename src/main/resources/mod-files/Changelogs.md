@@ -12,7 +12,7 @@
 - Salt mines will no longer appear in mountains.
 - Change World Map textures.
 - Fix typo.
-- Glass structure delete. (Sorry, The metal structure may also be removed, to be replaced by a new structure that better matches the sand biome.)
+- Glass structure delete. (Sorry, The metal structure may also be remove, to be replaced by a new structure in the next update. That better matches the sand biome.)
 - Fix Admin output.
 - For unlock kitchen you need 200pop now.
 - For unlock logistics horse you need to build 3 pastures of Horse.
@@ -21,6 +21,9 @@
 - Fix LandingParty have no tool.
 - A button to link to translations on GitHub has been added.
 - When you get a mod update, you'll get a reminder to check out the changelogs!
+- As the shield has been added to the vanilla, it no longer belongs here. It has therefore been removed.
+- Glass and metal structures have been removed.
+- The probability of finding gold in mountains and wetlands has been increased.
 
 ## 30-11-2023 3.1.4 Patch
 - Fix overlapping icon from recruit in provinces view. Thanks for the report on Steam and Discord.

@@ -1,3 +1,0 @@
-NAME: "Shield",
-NAMES: "Shields",
-DESC: "Used to equip soldiers for battle.",
