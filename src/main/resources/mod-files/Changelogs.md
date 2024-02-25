@@ -15,7 +15,7 @@
 - Glass structure delete.
 - Fix Admin output.
 - For unlock kitchen you need 200pop now.
-- 
+- Correction du son du workshop cuisine.
 
 ## 26-10-2023 3.1.2 Patch
 - Fixed variant 2 road was unlocked by default. Thanks Meow Kat for this report.

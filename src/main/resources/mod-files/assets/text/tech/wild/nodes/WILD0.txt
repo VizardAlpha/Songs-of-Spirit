@@ -1,2 +1,2 @@
-NAME: "Rice Farm Bonus",
-DESC: "A rice seed will generate a mountain of rice seed, who likes farms?",
+NAME: "Horse Husbandry",
+DESC: "Grants a better understanding of how to take care of domesticated horses, helping them breed faster in pastures. Horses are extremely useful animals, but the downside is that they are also very care intensive. Their leggs and hooves require special care, as well as their diets and exercise regimes.",

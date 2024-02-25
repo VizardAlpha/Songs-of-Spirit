@@ -1,0 +1,2 @@
+NAME: "Gold Mine Bonus",
+DESC: "Better prospecting skills and particularly search methods of workers can kick up your gold mine production.",

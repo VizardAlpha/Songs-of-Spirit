@@ -45,30 +45,16 @@ INDUSTRIES: [
 			},
 		},
 	},
-
-	{
-		INDUSTRY: {
-			IN: {
-				WOOD: 6.0,
-				STONE: 4.0,
-			},
-			OUT: {
-				WEAPON_HAMMER: 0.2,
-			},
-		},
-	},
-
     {
 		INDUSTRY: {
 			IN: {
-				WOOD: 5.0,
+				WOOD: 3.0,
 			},
 			OUT: {
-				WOODEN_WEAPON: 0.20,
+				WOODEN_WEAPON: 0.5,
 			},
 		},
 	},
-
 	{
     	INDUSTRY: {
     		IN: {
@@ -79,7 +65,6 @@ INDUSTRIES: [
     		},
     	},
     },
-
 	{
 		INDUSTRY: {
 			IN: {
@@ -91,19 +76,18 @@ INDUSTRIES: [
 			},
 		},
 	},
-
 	{
-		INDUSTRY: {
-			IN: {
-				WOOD: 6.0,
-				LEATHER: 1.0,
-			},
-			OUT: {
-				WOODEN_WEAPON: 1.0,
-			},
-		},
-	},
+        INDUSTRY: {
+            IN: {
+                WOOD: 6.0,
+                LEATHER: 2.0,
+            },
+            OUT: {
+                WEAPON_SHIELD: 1.0,
+            },
 
+        },
+    }
 ],
 
 ENVIRONMENT_EMIT: {

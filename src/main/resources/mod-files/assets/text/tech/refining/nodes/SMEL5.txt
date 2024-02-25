@@ -1,0 +1,2 @@
+NAME: "Secrets of the Gold",
+DESC: "Bellows and advanced machinery pulley systems make your smeltery a marvel of gold production.",

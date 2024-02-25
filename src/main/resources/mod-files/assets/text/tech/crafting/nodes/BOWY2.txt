@@ -1,0 +1,4 @@
+NAME: "Crossbow",
+DESC: "The crossbow is made of an elegant bentwood and carefully crafted arrows for maximum accuracy and distance. No one wants to fight on the front line, but a crossbow allows them to do more damage at range than a bow!
+       %r%%r%
+       (Each species has a different skill in ranged combat. Be sure to train your divisions accordingly).",

@@ -1,0 +1,2 @@
+NAME: "Coal Vinification",
+DESC: "Adding coal ? But nah, it's a process that allows to increase the wine production with Co2, what ? Nothing nothing...",

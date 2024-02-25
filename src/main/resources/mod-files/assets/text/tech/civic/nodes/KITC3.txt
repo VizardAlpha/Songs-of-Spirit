@@ -1,0 +1,2 @@
+NAME: "Sushi",
+DESC: "Who doesn't like sushi should not unlock this technique!",

@@ -1,0 +1,2 @@
+NAME: "Smelter",
+DESC: "The creation of glass requires the hand of an expert.",

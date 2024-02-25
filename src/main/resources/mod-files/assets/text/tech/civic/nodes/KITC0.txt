@@ -1,0 +1,2 @@
+NAME: "Kitchen",
+DESC: "Unlock the kitchen so that your subjects can prepare a good meal!",

@@ -1,2 +1,2 @@
-NAME: "Grape Farm Bonus",
-DESC: "More grapes but for what? Wine perhaps?",
+NAME: "Horse Bonus",
+DESC: "Our stablehands raise better, faster and stronger horses.",

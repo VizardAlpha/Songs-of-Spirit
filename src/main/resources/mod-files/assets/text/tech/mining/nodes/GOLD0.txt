@@ -1,0 +1,2 @@
+NAME: "Gold Mine",
+DESC: "Your subjects will be able to collect gold ore to make something extraordinary!",
