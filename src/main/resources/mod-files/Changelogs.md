@@ -1,3 +1,12 @@
+## 22-03-2024 4.0.1 Patch
+- The LandingParty for wood is increase to 120 -> 140
+- The cost of making furnishings has been reduced to 4 -> 2 planks
+- The cost of making planks has been reduced to 3 -> 2 woods
+- Previously, you had to unlock the advanced weaver to make ropes, but this has now been corrected.
+- The cost of unlocking ropes technology has been reduced from 350 -> 250.
+- The cost of unlocking sandstone technology has been reduced from 750 -> 350.
+- I'll add more information on object recipes to the wiki for 4.1.0.
+
 ## 25-02-2024 4.0.0 Major
 - The version system has changed: now, the first number represents a major version, the second number a minor version and the last number a Patch. More information on Steam.
 - Adding salt and drifting, some dishes require salt for their preparation.

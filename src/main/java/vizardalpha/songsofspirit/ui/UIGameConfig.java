@@ -91,9 +91,5 @@ public class UIGameConfig {
             body.setHeight(height);
             body.setWidth(width);
         }
-
-        public SpiritInfoButton(SPRITE label) {
-            super(label);
-        }
     }
 }

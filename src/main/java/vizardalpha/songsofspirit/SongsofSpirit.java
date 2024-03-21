@@ -52,9 +52,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         this.instance = instance;
 
         IDebugPanel.add("Songs of Spirit: Welcome Message", this::showWelcomeMessage);
-        IDebugPanel.add("Songs of Spirit: Update Message", () -> {
-            showModUpdateMessage(instance.getState().getModVersion().toString());
-        });
+        IDebugPanel.add("Songs of Spirit: Update Message", () -> showModUpdateMessage(instance.getState().getModVersion().toString()));
 
         return instance;
     }

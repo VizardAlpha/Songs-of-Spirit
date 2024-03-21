@@ -126,7 +126,7 @@ public class StringUtil {
     }
 
     public static String unwrap(String string, char prefix, char suffix) {
-        if (string == null || string.length() == 0) {
+        if (string == null || string.isEmpty()) {
             return string;
         }
 

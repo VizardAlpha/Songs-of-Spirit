@@ -112,19 +112,17 @@ public class InfoModal extends Interrupter {
     private GuiSection header() {
         GuiSection section = new GuiSection();
 
-        panels.forEach((title, panel) -> {
-            section.addRightC(0, new GButt.ButtPanel(title) {
-                @Override
-                protected void clickA() {
-                    switcher.set(panel);
-                }
+        panels.forEach((title, panel) -> section.addRightC(0, new GButt.ButtPanel(title) {
+            @Override
+            protected void clickA() {
+                switcher.set(panel);
+            }
 
-                @Override
-                protected void renAction() {
-                    selectedSet(switcher.current() == panel);
-                }
-            }.setDim(136, 32));
-        });
+            @Override
+            protected void renAction() {
+                selectedSet(switcher.current() == panel);
+            }
+        }.setDim(136, 32)));
 
         githubButton = new GButt.ButtPanel("Translation");
         discordButton = new GButt.ButtPanel("Discord");

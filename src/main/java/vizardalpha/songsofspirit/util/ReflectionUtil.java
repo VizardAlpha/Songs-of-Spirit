@@ -166,7 +166,7 @@ public class ReflectionUtil {
     public static Optional<Class<?>> getGenericClass(Field field) {
         List<Class<?>> classes = getGenericClasses(field);
 
-        if (classes.size() == 0) {
+        if (classes.isEmpty()) {
             return Optional.empty();
         }
 

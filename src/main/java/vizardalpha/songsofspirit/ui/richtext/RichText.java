@@ -28,11 +28,7 @@ public class RichText extends GuiSection {
         richTextLines = new RichTextLines(lines, width - up.body().width() , height, lineSpace, alignCenter);
         add(richTextLines);
 
-        down.clickActionSet(() -> {
-            richTextLines.increase(5);
-        });
-        up.clickActionSet(() -> {
-            richTextLines.decrease(5);
-        });
+        down.clickActionSet(() -> richTextLines.increase(5));
+        up.clickActionSet(() -> richTextLines.decrease(5));
     }
 }

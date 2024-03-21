@@ -38,7 +38,7 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 3.0,
+				WOOD: 2.0,
 			},
 			OUT: {
 				PLANK: 4.0,
@@ -48,7 +48,7 @@ INDUSTRIES: [
 	{
     	INDUSTRY: {
     		IN: {
-    			PLANK: 3.0,
+    			PLANK: 2.0,
     		},
     		OUT: {
     			FURNITURE: 0.75,
