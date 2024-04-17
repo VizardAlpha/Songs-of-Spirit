@@ -31,7 +31,7 @@ DEGRADE_RATE: 0.2,
 
 INDUSTRY: {
 	OUT: {
-		WATER: 1.0,
+		WATER: 2.5,
 	},
 },
 

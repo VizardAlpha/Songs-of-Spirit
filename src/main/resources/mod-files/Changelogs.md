@@ -1,3 +1,7 @@
+## XX-04-2024 4.0.2 Patch
+- The bread recipe has been modified, requiring less water 2.5 -> 1.5.
+- Water production increased 1 -> 2.5.
+
 ## 22-03-2024 4.0.1 Patch
 - The LandingParty for wood is increase to 120 -> 140
 - The cost of making furnishings has been reduced to 4 -> 2 planks

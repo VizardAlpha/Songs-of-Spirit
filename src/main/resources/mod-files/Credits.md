@@ -3,12 +3,13 @@
 - 4rg0n [Script]
 
 ---
-## Bug Reporters
+## Bug Reporters / Suggest
 - Shado,
 - Rebel of Exclusivity,
 - Meow Kat,
 - Fraggenstein,
 - No_one2000,
+- HHx4xHH (HUGOOOOO)
 
 ---
 
