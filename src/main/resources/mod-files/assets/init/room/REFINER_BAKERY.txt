@@ -42,7 +42,7 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-			    WATER: 2.5,
+			    WATER: 1.5,
 			    SALT: 0.5,
 				GRAIN: 6.0,
 				WOOD: 1.0,
