@@ -1,6 +1,7 @@
-# Creators
-- VizardAlpha [Assets]
+# Dev
+- VizardAlpha [Creator]
 - 4rg0n [Script]
+- pixel_rice_bowl [Sprites]
 
 ---
 ## Bug Reporters / Suggest
@@ -17,3 +18,4 @@
 ### Chinese
 - Prototype-alpha,
 - sizhentao03,
+- H2wlkr

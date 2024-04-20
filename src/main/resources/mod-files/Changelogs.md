@@ -1,6 +1,11 @@
-## XX-04-2024 4.0.2 Patch
+## 20-04-2024 4.0.2 Patch
 - The bread recipe has been modified, requiring less water 2.5 -> 1.5.
 - Water production increased 1 -> 2.5.
+- New sprites for roads.
+- Tested with the in-game wiki, some information is available. [If you have any suggestions, feel free to share them on Discord]. The wiki won't be definitive, but it's there to help you.
+- Thanks to pixel_rice_bowl for the new sprites(Road and Grape)
+- Current sprites will be replaced by sprites created by pixel_rice_bowl.
+- The Chinese translation has been updated by H2wlkr. The Chinese version will soon be available on Steam.
 
 ## 22-03-2024 4.0.1 Patch
 - The LandingParty for wood is increase to 120 -> 140

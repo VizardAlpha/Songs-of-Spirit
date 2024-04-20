@@ -1,7 +1,7 @@
 ICON: {
 	BG: 32->BG->3,
-	FG: 24->resource->Grape->0,
-	SHADOW: 2,
+	FG: 32->GRAPE->0,
+	SHADOW: 1,
 },
 GROWABLE: GRAPE,
 RESOURCES: [GRAPE,],
