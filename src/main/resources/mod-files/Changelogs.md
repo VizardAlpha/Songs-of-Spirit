@@ -1,4 +1,4 @@
-## 22-04-2024 4.1.0 Minor
+## 23-04-2024 4.1.0 Minor
 - Wild horses give more meat and leather. 0.25 -> 0.7 and 0.25 -> 0.5
 - Wild horses now do 0.3 pierce damage.
 - It is no longer possible to find a sand deposit in the mountains.
@@ -21,6 +21,8 @@
 - Musket stats have been adjusted. + piercing.
 - Fix GlassMaker which was not added to the technology, my bad.
 - Your city map is 13 times larger. (It's a test)
+- Currently it is not possible to view in-game credits and changelogs.
+- The Wiki test will be available in the next major release.
 
 ## 20-04-2024 4.0.2 Patch
 - The bread recipe has been modified, requiring less water 2.5 -> 1.5.
