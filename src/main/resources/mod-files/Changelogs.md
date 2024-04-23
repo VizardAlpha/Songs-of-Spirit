@@ -1,26 +1,26 @@
 ## 22-04-2024 4.1.0 Minor
-- Les chevaux sauvage donne plus de viande et de cuir. 0.25 -> 0.7 et 0.25 -> 0.5
-- Les chevaux sauvage font désormais 0.3 de dégat de perce.
-- Il n'est plus possible de trouver un gisement de sable en montagne.
-- Fix sur la fertilé des gisements qui n'était pas appliqué correctement.
-- L'eau est considérer comme une boisson maintenant. (C'est un test)
-- La production des vignes et riz a été baissé en zone froide. 0.5 -> 0.2
-- Les accidents par années des mines a été ajuster sur la version vanilla de la mine de gem, de meme pour la dégradations.
-- Les accidents par années des paturages ont été ajuster pour correspondre au vanilla.
-- La deuxieme recette du boulanger a été ajuster. Elle donnera plus de pain et coutera un peu moins chere.
-- Mise a jour des fichiers Songs of Spirit pour correspondre aux changements vanilla. (Trop de changement :( )
-- La deuxieme recette du vignificateur a été ajuster. Elle donnera plus de vin. 9 -> 12
-- Le cout de production de l'arc en corde a été réduit. 2 -> 1.5
-- Les cout de production de l'arbalete ont été réduit.
-- Le bois transformer en planche a été augmenter. 4 -> 6
-- Le cout en planche pour les fournitures a été augmenter. 2 -> 3
-- La production des fournitures a été augmenter. 0.75 -> 1
-- Le cout en bois pour la création d'arme en bois a été réduite. 3 -> 2.5
-- Le cout en Or et en tools de la deuxieme recette pour la creation de bijoux a été reduite. 6 -> 4 et 4 -> 3
-- Les dégats de l'arme en bois a été reduite, ainsi que son percing. 1.5 -> 1.2 et 1.3 -> 1.1
-- Les stats du musket ont été ajuster. Plus de percing.
-- Fix du GlassMaker qui n'était pas rajouter au technologie, my bad.
-- 
+- Wild horses give more meat and leather. 0.25 -> 0.7 and 0.25 -> 0.5
+- Wild horses now do 0.3 pierce damage.
+- It is no longer possible to find a sand deposit in the mountains.
+- Fix on the fertility of deposits which was not applied correctly.
+- Water is considered a drink now. (It's a test)
+- The production of vines and rice was reduced in the cold zone. 0.5 -> 0.2
+- The accidents per year of the mines have been adjusted on the vanilla version of the gem mine, the same for the degradations.
+- Accidents per year of pastures have been adjusted to match vanilla.
+- The second baker's recipe has been adjusted. It will give more pain and cost a little less.
+- Updated Songs of Spirit files to match vanilla changes. (Too much change :( )
+- The second winemaker recipe has been adjusted. She will give more wine. 9 -> 12
+- The production cost of the String Bow has been reduced. 2 -> 1.5
+- Crossbow production costs have been reduced.
+- Wood transformed into planks has been increased. 4 -> 6
+- The board cost for supplies has been increased. 2 -> 3
+- Production of supplies has been increased. 0.75 -> 1
+- The wood cost for creating wooden weapons has been reduced. 3 -> 2.5
+- The cost of Gold and tools for the second recipe for creating jewelry has been reduced. 6 -> 4 and 4 -> 3
+- The damage of the wooden weapon has been reduced, as well as its piercing. 1.5 -> 1.2 and 1.3 -> 1.1
+- Musket stats have been adjusted. + piercing.
+- Fix GlassMaker which was not added to the technology, my bad.
+- Your city map is 13 times larger. (It's a test)
 
 ## 20-04-2024 4.0.2 Patch
 - The bread recipe has been modified, requiring less water 2.5 -> 1.5.

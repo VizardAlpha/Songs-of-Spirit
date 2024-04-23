@@ -1,0 +1,6 @@
+**LOW = easier beginning, harder end, HIGH = harder beginning, easier end
+HAPPINESS_EXPONENT: 0.35,
+TOURIST_PER_YEAR_MAX: 256,
+TOURIST_CRETIDS: 500,
+**must be a multiple of 32
+DIMENSION: 1184,
