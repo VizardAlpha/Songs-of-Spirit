@@ -23,7 +23,7 @@ INDUSTRY: {
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
-	SOUND: DIG,
+	SOUND: impact->Dig*,
 	USES_TOOL: true,
 	FULFILLMENT: 0,
 },

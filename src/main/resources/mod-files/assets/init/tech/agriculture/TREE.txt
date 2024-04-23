@@ -1,6 +1,6 @@
 TREE: {
 	0: [WOOD0,_____,FIEL0,_____,FIEL5,FIEL8,_____,],
-	1: [_____,_____,_____,FIEL6,FIEL7,FIEL9,FIEL10,],
+	1: [WOOD1,_____,_____,FIEL6,FIEL7,FIEL9,FIEL10,],
 	2: [FIEL1,FIEL2,FIEL3,FIEL4,FIEL11,FIEL12,_____,],
-
+	3: [_____,FRUI1,GRAI0,_____,COTT0,_____,_____,],
 },

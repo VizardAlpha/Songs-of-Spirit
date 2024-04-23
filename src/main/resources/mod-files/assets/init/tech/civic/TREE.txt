@@ -1,7 +1,7 @@
 TREE: {
-	0: [FOOD0,_____,HEAL0,HEAL4,REL00,LAW00,ENTE0,],
-	1: [FOOD1,FOOD2,HEAL3,HEAL2,REL11,REL22,ENTE1,],
-	2: [FOOD3,FOOD4,HEAL6,HEAL5,_____,REL33,ENTE2,],
-	3: [_____,FOOD5,WATER0,HEAL7,KITC0,_____,_____,],
+	0: [FOOD0,_____,REL00,_____,ENTE0,_____,_____,],
+	1: [FOOD1,FOOD2,REL11,REL22,ENTE1,_____,_____,],
+	2: [FOOD3,FOOD4B,_____,REL33,ENTE2,_____,_____,],
+	3: [FOOD4,FOOD5,WATER0,KITC0,_____,_____,_____,],
 	4: [HORS0,_____,WATER1,_____,KITC1,KITC2,KITC3,],
 },

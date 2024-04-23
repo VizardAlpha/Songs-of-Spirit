@@ -2,7 +2,9 @@ MASS: 120,
 SPEED: 6,
 HEIGHT: 8,
 DANGER: 0,
-SOUND: HORSE,
+SOUND: [
+    animal->Horse*,
+],
 
 ICON: 32->animal->Horse->0,
 SPRITE: Horse,
@@ -11,7 +13,7 @@ LIVES_IN_CAVES: 0,
 CARAVAN: true,
 
 RESOURCES: [MEAT,LEATHER,],
-RESOURCE_AMOUNT: [0.25,0.25,],
+RESOURCE_AMOUNT: [0.7,0.5,],
 
 CLIMATE: {
 	COLD: 0.5,
@@ -29,5 +31,5 @@ PACK: true,
 GRAZES: true,
 
 DAMAGE: {
-	PIERCE: 0.2,
+	PIERCE: 0.3,
 },

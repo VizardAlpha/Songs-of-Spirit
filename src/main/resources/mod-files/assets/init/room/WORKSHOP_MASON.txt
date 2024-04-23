@@ -19,8 +19,8 @@ ITEMS: [
 ],
 WORK: {
 	SHIFT_OFFSET: 0.325,
-	SOUND: STONE,
-	ACCIDENTS_PER_YEAR: 0.0025,
+	SOUND: impact->Mason*,
+	ACCIDENTS_PER_YEAR: 0.025,
 	FULFILLMENT: 1.0,
 },
 
@@ -31,7 +31,7 @@ INDUSTRIES: [
 				STONE: 2,
 			},
 			OUT: {
-				STONE_CUT: 0.5,
+				STONE_CUT: 1,
 			},
 		},
 	},
@@ -41,7 +41,7 @@ INDUSTRIES: [
 				SAND: 2,
 			},
 			OUT: {
-				SANDSTONE_BRICK: 0.5,
+				SANDSTONE_BRICK: 1,
 			},
 		},
 	},

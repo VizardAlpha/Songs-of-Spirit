@@ -6,7 +6,7 @@
 
     <groupId>vizardalpha.songsofspirit</groupId>
     <artifactId>songs-of-spirit</artifactId>
-    <version>4.0.1</version>
+    <version>4.1.0</version>
     <properties>
         <!-- Songs of Syx uses Java 1.8 -->
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,8 +19,8 @@
         <mod.description>Songs of Spirit is a mod adding new content and working on basic game settings.</mod.description>
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
-        <game.version.major>65</game.version.major>
-        <game.version.minor>65</game.version.minor>
+        <game.version.major>66</game.version.major>
+        <game.version.minor>08</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>
@@ -35,7 +35,7 @@
         <mod.dependency.lib.directory>${project.basedir}/lib</mod.dependency.lib.directory>
         <mod.build.output.directory>${basedir}/target/out/${mod.name}</mod.build.output.directory>
         <mod.files.build.output.directory>${mod.build.output.directory}/${game.version.directory}</mod.files.build.output.directory>
-        <mod.script.output.directory>${mod.files.build.output.directory}/script/jar</mod.script.output.directory>
+        <mod.script.output.directory>${mod.files.build.output.directory}/script</mod.script.output.directory>
         <mod.source.output.directory>${mod.files.build.output.directory}/script/_src</mod.source.output.directory>
         <mod.files.directory>${project.basedir}/src/main/resources/${mod.files.name}</mod.files.directory>
 
@@ -144,7 +144,7 @@
         <dependency>
             <groupId>org.songsofsyx</groupId>
             <artifactId>songsofsyx</artifactId>
-            <version>${game.version}</version>
+            <version>${game.version.major}.${game.version.minor}</version>
         </dependency>
 
         <!-- Lazy Developer -->

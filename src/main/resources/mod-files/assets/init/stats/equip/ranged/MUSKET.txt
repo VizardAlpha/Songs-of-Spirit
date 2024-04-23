@@ -21,7 +21,7 @@ SLOT_USAGE: [
 ],
 
 BOOST: {
-    BATTLE_RANGED_MUSKET>MUL: 0.5,
+    BATTLE_RANGED_MUSKET>ADD: 0.5,
 	BATTLE_DEFENCE_SKILL>MUL: 0.5,
 	PHYSICS_SPEED>MUL: 0.80,
 },
@@ -29,9 +29,8 @@ BOOST: {
 PROJECTILE: {
 	COLOR: 30_20_8,
 	**SPRITE_FILE: sprites/settlement/projectile
-	** ^^ if not present, then a special arrow is drawn
-	SOUND_RELEASE: MUSKET_RELEASE,
-	SOUND_HIT: MUSKET_HIT,
+	SOUND_RELEASE: swing->Musket*,
+	SOUND_HIT: impact->Musket*,
 
 	FROM: {
 		TILE_SPEED: 50,
@@ -39,7 +38,7 @@ PROJECTILE: {
 		ACCURACY: 0.7,
 		MAX_ARCH_ANGLE_DEGREES: 50,
 		DAMAGE: {
-			PIERCE: 25,
+			PIERCE: 45,
 		},
 		MASS: 1,
 		TILE_RADIUS_DAMAGE: 0,
@@ -48,7 +47,7 @@ PROJECTILE: {
 	TO: {
 		TILE_SPEED: 65,
 		RELOAD_SECONDS: 6,
-		ACCURACY: 0.99,
+		ACCURACY: 0.95,
 		MAX_ARCH_ANGLE_DEGREES: 65,
 		DAMAGE: {
 			PIERCE: 55,

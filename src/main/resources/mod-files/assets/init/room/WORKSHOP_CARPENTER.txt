@@ -29,8 +29,11 @@ UPGRADES: [
 ],
 WORK: {
 	SHIFT_OFFSET: 0.325,
-	SOUND: AXE,
-	ACCIDENTS_PER_YEAR: 0.0025,
+	SOUND: [
+           	impact->Axe*,
+           	impact->HammerSoft*,
+    ],
+	ACCIDENTS_PER_YEAR: 0.025,
 	FULFILLMENT: 1.0,
 },
 
@@ -41,24 +44,24 @@ INDUSTRIES: [
 				WOOD: 2.0,
 			},
 			OUT: {
-				PLANK: 4.0,
+				PLANK: 6.0,
 			},
 		},
 	},
 	{
     	INDUSTRY: {
     		IN: {
-    			PLANK: 2.0,
+    			PLANK: 3.0,
     		},
     		OUT: {
-    			FURNITURE: 0.75,
+    			FURNITURE: 1.0,
     		},
     	},
     },
     {
 		INDUSTRY: {
 			IN: {
-				WOOD: 3.0,
+				WOOD: 2.5,
 			},
 			OUT: {
 				WOODEN_WEAPON: 0.5,

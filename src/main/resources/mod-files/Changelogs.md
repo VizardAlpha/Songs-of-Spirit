@@ -1,3 +1,38 @@
+## 23-04-2024 4.1.0 Minor
+- Wild horses give more meat and leather. 0.25 -> 0.7 and 0.25 -> 0.5
+- Wild horses now do 0.3 pierce damage.
+- It is no longer possible to find a sand deposit in the mountains.
+- Fix on the fertility of deposits which was not applied correctly.
+- Water is considered a drink now. (It's a test)
+- The production of vines and rice was reduced in the cold zone. 0.5 -> 0.2
+- The accidents per year of the mines have been adjusted on the vanilla version of the gem mine, the same for the degradations.
+- Accidents per year of pastures have been adjusted to match vanilla.
+- The second baker's recipe has been adjusted. It will give more pain and cost a little less.
+- Updated Songs of Spirit files to match vanilla changes. (Too much change :( )
+- The second winemaker recipe has been adjusted. She will give more wine. 9 -> 12
+- The production cost of the String Bow has been reduced. 2 -> 1.5
+- Crossbow production costs have been reduced.
+- Wood transformed into planks has been increased. 4 -> 6
+- The board cost for supplies has been increased. 2 -> 3
+- Production of supplies has been increased. 0.75 -> 1
+- The wood cost for creating wooden weapons has been reduced. 3 -> 2.5
+- The cost of Gold and tools for the second recipe for creating jewelry has been reduced. 6 -> 4 and 4 -> 3
+- The damage of the wooden weapon has been reduced, as well as its piercing. 1.5 -> 1.2 and 1.3 -> 1.1
+- Musket stats have been adjusted. + piercing.
+- Fix GlassMaker which was not added to the technology, my bad.
+- Your city map is 13 times larger. (It's a test)
+- Currently it is not possible to view in-game credits and changelogs.
+- The Wiki test will be available in the next major release.
+
+## 20-04-2024 4.0.2 Patch
+- The bread recipe has been modified, requiring less water 2.5 -> 1.5.
+- Water production increased 1 -> 2.5.
+- New sprites for roads.
+- Tested with the in-game wiki, some information is available. [If you have any suggestions, feel free to share them on Discord]. The wiki won't be definitive, but it's there to help you.
+- Thanks to pixel_rice_bowl for the new sprites(Road and Grape)
+- Current sprites will be replaced by sprites created by pixel_rice_bowl.
+- The Chinese translation has been updated by H2wlkr. The Chinese version will soon be available on Steam.
+
 ## 22-03-2024 4.0.1 Patch
 - The LandingParty for wood is increase to 120 -> 140
 - The cost of making furnishings has been reduced to 4 -> 2 planks

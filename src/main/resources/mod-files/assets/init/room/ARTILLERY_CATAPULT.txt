@@ -14,82 +14,82 @@ PROJECTILE_RESOURCE: STONE,
 PROJECTILE: {
 	SPRITE_FILE: _CATAPULT,
 	COLOR: 255_255_255,
-	SOUND_RELEASE: CATAPULT_RELEASE,
-	SOUND_HIT: CATAPULT_HIT,
+	SOUND_RELEASE: swing->Artillery*,
+	SOUND_HIT: impact->Artillery*,
 
 	FROM: {
-		TILE_SPEED: 30,
-		MASS: 8,
-		DAMAGE: {
-			PIERCE: 0.5,
-		},
-		ACCURACY: 0.80,
-		TILE_RADIUS_DAMAGE: 2,
-		RELOAD_SECONDS: 60,
-		MAX_ARCH_ANGLE_DEGREES: 50,
-	},
-	TO: {
-		TILE_SPEED: 55,
-		MASS: 8,
-		DAMAGE: {
-			PIERCE: 0.5,
-		},
-		ACCURACY: 0.90,
-		TILE_RADIUS_DAMAGE: 5,
-		RELOAD_SECONDS: 15,
-		MAX_ARCH_ANGLE_DEGREES: 65,
-	},
+    		TILE_SPEED: 30,
+    		MASS: 8,
+    		DAMAGE: {
+    			PIERCE: 0.5,
+    		},
+    		ACCURACY: 0.80,
+    		TILE_RADIUS_DAMAGE: 2,
+    		RELOAD_SECONDS: 60,
+    		MAX_ARCH_ANGLE_DEGREES: 50,
+    	},
+    TO: {
+        TILE_SPEED: 55,
+        MASS: 8,
+        DAMAGE: {
+            PIERCE: 0.5,
+        },
+        ACCURACY: 0.90,
+        TILE_RADIUS_DAMAGE: 5,
+        RELOAD_SECONDS: 15,
+        MAX_ARCH_ANGLE_DEGREES: 65,
+    },
 },
 
 
 SOUND_WORK: CATAPULT_WORK,
 SPRITES: {
-	BASE_2X2: {
-		SHADOW_LENGTH: 6,
-		ROTATES: true,
-		TINT: true,
-		FRAMES: [
-			ARTILLERY: 0,
-		],
-	},
-	BASE_ROT_2X2: {
-		ROTATES: true,
-		SHADOW_LENGTH: 6,
-		TINT: true,
-		FRAMES: [
-			ARTILLERY: 1,
-		],
-	},
-	ARM_2X2: {
-		ROTATES: true,
-		SHADOW_LENGTH: 6,
-		TINT: true,
-		FRAMES: [
-			ARTILLERY: 2,
-		],
-	},
-	ARM_ROT_2X2: {
-		ROTATES: true,
-		SHADOW_LENGTH: 6,
-		TINT: true,
-		FRAMES: [
-			ARTILLERY: 3,
-		],
-	},
+    BASE_2X2: {
+        SHADOW_LENGTH: 6,
+        ROTATES: true,
+        TINT: true,
+        FRAMES: [
+            ARTILLERY: 0,
+        ],
+    },
+    BASE_ROT_2X2: {
+        ROTATES: true,
+        SHADOW_LENGTH: 6,
+        TINT: true,
+        FRAMES: [
+            ARTILLERY: 1,
+        ],
+    },
+    ARM_2X2: {
+        ROTATES: true,
+        SHADOW_LENGTH: 6,
+        TINT: true,
+        FRAMES: [
+            ARTILLERY: 2,
+        ],
+    },
+    ARM_ROT_2X2: {
+        ROTATES: true,
+        SHADOW_LENGTH: 6,
+        TINT: true,
+        FRAMES: [
+            ARTILLERY: 3,
+        ],
+    },
 
-	TORCH_1X1: {
-		SHADOW_LENGTH: 6,
-		TINT: true,
-		FRAMES: [
-			TORCH: 0,
-		],
-	},
+    TORCH_1X1: {
+        SHADOW_LENGTH: 6,
+        TINT: true,
+        FRAMES: [
+            TORCH: 0,
+        ],
+    },
 
-	STORAGE_1X1: {
-		SHADOW_LENGTH: 1,
-		TINT: true,
-		FRAMES: [
-			STORAGE: 5,
-		],
-	},
+    STORAGE_1X1: {
+        SHADOW_LENGTH: 1,
+        TINT: true,
+        FRAMES: [
+            STORAGE: 5,
+        ],
+    },
 },
