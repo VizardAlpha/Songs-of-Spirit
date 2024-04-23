@@ -21,7 +21,7 @@ SLOT_USAGE: [
 ],
 
 BOOST: {
-    BATTLE_RANGED_CROSSBOW>MUL: 0.5,
+    BATTLE_RANGED_CROSSBOW>ADD: 0.5,
 	BATTLE_DEFENCE_SKILL>MUL: 0.5,
 	PHYSICS_SPEED>MUL: 0.85,
 },
@@ -29,9 +29,8 @@ BOOST: {
 PROJECTILE: {
 	COLOR: 30_20_8,
 	**SPRITE_FILE: sprites/settlement/projectile
-	** ^^ if not present, then a special arrow is drawn
-	SOUND_RELEASE: ARROW_RELEASE,
-	SOUND_HIT: ARROW_HIT,
+	SOUND_RELEASE: swing->Arrow*,
+    SOUND_HIT: impact->Arrow*,
 
 	FROM: {
 		TILE_SPEED: 35,

@@ -28,6 +28,10 @@ STATS: [
 		DESC: "How well this room will perform. Increased by placing Auxiliaries.",
 	},
 	{
+    	NAME: "",
+    	DESC: "",
+    },
+	{
 		NAME: "Production",
 		DESC: "How much will be produced per day. Depends on Workers, water and Efficiency.",
 	},

@@ -1,3 +1,27 @@
+## 22-04-2024 4.1.0 Minor
+- Les chevaux sauvage donne plus de viande et de cuir. 0.25 -> 0.7 et 0.25 -> 0.5
+- Les chevaux sauvage font désormais 0.3 de dégat de perce.
+- Il n'est plus possible de trouver un gisement de sable en montagne.
+- Fix sur la fertilé des gisements qui n'était pas appliqué correctement.
+- L'eau est considérer comme une boisson maintenant. (C'est un test)
+- La production des vignes et riz a été baissé en zone froide. 0.5 -> 0.2
+- Les accidents par années des mines a été ajuster sur la version vanilla de la mine de gem, de meme pour la dégradations.
+- Les accidents par années des paturages ont été ajuster pour correspondre au vanilla.
+- La deuxieme recette du boulanger a été ajuster. Elle donnera plus de pain et coutera un peu moins chere.
+- Mise a jour des fichiers Songs of Spirit pour correspondre aux changements vanilla. (Trop de changement :( )
+- La deuxieme recette du vignificateur a été ajuster. Elle donnera plus de vin. 9 -> 12
+- Le cout de production de l'arc en corde a été réduit. 2 -> 1.5
+- Les cout de production de l'arbalete ont été réduit.
+- Le bois transformer en planche a été augmenter. 4 -> 6
+- Le cout en planche pour les fournitures a été augmenter. 2 -> 3
+- La production des fournitures a été augmenter. 0.75 -> 1
+- Le cout en bois pour la création d'arme en bois a été réduite. 3 -> 2.5
+- Le cout en Or et en tools de la deuxieme recette pour la creation de bijoux a été reduite. 6 -> 4 et 4 -> 3
+- Les dégats de l'arme en bois a été reduite, ainsi que son percing. 1.5 -> 1.2 et 1.3 -> 1.1
+- Les stats du musket ont été ajuster. Plus de percing.
+- Fix du GlassMaker qui n'était pas rajouter au technologie, my bad.
+- 
+
 ## 20-04-2024 4.0.2 Patch
 - The bread recipe has been modified, requiring less water 2.5 -> 1.5.
 - Water production increased 1 -> 2.5.

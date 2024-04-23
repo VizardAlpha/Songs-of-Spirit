@@ -19,9 +19,9 @@ ITEMS: [
 ],
 WORK: {
 	SHIFT_OFFSET: 0.325,
-	SOUND: METAL,
+	SOUND: work->Rope*,
 	FULFILLMENT: 1.0,
-	ACCIDENTS_PER_YEAR: 0.0025,
+	ACCIDENTS_PER_YEAR: 0.025,
 },
 
 INDUSTRIES: [
@@ -29,24 +29,24 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				WOOD: 4.0,
-				ROPE: 2.0,
+				ROPE: 1.5,
 				LEATHER: 1.0,
 			},
 			OUT: {
-				BOW: 0.25,
+				BOW: 0.4,
 			},
 		},
 	},
 	{
 		INDUSTRY: {
 			IN: {
-				WOOD: 6.0,
-				ROPE: 4.0,
-				METAL: 3.0,
-				LEATHER: 2.0,
+				WOOD: 5.0,
+				ROPE: 2.0,
+				METAL: 2.5,
+				LEATHER: 1.5,
 			},
 			OUT: {
-				CROSSBOW: 0.25,
+				CROSSBOW: 0.4,
 			},
 		},
 	},

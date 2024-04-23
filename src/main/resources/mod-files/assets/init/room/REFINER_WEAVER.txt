@@ -33,19 +33,19 @@ UPGRADES: [
 ],
 WORK: {
 	SHIFT_OFFSET: 0.125,
-	SOUND: MACHINE,
+	SOUND: work->Machine*,
 	FULFILLMENT: 0.2,
-	ACCIDENTS_PER_YEAR: 0.005,
+	ACCIDENTS_PER_YEAR: 0.05,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				COTTON: 2.5,
+				COTTON: 3,
 			},
 			OUT: {
-				FABRIC: 2.5,
+				FABRIC: 3,
 			},
 		},
 	},

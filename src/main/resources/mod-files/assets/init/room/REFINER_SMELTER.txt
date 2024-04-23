@@ -1,7 +1,7 @@
 ICON: 32->REFINER->3,
 RESOURCES: [STONE,WOOD,METAL,MACHINERY,],
 AREA_COSTS: [0.2,0,0,0,],
-FLOOR: [DIRT,STONE_SMALL_BRICK,STONE_MEDIUM_DARK,],
+FLOOR: [DIRT,STONE_BRICK,STONE_MEDIUM_DARK,],
 MINI_COLOR: 226_195_38,
 ITEMS: [
 	{
@@ -33,31 +33,31 @@ UPGRADES: [
 ],
 WORK: {
 	SHIFT_OFFSET: 0.125,
-	SOUND: MACHINE,
+	SOUND: work->Machine*,
 	FULFILLMENT: 0.2,
-	ACCIDENTS_PER_YEAR: 0.005,
+	ACCIDENTS_PER_YEAR: 0.05,
 },
 
 INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				COAL: 1,
-				ORE: 1,
+				COAL: 1.25,
+				ORE: 1.25,
 			},
 			OUT: {
-				METAL: 1,
+				METAL: 1.25,
 			},
 		},
 	},
 	{
 		INDUSTRY: {
 			IN: {
-				COAL: 1,
-				GOLD_ORE: 1,
+				COAL: 1.25,
+				GOLD_ORE: 1.25,
 			},
 			OUT: {
-				GOLD_INGOT: 1,
+				GOLD_INGOT: 1.25,
 			},
 		},
 	},

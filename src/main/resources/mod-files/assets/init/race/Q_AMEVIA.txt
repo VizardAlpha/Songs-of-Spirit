@@ -19,6 +19,8 @@ OPINION_FILE_CONFIDENT: Normal,
 KING_FILE: Normal,
 WORLD_NAME_FILE: Misc,
 HOME: AMEVIA,
+RAID_TEXT_FILE: Normal,
+
 TECH: [
 	    *,
 ],
@@ -30,11 +32,18 @@ PREFERRED: {
         EGG,
         SALMON_FLESH,
     ],
+    DRINK: [
+    		*,
+    ],
+    ROAD: {
+    	*: 0.25,
+    	STONE_BRICK : 1.0,
+    },
     STRUCTURE: {
         MOUNTAIN: 0,
-        STONE: 0.7,
+        STONE: 0.5,
         GRAND: 1.0,
-        WOOD: 0.2,
+        WOOD: 0.0,
         MUD: 1.0,
         OUTDOORS: 0.3,
     },
@@ -44,7 +53,7 @@ PREFERRED: {
     },
 
     WORK: {
-    	FISHERY: 1.0,
+    	FISHERY*: 1.0,
     	NURSERY_AMEVIA: 1.0,
         PASTURE_GLOBDIEN: 0.8,
     },
@@ -83,6 +92,9 @@ RESOURCE: {
 RESOURCE_GROOMING: {
 	LEATHER: 1,
 },
+MILITARY_EQUIPMENT_EFFICIENCY: {
+	*: 1,
+},
 STATS: {
 	ACCESS_WATER_SWEET: {
 		CITIZEN: 3,
@@ -103,9 +115,6 @@ STATS: {
 SPRITE_FILE: Q_AMEVIA,
 ICON_SMALL: 24->race->Amevia->0,
 ICON_BIG: 32->race->Amevia->0,
-WORLD_BUILDING_OVERRIDE: {
-
-},
 BOOST: {
 	RELIGION_CRATOR>ADD: 0.0,
 	RELIGION_AMINION>ADD: -0.5,

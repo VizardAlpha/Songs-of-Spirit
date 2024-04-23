@@ -13,17 +13,17 @@ MINI_COLOR: 74_119_14,
 ITEMS: [
 	{
 		COSTS: [1,1,],
-		STATS: [0,1,0,0,],
+		STATS: [0,1,0,0,0,],
 	},
 	{
 		COSTS: [2,2,],
-		STATS: [0,0,1,0,],
+		STATS: [0,0,1,0,0,],
 	},
 ],
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
-	SOUND: SQUISH,
+	SOUND: gore->Squish*,
 	FULFILLMENT: 0.0,
 },
 
@@ -209,4 +209,3 @@ SPRITES: {
 	],
 	
 },
-

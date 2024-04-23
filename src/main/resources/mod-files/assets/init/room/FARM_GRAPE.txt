@@ -23,7 +23,7 @@ INDUSTRY: {
 
 WORK: {
 	SHIFT_OFFSET: 0.125,
-	SOUND: DIG,
+	SOUND: impact->Dig*,
 	USES_TOOL: true,
 	FULFILLMENT: 0,
 },
@@ -32,6 +32,6 @@ BONUS: {
 	CLIMATE: {
 		HOT: 1.9,
 		TEMPERATE: 1.6,
-		COLD: 0.5,
+		COLD: 0.2,
 	},
 },
