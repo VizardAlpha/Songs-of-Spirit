@@ -33,10 +33,10 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
         return false;
     }
 
-    @Override
+    /*@Override
     public boolean forceInit() {
-        return true;
-    }
+        return false;
+    }*/
 
     @Override
     public CharSequence desc() {

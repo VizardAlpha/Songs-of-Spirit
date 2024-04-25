@@ -1,3 +1,6 @@
+## 25-04-2024 4.1.2 Patch
+- Disabling the script for now. (It will be activated as soon as the backups are fixed)
+
 ## 25-04-2024 4.1.1 Patch
 - Fix on map size.
 - The script is selected by default and added automatically for each game.
