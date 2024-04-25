@@ -1,3 +1,7 @@
+## 25-04-2024 4.1.1 Patch
+- Fix on map size.
+- The script is selected by default and added automatically for each game.
+
 ## 23-04-2024 4.1.0 Minor
 - Wild horses give more meat and leather. 0.25 -> 0.7 and 0.25 -> 0.5
 - Wild horses now do 0.3 pierce damage.
