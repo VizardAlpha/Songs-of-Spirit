@@ -28,10 +28,10 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
 
     public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
 
-    @Override
+    /*@Override
     public boolean isSelectable() {
-        return false;
-    }
+        return true;
+    }*/
 
     /*@Override
     public boolean forceInit() {

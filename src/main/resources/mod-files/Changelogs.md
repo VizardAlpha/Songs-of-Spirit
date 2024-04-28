@@ -1,3 +1,6 @@
+## 28-04-2024 4.3.0 Minor
+- Map size reduced to 960 instead of 1216. If you still have any crashes, please let me know.
+
 ## 25-04-2024 4.1.2 Patch
 - Disabling the script for now. (It will be activated as soon as the backups are fixed)
 
