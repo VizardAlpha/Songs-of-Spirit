@@ -1,3 +1,7 @@
+## 30-04-2024 4.3.1 Patch
+- Fix missing stats
+- The script can ben enable.
+
 ## 28-04-2024 4.3.0 Minor
 - Map size reduced to 960 instead of 1216. If you still have any crashes, please let me know.
 
