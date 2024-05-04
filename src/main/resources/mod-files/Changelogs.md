@@ -1,3 +1,6 @@
+## 30-04-2024 4.3.2 Patch
+- Fixed stats for horses in combat.
+
 ## 30-04-2024 4.3.1 Patch
 - Fix missing stats
 - The script can ben enable.
