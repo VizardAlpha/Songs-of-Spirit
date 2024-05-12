@@ -6,7 +6,7 @@
 
     <groupId>vizardalpha.songsofspirit</groupId>
     <artifactId>songs-of-spirit</artifactId>
-    <version>4.3.0</version>
+    <version>4.3.2</version>
     <properties>
         <!-- Songs of Syx uses Java 1.8 -->
         <maven.compiler.source>8</maven.compiler.source>
@@ -20,7 +20,7 @@
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
         <game.version.major>66</game.version.major>
-        <game.version.minor>21</game.version.minor>
+        <game.version.minor>29</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>

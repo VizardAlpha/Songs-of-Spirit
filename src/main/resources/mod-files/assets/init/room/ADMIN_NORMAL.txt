@@ -3,7 +3,7 @@ RESOURCES: [FURNITURE, PAPER, FABRIC,],
 AREA_COSTS: [0.25,0,0,],
 FLOOR: WOOD,
 MINI_COLOR: 134_184_184,
-VALUE_DEGRADE_PER_YEAR: 2.0,
+VALUE_DEGRADE_PER_YEAR: 0.025,
 VALUE_PER_WORKER: 10,
 VALUE_WORK_SPEED: 1,
 
@@ -17,15 +17,15 @@ WORK: {
 ITEMS: [
 	{
 		COSTS: [1,1,0,],
-		STATS: [1,0,],
+		STATS: [1,0,0,],
 	},
 	{
 		COSTS: [1,1,0,],
-		STATS: [0,1.5,],
+		STATS: [0,0,1.5,],
 	},
 	{
 		COSTS: [0,0,1,],
-		STATS: [0,0.25,],
+		STATS: [0,0,0.25,],
 	},
 ],
 
@@ -38,47 +38,47 @@ INDUSTRY: {
 
 SPRITES: {
 	TABLE_COMBO: [
-		{	
+		{
 			TINT: true,
 			SHADOW_HEIGHT: 5,
 			FRAMES: [
-				COMBO_TABLES: 4,	
+				COMBO_TABLES: 4,
 			],
 		},
 	],
 	WORK_UNUSED_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 1,
 			FRAMES: [
-				WORK: 26,	
+				WORK: 26,
 			],
 		},
 	],
 	WORK_USED_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 1,
 			FRAMES: [
-				WORK2: 0,	
+				WORK2: 0,
 			],
 		},
 	],
 	WORK_USED_TOP_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			FPS: 2,
 			FRAMES: [
 				WORK2: 1,
-				WORK2: 2,	
+				WORK2: 2,
 			],
 		},
 	],
 	MISC_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 1,
@@ -90,7 +90,7 @@ SPRITES: {
 		},
 	],
 	STOOL_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 5,
@@ -101,17 +101,17 @@ SPRITES: {
 		},
 	],
 	SHELF_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 5,
 			FRAMES: [
-				SHELVES: 1,	
+				SHELVES: 1,
 			],
 		},
 	],
 	SHELF_TOP_1X1: [
-		{	
+		{
 			ROTATES: true,
 			TINT: true,
 			SHADOW_LENGTH: 1,
@@ -122,14 +122,15 @@ SPRITES: {
 		},
 	],
 	CARPET_COMBO: [
-		{	
+		{
 			TINT: true,
 			FRAMES: [
 				COMBO_CARPETS: 0,
 				COMBO_CARPETS: 1,
 				COMBO_CARPETS: 2,
-				COMBO_CARPETS: 3,	
+				COMBO_CARPETS: 3,
 			],
 		},
 	],
 },
+
