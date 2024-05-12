@@ -1,3 +1,10 @@
+## xx-xx-2024 5.0.0 Major
+- Addition of 50 wooden planks to the starter.
+- Fix the starter. You start a new game with the items listed in the starter.
+- You start the game with two new villagers.
+- The throne building is larger than the vanilla building.
+- 
+
 ## 30-04-2024 4.3.2 Patch
 - Fixed stats for horses in combat.
 
