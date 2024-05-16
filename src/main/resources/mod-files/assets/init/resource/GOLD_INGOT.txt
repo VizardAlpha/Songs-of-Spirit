@@ -5,3 +5,4 @@ MINIMAP_COLOR: 10_10_10,
 SPRITE: Gold_Ingot,
 SPRITE_DEBRIS: Stone,
 CATEGORY_DEFAULT: 2,
+PRICE_CAP: 0.1, **to set a maximum sell price

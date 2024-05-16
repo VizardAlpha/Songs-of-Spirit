@@ -5,3 +5,4 @@ MINIMAP_COLOR: 10_10_10,
 SPRITE: Sushi,
 SPRITE_DEBRIS: Wood,
 CATEGORY_DEFAULT: 0,
+PRICE_CAP: 0.1, **to set a maximum sell price
