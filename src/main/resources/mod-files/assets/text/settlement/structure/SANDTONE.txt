@@ -1,0 +1,13 @@
+INFO: {
+	NAME: "Sandstone Building",
+	NAMES: "Sandstone Buildings",
+	DESC: "Sandstone Buildings built from sandstone brick. Your inhabitants of warmer climates will be happier in these buildings.",
+},
+
+BONUS: {
+	NAME: "Sandstone Structure Construction",
+	DESC: "Decreases construction time of Sandstone Structures.",
+},
+
+NAME_WALL: "Sandstone Wall",
+NAME_CEILING: "Sandstone Ceiling",
