@@ -30,7 +30,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
 
     @Override
     public boolean isSelectable() {
-        return false;
+        return true;
     }
 
     @Override
