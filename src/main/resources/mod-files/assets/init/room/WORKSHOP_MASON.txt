@@ -38,10 +38,10 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-				SAND: 2,
+				SOS_SAND: 2,
 			},
 			OUT: {
-				SANDSTONE_BRICK: 1,
+				SOS_SANDSTONE_BRICK: 1,
 			},
 		},
 	},

@@ -1,0 +1,8 @@
+ICON: 24->resource->SOS_Flour->0,
+DEGRADE_RATE: 0.2,
+COLOR: 255_255_255,
+MINIMAP_COLOR: 10_10_10,
+SPRITE: SOS_Flour,
+SPRITE_DEBRIS: Stone,
+CATEGORY_DEFAULT: 2,
+PRICE_CAP: 0.1, **to set a maximum sell price

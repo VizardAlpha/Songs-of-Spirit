@@ -1,0 +1,35 @@
+MASS: 120,
+SPEED: 6,
+HEIGHT: 8,
+DANGER: 0,
+SOUND: [
+    animal->SOS_Horse*,
+],
+
+ICON: 32->animal->SOS_Horse->0,
+SPRITE: SOS_Horse,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0,
+CARAVAN: true,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.7,],
+
+CLIMATE: {
+	COLD: 0.5,
+	TEMPERATE: 1,
+	HOT: 0.7,
+},
+
+TERRAIN: {
+	FOREST: 0.8,
+	WET: 0.5,
+	NONE: 1.0,
+},
+
+PACK: true,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.3,
+},

@@ -44,14 +44,14 @@ INDUSTRIES: [
 				WOOD: 2.0,
 			},
 			OUT: {
-				PLANK: 6.0,
+				SOS_PLANK: 6.0,
 			},
 		},
 	},
 	{
     	INDUSTRY: {
     		IN: {
-    			PLANK: 3.0,
+    			SOS_PLANK: 3.0,
     		},
     		OUT: {
     			FURNITURE: 1.0,
@@ -64,7 +64,7 @@ INDUSTRIES: [
 				WOOD: 2.5,
 			},
 			OUT: {
-				WOODEN_WEAPON: 0.5,
+				SOS_WOODEN_WEAPON: 0.5,
 			},
 		},
 	},
@@ -82,7 +82,7 @@ INDUSTRIES: [
 	{
         INDUSTRY: {
             IN: {
-                PLANK: 6.0,
+                SOS_PLANK: 6.0,
                 LEATHER: 2.0,
             },
             OUT: {

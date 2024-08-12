@@ -39,12 +39,23 @@ WORK: {
 },
 
 INDUSTRIES: [
+    {
+		INDUSTRY: {
+			IN: {
+				SOS_FLOUR: 3.0,
+				WOOD: 1.0,
+			},
+			OUT: {
+				BREAD: 2,
+			},
+		},
+	},
 	{
 		INDUSTRY: {
 			IN: {
-			    WATER: 1.5,
-			    SALT: 0.5,
-				GRAIN: 6.0,
+			    SOS_WATER: 2,
+			    SOS_SALT: 0.5,
+				SOS_FLOUR: 6.0,
 				WOOD: 1.0,
 			},
 			OUT: {
@@ -56,9 +67,9 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-			    WATER: 2,
-			    SALT: 1,
-				GRAIN: 6.0,
+			    SOS_WATER: 2,
+			    SOS_SALT: 0.5,
+				SOS_FLOUR: 6.0,
 				COAL: 0.5,
 			},
 			OUT: {
@@ -264,4 +275,3 @@ SPRITES: {
 		},
 	],
 },
-

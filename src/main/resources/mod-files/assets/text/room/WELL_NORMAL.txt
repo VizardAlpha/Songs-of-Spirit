@@ -1,0 +1,54 @@
+INFO: {
+	NAME: "Well",
+	NAMES: "Wells",
+	DESC: "Provides basic bathing and irrigation to nearby land.",
+	WIKI: {
+		CATEGORY: "Service",
+		NAME: "Well",
+		TEXT: "Provides basic bathing and irrigation to nearby land.",
+		CATEGORIES: [],
+	},
+},
+
+BONUS: {
+	NAME: "Wood Cutting",
+	DESC: "Increases the output of your Woodcutters",
+},
+
+WORK: {
+	TITLE: "Woodcutter",
+	VERB: "Transporting water",
+},
+
+STATS: [
+	{
+		NAME: "Spots",
+		DESC: "Available spots",
+	},
+	{
+        NAME: "Workers",
+        DESC: "The amount of workers that can be employed.",
+    },
+    {
+        NAME: "Efficiency",
+        DESC: "How well this room will perform.",
+    },
+    {
+        NAME: "Output",
+        DESC: "The amount of water that will be produced per day.",
+    },
+],
+
+ITEMS: [
+	{
+		NAME: "Well",
+		DESC: "Provides basic fresh water and irrigation to nearby land.",
+	},
+],
+
+SERVICE: {
+	NAME: "Well",
+	NAMES: "Wells",
+	DESC: "Provides basic bathing and irrigation to nearby land.",
+	VERB: "Washing up",
+},

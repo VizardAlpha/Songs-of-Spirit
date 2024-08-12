@@ -1,0 +1,34 @@
+MASS: 75,
+SPEED: 5,
+HEIGHT: 9,
+DANGER: 0.2,
+SOUND: [
+	animal->Bull*,
+],
+
+ICON: 32->animal->Stagbeast->0,
+SPRITE: Stagbeast,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0,
+CARAVAN: false,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.5,],
+
+CLIMATE: {
+	COLD: 1.0,
+	TEMPERATE: 0.0,
+	HOT: 0,
+},
+
+TERRAIN: {
+	FOREST: 1.0,
+	NONE: 0.2,
+},
+
+PACK: false,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.4,
+},

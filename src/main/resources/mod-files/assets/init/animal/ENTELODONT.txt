@@ -1,0 +1,35 @@
+MASS: 55,
+SPEED: 4,
+HEIGHT: 5,
+DANGER: 0.25,
+SOUND: [
+	animal->Pig*,
+],
+
+ICON: 32->animal->Entelodont->0,
+SPRITE: Entelodont,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0,
+CARAVAN: false,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [1,],
+
+CLIMATE: {
+	COLD: 0.5,
+	TEMPERATE: 1,
+	HOT: 0.5,
+},
+
+TERRAIN: {
+	FOREST: 1.0,
+	WET: 1.0,
+	NONE: 0.2,
+},
+
+PACK: true,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.4,
+},

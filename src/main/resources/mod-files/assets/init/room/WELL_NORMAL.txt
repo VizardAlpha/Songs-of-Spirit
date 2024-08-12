@@ -1,0 +1,176 @@
+ICON: 32->SERVICE->6,
+RESOURCES: [STONE,CLAY,STONE_CUT,MACHINERY,],
+AREA_COSTS: [0,0,0,0,],
+FLOOR: [DIRT,STONE1,STONE2,],
+MINI_COLOR: 255_200_0,
+ITEMS: [
+	{
+		COSTS: [2,8,4,1,],
+		STATS: [4,0,0,0,],
+	},
+],
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: work->Machine*,
+	FULFILLMENT: 0.2,
+	ACCIDENTS_PER_YEAR: 0.05,
+},
+
+INDUSTRY: {
+    OUT: {
+        SOS_WATER: 7.0,
+    },
+},
+
+SERVICE: {
+	DEFAULT_ACCESS: 1.0,
+	DEFAULT_VALUE: 1.0,
+	RADIUS: 100,
+	STANDING: {
+		CITIZEN: 1.5,
+		SLAVE: 3,
+		NOBLE: 0,
+		PRIO: 100,
+	},
+	SOUND: work->Rope*,
+	NEED: WELL,
+	BOOST: {
+		CIVIC_HYGINE>ADD: 1.0,
+	},
+},
+UPGRADES: [
+	{
+		RESOURCE_MASK: [1,0,0,0,],
+		BOOST: 0,
+	},
+	{
+		RESOURCE_MASK: [1,1,0,0,],
+		BOOST: 1.0,
+	},
+	{
+		RESOURCE_MASK: [1,1,1,1,],
+		BOOST: 1.0,
+	},
+],
+SPRITES: {
+	STONE_RING_COMBO: [
+		{
+			SHADOW_LENGTH: 2,
+			COLOR: {R:100,G:80,B:70,},
+			FRAMES: [
+				FRAMES: 2,
+			],
+		},
+		{
+			SHADOW_LENGTH: 7,
+			COLOR: {R:210,G:200,B:160,},
+			FRAMES: [
+				FRAMES: 2,
+			],
+		},
+		{
+			SHADOW_LENGTH: 7,
+			COLOR: {R:210,G:200,B:160,},
+			FRAMES: [
+				FRAMES: 2,
+			],
+		},
+	],
+	STONE_RING_STENCIL_COMBO: [
+		{
+			COLOR: {R:60,G:120,B:180,},
+			FRAMES: [
+				FRAMES: 3,
+			],
+		},
+		{
+			COLOR: {R:60,G:120,B:180,},
+			FRAMES: [
+				FRAMES: 3,
+			],
+		},
+		{
+			COLOR: {R:60,G:180,B:240,},
+			FRAMES: [
+				FRAMES: 3,
+			],
+		},
+	],
+	ROOF_EDGE_1X1: [
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			SHADOW_HEIGHT: 12,
+			FRAMES: [
+				2xROOF: 2,
+			],
+		},
+		{
+			SHADOW_HEIGHT: 12,
+			FRAMES: [
+				2xROOF: 4,
+			],
+		},
+	],
+	ROOF_MID_1X1: [
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			SHADOW_HEIGHT: 12,
+			FRAMES: [
+				2xROOF: 3,
+			],
+		},
+		{
+			SHADOW_HEIGHT: 12,
+			FRAMES: [
+				2xROOF: 5,
+			],
+		},
+	],
+	FOUNTAIN_1X1: [
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			SHADOW_LENGTH: 8,
+			FRAMES: [
+				SPECIAL: 0,
+			],
+		},
+	],
+	BUCKET_1X1: [
+		{
+			FRAMES: [
+				
+			],
+		},
+		{
+			SHADOW_HEIGHT: 2,
+			FRAMES: [
+				STORAGE: 10,
+			],
+		},
+		{
+			SHADOW_HEIGHT: 2,
+			FRAMES: [
+				STORAGE: 13,
+			],
+		},
+	],
+},
+

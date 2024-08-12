@@ -1,0 +1,35 @@
+SPEED: 4,
+HEIGHT: 5,
+MASS: 110,
+DANGER: 0.5,
+SOUND: [
+	animal->Bull*,
+],
+
+ICON: 32->animal->Auroch->0,
+SPRITE: Auroch,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0,
+CARAVAN: true,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.8,],
+
+CLIMATE: {
+	COLD: 0.8,
+	TEMPERATE: 1,
+	HOT: 0,
+},
+
+TERRAIN: {
+	FOREST: 0.5,
+	WET: 0.5,
+	NONE: 1.0,
+},
+
+PACK: true,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.4,
+},

@@ -1,0 +1,9 @@
+ICON: 24->resource->SOS_Crossbow->0,
+DEGRADE_RATE: 0.1,
+COLOR: 255_255_255,
+MINIMAP_COLOR: 10_10_10,
+SPRITE: SOS_Crossbow,
+SPRITE_DEBRIS: Metal,
+CATEGORY_DEFAULT: 4,
+PRICE_CAP: 0.1, **to set a maximum sell price
+**PRICE_MUL: 1.1, **to simply increase/decrease price

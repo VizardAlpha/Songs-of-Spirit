@@ -1,8 +1,0 @@
-ICON: 24->resource->Grape->0,
-DEGRADE_RATE: 0.5,
-COLOR: 255_255_255,
-MINIMAP_COLOR: 10_10_10,
-SPRITE: Grape,
-SPRITE_DEBRIS: Wood,
-CATEGORY_DEFAULT: 0,
-PRICE_CAP: 0.1, **to set a maximum sell price

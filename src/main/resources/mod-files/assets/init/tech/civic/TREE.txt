@@ -2,6 +2,6 @@ TREE: {
 	0: [FOOD0,_____,REL00,_____,ENTE0,_____,_____,],
 	1: [FOOD1,FOOD2,REL11,REL22,ENTE1,_____,_____,],
 	2: [FOOD3,FOOD4B,_____,REL33,ENTE2,_____,_____,],
-	3: [FOOD4,FOOD5,WATER0,KITC0,_____,_____,_____,],
-	4: [HORS0,_____,WATER1,_____,KITC1,KITC2,KITC3,],
+	3: [FOOD4,FOOD5,_____,SOS_KITC0,_____,_____,_____,],
+	4: [SOS_HORS0,_____,_____,_____,SOS_KITC1,SOS_KITC2,SOS_KITC3,],
 },

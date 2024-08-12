@@ -30,7 +30,7 @@ PREFERRED: {
         FISH,
         FRUIT,
         EGG,
-        SALMON_FLESH,
+        SOS_SALMON_FLESH,
     ],
     DRINK: [
     		*,

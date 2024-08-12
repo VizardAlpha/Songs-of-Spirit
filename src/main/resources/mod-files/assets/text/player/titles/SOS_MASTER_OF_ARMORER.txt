@@ -1,0 +1,2 @@
+NAME: "The master armorer",
+DESC: "Gained by craft lots of weapon ! Increase the prod !",

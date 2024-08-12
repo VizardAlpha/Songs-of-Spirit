@@ -29,7 +29,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				WOOD: 4.0,
-				ROPE: 1.5,
+				SOS_ROPE: 1.5,
 				LEATHER: 1.0,
 			},
 			OUT: {
@@ -41,12 +41,12 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				WOOD: 5.0,
-				ROPE: 2.0,
+				SOS_ROPE: 2.0,
 				METAL: 2.5,
 				LEATHER: 1.5,
 			},
 			OUT: {
-				CROSSBOW: 0.4,
+				SOS_CROSSBOW: 0.4,
 			},
 		},
 	},

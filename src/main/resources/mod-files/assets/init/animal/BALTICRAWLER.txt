@@ -1,0 +1,36 @@
+SPEED: 1,
+HEIGHT: 5,
+MASS: 200,
+DANGER: 0.0,
+SOUND: [
+	animal->Lizard*,
+],
+
+ICON: 32->animal->Balticrawler->0,
+SPRITE: Balticrawler,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0.8,
+CARAVAN: false,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [1.15,],
+
+CLIMATE: {
+	COLD: 1.0,
+	TEMPERATE: 1.0,
+	HOT: 0.75,
+},
+
+TERRAIN: {
+	FOREST: 0.1,
+	WET: 0.1,
+	MOUNTAIN: 1.0,
+	NONE: 0.1,
+},
+
+PACK: false,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.2,
+},

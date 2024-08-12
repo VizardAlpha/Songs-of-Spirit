@@ -31,7 +31,7 @@ PREFERRED: {
 		MEAT,
 		FRUIT,
 		EGG,
-		SUSHI,
+		SOS_SUSHI,
 	],
 	DRINK: [
     		ALCO_WINE,
@@ -51,8 +51,8 @@ PREFERRED: {
 		PASTURE_ONX: 1.0,
 		PASTURE_BALTI: 0.1,
 		ORCHARD*: 1.0,
-		PASTURE_HORSE: 1.0,
-		MINE_SAND: 0.0,		
+		PASTURE_SOS_HORSE: 1.0,
+		MINE_SOS_SAND: 0.0,
 	},
 	ROAD: {
     		*: 0.1,

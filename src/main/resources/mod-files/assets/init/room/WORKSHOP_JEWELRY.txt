@@ -40,7 +40,7 @@ INDUSTRIES: [
 		INDUSTRY: {
 			IN: {
 				TOOL: 3,
-				GOLD_INGOT: 4,
+				SOS_GOLD_INGOT: 4,
 			},
 			OUT: {
 				JEWELRY: 1.0,

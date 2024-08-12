@@ -1,0 +1,36 @@
+MASS: 45,
+SPEED: 2,
+HEIGHT: 4,
+DANGER: 0,
+SOUND: [
+	animal->Lizard*,
+],
+
+ICON: 32->animal->Globdien->0,
+SPRITE: Globdien,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0.2,
+CARAVAN: false,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.5,],
+
+CLIMATE: {
+	COLD: 0.1,
+	TEMPERATE: 0.4,
+	HOT: 1,
+},
+
+TERRAIN: {
+	FOREST: 0.1,
+	WET: 1,
+	NONE: 0.1,
+	OCEAN: 1,
+},
+
+PACK: true,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.4,
+},

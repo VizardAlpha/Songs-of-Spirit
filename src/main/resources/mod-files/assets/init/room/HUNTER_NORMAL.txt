@@ -1,0 +1,84 @@
+ICON: 32->WORK->4,
+RESOURCES: [FURNITURE,],
+AREA_COSTS: [0.2,],
+FLOOR: WOOD_SQUARE,
+MINI_COLOR: 74_119_14,
+ITEMS: [
+	{
+		COSTS: [2,],
+		STATS: [1,0,0,],
+	},
+	{
+		COSTS: [2,],
+		STATS: [0,0.4,0,],
+	},
+],
+
+MAX_EMPLOYED: 15,
+INDUSTRIES: [
+	{
+		INDUSTRY: {
+			IN: {
+
+			},
+			OUT: {
+				SOS_CORPS: 7,
+			},
+		},
+	},
+	
+	{
+		INDUSTRY: {
+			IN: {
+
+			},
+			OUT: {
+				SOS_CORPS: 12,
+			},
+		},
+	},
+],
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: gore->Squish*,
+	USES_TOOL: true,
+	FULFILLMENT: 1.0,
+},
+BONUS: {
+	CLIMATE: {
+		COLD: 1.2,
+	},
+},
+SPRITES: {
+	
+	TABLE_COMBO: {
+		SHADOW_LENGTH: 0,
+		SHADOW_HEIGHT: 5,
+		FRAMES: [
+			COMBO_TABLES:1,
+			COMBO_TABLES:8,
+		],
+	
+	},
+	STORAGE_1X1: {
+		SHADOW_LENGTH: 3,
+		SHADOW_HEIGHT: 0,
+		FRAMES: [
+			STORAGE:1,
+			STORAGE:5,
+		],
+	},
+	NICKNACK_1X1: {
+		ROTATES: false,
+		SHADOW_LENGTH: 3,
+		SHADOW_HEIGHT: 0,
+		FRAMES: [
+			TOP: 0,
+			TOP: 1,
+			ANIMAL: 0,
+			ANIMAL: 1,
+		],
+	},
+},
+

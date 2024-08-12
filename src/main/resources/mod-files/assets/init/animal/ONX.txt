@@ -1,0 +1,34 @@
+SPEED: 4,
+HEIGHT: 6,
+MASS: 45,
+DANGER: 0.1,
+SOUND: [
+	animal->Sheep*,
+],
+
+ICON: 32->animal->Onx->0,
+SPRITE: Onx,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0,
+CARAVAN: true,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.8,],
+
+CLIMATE: {
+	COLD: 1.0,
+	TEMPERATE: 1,
+	HOT: 0,
+},
+
+TERRAIN: {
+	FOREST: 0.5,
+	NONE: 1.0,
+},
+
+PACK: true,
+GRAZES: true,
+
+DAMAGE: {
+	PIERCE: 0.4,
+},

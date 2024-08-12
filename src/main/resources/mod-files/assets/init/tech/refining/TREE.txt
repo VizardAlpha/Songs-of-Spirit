@@ -1,8 +1,8 @@
 TREE: {
-	0: [BREW0,BAKE3,BAKE0,CHAR0,SMEL0,GLASS0,WEAV0,],
-	1: [BREW3,BAKE2,BAKE1,CHAR1,SMEL1,GLASS1,WEAV1,],
+	0: [BREW0,BAKE3,BAKE0,CHAR0,SMEL0,SOS_GLASS0,WEAV0,],
+	1: [BREW3,BAKE2,BAKE1,CHAR1,SMEL1,SOS_GLASS1,WEAV1,],
 	2: [BREW1,_____,_____,CHAR2,SMEL2,SMEL4,WEAV2,],
-	3: [BREW2,_____,VINIF0,CHAR3,SMEL3,SMEL5,WEAV3,],
-	4: [_____,_____,VINIF1,_____,_____,_____,WEAV4,],
-	5: [_____,_____,VINIF2,_____,_____,_____,_____,],
+	3: [BREW2,_____,SOS_VINIF0,CHAR3,SMEL3,SOS_SMEL5,WEAV3,],
+	4: [_____,_____,SOS_VINIF1,_____,_____,_____,SOS_WEAV4,],
+	5: [_____,_____,SOS_VINIF2,_____,_____,_____,_____,],
 },

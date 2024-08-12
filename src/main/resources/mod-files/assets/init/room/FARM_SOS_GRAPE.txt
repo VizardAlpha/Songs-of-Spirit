@@ -1,0 +1,37 @@
+ICON: {
+	BG: 32->BG->3,
+	FG: 32->SOS_GRAPE->0,
+	SHADOW: 1,
+},
+GROWABLE: SOS_GRAPE,
+RESOURCES: [SOS_GRAPE,],
+AREA_COSTS: [0.1,],
+MINI_COLOR: 74_119_14,
+MINI_COLOR_PATTERN: [
+	"44444444",
+	"99999999",
+	"00000000",
+	"44444444",
+],
+INDOORS: false,
+
+INDUSTRY: {
+	OUT: {
+		SOS_GRAPE: 3.0,
+	},
+},
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: impact->Dig*,
+	USES_TOOL: true,
+	FULFILLMENT: 0,
+},
+
+BONUS: {
+	CLIMATE: {
+		HOT: 1.9,
+		TEMPERATE: 1.6,
+		COLD: 0.2,
+	},
+},

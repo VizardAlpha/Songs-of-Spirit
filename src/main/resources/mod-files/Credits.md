@@ -1,5 +1,7 @@
-# Dev
-- VizardAlpha [Creator]
+# Creator
+- VizardAlpha [Assets]
+
+# Teams
 - 4rg0n [Script]
 - pixel_rice_bowl [Sprites]
 
@@ -18,6 +20,7 @@
 - aura
 - Roshag
 - MinosAsterion
+- Riley
 
 
 ---

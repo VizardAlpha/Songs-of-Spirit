@@ -1,0 +1,37 @@
+ICON: {
+	BG: 32->BG->3,
+	FG: 24->resource->SOS_Rice->0,
+	SHADOW: 2,
+},
+GROWABLE: SOS_RICE,
+RESOURCES: [SOS_RICE,],
+AREA_COSTS: [0.1,],
+MINI_COLOR: 74_119_14,
+MINI_COLOR_PATTERN: [
+	"44444444",
+	"99999999",
+	"00000000",
+	"44444444",
+],
+INDOORS: false,
+
+INDUSTRY: {
+	OUT: {
+		SOS_RICE: 4.0,
+	},
+},
+
+WORK: {
+	SHIFT_OFFSET: 0.125,
+	SOUND: impact->Dig*,
+	USES_TOOL: true,
+	FULFILLMENT: 0,
+},
+
+BONUS: {
+	CLIMATE: {
+		HOT: 1.4,
+		TEMPERATE: 1.8,
+		COLD: 0.2,
+	},
+},

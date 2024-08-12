@@ -1,0 +1,35 @@
+MASS: 75,
+SPEED: 6,
+HEIGHT: 7,
+DANGER: 1.0,
+SOUND: [
+	animal->Lion*,
+],
+
+ICON: 32->animal->Smilodon->0,
+SPRITE: Smilodon,
+COLOR: 255_255_255,
+LIVES_IN_CAVES: 0.5,
+CARAVAN: false,
+
+RESOURCES: [SOS_CORPS,],
+RESOURCE_AMOUNT: [0.5,],
+
+CLIMATE: {
+	COLD: 0.5,
+	TEMPERATE: 0.5,
+	HOT: 0.1,
+},
+
+TERRAIN: {
+	FOREST: 0.2,
+	MOUNTAIN: 0.5,
+	NONE: 0.05,
+},
+
+PACK: false,
+GRAZES: false,
+
+DAMAGE: {
+	PIERCE: 0.6,
+},

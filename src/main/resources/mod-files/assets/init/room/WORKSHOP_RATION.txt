@@ -93,7 +93,7 @@ INDUSTRIES: [
 	    {
 		INDUSTRY: {
 			IN: {
-				RICE: 4,
+				SOS_RICE: 4,
 				HERB: 1,
 			},
 			OUT: {

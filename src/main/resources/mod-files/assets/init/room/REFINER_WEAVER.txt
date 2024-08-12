@@ -55,7 +55,7 @@ INDUSTRIES: [
 				COTTON: 3.5,
 			},
 			OUT: {
-				ROPE: 3.0,
+				SOS_ROPE: 3.0,
 			},
 		},
 	},
