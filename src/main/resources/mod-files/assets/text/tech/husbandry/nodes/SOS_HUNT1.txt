@@ -1,2 +1,2 @@
-NAME: "?",
-DESC: "?",
+NAME: "Expert Hunting",
+DESC: "After hunting a certain number of animals, you have acquired a thorough knowledge of hunting. Your hunters will bring in more carcasses.",
