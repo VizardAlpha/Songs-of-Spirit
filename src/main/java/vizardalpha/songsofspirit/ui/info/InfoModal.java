@@ -122,7 +122,7 @@ public class InfoModal extends Interrupter {
             protected void renAction() {
                 selectedSet(switcher.current() == panel);
             }
-        }.setDim(136, 32)));
+        }));
 
         githubButton = new GButt.ButtPanel("Translation");
         discordButton = new GButt.ButtPanel("Discord");
