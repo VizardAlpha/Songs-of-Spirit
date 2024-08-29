@@ -42,7 +42,6 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-			    WATER: 1.5,
 			    SALT: 0.5,
 				GRAIN: 6.0,
 				WOOD: 1.0,
@@ -56,7 +55,6 @@ INDUSTRIES: [
 	{
 		INDUSTRY: {
 			IN: {
-			    WATER: 2,
 			    SALT: 1,
 				GRAIN: 6.0,
 				COAL: 0.5,

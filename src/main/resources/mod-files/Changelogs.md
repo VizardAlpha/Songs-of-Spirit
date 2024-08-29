@@ -1,3 +1,7 @@
+## 29-08-2024 4.4.0 Minor
+- In version 4.x.x, water will no longer be mandatory for food preparation. However, it will still be available in the research.
+- Changeslogs are available in-game again.
+
 ## 30-04-2024 4.3.2 Patch
 - Fixed stats for horses in combat.
 
