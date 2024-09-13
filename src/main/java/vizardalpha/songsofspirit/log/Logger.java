@@ -3,37 +3,32 @@ package vizardalpha.songsofspirit.log;
 
 import lombok.Getter;
 import lombok.Setter;
-import snake2d.LOG;
+import vizardalpha.songsofspirit.log.writer.LogWriter;
+import vizardalpha.songsofspirit.log.writer.StdOut;
+import vizardalpha.songsofspirit.util.ExceptionUtil;
 import vizardalpha.songsofspirit.util.StringUtil;
 
-import java.time.LocalTime;
 import java.util.Arrays;
-import java.util.logging.Level;
 
 /**
- * trace {@link Level#FINER}
- * debug {@link Level#FINE}
- * info {@link Level#INFO}
- * warn {@link Level#WARNING}
- * error {@link Level#SEVERE}
+ * For printing messages with different log {@link Level}s to the system output
  */
+@Getter
 public class Logger {
 
-    public static final String PREFIX_MOD = "SoS";
-    private final static Level DEFAULT_LEVEL = Level.INFO;
+    public static final String PREFIX_MOD = "MOD";
+    private final static Level DEFAULT_LEVEL = Loggers.getRootLevel();
     private final static String LOG_MSG_FORMAT = "[%s|%s]%s[%s] %s";
     private final static int NAME_DISPLAY_MAX_LENGTH = 32;
 
-    @Getter
     private final String name;
-    @Getter
     private final String shortName;
-    @Getter
     private final String displayName;
 
-    @Getter
     @Setter
     private Level level;
+    @Setter
+    private LogWriter writer;
 
     public Logger(Class<?> clazz) {
         this(clazz, DEFAULT_LEVEL);
@@ -41,109 +36,83 @@ public class Logger {
 
     public Logger(Class<?> clazz, Level level) {
         this.name = clazz.getCanonicalName();
-        this.shortName = StringUtil.shortenName(clazz);
+        this.shortName = StringUtil.shortenClassName(clazz);
         this.displayName = StringUtil.cutOrFill(shortName, NAME_DISPLAY_MAX_LENGTH, false);
         this.level = level;
+        this.writer = new StdOut(PREFIX_MOD, LOG_MSG_FORMAT, displayName);
     }
 
     public boolean isLevel(Level level) {
-        return (this.level.intValue() > level.intValue());
+        return (this.level.getValue() > level.getValue());
     }
 
     public void info(String formatMsg, Object... args) {
-        log("INFO", Level.INFO, formatMsg, args);
+        log(Level.INFO, formatMsg, args);
     }
 
     public void debug(String formatMsg, Object... args) {
-        log("DEBUG", Level.FINE, formatMsg, args);
+        log(Level.DEBUG, formatMsg, args);
     }
 
     public void trace(String formatMsg, Object... args) {
-        log("TRACE", Level.FINER, formatMsg, args);
+        log(Level.TRACE, formatMsg, args);
     }
 
     public void warn(String formatMsg, Object... args) {
-        log("WARN", Level.WARNING, formatMsg, args);
+        log(Level.WARN, formatMsg, args);
     }
 
     public void error(String formatMsg, Object... args) {
-        logErr("ERROR", Level.SEVERE, formatMsg, args);
+        logErr(Level.ERROR, formatMsg, args);
+    }
+
+    public void critical(String formatMsg, Object... args) {
+        logErr(Level.CRIT, formatMsg, args);
     }
 
 
-    private void log(String msgPrefix, Level level, String formatMsg, Object... args) {
+    private void log(Level level, String formatMsg, Object... args) {
         if (isLevel(level)) {
             return;
         }
 
-        Throwable ex = extractThrowable(args);
+        Throwable ex = ExceptionUtil.extractThrowableLast(args);
 
         if (ex != null) {
             args = Arrays.copyOf(args, args.length - 1);
 
-            doLog(msgPrefix, formatMsg, args);
-            printException(ex);
+            doLog(levelText(level), formatMsg, args);
+            writer.exception(ex);
         } else {
-            doLog(msgPrefix, formatMsg, args);
+            doLog(levelText(level), formatMsg, args);
         }
     }
 
-    private void doLog(String msgPrefix, String formatMsg, Object[] args) {
-        LOG.ln(String.format(LOG_MSG_FORMAT,
-            PREFIX_MOD,
-            timestamp(),
-            displayName,
-            msgPrefix,
-            String.format(formatMsg, StringUtil.stringifyValues(args))));
-    }
-
-    private void logErr(String msgPrefix, Level level, String formatMsg, Object... args) {
+    private void logErr(Level level, String formatMsg, Object... args) {
         if (isLevel(level)) {
             return;
         }
 
-        Throwable ex = extractThrowable(args);
+        Throwable ex = ExceptionUtil.extractThrowableLast(args);
 
         if (ex != null) {
             args = Arrays.copyOf(args, args.length - 1);
-            doLogErr(msgPrefix, formatMsg, args);
-            printException(ex);
+            doLogErr(levelText(level), formatMsg, args);
+            writer.exception(ex);
         } else {
-            doLogErr(msgPrefix, formatMsg, args);
+            doLogErr(levelText(level), formatMsg, args);
         }
     }
 
     private void doLogErr(String msgPrefix, String formatMsg, Object[] args) {
-        LOG.err((String.format(LOG_MSG_FORMAT,
-            PREFIX_MOD,
-            timestamp(),
-            displayName,
-            msgPrefix,
-            String.format(formatMsg, StringUtil.stringifyValues(args)))));
+        writer.error(msgPrefix, formatMsg, args);
     }
 
-    private void printException(Throwable ex) {
-        System.out.println("\n" + ex.getMessage());
-        ex.printStackTrace(System.out);
-        System.out.println();
+    private void doLog(String prefix, String formatMsg, Object[] args) {
+        writer.log(prefix, formatMsg, args);
     }
 
-    private Throwable extractThrowable(Object[] args) {
-        Object lastArg = null;
-        int lastPos = args.length - 1;
-
-        if (lastPos >= 0) {
-            lastArg = args[lastPos];
-        }
-
-        if (lastArg instanceof Throwable) {
-            return (Throwable) lastArg;
-        }
-
-        return null;
-    }
-
-    private String timestamp() {
-        return LocalTime.now().toString();
+    private String levelText(Level level) {
+        return level.getName();
     }
 }

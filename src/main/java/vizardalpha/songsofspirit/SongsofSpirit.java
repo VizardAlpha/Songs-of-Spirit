@@ -10,14 +10,13 @@ import vizardalpha.songsofspirit.game.MessageHighlight;
 import vizardalpha.songsofspirit.game.SCRIPT;
 import vizardalpha.songsofspirit.game.api.GameModApi;
 import vizardalpha.songsofspirit.game.api.GameUiApi;
+import vizardalpha.songsofspirit.log.Level;
 import vizardalpha.songsofspirit.log.Logger;
 import vizardalpha.songsofspirit.log.Loggers;
 import vizardalpha.songsofspirit.ui.UIGameConfig;
 import vizardalpha.songsofspirit.ui.info.InfoModal;
 import vizardalpha.songsofspirit.ui.info.store.ChangelogsStore;
 import vizardalpha.songsofspirit.ui.info.store.CreditsStore;
-
-import java.util.logging.Level;
 
 public final class SongsofSpirit implements SCRIPT<Instance.State> {
     private static final Logger log = Loggers.getLogger(SongsofSpirit.class);
@@ -56,7 +55,7 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     @Override
     public SCRIPT_INSTANCE createInstance() {
         log.debug("PHASE: createInstance");
-        Loggers.setLevels(Level.FINEST);
+        Loggers.setLevels(Level.DEBUG);
 
         Instance instance = new Instance(this);
         this.instance = instance;
