@@ -1,0 +1,45 @@
+INFO: {
+	NAME: "Butcher",
+	NAMES: "Butcher",
+	DESC: "The Butcher is a room where workers can process meat and other animal products.",
+},
+
+BONUS: {
+	NAME: "Butcher",
+	DESC: "Increases effectiveness of Butcher.",
+},
+
+WORK: {
+	TITLE: "Chef",
+	VERB: "Making delicatessen",
+},
+
+STATS: [
+	{
+		NAME: "Workers",
+		DESC: "The amount of workers.",
+	},
+	{
+		NAME: "Efficiency",
+		DESC: "Efficiency increases production.",
+	},
+	{
+		NAME: "Empty",
+		DESC: "Empty.",
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Storage",
+		DESC: "The internal storage for produce.",
+	},
+	{
+		NAME: "Work Bench",
+		DESC: "Where subjects work.",
+	},
+	{
+		NAME: "Auxiliary Station",
+		DESC: "Adds Efficiency to the room.",
+	},
+],

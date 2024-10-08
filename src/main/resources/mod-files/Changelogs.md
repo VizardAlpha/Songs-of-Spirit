@@ -1,3 +1,5 @@
+No longer supported
+
 ## xx-xx-2024 5.0.0 Major
 - Addition of 50 wooden planks to the starter.
 - Fix the starter. You start a new game with the items listed in the starter.
@@ -10,6 +12,8 @@
 - Mod files have been reorganized for greater compatibility with other mods.
 - You can add horses to various buildings to increase their production.
 - Water is no longer considered a drink. (sad)
+- Nouvelle zone d'entrainement pour les muskets. Les arbalétriers s'entraineront avec les archers.
+- Il faudra atteindra un certain titre pour débloquer les arbalétriers.
 - 
 
 ## 30-04-2024 4.3.2 Patch

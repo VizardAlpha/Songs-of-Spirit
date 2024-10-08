@@ -1,0 +1,29 @@
+INFO: {
+	NAME: "Archery Range",
+	NAMES: "Archery Ranges",
+	DESC: "Where subjects are train their ranged capabilities.",
+},
+
+STATS: [
+	{
+		NAME: "Capacity",
+		DESC: "The amount of soldiers this room can train",
+	},
+],
+
+ITEMS: [
+	{
+		NAME: "Training Targets",
+		DESC: "Increases the amount of soldiers this room can train.",
+	},
+],
+
+EMPLOYMENT: {
+	TITLE: "Conscript",
+	VERB: "Training",
+},
+
+TRAINING: {
+	NAME: "Archery Training",
+	DESC: "Archery training, honed at the Archery Range. Increases ranged skill.",
+},
