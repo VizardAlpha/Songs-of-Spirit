@@ -22,10 +22,10 @@ public final class SongsofSpirit implements SCRIPT<Instance.State> {
     private static final Logger log = Loggers.getLogger(SongsofSpirit.class);
     private UIGameConfig uiGameConfig;
     private Instance instance;
-    private final Json welcomeJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_START"));
-    private final Json updateJson = new Json(PATHS.SCRIPT().text.get("SONGS_OF_SPIRIT_UPDATE"));
+    private final Json welcomeJson = new Json(PATHS.SCRIPT().path.text.get("SONGS_OF_SPIRIT_START"));
+    private final Json updateJson = new Json(PATHS.SCRIPT().path.text.get("SONGS_OF_SPIRIT_UPDATE"));
 
-    public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
+    public final static INFO MOD_INFO = new INFO((new Json((PATHS.SCRIPT()).path.text.get("SONGS_OF_SPIRIT"))).json("SONGS_OF_SPIRIT_INFO"));
 
     /*@Override
     public boolean isSelectable() {
