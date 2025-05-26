@@ -1,4 +1,4 @@
-[![Discord](https://img.shields.io/discord/1101869575655657523.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/KCarMbDtJz)
+[![Discord](https://img.shields.io/discord/1374474508693541048.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/6n4EHkefVu)
 
 Songs of Spirit is a mod from the game Songs of Syx.
 
