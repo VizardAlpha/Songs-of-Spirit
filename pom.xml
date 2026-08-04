@@ -6,11 +6,10 @@
 
     <groupId>vizardalpha.songsofspirit</groupId>
     <artifactId>songs-of-spirit</artifactId>
-    <version>4.5.0</version>
+    <version>5.0.0-beta</version>
     <properties>
-        <!-- Songs of Syx uses Java 1.8 -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- These settings will go into the mods _Info.txt file -->
@@ -19,8 +18,8 @@
         <mod.description>Songs of Spirit is a mod adding new content and working on basic game settings.</mod.description>
         <mod.author>VizardAlpha</mod.author>
         <mod.info>Game V${game.version} | Mod Version ${project.version}</mod.info>
-        <game.version.major>68</game.version.major>
-        <game.version.minor>28</game.version.minor>
+        <game.version.major>71</game.version.major>
+        <game.version.minor>44</game.version.minor>
 
         <!-- Build settings -->
         <game.version>${game.version.major}.${game.version.minor}</game.version>
@@ -42,7 +41,7 @@
         <!-- Dependency versions -->
         <junit-jupiter-engine.version>5.9.2</junit-jupiter-engine.version>
         <mockito-core.version>4.11.0</mockito-core.version>
-        <assertj-core.version>3.24.2</assertj-core.version>
+        <assertj-core.version>3.27.7</assertj-core.version>
         <lombok.version>1.18.38</lombok.version>
         <jackson.version>2.17.2</jackson.version>
         <jetbrains.annotations.version>24.1.0</jetbrains.annotations.version>
@@ -461,8 +460,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>21</source>
+                    <target>21</target>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
